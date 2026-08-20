@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+    --font-cinzel: 'Cinzel', serif;
+    --font-cinzel-decorative: 'Cinzel Decorative', 'Cinzel', serif;
+    --font-script: 'Pinyon Script', 'Alex Brush', cursive;
+    --font-sans: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+    --font-outfit: 'Outfit', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.65;
+    letter-spacing: 0.01em;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-cinzel);
+    letter-spacing: 0.06em;
+  }
+}
+
+/* Lenis Smooth Scroll Recommended Rules */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Dark Theme Default */
+html.dark-theme body,
+body {
+  background-color: #052932;
+  color: #F7F4EB;
+}
+
+/* Custom Cursor Rules (Desktop Only) */
+@media (hover: hover) and (pointer: fine) and (min-width: 1024px) {
+  a, button, input, select, textarea, [role="button"], .cursor-pointer {
+    cursor: pointer;
+  }
+}
+
+/* Light Theme */
+html.light-theme body {
+  background-color: #FAF7F2;
+  color: #062B35;
+}
+
+.font-outfit {
+  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-poppins {
+  font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-editorial {
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-garamond {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-cinzel-decorative {
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+}
+
+.font-script {
+  font-family: 'Pinyon Script', 'Alex Brush', cursive;
+}
+
+.font-sans-clean {
+  font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+}
+
+/* Metallic Gold Gradients */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #FDE68A 0%, #D4AF37 40%, #B89028 70%, #F5E08B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-text-shimmer {
+  background: linear-gradient(90deg, #D4AF37 0%, #FFF3C4 50%, #D4AF37 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s linear infinite;
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(to bottom right, #F3E5AB, #D4AF37, #997A15) 1;
+}
+
+.gold-box-glow {
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.15);
+}
+
+.gold-box-glow-strong {
+  box-shadow: 0 0 40px rgba(212, 175, 55, 0.28);
+}
+
+.teal-card-bg {
+  background: radial-gradient(120% 120% at 50% 0%, #0c4350 0%, #062b35 100%);
+}
+
+.teal-deep-gradient {
+  background: linear-gradient(180deg, #062B35 0%, #041E26 100%);
+}
+
+.sun-warm-gradient {
+  background: radial-gradient(circle at 50% 30%, rgba(212, 175, 55, 0.12) 0%, rgba(6, 43, 53, 0) 70%);
+}
+
+@keyframes shimmer {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #041b21;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a5863;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
+html.light-theme ::-webkit-scrollbar-track {
+  background: #F3EDE2;
+}
+html.light-theme ::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+}
