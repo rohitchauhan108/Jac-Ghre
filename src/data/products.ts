@@ -1,13 +1,13 @@
 import { Product, CampaignSlide, BotanicalIngredient } from '../types';
 
-import ghreModelCampaign from '../assets/images/ghre_campaign_model_1787204370781.jpg';
+import ghreModelCampaign from '../assets/images/modelcompaign.jpeg';
 import ghreFullLineup from '../assets/images/ghre_full_lineup_1787204386926.jpg';
 import ghreSunArt from '../assets/images/ghre_sun_art_1787204403014.jpg';
-import ghreSummerDream from '../assets/images/ghre_summer_dream_banner_1787206162115.jpg';
+import ghreSummerDream from '../assets/images/summerhair.jpeg';
 import ghreOrangeBlossom from '../assets/images/ghre_orange_blossom_banner_1787206177953.jpg';
 import ghreOilBotanic from '../assets/images/ghre_oil_botanic_1787204418411.jpg';
 import ghreLeaveIn from '../assets/images/ghre_leave_in_1787204430544.jpg';
-import jacGhrePortrait from '../assets/images/jac_ghre_portrait_1787204444781.jpg';
+import jacGhrePortrait from '../assets/images/founder.jpeg';
 import ghreRepairShampooImg from '../assets/images/ghre_repair_shampoo_1787204461932.jpg';
 
 export const CAMPAIGN_IMAGES = {
