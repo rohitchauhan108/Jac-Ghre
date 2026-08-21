@@ -5,7 +5,7 @@ import { Sparkles, Heart } from 'lucide-react';
 
 export const FounderVisionQuote: React.FC = () => {
   return (
-    <section className="relative py-20 bg-gradient-to-b from-[#021319] via-[#041a22] to-[#021319] overflow-hidden border-b border-[#D4AF37]/30">
+    <section className="relative py-20 bg-gradient-to-b from-[#006073] via-[#007288] to-[#006073] overflow-hidden border-b border-[#D4AF37]/30">
       {/* Background Floral/Sun Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.08)_0%,transparent_70%)] pointer-events-none" />
 
@@ -15,7 +15,7 @@ export const FounderVisionQuote: React.FC = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="border-2 border-[#D4AF37] bg-[#031d25]/90 p-8 sm:p-14 shadow-[0_20px_50px_rgba(0,0,0,0.7)] relative"
+          className="border-2 border-[#D4AF37] bg-[#006073]/90 p-8 sm:p-14 shadow-[0_20px_50px_rgba(0,96,115,0.7)] relative"
         >
           {/* Top Gold Corner Accents */}
           <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-[#D4AF37]" />

@@ -14,7 +14,7 @@ export const Newsletter: React.FC = () => {
   };
 
   return (
-    <section className="relative py-20 sm:py-28 bg-[#041d24] border-t border-b border-[#D4AF37]/25 overflow-hidden">
+    <section className="relative py-20 sm:py-28 bg-[#006073] border-t border-b border-[#D4AF37]/25 overflow-hidden">
       {/* Subtle Radial Glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(212,175,55,0.06)_0%,transparent_60%)]" />
 

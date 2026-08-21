@@ -35,7 +35,7 @@ export const CartDrawer: React.FC = () => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={() => setIsCartOpen(false)}
-          className="fixed inset-0 bg-[#021317]/80 backdrop-blur-sm"
+          className="fixed inset-0 bg-[#006073]/85 backdrop-blur-sm"
         />
 
         <div className="fixed inset-y-0 right-0 max-w-full flex pl-10">
@@ -44,10 +44,10 @@ export const CartDrawer: React.FC = () => {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="w-screen max-w-md bg-[#052932] border-l border-[#D4AF37]/30 shadow-2xl flex flex-col justify-between relative"
+            className="w-screen max-w-md bg-[#007288] border-l border-[#D4AF37]/30 shadow-2xl flex flex-col justify-between relative"
           >
             {/* Header */}
-            <div className="p-6 border-b border-[#D4AF37]/20 flex items-center justify-between bg-[#041e25]">
+            <div className="p-6 border-b border-[#D4AF37]/20 flex items-center justify-between bg-[#006073]">
               <div className="flex items-center gap-3">
                 <GoldEmblem size={22} />
                 <div>
@@ -62,7 +62,7 @@ export const CartDrawer: React.FC = () => {
 
               <button
                 onClick={() => setIsCartOpen(false)}
-                className="p-2 text-[#D4AF37] hover:text-[#F3E5AB] hover:bg-[#062c37] border border-[#D4AF37]/20 transition-colors"
+                className="p-2 text-[#D4AF37] hover:text-[#F3E5AB] hover:bg-[#007288] border border-[#D4AF37]/20 transition-colors"
                 aria-label="Close cart"
               >
                 <X className="w-5 h-5" />
@@ -70,7 +70,7 @@ export const CartDrawer: React.FC = () => {
             </div>
 
             {/* Free Shipping Progress */}
-            <div className="px-6 py-3 bg-[#073642]/60 border-b border-[#D4AF37]/15">
+            <div className="px-6 py-3 bg-[#006073]/60 border-b border-[#D4AF37]/15">
               <div className="flex items-center justify-between text-xs mb-1.5 font-sans">
                 {remainingForFreeShipping > 0 ? (
                   <span className="text-[#C5D5D8]">
@@ -82,7 +82,7 @@ export const CartDrawer: React.FC = () => {
                   </span>
                 )}
               </div>
-              <div className="w-full h-1.5 bg-[#041d24] overflow-hidden">
+              <div className="w-full h-1.5 bg-[#006073] overflow-hidden">
                 <div
                   className="h-full bg-gradient-to-r from-[#AA8221] via-[#D4AF37] to-[#F9E8B2] transition-all duration-500"
                   style={{ width: `${progressToFreeShipping}%` }}
@@ -112,9 +112,9 @@ export const CartDrawer: React.FC = () => {
                 cart.map((item) => (
                   <div
                     key={item.product.id}
-                    className="flex gap-4 p-3 bg-[#062c37] border border-[#D4AF37]/15 hover:border-[#D4AF37]/40 transition-colors"
+                    className="flex gap-4 p-3 bg-[#006073] border border-[#D4AF37]/15 hover:border-[#D4AF37]/40 transition-colors"
                   >
-                    <div className="w-20 h-24 bg-[#041e25] border border-[#D4AF37]/10 flex items-center justify-center p-2 shrink-0">
+                    <div className="w-20 h-24 bg-[#006073] border border-[#D4AF37]/10 flex items-center justify-center p-2 shrink-0">
                       <img
                         src={item.product.image}
                         alt={item.product.name}
@@ -174,7 +174,7 @@ export const CartDrawer: React.FC = () => {
 
             {/* Footer Summary & Checkout */}
             {cart.length > 0 && (
-              <div className="p-6 bg-[#041e25] border-t border-[#D4AF37]/30 space-y-4">
+              <div className="p-6 bg-[#006073] border-t border-[#D4AF37]/30 space-y-4">
                 <div className="space-y-1.5 text-xs">
                   <div className="flex justify-between text-[#8EAAB0]">
                     <span>Subtotal</span>
@@ -240,7 +240,7 @@ export const WishlistDrawer: React.FC = () => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={() => setIsWishlistOpen(false)}
-          className="fixed inset-0 bg-[#021317]/80 backdrop-blur-sm"
+          className="fixed inset-0 bg-[#006073]/85 backdrop-blur-sm"
         />
 
         <div className="fixed inset-y-0 right-0 max-w-full flex pl-10">
@@ -252,7 +252,7 @@ export const WishlistDrawer: React.FC = () => {
             className="w-screen max-w-md bg-[#052932] border-l border-[#D4AF37]/30 shadow-2xl flex flex-col justify-between"
           >
             {/* Header */}
-            <div className="p-6 border-b border-[#D4AF37]/20 flex items-center justify-between bg-[#041e25]">
+            <div className="p-6 border-b border-[#D4AF37]/20 flex items-center justify-between bg-[#006073]">
               <div className="flex items-center gap-3">
                 <GoldEmblem size={22} />
                 <div>
@@ -267,7 +267,7 @@ export const WishlistDrawer: React.FC = () => {
 
               <button
                 onClick={() => setIsWishlistOpen(false)}
-                className="p-2 text-[#D4AF37] hover:text-[#F3E5AB] hover:bg-[#062c37] border border-[#D4AF37]/20 transition-colors"
+                className="p-2 text-[#D4AF37] hover:text-[#F3E5AB] hover:bg-[#007288] border border-[#D4AF37]/20 transition-colors"
                 aria-label="Close wishlist"
               >
                 <X className="w-5 h-5" />
@@ -296,9 +296,9 @@ export const WishlistDrawer: React.FC = () => {
                 wishlistProducts.map((product) => (
                   <div
                     key={product.id}
-                    className="flex gap-4 p-3 bg-[#062c37] border border-[#D4AF37]/15 hover:border-[#D4AF37]/40 transition-colors"
+                    className="flex gap-4 p-3 bg-[#006073] border border-[#D4AF37]/15 hover:border-[#D4AF37]/40 transition-colors"
                   >
-                    <div className="w-20 h-24 bg-[#041e25] border border-[#D4AF37]/10 flex items-center justify-center p-2 shrink-0">
+                    <div className="w-20 h-24 bg-[#006073] border border-[#D4AF37]/10 flex items-center justify-center p-2 shrink-0">
                       <img
                         src={product.image}
                         alt={product.name}
@@ -343,7 +343,7 @@ export const WishlistDrawer: React.FC = () => {
               )}
             </div>
 
-            <div className="p-6 bg-[#041e25] border-t border-[#D4AF37]/30">
+            <div className="p-6 bg-[#006073] border-t border-[#D4AF37]/30">
               <button
                 onClick={() => {
                   wishlistProducts.forEach((p) => addToCart(p));

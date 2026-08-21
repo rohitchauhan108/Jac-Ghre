@@ -21,16 +21,16 @@ export const GoodHairDaySection: React.FC = () => {
   });
 
   return (
-    <section id="sun-body" className="relative py-24 sm:py-32 bg-[#021319] overflow-hidden">
+    <section id="sun-body" className="relative py-24 sm:py-32 bg-[#006073] overflow-hidden">
       {/* Background with warm golden sun rays & deep ocean teal */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#041a22] via-[#02131a] to-[#031d25]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#007288] via-[#006073] to-[#006073]" />
       <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.12)_0%,transparent_70%)] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[radial-gradient(circle_at_center,rgba(6,60,72,0.25)_0%,transparent_70%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#031a22] border border-[#D4AF37]/40 mb-3 shadow-md">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#006073] border border-[#D4AF37]/40 mb-3 shadow-md">
             <Sun className="w-4 h-4 text-[#D4AF37]" />
             <span className="text-[11px] font-cinzel font-semibold tracking-[0.3em] text-[#F3E5AB] uppercase">
               SAINT-TROPEZ • MIAMI RIVIERA
@@ -48,7 +48,7 @@ export const GoodHairDaySection: React.FC = () => {
           <div className="h-0.5 w-24 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto mt-4" />
 
           {/* Filter Pills */}
-          <div className="mt-8 inline-flex p-1 bg-[#021217] border border-[#D4AF37]/30 shadow-lg">
+          <div className="mt-8 inline-flex p-1 bg-[#006073] border border-[#D4AF37]/30 shadow-lg">
             <button
               onClick={() => setActiveTab('all')}
               className={`px-5 py-2 text-xs font-cinzel tracking-[0.2em] uppercase transition-all ${
@@ -83,7 +83,7 @@ export const GoodHairDaySection: React.FC = () => {
         </div>
 
         {/* Feature Hero Banner with Artwork Stage */}
-        <div className="relative mb-14 border-2 border-[#D4AF37]/50 bg-gradient-to-r from-[#031d25] via-[#052932] to-[#031d25] p-6 sm:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.8)] overflow-hidden">
+        <div className="relative mb-14 border-2 border-[#D4AF37]/50 bg-gradient-to-r from-[#006073] via-[#007288] to-[#006073] p-6 sm:p-10 shadow-[0_20px_50px_rgba(0,96,115,0.8)] overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Visual */}
             <div className="lg:col-span-6 relative aspect-[16/10] overflow-hidden border border-[#D4AF37]/30 shadow-2xl">
@@ -92,8 +92,8 @@ export const GoodHairDaySection: React.FC = () => {
                 alt="GHRÉ SUN The Art of Sun-Kissed Beauty"
                 className="w-full h-full object-cover object-center filter brightness-105 contrast-105 hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#021319]/80 via-transparent to-transparent pointer-events-none" />
-              <div className="absolute bottom-3 left-3 px-3 py-1 bg-[#021319]/90 border border-[#D4AF37]/40 text-[10px] font-cinzel tracking-[0.2em] text-[#D4AF37] uppercase">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#006073]/80 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute bottom-3 left-3 px-3 py-1 bg-[#006073]/90 border border-[#D4AF37]/40 text-[10px] font-cinzel tracking-[0.2em] text-[#D4AF37] uppercase">
                 MEDITERRANEAN BOTANICAL HARVEST
               </div>
             </div>
@@ -121,7 +121,7 @@ export const GoodHairDaySection: React.FC = () => {
                 </button>
                 <button
                   onClick={() => setQuickViewProduct(sunProducts[0])}
-                  className="px-5 py-3 bg-[#02141a] border border-[#D4AF37]/50 text-[#F3E5AB] font-cinzel text-xs tracking-[0.15em] uppercase hover:bg-[#062c37] transition-all"
+                  className="px-5 py-3 bg-[#006073] border border-[#D4AF37]/50 text-[#F3E5AB] font-cinzel text-xs tracking-[0.15em] uppercase hover:bg-[#007288] transition-all"
                 >
                   View Details
                 </button>
@@ -143,7 +143,7 @@ export const GoodHairDaySection: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative bg-[#041e26] border border-[#D4AF37]/30 hover:border-[#D4AF37] transition-all duration-500 shadow-xl flex flex-col justify-between overflow-hidden"
+                className="group relative bg-[#006073] border border-[#D4AF37]/30 hover:border-[#D4AF37] transition-all duration-500 shadow-xl flex flex-col justify-between overflow-hidden"
               >
                 {/* Top Badge & Heart */}
                 <div className="p-4 pb-0 flex items-center justify-between">
@@ -165,12 +165,12 @@ export const GoodHairDaySection: React.FC = () => {
                   <img
                     src={p.image}
                     alt={p.name}
-                    className="max-h-full object-contain filter drop-shadow-[0_15px_20px_rgba(0,0,0,0.8)] group-hover:scale-108 transition-transform duration-500"
+                    className="max-h-full object-contain filter drop-shadow-[0_15px_20px_rgba(0,96,115,0.8)] group-hover:scale-108 transition-transform duration-500"
                   />
                 </div>
 
                 {/* Content */}
-                <div className="p-5 pt-2 flex-1 flex flex-col justify-between border-t border-[#D4AF37]/15 bg-[#03181f]">
+                <div className="p-5 pt-2 flex-1 flex flex-col justify-between border-t border-[#D4AF37]/15 bg-[#006073]">
                   <div>
                     <h4
                       onClick={() => setQuickViewProduct(p)}

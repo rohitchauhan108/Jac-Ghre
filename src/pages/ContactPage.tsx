@@ -33,11 +33,11 @@ export const ContactPage: React.FC = () => {
   ];
 
   return (
-    <div className="pt-8 pb-28 bg-[#041a22] min-h-screen">
+    <div className="pt-8 pb-28 bg-[#007288] min-h-screen">
       {/* Hero Header Banner */}
-      <section className="relative py-20 border-b border-[#D4AF37]/30 bg-gradient-to-b from-[#03151c] via-[#052932] to-[#041a22] overflow-hidden">
+      <section className="relative py-20 border-b border-[#D4AF37]/30 bg-gradient-to-b from-[#006073] via-[#007288] to-[#006073] overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 bg-[#031d25] border border-[#D4AF37]/50 mb-4 shadow-md">
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 bg-[#006073] border border-[#D4AF37]/50 mb-4 shadow-md">
             <Mail className="w-4 h-4 text-[#D4AF37]" />
             <span className="text-xs font-cinzel font-semibold tracking-[0.3em] text-[#F3E5AB] uppercase">
               CLIENT SERVICES & ATELIER CONCIERGE
@@ -59,7 +59,7 @@ export const ContactPage: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-24">
           {/* Contact Information & Flagships */}
           <div className="lg:col-span-5 space-y-8">
-            <div className="bg-[#031820] border border-[#D4AF37]/35 p-6 sm:p-8 shadow-xl">
+            <div className="bg-[#006073] border border-[#D4AF37]/35 p-6 sm:p-8 shadow-xl">
               <h3 className="font-cinzel text-xl font-bold text-[#F7F4EB] uppercase mb-6 flex items-center gap-2">
                 <GoldEmblem size={20} withGlow />
                 <span>Global Flagship Ateliers</span>
@@ -121,7 +121,7 @@ export const ContactPage: React.FC = () => {
           </div>
 
           {/* Contact Message Form */}
-          <div className="lg:col-span-7 bg-[#031820] border-2 border-[#D4AF37]/50 p-6 sm:p-10 shadow-2xl">
+          <div className="lg:col-span-7 bg-[#006073] border-2 border-[#D4AF37]/50 p-6 sm:p-10 shadow-2xl">
             <h3 className="font-cinzel text-2xl font-bold text-[#F7F4EB] uppercase mb-2">
               Send a Concierge Message
             </h3>
@@ -130,7 +130,7 @@ export const ContactPage: React.FC = () => {
             </p>
 
             {formSubmitted ? (
-              <div className="p-8 bg-[#02171d] border border-[#D4AF37] text-center">
+              <div className="p-8 bg-[#006073] border border-[#D4AF37] text-center">
                 <CheckCircle2 className="w-12 h-12 text-[#D4AF37] mx-auto mb-3" />
                 <h4 className="font-cinzel text-xl font-bold text-[#F7F4EB] uppercase">
                   Message Sent Successfully
@@ -150,7 +150,7 @@ export const ContactPage: React.FC = () => {
                       type="text"
                       required
                       placeholder="Jane Doe"
-                      className="w-full px-4 py-3 bg-[#021117] border border-[#D4AF37]/40 text-sm text-[#F7F4EB] placeholder-[#8EAAB0] font-poppins outline-none focus:border-[#D4AF37]"
+                      className="w-full px-4 py-3 bg-[#006073] border border-[#D4AF37]/40 text-sm text-[#F7F4EB] placeholder-[#8EAAB0] font-poppins outline-none focus:border-[#D4AF37]"
                     />
                   </div>
                   <div>
@@ -161,7 +161,7 @@ export const ContactPage: React.FC = () => {
                       type="email"
                       required
                       placeholder="client@luxury.com"
-                      className="w-full px-4 py-3 bg-[#021117] border border-[#D4AF37]/40 text-sm text-[#F7F4EB] placeholder-[#8EAAB0] font-poppins outline-none focus:border-[#D4AF37]"
+                      className="w-full px-4 py-3 bg-[#006073] border border-[#D4AF37]/40 text-sm text-[#F7F4EB] placeholder-[#8EAAB0] font-poppins outline-none focus:border-[#D4AF37]"
                     />
                   </div>
                 </div>
@@ -170,7 +170,7 @@ export const ContactPage: React.FC = () => {
                   <label className="block font-cinzel text-xs text-[#D4AF37] uppercase tracking-wider mb-2">
                     Inquiry Topic
                   </label>
-                  <select className="w-full px-4 py-3 bg-[#021117] border border-[#D4AF37]/40 text-sm text-[#F7F4EB] font-poppins outline-none focus:border-[#D4AF37] cursor-pointer">
+                  <select className="w-full px-4 py-3 bg-[#006073] border border-[#D4AF37]/40 text-sm text-[#F7F4EB] font-poppins outline-none focus:border-[#D4AF37] cursor-pointer">
                     <option>Product & Hair Care Consultation</option>
                     <option>Order Tracking & Shipping</option>
                     <option>Wholesale & Luxury Salon Inquiries</option>
@@ -186,7 +186,7 @@ export const ContactPage: React.FC = () => {
                     rows={4}
                     required
                     placeholder="How may our concierges assist you today?"
-                    className="w-full px-4 py-3 bg-[#021117] border border-[#D4AF37]/40 text-sm text-[#F7F4EB] placeholder-[#8EAAB0] font-poppins outline-none focus:border-[#D4AF37]"
+                    className="w-full px-4 py-3 bg-[#006073] border border-[#D4AF37]/40 text-sm text-[#F7F4EB] placeholder-[#8EAAB0] font-poppins outline-none focus:border-[#D4AF37]"
                   />
                 </div>
 
@@ -203,7 +203,7 @@ export const ContactPage: React.FC = () => {
         </div>
 
         {/* FAQ Section */}
-        <div className="p-8 sm:p-12 bg-[#031d25] border border-[#D4AF37]/35 shadow-2xl">
+        <div className="p-8 sm:p-12 bg-[#006073] border border-[#D4AF37]/35 shadow-2xl">
           <div className="text-center max-w-2xl mx-auto mb-10">
             <HelpCircle className="w-8 h-8 text-[#D4AF37] mx-auto mb-2" />
             <h3 className="font-cinzel text-2xl font-bold text-[#F7F4EB] uppercase">
@@ -215,7 +215,7 @@ export const ContactPage: React.FC = () => {
             {faqs.map((faq, index) => (
               <div
                 key={faq.q}
-                className="border border-[#D4AF37]/30 bg-[#021319] overflow-hidden"
+                className="border border-[#D4AF37]/30 bg-[#006073] overflow-hidden"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}

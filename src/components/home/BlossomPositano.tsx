@@ -15,9 +15,9 @@ export const BlossomPositano: React.FC = () => {
   const isFavorited = isInWishlist(perfume.id);
 
   return (
-    <section id="fragrance" className="relative py-24 sm:py-32 bg-[#05262e] overflow-hidden">
+    <section id="fragrance" className="relative py-24 sm:py-32 bg-[#007288] overflow-hidden">
       {/* Background warm solar radiance */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#041d24] via-[#062f3a] to-[#041d24]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#006073] via-[#007288] to-[#006073]" />
       <div className="absolute top-1/3 left-1/4 w-[600px] h-[600px] bg-[radial-gradient(circle_at_center,rgba(247,208,70,0.12)_0%,transparent_65%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -31,10 +31,10 @@ export const BlossomPositano: React.FC = () => {
             className="lg:col-span-6 relative"
           >
             {/* Visual Frame */}
-            <div className="relative z-10 overflow-hidden bg-gradient-to-b from-[#093d4a] to-[#031c22] border-2 border-[#D4AF37]/50 shadow-[0_20px_60px_rgba(0,0,0,0.7)] p-6 sm:p-10 flex flex-col items-center justify-center">
+            <div className="relative z-10 overflow-hidden bg-gradient-to-b from-[#007288] to-[#006073] border-2 border-[#D4AF37]/50 shadow-[0_20px_60px_rgba(0,0,0,0.7)] p-6 sm:p-10 flex flex-col items-center justify-center">
               {/* Top Eau de Parfum Badge */}
               <div className="relative z-20 flex items-center justify-between w-full mb-6">
-                <span className="px-3 py-1 bg-[#041e25]/90 border border-[#D4AF37]/40 text-[10px] font-cinzel tracking-[0.25em] text-[#F3E5AB] uppercase">
+                <span className="px-3 py-1 bg-[#006073]/90 border border-[#D4AF37]/40 text-[10px] font-cinzel tracking-[0.25em] text-[#F3E5AB] uppercase">
                   Haute Parfumerie
                 </span>
                 <span className="text-[11px] font-cinzel tracking-widest text-[#D4AF37] font-semibold">
@@ -95,7 +95,7 @@ export const BlossomPositano: React.FC = () => {
 
             {/* Olfactory Pyramid Cards */}
             <div className="grid grid-cols-3 gap-3">
-              <div className="p-3 bg-[#041e25] border border-[#D4AF37]/20 text-center">
+              <div className="p-3 bg-[#006073] border border-[#D4AF37]/20 text-center">
                 <span className="text-[10px] font-cinzel text-[#D4AF37] block uppercase tracking-wider mb-1">
                   Top Notes
                 </span>
@@ -104,7 +104,7 @@ export const BlossomPositano: React.FC = () => {
                 </p>
               </div>
 
-              <div className="p-3 bg-[#041e25] border border-[#D4AF37]/20 text-center">
+              <div className="p-3 bg-[#006073] border border-[#D4AF37]/20 text-center">
                 <span className="text-[10px] font-cinzel text-[#D4AF37] block uppercase tracking-wider mb-1">
                   Heart Notes
                 </span>
@@ -113,7 +113,7 @@ export const BlossomPositano: React.FC = () => {
                 </p>
               </div>
 
-              <div className="p-3 bg-[#041e25] border border-[#D4AF37]/20 text-center">
+              <div className="p-3 bg-[#006073] border border-[#D4AF37]/20 text-center">
                 <span className="text-[10px] font-cinzel text-[#D4AF37] block uppercase tracking-wider mb-1">
                   Base Notes
                 </span>
@@ -134,7 +134,7 @@ export const BlossomPositano: React.FC = () => {
                   className={`px-4 py-2 text-xs font-cinzel uppercase border transition-all ${
                     selectedSize === '50ml'
                       ? 'border-[#D4AF37] bg-[#D4AF37] text-[#062B35] font-bold'
-                      : 'border-[#D4AF37]/30 bg-[#041e25] text-[#E8DCC4] hover:border-[#D4AF37]'
+                      : 'border-[#D4AF37]/30 bg-[#006073] text-[#E8DCC4] hover:border-[#D4AF37]'
                   }`}
                 >
                   50ml / 1.7 fl.oz • {currencySymbol}{(perfume.price * currencyRate * 0.65).toFixed(0)}
@@ -144,7 +144,7 @@ export const BlossomPositano: React.FC = () => {
                   className={`px-4 py-2 text-xs font-cinzel uppercase border transition-all ${
                     selectedSize === '100ml'
                       ? 'border-[#D4AF37] bg-[#D4AF37] text-[#062B35] font-bold'
-                      : 'border-[#D4AF37]/30 bg-[#041e25] text-[#E8DCC4] hover:border-[#D4AF37]'
+                      : 'border-[#D4AF37]/30 bg-[#006073] text-[#E8DCC4] hover:border-[#D4AF37]'
                   }`}
                 >
                   100ml / 3.4 fl.oz • {currencySymbol}{(perfume.price * currencyRate).toFixed(0)} (Iconic)
@@ -164,7 +164,7 @@ export const BlossomPositano: React.FC = () => {
 
               <button
                 onClick={() => setQuickViewProduct(perfume)}
-                className="p-3.5 border border-[#D4AF37]/50 hover:border-[#D4AF37] bg-[#041e25] text-[#D4AF37] hover:bg-[#062c37] transition-all"
+                className="p-3.5 border border-[#D4AF37]/50 hover:border-[#D4AF37] bg-[#006073] text-[#D4AF37] hover:bg-[#007288] transition-all"
                 title="Full Fragrance Notes"
               >
                 <Eye className="w-4 h-4" />
@@ -172,7 +172,7 @@ export const BlossomPositano: React.FC = () => {
 
               <button
                 onClick={() => toggleWishlist(perfume.id)}
-                className="p-3.5 border border-[#D4AF37]/50 hover:border-[#D4AF37] bg-[#041e25] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#062B35] transition-all"
+                className="p-3.5 border border-[#D4AF37]/50 hover:border-[#D4AF37] bg-[#006073] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#062B35] transition-all"
                 title="Add to Wishlist"
               >
                 <Heart className={`w-4 h-4 ${isFavorited ? 'fill-[#D4AF37]' : ''}`} />

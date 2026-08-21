@@ -17,9 +17,9 @@ export const CampaignBanner: React.FC = () => {
   };
 
   return (
-    <section id="campaign-banner" className="relative py-20 sm:py-28 bg-[#02141a] overflow-hidden">
+    <section id="campaign-banner" className="relative py-20 sm:py-28 bg-[#007288] overflow-hidden">
       {/* Cinematic Deep Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#041a22] via-[#02151c] to-[#041920]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#006073] via-[#007288] to-[#006073]" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.07)_0%,transparent_70%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -29,7 +29,7 @@ export const CampaignBanner: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="border-2 border-[#D4AF37]/60 bg-gradient-to-br from-[#04242e]/95 via-[#031d25]/95 to-[#021319]/95 shadow-[0_25px_60px_rgba(0,0,0,0.85)] relative overflow-hidden"
+          className="border-2 border-[#D4AF37]/60 bg-gradient-to-br from-[#006073]/95 via-[#007288]/95 to-[#006073]/95 shadow-[0_25px_60px_rgba(0,96,115,0.85)] relative overflow-hidden"
         >
           {/* Top Gold Corner Accents */}
           <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-[#D4AF37] z-20" />
@@ -38,16 +38,16 @@ export const CampaignBanner: React.FC = () => {
           <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-[#D4AF37] z-20" />
 
           {/* Panoramic Campaign Banner Image */}
-          <div className="relative aspect-[16/9] sm:aspect-[16/8] md:aspect-[21/9] w-full overflow-hidden bg-[#021116] group cursor-pointer" onClick={() => navigateToPage('hair-care')}>
+          <div className="relative aspect-[16/9] sm:aspect-[16/8] md:aspect-[21/9] w-full overflow-hidden bg-[#006073] group cursor-pointer" onClick={() => navigateToPage('hair-care')}>
             <img
               src={CAMPAIGN_IMAGES.summerDream}
               alt="GHRÉ PARIS Your Summ'Hair Dream Campaign"
               className="w-full h-full object-cover object-center transform group-hover:scale-[1.015] transition-transform duration-700"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#021319]/80 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#006073]/80 via-transparent to-transparent pointer-events-none" />
 
             <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 z-20 flex flex-wrap items-center gap-3">
-              <span className="px-3.5 py-1.5 bg-[#031d25]/90 border border-[#D4AF37]/50 text-[#F3E5AB] font-cinzel text-xs tracking-[0.2em] uppercase backdrop-blur-md">
+              <span className="px-3.5 py-1.5 bg-[#006073]/90 border border-[#D4AF37]/50 text-[#F3E5AB] font-cinzel text-xs tracking-[0.2em] uppercase backdrop-blur-md">
                 SAINT-TROPEZ • MIAMI
               </span>
               <button
@@ -64,7 +64,7 @@ export const CampaignBanner: React.FC = () => {
           </div>
 
           {/* VIP Access Bar Below Banner */}
-          <div className="p-6 sm:p-8 bg-[#031d25]/90 border-t border-[#D4AF37]/30 flex flex-col lg:flex-row items-center justify-between gap-6">
+          <div className="p-6 sm:p-8 bg-[#006073]/90 border-t border-[#D4AF37]/30 flex flex-col lg:flex-row items-center justify-between gap-6">
             <div className="text-center lg:text-left space-y-1">
               <div className="flex items-center justify-center lg:justify-start gap-2">
                 <GoldEmblem size={20} />
@@ -79,7 +79,7 @@ export const CampaignBanner: React.FC = () => {
 
             {/* VIP Reservation Form */}
             {isReserved ? (
-              <div className="p-3.5 bg-[#05323d] border border-[#D4AF37] flex items-center gap-3 text-xs font-cinzel tracking-wider text-[#F3E5AB]">
+              <div className="p-3.5 bg-[#007288] border border-[#D4AF37] flex items-center gap-3 text-xs font-cinzel tracking-wider text-[#F3E5AB]">
                 <Check className="w-4 h-4 text-[#D4AF37]" />
                 <span>You are on the VIP Launch Priority Access List.</span>
               </div>
@@ -91,7 +91,7 @@ export const CampaignBanner: React.FC = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                   placeholder="Enter VIP email for release..."
-                  className="px-4 py-2.5 bg-[#021117] border border-[#D4AF37]/40 text-xs text-[#F7F4EB] placeholder-[#8EAAB0]/70 font-sans outline-none focus:border-[#D4AF37] min-w-[240px]"
+                  className="px-4 py-2.5 bg-[#006073] border border-[#D4AF37]/40 text-xs text-[#F7F4EB] placeholder-[#8EAAB0]/70 font-sans outline-none focus:border-[#D4AF37] min-w-[240px]"
                 />
                 <button
                   type="submit"

@@ -42,11 +42,11 @@ export const JournalPage: React.FC = () => {
   ];
 
   return (
-    <div className="pt-8 pb-28 bg-[#041a22] min-h-screen">
+    <div className="pt-8 pb-28 bg-[#007288] min-h-screen">
       {/* Hero Header Banner */}
-      <section className="relative py-20 border-b border-[#D4AF37]/30 bg-gradient-to-b from-[#03151c] via-[#052932] to-[#041a22] overflow-hidden">
+      <section className="relative py-20 border-b border-[#D4AF37]/30 bg-gradient-to-b from-[#006073] via-[#007288] to-[#006073] overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 bg-[#031d25] border border-[#D4AF37]/50 mb-4 shadow-md">
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 bg-[#006073] border border-[#D4AF37]/50 mb-4 shadow-md">
             <BookOpen className="w-4 h-4 text-[#D4AF37]" />
             <span className="text-xs font-cinzel font-semibold tracking-[0.3em] text-[#F3E5AB] uppercase">
               LE JOURNAL BOTANIQUE & SCIENCE
@@ -74,15 +74,15 @@ export const JournalPage: React.FC = () => {
           {articles.map((article) => (
             <div
               key={article.id}
-              className="bg-[#031d25] border border-[#D4AF37]/35 hover:border-[#D4AF37] transition-all p-6 sm:p-8 shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
+              className="bg-[#006073] border border-[#D4AF37]/35 hover:border-[#D4AF37] transition-all p-6 sm:p-8 shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
             >
-              <div className="lg:col-span-5 relative aspect-[16/10] overflow-hidden bg-[#021319] border border-[#D4AF37]/25">
+              <div className="lg:col-span-5 relative aspect-[16/10] overflow-hidden bg-[#006073] border border-[#D4AF37]/25">
                 <img
                   src={article.image}
                   alt={article.title}
                   className="w-full h-full object-cover filter contrast-105 hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute top-3 left-3 px-2.5 py-1 bg-[#02141a]/90 text-[10px] font-cinzel text-[#D4AF37] uppercase tracking-wider">
+                <div className="absolute top-3 left-3 px-2.5 py-1 bg-[#006073]/90 text-[10px] font-cinzel text-[#D4AF37] uppercase tracking-wider">
                   {article.category}
                 </div>
               </div>
@@ -102,7 +102,7 @@ export const JournalPage: React.FC = () => {
                   {article.excerpt}
                 </p>
 
-                <div className="p-3 bg-[#021319] border-l-2 border-[#D4AF37] text-xs font-poppins text-[#F3E5AB]">
+                <div className="p-3 bg-[#006073] border-l-2 border-[#D4AF37] text-xs font-poppins text-[#F3E5AB]">
                   <strong className="text-[#D4AF37]">Key Discovery:</strong> {article.keyFact}
                 </div>
 
@@ -136,7 +136,7 @@ export const JournalPage: React.FC = () => {
             {BOTANICAL_INGREDIENTS.map((ing) => (
               <div
                 key={ing.name}
-                className="bg-[#031820] border border-[#D4AF37]/30 p-6 flex flex-col justify-between shadow-xl"
+                className="bg-[#006073] border border-[#D4AF37]/30 p-6 flex flex-col justify-between shadow-xl"
               >
                 <div>
                   <div className="w-10 h-10 bg-[#021318] border border-[#D4AF37]/40 flex items-center justify-center mb-4">

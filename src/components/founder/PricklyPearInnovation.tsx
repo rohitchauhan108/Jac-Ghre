@@ -12,12 +12,12 @@ export const PricklyPearInnovation: React.FC = () => {
   const elixirProduct = PRODUCTS.find((p) => p.id === 'elixir-reparatrice' || p.category === 'haircare' || p.category === 'elixir') || PRODUCTS[0];
 
   return (
-    <section className="relative py-24 bg-[#021116] overflow-hidden border-b border-[#D4AF37]/30">
+    <section className="relative py-24 bg-[#006073] overflow-hidden border-b border-[#D4AF37]/30">
       {/* Golden Radial Aura */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.1)_0%,transparent_70%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="border-2 border-[#D4AF37] bg-gradient-to-br from-[#04242e]/95 via-[#031d25]/95 to-[#021319]/95 p-8 sm:p-14 shadow-2xl relative">
+        <div className="border-2 border-[#D4AF37] bg-gradient-to-br from-[#007288]/95 via-[#006073]/95 to-[#006073]/95 p-8 sm:p-14 shadow-2xl relative">
           {/* Corner Gold Accent Brackets */}
           <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-[#D4AF37]" />
           <div className="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-[#D4AF37]" />
@@ -27,22 +27,22 @@ export const PricklyPearInnovation: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             {/* Left: Product Flacon Presentation */}
             <div className="lg:col-span-5 flex justify-center">
-              <div className="relative aspect-[3/4] w-full max-w-sm bg-[#021319] border border-[#D4AF37]/60 p-6 shadow-2xl group overflow-hidden">
+              <div className="relative aspect-[3/4] w-full max-w-sm bg-[#006073] border border-[#D4AF37]/60 p-6 shadow-2xl group overflow-hidden">
                 <img
                   src={elixirProduct.image}
                   alt="Jac Ghré Prickly Pear Oil Elixir"
                   className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#021319]/80 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#006073]/80 via-transparent to-transparent pointer-events-none" />
 
-                <div className="absolute top-3 left-3 px-3 py-1 bg-[#031d25]/90 border border-[#D4AF37]/60 text-[10px] font-cinzel font-bold text-[#D4AF37] uppercase">
+                <div className="absolute top-3 left-3 px-3 py-1 bg-[#006073]/90 border border-[#D4AF37]/60 text-[10px] font-cinzel font-bold text-[#D4AF37] uppercase">
                   SIGNATURE FORMULA
                 </div>
 
                 <div className="absolute bottom-4 inset-x-4 flex gap-2">
                   <button
                     onClick={() => setQuickViewProduct(elixirProduct)}
-                    className="flex-1 py-2.5 bg-[#031d25]/90 hover:bg-[#073946] border border-[#D4AF37]/70 text-[#F3E5AB] font-cinzel text-xs font-bold tracking-wider uppercase transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+                    className="flex-1 py-2.5 bg-[#006073]/90 hover:bg-[#007288] border border-[#D4AF37]/70 text-[#F3E5AB] font-cinzel text-xs font-bold tracking-wider uppercase transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
                   >
                     <Eye className="w-3.5 h-3.5" />
                     <span>Quick View</span>
@@ -60,7 +60,7 @@ export const PricklyPearInnovation: React.FC = () => {
 
             {/* Right: Formulation Details from Client Specification */}
             <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#021319] border border-[#D4AF37]/40">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#006073] border border-[#D4AF37]/40">
                 <Droplets className="w-3.5 h-3.5 text-[#D4AF37]" />
                 <span className="text-[11px] font-cinzel font-bold tracking-[0.25em] text-[#D4AF37] uppercase">
                   INNOVATION BY JAC GHRÉ BEAUTY EXPERT
@@ -77,28 +77,28 @@ export const PricklyPearInnovation: React.FC = () => {
 
               {/* Formulation Key Benefits */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
-                <div className="p-3.5 bg-[#021319] border border-[#D4AF37]/30 flex items-start gap-2.5">
+                <div className="p-3.5 bg-[#006073] border border-[#D4AF37]/30 flex items-start gap-2.5">
                   <Check className="w-4 h-4 text-[#D4AF37] shrink-0 mt-0.5" />
                   <span className="text-xs font-outfit text-[#E2EDF0]">
                     <strong>Cold-Pressed Prickly Pear:</strong> Rich in precious Vitamin E & botanical sterols.
                   </span>
                 </div>
 
-                <div className="p-3.5 bg-[#021319] border border-[#D4AF37]/30 flex items-start gap-2.5">
+                <div className="p-3.5 bg-[#006073] border border-[#D4AF37]/30 flex items-start gap-2.5">
                   <Check className="w-4 h-4 text-[#D4AF37] shrink-0 mt-0.5" />
                   <span className="text-xs font-outfit text-[#E2EDF0]">
                     <strong>Keratin Vitamin Complex:</strong> Rebuilds damaged hair cuticles instantly.
                   </span>
                 </div>
 
-                <div className="p-3.5 bg-[#021319] border border-[#D4AF37]/30 flex items-start gap-2.5">
+                <div className="p-3.5 bg-[#006073] border border-[#D4AF37]/30 flex items-start gap-2.5">
                   <Check className="w-4 h-4 text-[#D4AF37] shrink-0 mt-0.5" />
                   <span className="text-xs font-outfit text-[#E2EDF0]">
                     <strong>Solar & Salt Defense:</strong> Shields against harsh coastal UV radiation.
                   </span>
                 </div>
 
-                <div className="p-3.5 bg-[#021319] border border-[#D4AF37]/30 flex items-start gap-2.5">
+                <div className="p-3.5 bg-[#006073] border border-[#D4AF37]/30 flex items-start gap-2.5">
                   <Check className="w-4 h-4 text-[#D4AF37] shrink-0 mt-0.5" />
                   <span className="text-xs font-outfit text-[#E2EDF0]">
                     <strong>Weightless Mirror Shine:</strong> Ultra-clean silky texture without build-up.

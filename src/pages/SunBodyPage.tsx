@@ -11,12 +11,12 @@ export const SunBodyPage: React.FC = () => {
   const sunProducts = PRODUCTS.filter((p) => p.category === 'bodycare');
 
   return (
-    <div className="pt-8 pb-28 bg-[#041a22] min-h-screen">
+    <div className="pt-8 pb-28 bg-[#007288] min-h-screen">
       {/* Sun Header Banner */}
-      <section className="relative py-20 border-b border-[#D4AF37]/30 bg-gradient-to-b from-[#03151c] via-[#052932] to-[#041a22] overflow-hidden">
+      <section className="relative py-20 border-b border-[#D4AF37]/30 bg-gradient-to-b from-[#006073] via-[#007288] to-[#006073] overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[radial-gradient(circle,rgba(212,175,55,0.18)_0%,transparent_70%)] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 bg-[#031d25] border border-[#D4AF37]/50 mb-4 shadow-md">
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 bg-[#006073] border border-[#D4AF37]/50 mb-4 shadow-md">
             <Sun className="w-4 h-4 text-[#D4AF37]" />
             <span className="text-xs font-cinzel font-semibold tracking-[0.3em] text-[#F3E5AB] uppercase">
               GHRÉ SUN • ST-TROPEZ ✕ MIAMI
@@ -42,7 +42,7 @@ export const SunBodyPage: React.FC = () => {
         {/* Featured Editorial Split: Summer Glow Oil vs Body Watch */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
           {/* Summer Glow Card */}
-          <div className="bg-gradient-to-br from-[#06323d] to-[#021820] border-2 border-[#D4AF37]/60 p-8 shadow-2xl relative overflow-hidden flex flex-col justify-between">
+          <div className="bg-gradient-to-br from-[#007288] to-[#006073] border-2 border-[#D4AF37]/60 p-8 shadow-2xl relative overflow-hidden flex flex-col justify-between">
             <div className="absolute -top-12 -right-12 w-48 h-48 bg-[#D4AF37]/15 rounded-full blur-2xl pointer-events-none" />
             <div>
               <div className="flex items-center justify-between mb-4">
@@ -60,7 +60,7 @@ export const SunBodyPage: React.FC = () => {
               <p className="font-poppins text-sm sm:text-base text-[#B5CAD0] mt-3 leading-relaxed">
                 Suspends multi-tonal gold micro-pearls in a dry-touch botanical oil matrix. Enhances your natural tan, hydrates dry skin, and leaves hair glistening without greasiness.
               </p>
-              <div className="my-6 aspect-video bg-[#021319] border border-[#D4AF37]/30 flex items-center justify-center p-4">
+              <div className="my-6 aspect-video bg-[#006073] border border-[#D4AF37]/30 flex items-center justify-center p-4">
                 <img
                   src={PRODUCTS.find((p) => p.id === 'summer-glow-oil')?.image || CAMPAIGN_IMAGES.sunArt}
                   alt="Summer Glow Oil"
@@ -89,11 +89,11 @@ export const SunBodyPage: React.FC = () => {
           </div>
 
           {/* Body Watch Cleanser */}
-          <div className="bg-gradient-to-br from-[#06323d] to-[#021820] border-2 border-[#D4AF37]/60 p-8 shadow-2xl relative overflow-hidden flex flex-col justify-between">
+          <div className="bg-gradient-to-br from-[#007288] to-[#006073] border-2 border-[#D4AF37]/60 p-8 shadow-2xl relative overflow-hidden flex flex-col justify-between">
             <div className="absolute -top-12 -right-12 w-48 h-48 bg-[#D4AF37]/15 rounded-full blur-2xl pointer-events-none" />
             <div>
               <div className="flex items-center justify-between mb-4">
-                <span className="px-3 py-1 bg-[#021319] border border-[#D4AF37]/50 text-[#D4AF37] font-cinzel text-xs font-bold uppercase tracking-wider">
+                <span className="px-3 py-1 bg-[#006073] border border-[#D4AF37]/50 text-[#D4AF37] font-cinzel text-xs font-bold uppercase tracking-wider">
                   Post-Sun Cleanser
                 </span>
                 <span className="font-cinzel text-sm text-[#F3E5AB]">250 ML / 8.4 FL OZ</span>
@@ -107,7 +107,7 @@ export const SunBodyPage: React.FC = () => {
               <p className="font-poppins text-sm sm:text-base text-[#B5CAD0] mt-3 leading-relaxed">
                 A gentle foaming botanical bath elixir that dissolves sea salt, sunscreen residues, and environmental impurities while soothing sun-heated skin with aloe and coconut monoï.
               </p>
-              <div className="my-6 aspect-video bg-[#021319] border border-[#D4AF37]/30 flex items-center justify-center p-4">
+              <div className="my-6 aspect-video bg-[#006073] border border-[#D4AF37]/30 flex items-center justify-center p-4">
                 <img
                   src={PRODUCTS.find((p) => p.id === 'body-watch-monoi')?.image || CAMPAIGN_IMAGES.sunArt}
                   alt="Body Watch Monoï"
@@ -154,7 +154,7 @@ export const SunBodyPage: React.FC = () => {
               return (
                 <div
                   key={mist.id}
-                  className="bg-[#031d25] border border-[#D4AF37]/40 hover:border-[#D4AF37] transition-all p-6 flex flex-col justify-between shadow-xl group"
+                  className="bg-[#006073] border border-[#D4AF37]/40 hover:border-[#D4AF37] transition-all p-6 flex flex-col justify-between shadow-xl group"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-3">
@@ -164,7 +164,7 @@ export const SunBodyPage: React.FC = () => {
                       <span className="text-xs text-[#8EAAB0] font-poppins">{mist.size}</span>
                     </div>
 
-                    <div className="aspect-square flex items-center justify-center p-4 bg-[#021319] border border-[#D4AF37]/20 my-3">
+                    <div className="aspect-square flex items-center justify-center p-4 bg-[#006073] border border-[#D4AF37]/20 my-3">
                       <img
                         src={mist.image}
                         alt={mist.name}
@@ -205,12 +205,12 @@ export const SunBodyPage: React.FC = () => {
         </div>
 
         {/* Resort Ritual Guide */}
-        <div className="p-8 sm:p-12 bg-[#031d25] border-2 border-[#D4AF37]/50 shadow-2xl">
+        <div className="p-8 sm:p-12 bg-[#006073] border-2 border-[#D4AF37]/50 shadow-2xl">
           <h3 className="font-cinzel text-2xl font-bold text-[#F7F4EB] uppercase text-center mb-8">
             The Saint-Tropez to Miami Beach Ritual
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-5 bg-[#021319] border border-[#D4AF37]/25">
+            <div className="p-5 bg-[#006073] border border-[#D4AF37]/25">
               <span className="font-cinzel text-xs font-bold text-[#D4AF37] uppercase tracking-widest block mb-2">
                 01. Morning Preparation
               </span>
@@ -219,7 +219,7 @@ export const SunBodyPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="p-5 bg-[#021319] border border-[#D4AF37]/25">
+            <div className="p-5 bg-[#006073] border border-[#D4AF37]/25">
               <span className="font-cinzel text-xs font-bold text-[#D4AF37] uppercase tracking-widest block mb-2">
                 02. Afternoon Beachside
               </span>
@@ -228,7 +228,7 @@ export const SunBodyPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="p-5 bg-[#021319] border border-[#D4AF37]/25">
+            <div className="p-5 bg-[#006073] border border-[#D4AF37]/25">
               <span className="font-cinzel text-xs font-bold text-[#D4AF37] uppercase tracking-widest block mb-2">
                 03. Sunset Soirée
               </span>

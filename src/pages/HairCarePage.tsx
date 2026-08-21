@@ -26,12 +26,12 @@ export const HairCarePage: React.FC = () => {
   const recommendedProducts = getRecommendedRoutine();
 
   return (
-    <div className="pt-8 pb-28 bg-[#041a22] min-h-screen">
+    <div className="pt-8 pb-28 bg-[#007288] min-h-screen">
       {/* Header Banner */}
-      <section className="relative py-20 border-b border-[#D4AF37]/30 bg-gradient-to-b from-[#03151c] via-[#052932] to-[#041a22] overflow-hidden">
+      <section className="relative py-20 border-b border-[#D4AF37]/30 bg-gradient-to-b from-[#006073] via-[#007288] to-[#006073] overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.12)_0%,transparent_70%)] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 bg-[#031d25] border border-[#D4AF37]/50 mb-4 shadow-md">
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 bg-[#006073] border border-[#D4AF37]/50 mb-4 shadow-md">
             <Sparkles className="w-4 h-4 text-[#D4AF37]" />
             <span className="text-xs font-cinzel font-semibold tracking-[0.3em] text-[#F3E5AB] uppercase">
               HAUTE COIFFURE RITUALS
@@ -54,7 +54,7 @@ export const HairCarePage: React.FC = () => {
 
       {/* Routine Diagnostic Builder */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
-        <div className="p-8 sm:p-12 bg-gradient-to-br from-[#06303b] via-[#04222a] to-[#021820] border-2 border-[#D4AF37]/60 shadow-2xl mb-24 relative overflow-hidden">
+        <div className="p-8 sm:p-12 bg-gradient-to-br from-[#007288] via-[#006073] to-[#006073] border-2 border-[#D4AF37]/60 shadow-2xl mb-24 relative overflow-hidden">
           <div className="text-center max-w-2xl mx-auto mb-10">
             <GoldEmblem size={26} withGlow className="mb-2" />
             <h2 className="font-cinzel text-2xl sm:text-3xl font-bold text-[#F7F4EB] uppercase">
@@ -67,7 +67,7 @@ export const HairCarePage: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
             {/* Hair Type Selector */}
-            <div className="bg-[#021319] p-6 border border-[#D4AF37]/30">
+            <div className="bg-[#006073] p-6 border border-[#D4AF37]/30">
               <label className="font-cinzel text-xs font-bold text-[#D4AF37] uppercase tracking-wider block mb-3">
                 1. Select Hair Texture & State
               </label>
@@ -83,8 +83,8 @@ export const HairCarePage: React.FC = () => {
                     onClick={() => setHairType(item.id)}
                     className={`p-3 text-left border text-xs font-poppins transition-all ${
                       hairType === item.id
-                        ? 'border-[#D4AF37] bg-[#063643] text-[#F7F4EB] font-medium shadow-md'
-                        : 'border-[#D4AF37]/20 bg-[#031c23] text-[#8EAAB0] hover:border-[#D4AF37]/50'
+                        ? 'border-[#D4AF37] bg-[#006073] text-[#F7F4EB] font-medium shadow-md'
+                        : 'border-[#D4AF37]/20 bg-[#006073] text-[#8EAAB0] hover:border-[#D4AF37]/50'
                     }`}
                   >
                     {item.label}
@@ -94,7 +94,7 @@ export const HairCarePage: React.FC = () => {
             </div>
 
             {/* Primary Concern */}
-            <div className="bg-[#021319] p-6 border border-[#D4AF37]/30">
+            <div className="bg-[#006073] p-6 border border-[#D4AF37]/30">
               <label className="font-cinzel text-xs font-bold text-[#D4AF37] uppercase tracking-wider block mb-3">
                 2. Primary Transformation Goal
               </label>
@@ -110,8 +110,8 @@ export const HairCarePage: React.FC = () => {
                     onClick={() => setConcern(item.id)}
                     className={`p-3 text-left border text-xs font-poppins transition-all ${
                       concern === item.id
-                        ? 'border-[#D4AF37] bg-[#063643] text-[#F7F4EB] font-medium shadow-md'
-                        : 'border-[#D4AF37]/20 bg-[#031c23] text-[#8EAAB0] hover:border-[#D4AF37]/50'
+                        ? 'border-[#D4AF37] bg-[#006073] text-[#F7F4EB] font-medium shadow-md'
+                        : 'border-[#D4AF37]/20 bg-[#006073] text-[#8EAAB0] hover:border-[#D4AF37]/50'
                     }`}
                   >
                     {item.label}
@@ -132,7 +132,7 @@ export const HairCarePage: React.FC = () => {
                 return (
                   <div
                     key={p.id}
-                    className="p-5 bg-[#031e27] border border-[#D4AF37]/40 shadow-xl flex flex-col justify-between"
+                    className="p-5 bg-[#006073] border border-[#D4AF37]/40 shadow-xl flex flex-col justify-between"
                   >
                     <div>
                       <div className="flex items-center justify-between mb-2">
@@ -141,11 +141,11 @@ export const HairCarePage: React.FC = () => {
                         </span>
                         <span className="text-xs text-[#8EAAB0] font-poppins">{p.size}</span>
                       </div>
-                      <div className="aspect-square flex items-center justify-center p-3 bg-[#021319] border border-[#D4AF37]/20 mb-3">
+                      <div className="aspect-square flex items-center justify-center p-3 bg-[#006073] border border-[#D4AF37]/20 mb-3">
                         <img
                           src={p.image}
                           alt={p.name}
-                          className="max-h-full object-contain filter drop-shadow-[0_10px_20px_rgba(0,0,0,0.85)]"
+                          className="max-h-full object-contain filter drop-shadow-[0_10px_20px_rgba(0,96,115,0.85)]"
                         />
                       </div>
                       <h4 className="font-cinzel text-sm font-bold text-[#F7F4EB] line-clamp-1">
@@ -192,7 +192,7 @@ export const HairCarePage: React.FC = () => {
               return (
                 <div
                   key={p.id}
-                  className="bg-[#031d25] border border-[#D4AF37]/35 hover:border-[#D4AF37] transition-all p-6 flex flex-col justify-between shadow-xl group"
+                  className="bg-[#006073] border border-[#D4AF37]/35 hover:border-[#D4AF37] transition-all p-6 flex flex-col justify-between shadow-xl group"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-3">
@@ -202,11 +202,11 @@ export const HairCarePage: React.FC = () => {
                       <span className="text-xs text-[#8EAAB0] font-poppins">{p.size}</span>
                     </div>
 
-                    <div className="aspect-square flex items-center justify-center p-4 bg-[#021319] border border-[#D4AF37]/20 my-3 relative overflow-hidden">
+                    <div className="aspect-square flex items-center justify-center p-4 bg-[#006073] border border-[#D4AF37]/20 my-3 relative overflow-hidden">
                       <img
                         src={p.image}
                         alt={p.name}
-                        className="max-h-full object-contain filter drop-shadow-[0_10px_20px_rgba(0,0,0,0.85)] group-hover:scale-105 transition-transform duration-500"
+                        className="max-h-full object-contain filter drop-shadow-[0_10px_20px_rgba(0,96,115,0.85)] group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
 

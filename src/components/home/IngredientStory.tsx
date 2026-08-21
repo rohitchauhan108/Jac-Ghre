@@ -8,9 +8,9 @@ export const IngredientStory: React.FC = () => {
   const [selectedIngredient, setSelectedIngredient] = useState(BOTANICAL_INGREDIENTS[0]);
 
   return (
-    <section id="ingredients" className="relative py-24 sm:py-32 bg-[#041e26] overflow-hidden">
+    <section id="ingredients" className="relative py-24 sm:py-32 bg-[#006073] overflow-hidden">
       {/* Background gradients */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#031c22] via-[#052932] to-[#041e26]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#006073] via-[#007288] to-[#006073]" />
       <div className="absolute top-1/2 right-10 w-[500px] h-[500px] bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.06)_0%,transparent_70%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -43,8 +43,8 @@ export const IngredientStory: React.FC = () => {
                   onClick={() => setSelectedIngredient(item)}
                   className={`p-4 cursor-pointer transition-all duration-300 border flex items-center justify-between group ${
                     isSelected
-                      ? 'bg-[#062c37] border-[#D4AF37] shadow-lg translate-x-1.5'
-                      : 'bg-[#042028]/80 border-[#D4AF37]/15 hover:border-[#D4AF37]/50 hover:bg-[#062c37]/60'
+                      ? 'bg-[#007288] border-[#D4AF37] shadow-lg translate-x-1.5'
+                      : 'bg-[#006073]/80 border-[#D4AF37]/15 hover:border-[#D4AF37]/50 hover:bg-[#007288]/60'
                   }`}
                 >
                   <div className="flex items-center gap-3">
@@ -52,7 +52,7 @@ export const IngredientStory: React.FC = () => {
                       className={`w-9 h-9 flex items-center justify-center border transition-colors ${
                         isSelected
                           ? 'bg-[#D4AF37] text-[#062B35] border-[#D4AF37]'
-                          : 'bg-[#031920] text-[#D4AF37] border-[#D4AF37]/30 group-hover:border-[#D4AF37]'
+                          : 'bg-[#006073] text-[#D4AF37] border-[#D4AF37]/30 group-hover:border-[#D4AF37]'
                       }`}
                     >
                       <Sparkles className="w-4 h-4" />
@@ -82,7 +82,7 @@ export const IngredientStory: React.FC = () => {
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4 }}
-              className="h-full bg-gradient-to-b from-[#062c37] to-[#041e26] border border-[#D4AF37]/50 p-6 sm:p-10 flex flex-col justify-between shadow-2xl relative overflow-hidden"
+              className="h-full bg-gradient-to-b from-[#007288] to-[#006073] border border-[#D4AF37]/50 p-6 sm:p-10 flex flex-col justify-between shadow-2xl relative overflow-hidden"
             >
               {/* Background ambient plant photo subtle overlay */}
               <div className="absolute top-0 right-0 w-80 h-80 opacity-15 pointer-events-none">
@@ -100,7 +100,7 @@ export const IngredientStory: React.FC = () => {
                     <MapPin className="w-3.5 h-3.5 text-[#D4AF37]" />
                     <span>Origin: {selectedIngredient.origin}</span>
                   </div>
-                  <span className="px-3 py-1 bg-[#041e25] border border-[#D4AF37]/30 text-[10px] font-cinzel text-[#D4AF37] uppercase tracking-widest">
+                  <span className="px-3 py-1 bg-[#006073] border border-[#D4AF37]/30 text-[10px] font-cinzel text-[#D4AF37] uppercase tracking-widest">
                     Pure Extraction
                   </span>
                 </div>
@@ -125,7 +125,7 @@ export const IngredientStory: React.FC = () => {
                     {selectedIngredient.benefits.map((benefit, idx) => (
                       <div
                         key={idx}
-                        className="p-2.5 bg-[#041e25] border border-[#D4AF37]/20 text-[11px] text-[#F7F4EB] font-sans flex items-center gap-2"
+                        className="p-2.5 bg-[#006073] border border-[#D4AF37]/20 text-[11px] text-[#F7F4EB] font-sans flex items-center gap-2"
                       >
                         <div className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] shrink-0" />
                         <span>{benefit}</span>

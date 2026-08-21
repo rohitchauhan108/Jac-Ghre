@@ -40,7 +40,7 @@ export const FloatingConcierge: React.FC = () => {
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className={`w-[330px] sm:w-[380px] border-2 shadow-[0_25px_60px_rgba(0,0,0,0.75)] overflow-hidden ${
               isDark
-                ? 'bg-[#031d25] border-[#D4AF37]/60 text-[#F7F4EB]'
+                ? 'bg-[#006073] border-[#D4AF37]/60 text-[#F7F4EB]'
                 : 'bg-[#FFFFFF] border-[#D4AF37] text-[#062B35]'
             }`}
           >
@@ -48,7 +48,7 @@ export const FloatingConcierge: React.FC = () => {
             <div
               className={`p-4 border-b flex items-center justify-between ${
                 isDark
-                  ? 'bg-gradient-to-r from-[#021319] via-[#052932] to-[#021319] border-[#D4AF37]/30'
+                  ? 'bg-gradient-to-r from-[#006073] via-[#007288] to-[#006073] border-[#D4AF37]/30'
                   : 'bg-gradient-to-r from-[#FAF7F2] via-[#F3EDE2] to-[#FAF7F2] border-[#D4AF37]/40'
               }`}
             >
@@ -123,7 +123,7 @@ export const FloatingConcierge: React.FC = () => {
                   <div
                     className={`p-3 text-xs leading-relaxed border ${
                       isDark
-                        ? 'bg-[#021319] border-[#D4AF37]/25 text-[#B5CAD0]'
+                        ? 'bg-[#006073] border-[#D4AF37]/25 text-[#B5CAD0]'
                         : 'bg-[#FAF7F2] border-[#D4AF37]/30 text-[#4A6B74]'
                     }`}
                   >
@@ -144,7 +144,7 @@ export const FloatingConcierge: React.FC = () => {
                         onClick={() => handleOpenDirectWhatsapp(q)}
                         className={`w-full text-left p-2 text-xs transition-all border flex items-center justify-between group ${
                           isDark
-                            ? 'bg-[#02141a] border-[#D4AF37]/20 text-[#E8DCC4] hover:border-[#25D366] hover:text-[#25D366]'
+                            ? 'bg-[#006073] border-[#D4AF37]/20 text-[#E8DCC4] hover:border-[#25D366] hover:text-[#25D366]'
                             : 'bg-[#F9F6F0] border-[#D4AF37]/30 text-[#062B35] hover:border-[#25D366] hover:text-[#25D366]'
                         }`}
                       >
@@ -169,7 +169,7 @@ export const FloatingConcierge: React.FC = () => {
                         }}
                         className={`w-full px-3 py-2 text-xs border outline-none ${
                           isDark
-                            ? 'bg-[#021319] border-[#D4AF37]/30 text-[#F7F4EB] placeholder-[#8EAAB0] focus:border-[#25D366]'
+                            ? 'bg-[#006073] border-[#D4AF37]/30 text-[#F7F4EB] placeholder-[#8EAAB0] focus:border-[#25D366]'
                             : 'bg-[#FFFFFF] border-[#D4AF37]/40 text-[#062B35] placeholder-[#7A98A1] focus:border-[#25D366]'
                         }`}
                       />
@@ -188,7 +188,7 @@ export const FloatingConcierge: React.FC = () => {
                   <div
                     className={`p-3 text-xs leading-relaxed border ${
                       isDark
-                        ? 'bg-[#021319] border-[#D4AF37]/25 text-[#B5CAD0]'
+                        ? 'bg-[#006073] border-[#D4AF37]/25 text-[#B5CAD0]'
                         : 'bg-[#FAF7F2] border-[#D4AF37]/30 text-[#4A6B74]'
                     }`}
                   >
@@ -202,7 +202,7 @@ export const FloatingConcierge: React.FC = () => {
                       href="tel:+18005424473"
                       className={`block p-3 border transition-all ${
                         isDark
-                          ? 'bg-[#02141a] border-[#D4AF37]/30 text-[#F7F4EB] hover:border-[#D4AF37]'
+                          ? 'bg-[#006073] border-[#D4AF37]/30 text-[#F7F4EB] hover:border-[#D4AF37]'
                           : 'bg-[#FAF7F2] border-[#D4AF37]/40 text-[#062B35] hover:border-[#D4AF37]'
                       }`}
                     >
@@ -222,7 +222,7 @@ export const FloatingConcierge: React.FC = () => {
                       href="tel:+33142685500"
                       className={`block p-3 border transition-all ${
                         isDark
-                          ? 'bg-[#02141a] border-[#D4AF37]/30 text-[#F7F4EB] hover:border-[#D4AF37]'
+                          ? 'bg-[#006073] border-[#D4AF37]/30 text-[#F7F4EB] hover:border-[#D4AF37]'
                           : 'bg-[#FAF7F2] border-[#D4AF37]/40 text-[#062B35] hover:border-[#D4AF37]'
                       }`}
                     >
@@ -260,7 +260,7 @@ export const FloatingConcierge: React.FC = () => {
         {/* Realistic 3D Atelier Phone Hotline Button */}
         <div className="relative group flex items-center justify-center">
           {/* Tooltip Label */}
-          <div className="absolute right-full mr-3.5 px-3 py-1.5 bg-[#021319]/95 text-[#F3E5AB] border border-[#D4AF37]/70 text-[11px] font-cinzel tracking-wider whitespace-nowrap opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 shadow-[0_8px_20px_rgba(0,0,0,0.6)] pointer-events-none z-50 flex items-center gap-1.5">
+          <div className="absolute right-full mr-3.5 px-3 py-1.5 bg-[#006073]/95 text-[#F3E5AB] border border-[#D4AF37]/70 text-[11px] font-cinzel tracking-wider whitespace-nowrap opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 shadow-[0_8px_20px_rgba(0,96,115,0.6)] pointer-events-none z-50 flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" />
             <span>Call Atelier (+1 800 542-GHRE)</span>
           </div>
@@ -292,7 +292,7 @@ export const FloatingConcierge: React.FC = () => {
         {/* Realistic 3D Authentic WhatsApp Button */}
         <div className="relative group flex items-center justify-center">
           {/* Tooltip Label */}
-          <div className="absolute right-full mr-3.5 px-3 py-1.5 bg-[#021319]/95 text-[#25D366] border border-[#25D366]/70 text-[11px] font-cinzel tracking-wider whitespace-nowrap opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 shadow-[0_8px_20px_rgba(0,0,0,0.6)] pointer-events-none z-50 flex items-center gap-1.5">
+          <div className="absolute right-full mr-3.5 px-3 py-1.5 bg-[#006073]/95 text-[#25D366] border border-[#25D366]/70 text-[11px] font-cinzel tracking-wider whitespace-nowrap opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 shadow-[0_8px_20px_rgba(0,96,115,0.6)] pointer-events-none z-50 flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-[#25D366] animate-ping" />
             <span>Chat on WhatsApp (Live)</span>
           </div>
@@ -336,7 +336,7 @@ export const FloatingConcierge: React.FC = () => {
             {/* Live Online Ping Beacon Badge */}
             <span className="absolute -top-1 -right-1 flex h-4 w-4">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75" />
-              <span className="relative inline-flex rounded-full h-4 w-4 bg-[#D4AF37] border-2 border-[#021319]" />
+              <span className="relative inline-flex rounded-full h-4 w-4 bg-[#D4AF37] border-2 border-[#006073]" />
             </span>
           </button>
         </div>

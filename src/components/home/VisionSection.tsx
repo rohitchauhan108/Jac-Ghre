@@ -5,9 +5,9 @@ import { GoldEmblem } from '../ui/GoldEmblem';
 
 export const VisionSection: React.FC = () => {
   return (
-    <section id="vision" className="relative py-28 sm:py-36 bg-[#031c22] overflow-hidden text-center">
+    <section id="vision" className="relative py-28 sm:py-36 bg-[#006073] overflow-hidden text-center">
       {/* Background Deep Rich Petrol Teal Gradient with Organic Curves */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#041d24] via-[#062c37] to-[#041d24]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#006073] via-[#007288] to-[#006073]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.1)_0%,transparent_60%)]" />
 
       {/* Decorative Gold Circular Lines */}

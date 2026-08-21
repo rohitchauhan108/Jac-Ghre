@@ -81,12 +81,12 @@ export const ShopPage: React.FC = () => {
   }, [shopCategoryFilter, activeBadge, searchQuery, selectedSort]);
 
   return (
-    <div className="pt-8 pb-28 bg-[#041a22] min-h-screen">
+    <div className="pt-8 pb-28 bg-[#007288] min-h-screen">
       {/* Header Banner */}
-      <section className="relative py-16 sm:py-20 border-b border-[#D4AF37]/30 bg-gradient-to-b from-[#03151c] via-[#052932] to-[#041a22] overflow-hidden">
+      <section className="relative py-16 sm:py-20 border-b border-[#D4AF37]/30 bg-gradient-to-b from-[#006073] via-[#007288] to-[#006073] overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.12)_0%,transparent_70%)] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 bg-[#031d25] border border-[#D4AF37]/50 mb-4 shadow-md">
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 bg-[#006073] border border-[#D4AF37]/50 mb-4 shadow-md">
             <Sparkles className="w-4 h-4 text-[#D4AF37]" />
             <span className="text-xs font-cinzel font-semibold tracking-[0.3em] text-[#F3E5AB] uppercase">
               PARISIAN HAUTE FORMULATIONS
@@ -110,7 +110,7 @@ export const ShopPage: React.FC = () => {
       {/* Main Filter & Products Area */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
         {/* Controls Bar: Search, Category Pills, Sort */}
-        <div className="bg-[#031d25] border border-[#D4AF37]/35 p-6 shadow-xl mb-10 space-y-6">
+        <div className="bg-[#006073] border border-[#D4AF37]/35 p-6 shadow-xl mb-10 space-y-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             {/* Search Input */}
             <div className="relative w-full md:w-80">
@@ -120,7 +120,7 @@ export const ShopPage: React.FC = () => {
                 placeholder="Search creations or ingredients..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 bg-[#02141a] border border-[#D4AF37]/40 text-xs sm:text-sm text-[#F7F4EB] placeholder-[#8EAAB0] font-poppins outline-none focus:border-[#D4AF37]"
+                className="w-full pl-10 pr-4 py-2.5 bg-[#006073] border border-[#D4AF37]/40 text-xs sm:text-sm text-[#F7F4EB] placeholder-[#8EAAB0] font-poppins outline-none focus:border-[#D4AF37]"
               />
               {searchQuery && (
                 <button
@@ -143,7 +143,7 @@ export const ShopPage: React.FC = () => {
                 <select
                   value={selectedSort}
                   onChange={(e) => setSelectedSort(e.target.value as any)}
-                  className="bg-[#02141a] border border-[#D4AF37]/40 text-xs text-[#F7F4EB] font-poppins px-3 py-2 outline-none focus:border-[#D4AF37] cursor-pointer"
+                  className="bg-[#006073] border border-[#D4AF37]/40 text-xs text-[#F7F4EB] font-poppins px-3 py-2 outline-none focus:border-[#D4AF37] cursor-pointer"
                 >
                   <option value="featured">Featured Curated</option>
                   <option value="price-low">Price: Low to High</option>
@@ -163,7 +163,7 @@ export const ShopPage: React.FC = () => {
                 className={`px-4 py-2 text-xs font-cinzel tracking-wider uppercase transition-all ${
                   shopCategoryFilter === cat.id
                     ? 'bg-[#D4AF37] text-[#062B35] font-bold shadow-md'
-                    : 'bg-[#02141a] text-[#C7D9DC] border border-[#D4AF37]/25 hover:border-[#D4AF37]/60 hover:text-white'
+                    : 'bg-[#006073] text-[#C7D9DC] border border-[#D4AF37]/25 hover:border-[#D4AF37]/60 hover:text-white'
                 }`}
               >
                 {cat.label}
@@ -174,7 +174,7 @@ export const ShopPage: React.FC = () => {
 
         {/* Products Grid */}
         {filteredProducts.length === 0 ? (
-          <div className="text-center py-20 bg-[#031d25] border border-[#D4AF37]/30 p-8">
+          <div className="text-center py-20 bg-[#006073] border border-[#D4AF37]/30 p-8">
             <GoldEmblem size={28} withGlow className="mb-3" />
             <h3 className="font-cinzel text-xl font-bold text-[#F7F4EB] uppercase">
               No Creations Found
@@ -202,12 +202,12 @@ export const ShopPage: React.FC = () => {
               return (
                 <div
                   key={product.id}
-                  className="bg-[#031d25] border border-[#D4AF37]/35 hover:border-[#D4AF37] transition-all duration-300 flex flex-col justify-between shadow-2xl p-6 relative group"
+                  className="bg-[#006073] border border-[#D4AF37]/35 hover:border-[#D4AF37] transition-all duration-300 flex flex-col justify-between shadow-2xl p-6 relative group"
                 >
                   <div>
                     {/* Top Row: Badge & Wishlist */}
                     <div className="flex items-center justify-between mb-3">
-                      <span className="text-[10px] font-cinzel font-semibold tracking-widest text-[#D4AF37] uppercase bg-[#02141a] px-2 py-0.5 border border-[#D4AF37]/30">
+                      <span className="text-[10px] font-cinzel font-semibold tracking-widest text-[#D4AF37] uppercase bg-[#006073] px-2 py-0.5 border border-[#D4AF37]/30">
                         {product.badge || product.categoryLabel}
                       </span>
                       <button
@@ -215,7 +215,7 @@ export const ShopPage: React.FC = () => {
                         className={`p-1.5 border transition-all ${
                           inWish
                             ? 'bg-[#D4AF37] text-[#062B35] border-[#D4AF37]'
-                            : 'bg-[#02141a] text-[#E8DCC4] border-[#D4AF37]/30 hover:border-[#D4AF37]'
+                            : 'bg-[#006073] text-[#E8DCC4] border-[#D4AF37]/30 hover:border-[#D4AF37]'
                         }`}
                         aria-label="Add to wishlist"
                       >
@@ -226,14 +226,14 @@ export const ShopPage: React.FC = () => {
                     {/* Product Image Area */}
                     <div
                       onClick={() => setQuickViewProduct(product)}
-                      className="aspect-square flex items-center justify-center p-6 bg-[#021319] border border-[#D4AF37]/20 my-4 cursor-pointer relative overflow-hidden group/img"
+                      className="aspect-square flex items-center justify-center p-6 bg-[#006073] border border-[#D4AF37]/20 my-4 cursor-pointer relative overflow-hidden group/img"
                     >
                       <img
                         src={product.image}
                         alt={product.name}
                         className="max-h-full object-contain filter drop-shadow-[0_12px_24px_rgba(0,0,0,0.85)] group-hover/img:scale-105 transition-transform duration-500"
                       />
-                      <div className="absolute inset-0 bg-[#021319]/70 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center gap-2">
+                      <div className="absolute inset-0 bg-[#006073]/70 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center gap-2">
                         <span className="px-3.5 py-1.5 bg-[#D4AF37] text-[#062B35] font-cinzel text-xs font-bold uppercase tracking-wider flex items-center gap-1.5">
                           <Eye className="w-3.5 h-3.5" />
                           Quick Dossier
@@ -281,7 +281,7 @@ export const ShopPage: React.FC = () => {
                     <div className="flex items-center gap-2">
                       <button
                         onClick={() => setQuickViewProduct(product)}
-                        className="p-2.5 bg-[#02141a] text-[#E8DCC4] border border-[#D4AF37]/40 hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all"
+                        className="p-2.5 bg-[#006073] text-[#E8DCC4] border border-[#D4AF37]/40 hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all"
                         title="View Dossier"
                       >
                         <Eye className="w-4 h-4" />

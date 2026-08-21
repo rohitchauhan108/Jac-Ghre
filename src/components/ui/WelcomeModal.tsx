@@ -33,12 +33,12 @@ export const WelcomeModal: React.FC = () => {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full max-w-lg border-2 p-8 sm:p-12 shadow-[0_25px_70px_rgba(0,0,0,0.85)] z-10 overflow-hidden text-center bg-gradient-to-b from-[#06303B] via-[#042028] to-[#02141A] border-[#D4AF37]/70 text-[#F7F4EB]"
+            className="relative w-full max-w-lg border-2 p-8 sm:p-12 shadow-[0_25px_70px_rgba(0,96,115,0.85)] z-10 overflow-hidden text-center bg-gradient-to-b from-[#007288] via-[#006073] to-[#006073] border-[#D4AF37]/70 text-[#F7F4EB]"
           >
             {/* Close Button */}
             <button
               onClick={handleClose}
-              className="absolute top-4 right-4 p-2 transition-all border border-[#D4AF37]/40 text-[#D4AF37] hover:text-[#FFF3C4] hover:bg-[#031d25] cursor-pointer"
+              className="absolute top-4 right-4 p-2 transition-all border border-[#D4AF37]/40 text-[#D4AF37] hover:text-[#FFF3C4] hover:bg-[#007288] cursor-pointer"
               aria-label="Close modal"
             >
               <X className="w-4 h-4" />

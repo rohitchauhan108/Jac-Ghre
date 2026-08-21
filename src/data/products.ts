@@ -9,6 +9,10 @@ import ghreOilBotanic from '../assets/images/ghre_oil_botanic_1787204418411.jpg'
 import ghreLeaveIn from '../assets/images/ghre_leave_in_1787204430544.jpg';
 import jacGhrePortrait from '../assets/images/founder.jpeg';
 import ghreRepairShampooImg from '../assets/images/ghre_repair_shampoo_1787204461932.jpg';
+import banner1 from '../assets/images/banner1.jpeg'
+import banner2 from '../assets/images/banner2.jpeg'
+import banner3 from '../assets/images/banner3.jpeg'
+import banner4 from '../assets/images/banner4.jpeg'
 
 export const CAMPAIGN_IMAGES = {
   heroModel: ghreModelCampaign,
@@ -52,7 +56,7 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     secondaryCtaText: 'VIEW RITUALS',
     secondaryCtaLink: 'hair-care',
     accentTheme: 'teal-gold',
-    image: ghreFullLineup,
+    image: banner1,
     locationBadge: 'PARIS • SAINT-TROPEZ • MIAMI',
   },
   {
@@ -66,7 +70,7 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     secondaryCtaText: 'SHOP MISTS',
     secondaryCtaLink: 'sun-body',
     accentTheme: 'summer-sun',
-    image: ghreSunArt,
+    image: banner2,
     locationBadge: 'SAINT-TROPEZ • RIVIERA',
   },
   {
@@ -80,7 +84,7 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     secondaryCtaText: 'SHOP HAIR CARE',
     secondaryCtaLink: 'shop',
     accentTheme: 'summer-sun',
-    image: ghreSummerDream,
+    image: banner3,
     locationBadge: 'SAINT-TROPEZ • MIAMI',
   },
   {
@@ -94,7 +98,7 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     secondaryCtaText: 'SHOP COLLECTION',
     secondaryCtaLink: 'shop',
     accentTheme: 'teal-gold',
-    image: ghreOrangeBlossom,
+    image: banner4,
     locationBadge: 'SAINT-TROPEZ • MIAMI',
   },
 ];

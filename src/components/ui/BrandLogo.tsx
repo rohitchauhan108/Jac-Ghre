@@ -67,7 +67,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
         {withGlow && (
           <div className="absolute inset-0 rounded-full bg-[#D4AF37]/25 blur-md pointer-events-none" />
         )}
-        <div className="relative z-10 flex flex-col items-center justify-center p-2 rounded-full border border-[#D4AF37]/40 bg-[#004252]/80 backdrop-blur-sm shadow-[0_4px_20px_rgba(0,0,0,0.4)]">
+        <div className="relative z-10 flex flex-col items-center justify-center p-2 rounded-full border border-[#D4AF37]/40 bg-[#006073]/80 backdrop-blur-sm shadow-[0_4px_20px_rgba(0,96,115,0.4)]">
           <span className="font-cinzel text-[8px] tracking-[0.3em] text-[#D4AF37] font-semibold">JAC</span>
           <span className="font-cinzel text-sm font-bold tracking-widest text-[#F3E5AB] leading-none my-0.5">GHRÉ</span>
           <span className="font-cinzel text-[6px] tracking-[0.4em] text-[#D4AF37] uppercase">PARIS</span>
@@ -123,7 +123,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   return (
     <div className={`flex items-center gap-3 select-none text-left ${className}`}>
       {/* Mini Seal Monogram */}
-      <div className="relative shrink-0 flex flex-col items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-[#D4AF37]/50 bg-gradient-to-br from-[#06303B] to-[#021820] shadow-[0_3px_12px_rgba(0,0,0,0.35)]">
+      <div className="relative shrink-0 flex flex-col items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-[#D4AF37]/50 bg-gradient-to-br from-[#007288] to-[#006073] shadow-[0_3px_12px_rgba(0,96,115,0.35)]">
         <span className="font-cinzel text-[7px] tracking-[0.2em] text-[#D4AF37] font-semibold block leading-none">JAC</span>
         <span className="font-cinzel text-[11px] font-bold text-[#F3E5AB] leading-none my-0.5">G</span>
         <div className="w-3 h-px bg-[#D4AF37]/60" />

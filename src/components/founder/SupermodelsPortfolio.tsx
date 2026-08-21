@@ -31,11 +31,11 @@ export const SupermodelsPortfolio: React.FC = () => {
   ];
 
   return (
-    <section className="relative py-24 bg-[#03151c] text-[#F7F4EB] overflow-hidden border-b border-[#D4AF37]/30">
+    <section className="relative py-24 bg-[#006073] text-[#F7F4EB] overflow-hidden border-b border-[#D4AF37]/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#021319] border border-[#D4AF37]/40 mb-3 shadow-md">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#006073] border border-[#D4AF37]/40 mb-3 shadow-md">
             <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
             <span className="text-[11px] font-cinzel font-bold tracking-[0.3em] text-[#D4AF37] uppercase">
               THE RUNWAY ROSTER
@@ -69,10 +69,10 @@ export const SupermodelsPortfolio: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.08 }}
-                className="p-5 bg-gradient-to-br from-[#042028] to-[#02141a] border border-[#D4AF37]/35 hover:border-[#D4AF37] transition-all group relative shadow-lg"
+                className="p-5 bg-gradient-to-br from-[#007288] to-[#006073] border border-[#D4AF37]/35 hover:border-[#D4AF37] transition-all group relative shadow-lg"
               >
                 <div className="flex items-start justify-between gap-3 mb-2">
-                  <div className="w-8 h-8 rounded-full bg-[#021319] border border-[#D4AF37]/50 flex items-center justify-center text-[#D4AF37] text-xs font-cinzel font-bold">
+                  <div className="w-8 h-8 rounded-full bg-[#006073] border border-[#D4AF37]/50 flex items-center justify-center text-[#D4AF37] text-xs font-cinzel font-bold">
                     0{idx + 1}
                   </div>
                   <Star className="w-3.5 h-3.5 text-[#D4AF37] opacity-60 group-hover:opacity-100 transition-opacity" />
@@ -102,12 +102,12 @@ export const SupermodelsPortfolio: React.FC = () => {
             {celebrities.map((celeb, idx) => (
               <div
                 key={celeb.name}
-                className="p-6 bg-[#04242e] border-2 border-[#D4AF37]/40 text-center relative shadow-xl"
+                className="p-6 bg-[#006073] border-2 border-[#D4AF37]/40 text-center relative shadow-xl"
               >
                 <GoldEmblem size={20} className="mx-auto mb-2" />
                 <h4 className="font-cinzel text-lg font-bold text-[#FBF9F3]">{celeb.name}</h4>
                 <p className="text-xs font-outfit text-[#C4D8DC] mt-1 font-light">{celeb.title}</p>
-                <span className="inline-block mt-3 px-3 py-1 bg-[#021319] border border-[#D4AF37]/30 text-[10px] font-cinzel text-[#D4AF37] uppercase tracking-wider">
+                <span className="inline-block mt-3 px-3 py-1 bg-[#006073] border border-[#D4AF37]/30 text-[10px] font-cinzel text-[#D4AF37] uppercase tracking-wider">
                   Private VIP Styling
                 </span>
               </div>
@@ -116,7 +116,7 @@ export const SupermodelsPortfolio: React.FC = () => {
         </div>
 
         {/* Global Fashion Capitals Ticker */}
-        <div className="p-8 bg-[#021319] border border-[#D4AF37]/50">
+        <div className="p-8 bg-[#006073] border border-[#D4AF37]/50">
           <div className="text-center mb-6">
             <span className="text-[11px] font-cinzel font-bold tracking-[0.3em] text-[#D4AF37] uppercase block">
               INTERNATIONAL RUNWAY CAPITALS
@@ -130,7 +130,7 @@ export const SupermodelsPortfolio: React.FC = () => {
             {fashionCapitals.map((cap) => (
               <div
                 key={cap.city}
-                className="p-3 bg-[#041d24] border border-[#D4AF37]/20 text-center group hover:border-[#D4AF37] transition-colors"
+                className="p-3 bg-[#006073] border border-[#D4AF37]/20 text-center group hover:border-[#D4AF37] transition-colors"
               >
                 <span className="font-cinzel text-xs font-bold text-[#F3E5AB] block">
                   {cap.city}

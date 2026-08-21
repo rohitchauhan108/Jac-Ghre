@@ -8,7 +8,7 @@ import { FisherIslandConcierge } from '../components/founder/FisherIslandConcier
 
 export const JacGhrePage: React.FC = () => {
   return (
-    <div className="bg-[#03151c] min-h-screen">
+    <div className="bg-[#007288] min-h-screen">
       {/* 1. Hero: The Man. The Name. */}
       <FounderHero />
 
@@ -20,9 +20,6 @@ export const JacGhrePage: React.FC = () => {
 
       {/* 4. Thierry Mugler & Elite Model World Runway Legacy */}
       <ThierryMuglerLegacy />
-
-      {/* 5. Prickly Pear Oil Elixir Innovation */}
-      <PricklyPearInnovation />
 
       {/* 6. Fisher Island Club Concierge & Atelier Booking */}
       <FisherIslandConcierge />

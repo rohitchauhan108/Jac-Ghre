@@ -57,7 +57,7 @@ const AppContent: React.FC = () => {
 
   return (
     <div
-      className="min-h-screen font-poppins selection:bg-[#D4AF37] selection:text-[#062B35] relative transition-colors duration-300 bg-[#052932] text-[#F7F4EB]"
+      className="min-h-screen font-poppins selection:bg-[#D4AF37] selection:text-[#006073] relative transition-colors duration-300 bg-[#007288] text-[#F7F4EB]"
     >
       {/* Top Announcement Bar with "Website is Coming Soon" */}
       <AnnouncementBar />

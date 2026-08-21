@@ -7,14 +7,14 @@ import { BrandLogo } from '../ui/BrandLogo';
 
 export const FounderHero: React.FC = () => {
   return (
-    <section className="relative pt-12 pb-20 bg-gradient-to-b from-[#021319] via-[#042028] to-[#031820] overflow-hidden border-b border-[#D4AF37]/30">
+    <section className="relative pt-12 pb-20 bg-gradient-to-b from-[#006073] via-[#007288] to-[#006073] overflow-hidden border-b border-[#D4AF37]/30">
       {/* Subtle Background Lighting */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_center,rgba(212,175,55,0.12)_0%,transparent_60%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Top Eyebrow & Brand Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#031d25] border border-[#D4AF37]/50 mb-4 shadow-lg">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#006073] border border-[#D4AF37]/50 mb-4 shadow-lg">
             <Award className="w-3.5 h-3.5 text-[#D4AF37]" />
             <span className="text-[11px] font-cinzel font-bold tracking-[0.3em] text-[#F3E5AB] uppercase">
               BEAUTY EXPERT & VISIONARY
@@ -45,14 +45,14 @@ export const FounderHero: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="lg:col-span-5 flex justify-center"
           >
-            <div className="relative aspect-[3/4] w-full max-w-md bg-gradient-to-b from-[#052932] to-[#02141a] border-2 border-[#D4AF37] p-4 sm:p-5 shadow-[0_25px_60px_rgba(0,0,0,0.85)]">
+            <div className="relative aspect-[3/4] w-full max-w-md bg-gradient-to-b from-[#007288] to-[#006073] border-2 border-[#D4AF37] p-4 sm:p-5 shadow-[0_25px_60px_rgba(0,96,115,0.85)]">
               {/* Corner Gold Brackets */}
               <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-[#D4AF37]" />
               <div className="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-[#D4AF37]" />
               <div className="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-[#D4AF37]" />
               <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-[#D4AF37]" />
 
-              <div className="relative w-full h-full overflow-hidden bg-[#021319]">
+              <div className="relative w-full h-full overflow-hidden bg-[#006073]">
                 <img
                   src={CAMPAIGN_IMAGES.jacGhre}
                   alt="Jac GHRÉ — Beauty Expert"
@@ -60,7 +60,7 @@ export const FounderHero: React.FC = () => {
                 />
 
                 {/* Gradient and Badge on Image Bottom */}
-                <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-[#021319]/95 via-[#021319]/70 to-transparent flex items-end justify-between">
+                <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-[#006073]/95 via-[#006073]/70 to-transparent flex items-end justify-between">
                   <div>
                     <span className="font-cinzel text-sm font-bold text-[#FBF9F3] block">
                       JAC GHRÉ
@@ -69,7 +69,7 @@ export const FounderHero: React.FC = () => {
                       HAIR DIRECTOR & BEAUTY EXPERT
                     </span>
                   </div>
-                  <div className="p-1.5 border border-[#D4AF37]/50 bg-[#042028]">
+                  <div className="p-1.5 border border-[#D4AF37]/50 bg-[#007288]">
                     <GoldEmblem size={18} />
                   </div>
                 </div>
@@ -103,7 +103,7 @@ export const FounderHero: React.FC = () => {
 
             {/* Quick Stats Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3.5 pt-4">
-              <div className="p-4 bg-[#031d25] border border-[#D4AF37]/30 text-center">
+              <div className="p-4 bg-[#006073] border border-[#D4AF37]/30 text-center">
                 <span className="font-cinzel text-2xl sm:text-3xl font-bold text-[#D4AF37] block">
                   PARIS
                 </span>
@@ -111,7 +111,7 @@ export const FounderHero: React.FC = () => {
                   THIERRY MUGLER HAIR DIRECTOR
                 </span>
               </div>
-              <div className="p-4 bg-[#031d25] border border-[#D4AF37]/30 text-center">
+              <div className="p-4 bg-[#006073] border border-[#D4AF37]/30 text-center">
                 <span className="font-cinzel text-2xl sm:text-3xl font-bold text-[#D4AF37] block">
                   ELITE
                 </span>
@@ -119,7 +119,7 @@ export const FounderHero: React.FC = () => {
                   MODEL WORLD ARTISTIC DIRECTOR
                 </span>
               </div>
-              <div className="p-4 bg-[#031d25] border border-[#D4AF37]/30 text-center col-span-2 sm:col-span-1">
+              <div className="p-4 bg-[#006073] border border-[#D4AF37]/30 text-center col-span-2 sm:col-span-1">
                 <span className="font-cinzel text-2xl sm:text-3xl font-bold text-[#D4AF37] block">
                   MIAMI
                 </span>

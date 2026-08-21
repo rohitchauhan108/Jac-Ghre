@@ -6,9 +6,8 @@ import { GoldEmblem } from '../ui/GoldEmblem';
 import { useShop } from '../../context/ShopContext';
 
 export const CollectionShowcase: React.FC = () => {
-  const { theme, navigateToPage } = useShop();
+  const { navigateToPage } = useShop();
   const [activeCategory, setActiveCategory] = useState<string>('all');
-  const isDark = theme === 'dark';
 
   const categories = [
     { id: 'all', label: 'All Creations' },
@@ -26,110 +25,286 @@ export const CollectionShowcase: React.FC = () => {
   return (
     <section
       id="collection"
-      className={`relative py-24 sm:py-32 overflow-hidden transition-colors duration-300 ${
-        isDark ? 'bg-[#041e26]' : 'bg-[#FFFFFF]'
-      }`}
+      className="relative py-24 sm:py-32 lg:py-36 overflow-hidden bg-[#007288] border-b border-[#D4AF37]/30"
     >
-      {/* Background radial teal & subtle gold aura */}
+      {/* =========================================================
+          BACKGROUND
+          Main Teal: #007288
+      ========================================================= */}
+
+      {/* Soft Teal Depth */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#007288] via-[#007288]/95 to-[#007288] pointer-events-none" />
+
+      {/* Subtle Luxury Pattern */}
       <div
-        className={`absolute inset-0 pointer-events-none ${
-          isDark
-            ? 'bg-[radial-gradient(circle_at_50%_20%,rgba(6,43,53,0.9)_0%,rgba(3,25,32,1)_100%)]'
-            : 'bg-[radial-gradient(circle_at_50%_20%,rgba(250,247,242,0.8)_0%,rgba(243,237,226,0.5)_100%)]'
-        }`}
+        className="absolute inset-0 opacity-25 pointer-events-none"
+        style={{
+          backgroundImage: `
+            linear-gradient(
+              135deg,
+              transparent 0%,
+              transparent 47%,
+              rgba(255,255,255,0.045) 47%,
+              rgba(255,255,255,0.045) 48%,
+              transparent 48%,
+              transparent 100%
+            ),
+            linear-gradient(
+              45deg,
+              transparent 0%,
+              transparent 47%,
+              rgba(255,255,255,0.035) 47%,
+              rgba(255,255,255,0.035) 48%,
+              transparent 48%,
+              transparent 100%
+            )
+          `,
+          backgroundSize: '110px 110px',
+        }}
       />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.06)_0%,transparent_65%)] pointer-events-none" />
+
+      {/* Golden Atmospheric Glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[850px] h-[500px] bg-[radial-gradient(ellipse_at_center,rgba(212,175,55,0.10)_0%,transparent_70%)] pointer-events-none" />
+
+      {/* Center Soft Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.035)_0%,transparent_65%)] pointer-events-none" />
+
+      {/* Top Gold Line */}
+      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/60 to-transparent" />
+
+      {/* Bottom Gold Line */}
+      <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/50 to-transparent" />
+
+      {/* =========================================================
+          CONTENT
+      ========================================================= */}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="flex items-center justify-center gap-2 mb-3">
-            <GoldEmblem size={24} />
+
+        {/* =======================================================
+            SECTION HEADER
+        ======================================================= */}
+
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center max-w-3xl mx-auto mb-14 sm:mb-16"
+        >
+          {/* Emblem */}
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <span className="h-px w-12 bg-gradient-to-r from-transparent to-[#D4AF37]/60" />
+
+            <GoldEmblem
+              size={28}
+              withGlow
+            />
+
+            <span className="h-px w-12 bg-gradient-to-l from-transparent to-[#D4AF37]/60" />
           </div>
-          <span
-            className={`text-[11px] sm:text-xs font-cinzel font-semibold tracking-[0.35em] uppercase block mb-2 ${
-              isDark ? 'text-[#D4AF37]' : 'text-[#B8860B]'
-            }`}
-          >
+
+          {/* Eyebrow */}
+          <span className="text-[11px] sm:text-xs font-cinzel font-semibold tracking-[0.35em] uppercase block mb-3 text-[#D4AF37]">
             Pure, Excellence
           </span>
-          <h2
-            className={`font-cinzel text-3xl sm:text-5xl font-bold tracking-[0.14em] uppercase ${
-              isDark ? 'text-[#F7F4EB]' : 'text-[#062B35]'
-            }`}
-          >
+
+          {/* Heading */}
+          <h2 className="font-cinzel text-3xl sm:text-5xl lg:text-6xl font-bold tracking-[0.14em] uppercase text-[#F7F4EB]">
             GHRÉ Collection
           </h2>
-          <p
-            className={`mt-4 text-base sm:text-xl font-editorial italic ${
-              isDark ? 'text-[#F3E5AB]' : 'text-[#B8860B]'
-            }`}
-          >
-            Bespoke formulations crafted with pure prickly pear seed oil, silk peptides, and solar botanicals.
+
+          {/* Description */}
+          <p className="mt-5 text-base sm:text-xl font-editorial italic text-[#F3E5AB] leading-relaxed">
+            Bespoke formulations crafted with pure prickly pear seed oil,
+            silk peptides, and solar botanicals.
           </p>
-          <div className="h-0.5 w-24 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto mt-6" />
-        </div>
 
-        {/* Category Filters Bar */}
-        <div className="flex items-center justify-center flex-wrap gap-2 sm:gap-3 mb-14">
-          {categories.map((cat) => (
-            <button
-              key={cat.id}
-              onClick={() => setActiveCategory(cat.id)}
-              className={`py-2 px-4 sm:px-6 text-xs font-cinzel tracking-[0.2em] uppercase transition-all duration-300 cursor-pointer ${
-                activeCategory === cat.id
-                  ? 'bg-gradient-to-r from-[#D4AF37] to-[#B89028] text-[#062B35] font-bold shadow-md'
-                  : isDark
-                  ? 'bg-[#062c37] border border-[#D4AF37]/20 text-[#E8DCC4] hover:text-[#F3E5AB] hover:border-[#D4AF37]/50'
-                  : 'bg-[#FAF7F2] border border-[#D4AF37]/40 text-[#062B35] hover:text-[#B8860B] hover:border-[#D4AF37]'
-              }`}
-            >
-              {cat.label}
-            </button>
-          ))}
-        </div>
-
-        {/* Products Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-          {filteredProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
-
-        {/* Bottom Editorial Callout */}
-        <div
-          className={`mt-16 p-8 border flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left transition-colors ${
-            isDark
-              ? 'bg-gradient-to-r from-[#062c37] via-[#083846] to-[#062c37] border-[#D4AF37]/30'
-              : 'bg-gradient-to-r from-[#FAF7F2] via-[#F3EDE2] to-[#FAF7F2] border-[#D4AF37]/50 shadow-md'
-          }`}
-        >
-          <div className="flex items-center gap-4">
-            <GoldEmblem size={36} withGlow className="shrink-0 hidden sm:inline-flex" />
-            <div>
-              <h3
-                className={`font-cinzel text-lg tracking-wide ${
-                  isDark ? 'text-[#F7F4EB]' : 'text-[#062B35]'
-                }`}
-              >
-                Need a Personalized Hair & Fragrance Consultation?
-              </h3>
-              <p
-                className={`text-xs font-poppins font-light mt-1 ${
-                  isDark ? 'text-[#B7CBD0]' : 'text-[#556E77]'
-                }`}
-              >
-                Speak directly with a GHRÉ beauty concierge for tailor-made hair rituals and scent profiling.
-              </p>
-            </div>
+          {/* Divider */}
+          <div className="flex items-center justify-center gap-3 mt-7">
+            <span className="h-px w-16 bg-gradient-to-r from-transparent to-[#D4AF37]" />
+            <span className="w-1.5 h-1.5 rotate-45 bg-[#D4AF37]" />
+            <span className="h-px w-16 bg-gradient-to-l from-transparent to-[#D4AF37]" />
           </div>
-          <button
-            onClick={() => navigateToPage('contact')}
-            className="px-6 py-3 border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#062B35] font-cinzel text-xs font-semibold tracking-[0.2em] uppercase transition-all shrink-0 cursor-pointer"
-          >
-            Request VIP Consultation
-          </button>
+        </motion.div>
+
+        {/* =======================================================
+            CATEGORY FILTERS
+        ======================================================= */}
+
+        <div className="flex items-center justify-center flex-wrap gap-2 sm:gap-3 mb-14">
+
+          {categories.map((cat) => {
+            const isActive = activeCategory === cat.id;
+
+            return (
+              <button
+                key={cat.id}
+                onClick={() => setActiveCategory(cat.id)}
+                className={`
+                  relative
+                  py-2.5 px-4 sm:px-6
+                  text-[10px] sm:text-xs
+                  font-cinzel
+                  tracking-[0.18em]
+                  uppercase
+                  border
+                  transition-all
+                  duration-300
+                  cursor-pointer
+                  overflow-hidden
+                  ${
+                    isActive
+                      ? `
+                        bg-[#D4AF37]
+                        border-[#D4AF37]
+                        text-[#062B35]
+                        font-bold
+                        shadow-[0_8px_25px_rgba(212,175,55,0.25)]
+                      `
+                      : `
+                        bg-[#007288]/70
+                        border-[#D4AF37]/35
+                        text-[#F3E5AB]
+                        hover:bg-[#007288]
+                        hover:border-[#D4AF37]
+                        hover:text-[#FFF3C4]
+                      `
+                  }
+                `}
+              >
+                {cat.label}
+              </button>
+            );
+          })}
+
         </div>
+
+        {/* =======================================================
+            PRODUCTS GRID
+        ======================================================= */}
+
+        <motion.div
+          layout
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8"
+        >
+          {filteredProducts.map((product) => (
+            <motion.div
+              key={product.id}
+              layout
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.35 }}
+            >
+              <ProductCard product={product} />
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* =======================================================
+            BOTTOM VIP CONSULTATION PANEL
+        ======================================================= */}
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="
+            relative
+            mt-16
+            p-7 sm:p-8 lg:p-10
+            bg-[#007288]
+            border
+            border-[#D4AF37]/40
+            shadow-[0_20px_60px_rgba(0,60,72,0.35)]
+            overflow-hidden
+          "
+        >
+
+          {/* Panel Glow */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(212,175,55,0.07)_0%,transparent_45%)] pointer-events-none" />
+
+          {/* Subtle Pattern */}
+          <div
+            className="absolute inset-0 opacity-20 pointer-events-none"
+            style={{
+              backgroundImage: `
+                linear-gradient(
+                  135deg,
+                  transparent 0%,
+                  transparent 48%,
+                  rgba(255,255,255,0.05) 48%,
+                  rgba(255,255,255,0.05) 49%,
+                  transparent 49%
+                )
+              `,
+              backgroundSize: '80px 80px',
+            }}
+          />
+
+          {/* Corner Accents */}
+          <div className="absolute top-2 left-2 w-5 h-5 border-t border-l border-[#D4AF37]/70" />
+          <div className="absolute top-2 right-2 w-5 h-5 border-t border-r border-[#D4AF37]/70" />
+          <div className="absolute bottom-2 left-2 w-5 h-5 border-b border-l border-[#D4AF37]/70" />
+          <div className="absolute bottom-2 right-2 w-5 h-5 border-b border-r border-[#D4AF37]/70" />
+
+          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-7 text-center md:text-left">
+
+            {/* Left Content */}
+            <div className="flex items-center gap-5">
+
+              <GoldEmblem
+                size={42}
+                withGlow
+                className="shrink-0 hidden sm:inline-flex"
+              />
+
+              <div>
+
+                <span className="text-[9px] font-cinzel tracking-[0.3em] text-[#D4AF37] uppercase">
+                  PRIVATE BEAUTY CONCIERGE
+                </span>
+
+                <h3 className="font-cinzel text-lg sm:text-xl tracking-wide text-[#F7F4EB] mt-1">
+                  Need a Personalized Hair & Fragrance Consultation?
+                </h3>
+
+                <p className="text-xs sm:text-sm font-poppins font-light mt-2 text-[#C5D9DD] max-w-2xl">
+                  Speak directly with a GHRÉ beauty concierge for tailor-made
+                  hair rituals and scent profiling.
+                </p>
+
+              </div>
+
+            </div>
+
+            {/* CTA */}
+            <button
+              onClick={() => navigateToPage('contact')}
+              className="
+                px-6 py-3.5
+                border border-[#D4AF37]
+                text-[#D4AF37]
+                hover:bg-[#D4AF37]
+                hover:text-[#062B35]
+                font-cinzel
+                text-xs
+                font-semibold
+                tracking-[0.2em]
+                uppercase
+                transition-all
+                duration-300
+                shrink-0
+                cursor-pointer
+              "
+            >
+              Request VIP Consultation
+            </button>
+
+          </div>
+        </motion.div>
+
       </div>
     </section>
   );

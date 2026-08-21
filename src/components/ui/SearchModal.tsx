@@ -38,7 +38,7 @@ export const SearchModal: React.FC = () => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={() => setIsSearchOpen(false)}
-          className="fixed inset-0 bg-[#021317]/90 backdrop-blur-md"
+          className="fixed inset-0 bg-[#006073]/92 backdrop-blur-md"
         />
 
         <div className="relative min-h-screen flex items-start justify-center p-4 sm:p-6 pt-16 sm:pt-24 z-10">
@@ -46,7 +46,7 @@ export const SearchModal: React.FC = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="w-full max-w-3xl bg-[#062c37] border border-[#D4AF37]/50 shadow-2xl p-6 sm:p-8 relative"
+            className="w-full max-w-3xl bg-[#006073] border border-[#D4AF37]/50 shadow-2xl p-6 sm:p-8 relative"
           >
             <button
               onClick={() => setIsSearchOpen(false)}
@@ -92,7 +92,7 @@ export const SearchModal: React.FC = () => {
                 <button
                   key={query}
                   onClick={() => setSearchTerm(query)}
-                  className="px-2.5 py-1 bg-[#041e25] border border-[#D4AF37]/20 text-[#E8DCC4] hover:text-[#F3E5AB] hover:border-[#D4AF37]/60 font-sans text-xs transition-colors"
+                  className="px-2.5 py-1 bg-[#006073] border border-[#D4AF37]/20 text-[#E8DCC4] hover:text-[#F3E5AB] hover:border-[#D4AF37]/60 font-sans text-xs transition-colors"
                 >
                   {query}
                 </button>
@@ -125,7 +125,7 @@ export const SearchModal: React.FC = () => {
                       }}
                       className="flex items-center gap-3 p-3 bg-[#041e25] border border-[#D4AF37]/15 hover:border-[#D4AF37]/60 cursor-pointer transition-all group"
                     >
-                      <div className="w-16 h-16 bg-[#062c37] p-1 shrink-0 flex items-center justify-center">
+                      <div className="w-16 h-16 bg-[#007288] p-1 shrink-0 flex items-center justify-center">
                         <img
                           src={product.image}
                           alt={product.name}

@@ -40,9 +40,9 @@ export const CategoryShowcase: React.FC = () => {
   ];
 
   return (
-    <section id="sun-body" className="relative py-24 sm:py-32 bg-[#052932] overflow-hidden">
+    <section id="sun-body" className="relative py-24 sm:py-32 bg-[#007288] overflow-hidden">
       {/* Background radial gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#041e26] via-[#052932] to-[#041e26]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#006073] via-[#007288] to-[#006073]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
@@ -72,7 +72,7 @@ export const CategoryShowcase: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className="group relative h-[420px] overflow-hidden border border-[#D4AF37]/30 hover:border-[#D4AF37] transition-all duration-500 flex flex-col justify-end p-6 bg-[#031c22] shadow-xl"
+              className="group relative h-[420px] overflow-hidden border border-[#D4AF37]/30 hover:border-[#D4AF37] transition-all duration-500 flex flex-col justify-end p-6 bg-[#006073] shadow-xl"
             >
               {/* Background Photo */}
               <img
@@ -82,11 +82,11 @@ export const CategoryShowcase: React.FC = () => {
               />
 
               {/* Gradient Vignette */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#03171d] via-[#052932]/70 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#006073] via-[#007288]/70 to-transparent" />
 
               {/* Top Tag */}
               <div className="absolute top-4 left-4 z-10">
-                <span className="px-3 py-1 bg-[#041d24]/90 border border-[#D4AF37]/40 text-[9px] font-cinzel tracking-[0.2em] text-[#F3E5AB] uppercase backdrop-blur-sm">
+                <span className="px-3 py-1 bg-[#006073]/90 border border-[#D4AF37]/40 text-[9px] font-cinzel tracking-[0.2em] text-[#F3E5AB] uppercase backdrop-blur-sm">
                   {cat.tag}
                 </span>
               </div>

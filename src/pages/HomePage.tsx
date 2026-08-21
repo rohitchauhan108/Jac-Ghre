@@ -43,12 +43,10 @@ export const HomePage: React.FC = () => {
       {/* 9. The Vision */}
       <VisionSection />
 
-      {/* 10. Botanical Phyto-Story */}
-      <IngredientStory />
+   
 
 
-      {/* 12. Product Technical Spotlight */}
-      <ProductSpotlight />
+     
 
       {/* 13. Brand Closing Philosophy */}
       <BrandPhilosophy />

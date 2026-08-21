@@ -80,8 +80,8 @@ export const Header: React.FC = () => {
           isVisible ? 'translate-y-0' : '-translate-y-full pointer-events-none'
         } ${
           isScrolled
-            ? 'bg-[#052932]/98 backdrop-blur-lg border-b border-[#D4AF37]/35 py-3 shadow-[0_12px_35px_rgba(0,0,0,0.6)]'
-            : 'bg-gradient-to-b from-[#031c22]/95 via-[#052932]/80 to-transparent py-4 sm:py-5 border-b border-[#D4AF37]/20'
+            ? 'bg-[#006073]/98 backdrop-blur-lg border-b border-[#D4AF37]/35 py-3 shadow-[0_12px_35px_rgba(0,96,115,0.6)]'
+            : 'bg-gradient-to-b from-[#006073]/95 via-[#007288]/80 to-transparent py-4 sm:py-5 border-b border-[#D4AF37]/20'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -106,7 +106,7 @@ export const Header: React.FC = () => {
               <img 
                 src={logoLight} 
                 alt="GHRÉ Paris Logo" 
-                className="h-10 sm:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+                className="h-10 sm:h-28 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
               />
             </button>
           </div>
@@ -146,7 +146,7 @@ export const Header: React.FC = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
                         transition={{ duration: 0.2 }}
-                        className="border-2 shadow-2xl p-6 grid grid-cols-12 gap-6 bg-[#042028] border-[#D4AF37]/50 text-[#F7F4EB]"
+                        className="border-2 shadow-2xl p-6 grid grid-cols-12 gap-6 bg-[#006073] border-[#D4AF37]/50 text-[#F7F4EB]"
                       >
                         {/* Left: Collections Categories */}
                         <div className="col-span-5 border-r border-[#D4AF37]/20 pr-4 space-y-3">
@@ -215,7 +215,7 @@ export const Header: React.FC = () => {
                                   setShopDropdownOpen(false);
                                   setQuickViewProduct(p);
                                 }}
-                                className="group/item cursor-pointer p-2.5 border transition-all text-center bg-[#062c37] border-[#D4AF37]/20 hover:border-[#D4AF37]"
+                                className="group/item cursor-pointer p-2.5 border transition-all text-center bg-[#007288] border-[#D4AF37]/20 hover:border-[#D4AF37]"
                               >
                                 <div className="h-16 w-full flex items-center justify-center overflow-hidden mb-1">
                                   <img
@@ -303,7 +303,7 @@ export const Header: React.FC = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setMobileMenuOpen(false)}
-              className="fixed inset-0 bg-[#021317]/85 backdrop-blur-md"
+              className="fixed inset-0 bg-[#006073]/88 backdrop-blur-md"
             />
 
             <motion.div
@@ -312,7 +312,7 @@ export const Header: React.FC = () => {
               exit={{ x: '-100%' }}
               transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
               data-lenis-prevent
-              className="fixed inset-y-0 left-0 w-4/5 max-w-sm border-r-2 shadow-2xl p-6 flex flex-col justify-between overflow-y-auto bg-[#052932] border-[#D4AF37]/40 text-[#F7F4EB]"
+              className="fixed inset-y-0 left-0 w-4/5 max-w-sm border-r-2 shadow-2xl p-6 flex flex-col justify-between overflow-y-auto bg-[#007288] border-[#D4AF37]/40 text-[#F7F4EB]"
             >
               <div>
                 {/* Header inside drawer */}
@@ -333,7 +333,7 @@ export const Header: React.FC = () => {
                 </div>
 
                 {/* Coming Soon Notice inside Mobile Drawer */}
-                <div className="flex items-center justify-between gap-2 p-3 bg-[#021319]/60 border border-[#D4AF37]/30 mb-5">
+                <div className="flex items-center justify-between gap-2 p-3 bg-[#006073]/60 border border-[#D4AF37]/30 mb-5">
                   <div className="flex items-center gap-1.5 text-[11px] font-cinzel text-[#D4AF37] font-bold">
                     <Clock className="w-3.5 h-3.5" />
                     <span>LAUNCHING SOON</span>
@@ -370,7 +370,7 @@ export const Header: React.FC = () => {
                       setMobileMenuOpen(false);
                       setIsWelcomePopupOpen(true);
                     }}
-                    className="w-full py-2.5 bg-[#021319] border border-[#D4AF37] text-[#F3E5AB] font-cinzel text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 mb-3"
+                    className="w-full py-2.5 bg-[#006073] border border-[#D4AF37] text-[#F3E5AB] font-cinzel text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 mb-3"
                   >
                     <Gift className="w-3.5 h-3.5 text-[#D4AF37]" />
                     <span>Launch Notice</span>

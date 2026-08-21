@@ -36,7 +36,7 @@ export const FisherIslandConcierge: React.FC = () => {
   ];
 
   return (
-    <section className="relative py-24 bg-[#03151c] overflow-hidden">
+    <section className="relative py-24 bg-[#006073] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-14">
           <GoldEmblem size={28} withGlow className="mx-auto mb-3" />
@@ -65,15 +65,15 @@ export const FisherIslandConcierge: React.FC = () => {
                 onClick={() => setLocation(item.name)}
                 className={`w-full p-5 text-left border transition-all cursor-pointer flex items-start gap-4 ${
                   location === item.name
-                    ? 'bg-[#06333f] border-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,0.2)]'
-                    : 'bg-[#031d25]/70 border-[#D4AF37]/25 hover:border-[#D4AF37]/60'
+                    ? 'bg-[#007288] border-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,0.2)]'
+                    : 'bg-[#006073]/70 border-[#D4AF37]/25 hover:border-[#D4AF37]/60'
                 }`}
               >
                 <div
                   className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${
                     location === item.name
                       ? 'bg-[#D4AF37] text-[#062B35]'
-                      : 'bg-[#021319] text-[#D4AF37] border border-[#D4AF37]/40'
+                      : 'bg-[#006073] text-[#D4AF37] border border-[#D4AF37]/40'
                   }`}
                 >
                   <MapPin className="w-4 h-4" />
@@ -83,7 +83,7 @@ export const FisherIslandConcierge: React.FC = () => {
                     <h4 className="font-cinzel text-sm font-bold text-[#FBF9F3]">
                       {item.name}
                     </h4>
-                    <span className="text-[9px] font-cinzel font-bold tracking-wider px-2 py-0.5 bg-[#021319] border border-[#D4AF37]/40 text-[#D4AF37]">
+                    <span className="text-[9px] font-cinzel font-bold tracking-wider px-2 py-0.5 bg-[#006073] border border-[#D4AF37]/40 text-[#D4AF37]">
                       {item.tag}
                     </span>
                   </div>
@@ -95,7 +95,7 @@ export const FisherIslandConcierge: React.FC = () => {
             ))}
 
             {/* Official Web Badge */}
-            <div className="p-4 bg-[#021319] border border-[#D4AF37]/30 text-center">
+            <div className="p-4 bg-[#006073] border border-[#D4AF37]/30 text-center">
               <span className="text-xs font-cinzel text-[#8EAAB0] tracking-widest uppercase block">
                 Official Web Portal
               </span>
@@ -111,7 +111,7 @@ export const FisherIslandConcierge: React.FC = () => {
           </div>
 
           {/* Right: Booking Form */}
-          <div className="lg:col-span-7 bg-gradient-to-br from-[#04242e] to-[#02141a] border-2 border-[#D4AF37]/70 p-6 sm:p-10 shadow-2xl">
+          <div className="lg:col-span-7 bg-gradient-to-br from-[#007288] to-[#006073] border-2 border-[#D4AF37]/70 p-6 sm:p-10 shadow-2xl">
             {submitted ? (
               <div className="py-12 text-center space-y-4">
                 <CheckCircle2 className="w-14 h-14 text-[#D4AF37] mx-auto animate-bounce" />
@@ -150,7 +150,7 @@ export const FisherIslandConcierge: React.FC = () => {
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       placeholder="Madame / Monsieur..."
-                      className="w-full px-4 py-3 bg-[#021117] border border-[#D4AF37]/40 text-xs text-[#FBF9F3] placeholder-[#6C8A92] font-outfit outline-none focus:border-[#D4AF37]"
+                      className="w-full px-4 py-3 bg-[#006073] border border-[#D4AF37]/40 text-xs text-[#FBF9F3] placeholder-[#6C8A92] font-outfit outline-none focus:border-[#D4AF37]"
                     />
                   </div>
 
@@ -164,7 +164,7 @@ export const FisherIslandConcierge: React.FC = () => {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="client@luxury.com"
-                      className="w-full px-4 py-3 bg-[#021117] border border-[#D4AF37]/40 text-xs text-[#FBF9F3] placeholder-[#6C8A92] font-outfit outline-none focus:border-[#D4AF37]"
+                      className="w-full px-4 py-3 bg-[#006073] border border-[#D4AF37]/40 text-xs text-[#FBF9F3] placeholder-[#6C8A92] font-outfit outline-none focus:border-[#D4AF37]"
                     />
                   </div>
                 </div>
@@ -179,7 +179,7 @@ export const FisherIslandConcierge: React.FC = () => {
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       placeholder="+1 (305) 000-0000"
-                      className="w-full px-4 py-3 bg-[#021117] border border-[#D4AF37]/40 text-xs text-[#FBF9F3] placeholder-[#6C8A92] font-outfit outline-none focus:border-[#D4AF37]"
+                      className="w-full px-4 py-3 bg-[#006073] border border-[#D4AF37]/40 text-xs text-[#FBF9F3] placeholder-[#6C8A92] font-outfit outline-none focus:border-[#D4AF37]"
                     />
                   </div>
 
@@ -190,7 +190,7 @@ export const FisherIslandConcierge: React.FC = () => {
                     <select
                       value={service}
                       onChange={(e) => setService(e.target.value)}
-                      className="w-full px-4 py-3 bg-[#021117] border border-[#D4AF37]/40 text-xs text-[#FBF9F3] font-outfit outline-none focus:border-[#D4AF37] cursor-pointer"
+                      className="w-full px-4 py-3 bg-[#006073] border border-[#D4AF37]/40 text-xs text-[#FBF9F3] font-outfit outline-none focus:border-[#D4AF37] cursor-pointer"
                     >
                       <option value="Prickly Pear Cellular Trichology Ritual">
                         Prickly Pear Cellular Trichology Ritual

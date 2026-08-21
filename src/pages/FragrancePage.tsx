@@ -14,12 +14,12 @@ export const FragrancePage: React.FC = () => {
   const [selectedSize, setSelectedSize] = useState('100 ML');
 
   return (
-    <div className="pt-8 pb-28 bg-[#041a22] min-h-screen">
+    <div className="pt-8 pb-28 bg-[#007288] min-h-screen">
       {/* Fragrance Header Banner */}
-      <section className="relative py-20 border-b border-[#D4AF37]/30 bg-gradient-to-b from-[#03151c] via-[#052932] to-[#041a22] overflow-hidden">
+      <section className="relative py-20 border-b border-[#D4AF37]/30 bg-gradient-to-b from-[#006073] via-[#007288] to-[#006073] overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.15)_0%,transparent_70%)] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 bg-[#031d25] border border-[#D4AF37]/50 mb-4 shadow-md">
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 bg-[#006073] border border-[#D4AF37]/50 mb-4 shadow-md">
             <Flower2 className="w-4 h-4 text-[#D4AF37]" />
             <span className="text-xs font-cinzel font-semibold tracking-[0.3em] text-[#F3E5AB] uppercase">
               HAUTE PARFUMERIE • GRASSE ✕ POSITANO
@@ -45,14 +45,14 @@ export const FragrancePage: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24">
           {/* Left: Product Artwork Visual */}
           <div className="lg:col-span-6 flex justify-center">
-            <div className="relative aspect-[4/5] w-full max-w-lg bg-gradient-to-b from-[#06333f] to-[#021820] border-2 border-[#D4AF37]/70 p-8 shadow-2xl overflow-hidden flex items-center justify-center">
+            <div className="relative aspect-[4/5] w-full max-w-lg bg-gradient-to-b from-[#007288] to-[#006073] border-2 border-[#D4AF37]/70 p-8 shadow-2xl overflow-hidden flex items-center justify-center">
               <div className="absolute w-72 h-72 bg-[#D4AF37]/20 rounded-full blur-3xl pointer-events-none" />
               <img
                 src={CAMPAIGN_IMAGES.sunArt || edpProduct.image}
                 alt="Blossom Positano Eau de Parfum"
                 className="max-h-full object-contain filter drop-shadow-[0_20px_35px_rgba(0,0,0,0.95)] hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute top-4 left-4 px-3 py-1 bg-[#021319]/90 border border-[#D4AF37]/40 text-[10px] font-cinzel text-[#D4AF37] uppercase tracking-widest">
+              <div className="absolute top-4 left-4 px-3 py-1 bg-[#006073]/90 border border-[#D4AF37]/40 text-[10px] font-cinzel text-[#D4AF37] uppercase tracking-widest">
                 Millésime Signature
               </div>
             </div>
@@ -78,7 +78,7 @@ export const FragrancePage: React.FC = () => {
 
             {/* Olfactory Pyramid Cards */}
             <div className="space-y-3 pt-2">
-              <div className="p-4 bg-[#031d25] border border-[#D4AF37]/30">
+              <div className="p-4 bg-[#006073] border border-[#D4AF37]/30">
                 <span className="font-cinzel text-xs font-bold text-[#D4AF37] uppercase tracking-widest block mb-1">
                   Top Notes • Initial Burst
                 </span>
@@ -87,7 +87,7 @@ export const FragrancePage: React.FC = () => {
                 </p>
               </div>
 
-              <div className="p-4 bg-[#031d25] border border-[#D4AF37]/30">
+              <div className="p-4 bg-[#006073] border border-[#D4AF37]/30">
                 <span className="font-cinzel text-xs font-bold text-[#D4AF37] uppercase tracking-widest block mb-1">
                   Heart Notes • Floral Radiance
                 </span>
@@ -96,7 +96,7 @@ export const FragrancePage: React.FC = () => {
                 </p>
               </div>
 
-              <div className="p-4 bg-[#031d25] border border-[#D4AF37]/30">
+              <div className="p-4 bg-[#006073] border border-[#D4AF37]/30">
                 <span className="font-cinzel text-xs font-bold text-[#D4AF37] uppercase tracking-widest block mb-1">
                   Base Notes • Sensual Anchor
                 </span>
@@ -107,7 +107,7 @@ export const FragrancePage: React.FC = () => {
             </div>
 
             {/* Purchase Box */}
-            <div className="p-6 bg-[#031820] border-2 border-[#D4AF37]/50 shadow-xl">
+            <div className="p-6 bg-[#006073] border-2 border-[#D4AF37]/50 shadow-xl">
               <div className="flex items-center justify-between mb-4">
                 <div>
                   <span className="text-2xl font-cinzel font-bold text-[#F7F4EB]">
@@ -125,7 +125,7 @@ export const FragrancePage: React.FC = () => {
                       className={`px-3 py-1.5 text-xs font-cinzel tracking-wider uppercase border transition-all ${
                         selectedSize === size
                           ? 'bg-[#D4AF37] text-[#062B35] font-bold border-[#D4AF37]'
-                          : 'bg-[#021319] text-[#B7CBD0] border-[#D4AF37]/30'
+                          : 'bg-[#006073] text-[#B7CBD0] border-[#D4AF37]/30'
                       }`}
                     >
                       {size}
@@ -146,7 +146,7 @@ export const FragrancePage: React.FC = () => {
         </div>
 
         {/* Discovery Scent Experience Coffret */}
-        <div className="p-8 sm:p-12 bg-gradient-to-r from-[#031d25] via-[#052932] to-[#031d25] border-2 border-[#D4AF37]/50 shadow-2xl">
+        <div className="p-8 sm:p-12 bg-gradient-to-r from-[#006073] via-[#007288] to-[#006073] border-2 border-[#D4AF37]/50 shadow-2xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8 space-y-3 text-center lg:text-left">
               <span className="text-xs font-cinzel font-bold tracking-[0.3em] text-[#D4AF37] uppercase">
@@ -162,7 +162,7 @@ export const FragrancePage: React.FC = () => {
             <div className="lg:col-span-4 flex justify-center lg:justify-end">
               <button
                 onClick={() => addToCart(edpProduct)}
-                className="px-8 py-4 bg-[#021319] border-2 border-[#D4AF37] text-[#F3E5AB] font-cinzel text-xs font-bold tracking-[0.2em] uppercase hover:bg-[#D4AF37] hover:text-[#062B35] shadow-lg transition-all"
+                className="px-8 py-4 bg-[#006073] border-2 border-[#D4AF37] text-[#F3E5AB] font-cinzel text-xs font-bold tracking-[0.2em] uppercase hover:bg-[#D4AF37] hover:text-[#062B35] shadow-lg transition-all"
               >
                 Order Discovery Coffret ($45)
               </button>

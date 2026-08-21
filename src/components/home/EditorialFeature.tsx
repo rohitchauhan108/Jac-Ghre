@@ -6,9 +6,9 @@ import { CAMPAIGN_IMAGES } from '../../data/products';
 
 export const EditorialFeature: React.FC = () => {
   return (
-    <section id="hair-care" className="relative py-24 sm:py-32 bg-[#052932] overflow-hidden">
+    <section id="hair-care" className="relative py-24 sm:py-32 bg-[#007288] overflow-hidden">
       {/* Background gradients */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#052932] via-[#042028] to-[#041a22]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#007288] via-[#006073] to-[#007288]" />
       <div className="absolute top-0 right-0 w-96 h-96 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.08)_0%,transparent_70%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -25,7 +25,7 @@ export const EditorialFeature: React.FC = () => {
             <div className="absolute -top-4 -left-4 w-full h-full border border-[#D4AF37]/40 pointer-events-none hidden sm:block" />
 
             {/* Main Campaign Image */}
-            <div className="relative z-10 overflow-hidden bg-[#041e25] border-2 border-[#D4AF37]/50 shadow-2xl">
+            <div className="relative z-10 overflow-hidden bg-[#006073] border-2 border-[#D4AF37]/50 shadow-2xl">
               <img
                 src={CAMPAIGN_IMAGES.heroModel}
                 alt="The Art of Luxury Hair Care — GHRÉ Campaign"
@@ -33,7 +33,7 @@ export const EditorialFeature: React.FC = () => {
               />
 
               {/* Gold Crest in Bottom Corner */}
-              <div className="absolute bottom-6 right-6 p-4 bg-[#041d24]/90 border border-[#D4AF37]/60 backdrop-blur-md">
+              <div className="absolute bottom-6 right-6 p-4 bg-[#006073]/90 border border-[#D4AF37]/60 backdrop-blur-md">
                 <GoldEmblem size={32} withGlow />
                 <span className="block text-[9px] font-cinzel tracking-[0.25em] text-[#F3E5AB] uppercase mt-1 text-center font-bold">
                   GHRÉ PARIS
@@ -41,7 +41,7 @@ export const EditorialFeature: React.FC = () => {
               </div>
 
               {/* Floating Badge */}
-              <div className="absolute top-6 left-6 px-3.5 py-1.5 bg-[#041d24]/90 border border-[#D4AF37]/40 backdrop-blur-md">
+              <div className="absolute top-6 left-6 px-3.5 py-1.5 bg-[#006073]/90 border border-[#D4AF37]/40 backdrop-blur-md">
                 <span className="text-[10px] font-cinzel font-semibold tracking-[0.25em] text-[#D4AF37] uppercase flex items-center gap-1.5">
                   <Sparkles className="w-3 h-3 text-[#D4AF37]" />
                   Haute Trichology
@@ -78,7 +78,7 @@ export const EditorialFeature: React.FC = () => {
 
             {/* 3 Formula Pillars */}
             <div className="space-y-3 pt-2">
-              <div className="flex items-start gap-3 p-3.5 bg-[#031d25]/80 border border-[#D4AF37]/20">
+              <div className="flex items-start gap-3 p-3.5 bg-[#006073]/80 border border-[#D4AF37]/20">
                 <Droplets className="w-4 h-4 text-[#D4AF37] shrink-0 mt-0.5" />
                 <div>
                   <h4 className="font-cinzel text-xs font-semibold text-[#F7F4EB] uppercase tracking-wider">
@@ -90,7 +90,7 @@ export const EditorialFeature: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 p-3.5 bg-[#031d25]/80 border border-[#D4AF37]/20">
+              <div className="flex items-start gap-3 p-3.5 bg-[#006073]/80 border border-[#D4AF37]/20">
                 <Shield className="w-4 h-4 text-[#D4AF37] shrink-0 mt-0.5" />
                 <div>
                   <h4 className="font-cinzel text-xs font-semibold text-[#F7F4EB] uppercase tracking-wider">

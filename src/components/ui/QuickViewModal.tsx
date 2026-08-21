@@ -40,7 +40,7 @@ export const QuickViewModal: React.FC = () => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={() => setQuickViewProduct(null)}
-          className="fixed inset-0 bg-[#021317]/85 backdrop-blur-md"
+          className="fixed inset-0 bg-[#006073]/90 backdrop-blur-md"
         />
 
         {/* Modal Window */}
@@ -49,12 +49,12 @@ export const QuickViewModal: React.FC = () => {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.94, y: 20 }}
           transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-          className="relative z-10 w-full max-w-4xl bg-[#062c37] border border-[#D4AF37]/50 shadow-[0_25px_60px_rgba(0,0,0,0.85)] rounded-none overflow-hidden my-8"
+          className="relative z-10 w-full max-w-4xl bg-[#006073] border border-[#D4AF37]/50 shadow-[0_25px_60px_rgba(0,96,115,0.85)] rounded-none overflow-hidden my-8"
         >
           {/* Close button */}
           <button
             onClick={() => setQuickViewProduct(null)}
-            className="absolute top-4 right-4 z-30 p-2 text-[#D4AF37] hover:text-[#F3E5AB] hover:bg-[#041e25] transition-colors border border-[#D4AF37]/20"
+            className="absolute top-4 right-4 z-30 p-2 text-[#D4AF37] hover:text-[#F3E5AB] hover:bg-[#007288] transition-colors border border-[#D4AF37]/20"
             aria-label="Close modal"
           >
             <X className="w-5 h-5" />
@@ -62,11 +62,11 @@ export const QuickViewModal: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-12 min-h-[500px]">
             {/* Left Image Showcase */}
-            <div className="md:col-span-5 bg-gradient-to-b from-[#083542] via-[#062b35] to-[#031920] p-8 flex flex-col items-center justify-center relative border-b md:border-b-0 md:border-r border-[#D4AF37]/20">
+            <div className="md:col-span-5 bg-gradient-to-b from-[#007288] via-[#006073] to-[#006073] p-8 flex flex-col items-center justify-center relative border-b md:border-b-0 md:border-r border-[#D4AF37]/20">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.18)_0%,transparent_70%)] pointer-events-none" />
 
               {product.badge && (
-                <span className="absolute top-4 left-4 z-10 inline-flex items-center gap-1.5 px-3 py-1 text-[10px] uppercase font-cinzel tracking-[0.2em] bg-[#041d24]/90 text-[#F3E5AB] border border-[#D4AF37]/40">
+                <span className="absolute top-4 left-4 z-10 inline-flex items-center gap-1.5 px-3 py-1 text-[10px] uppercase font-cinzel tracking-[0.2em] bg-[#006073]/90 text-[#F3E5AB] border border-[#D4AF37]/40">
                   <Sparkles className="w-2.5 h-2.5 text-[#D4AF37]" />
                   {product.badge}
                 </span>
@@ -85,7 +85,7 @@ export const QuickViewModal: React.FC = () => {
             </div>
 
             {/* Right Information */}
-            <div className="md:col-span-7 p-6 md:p-8 flex flex-col justify-between bg-gradient-to-b from-[#062c37] to-[#041e26]">
+            <div className="md:col-span-7 p-6 md:p-8 flex flex-col justify-between bg-gradient-to-b from-[#007288] to-[#006073]">
               <div>
                 <div className="flex items-center justify-between mb-1.5">
                   <span className="text-[11px] font-cinzel tracking-[0.3em] text-[#D4AF37] uppercase">
@@ -184,7 +184,7 @@ export const QuickViewModal: React.FC = () => {
                         {product.composition?.map((comp, idx) => (
                           <span
                             key={idx}
-                            className="px-2.5 py-1 bg-[#041e25] border border-[#D4AF37]/25 text-[#F3E5AB] text-[11px] font-sans"
+                            className="px-2.5 py-1 bg-[#006073] border border-[#D4AF37]/25 text-[#F3E5AB] text-[11px] font-sans"
                           >
                             {comp}
                           </span>
@@ -195,7 +195,7 @@ export const QuickViewModal: React.FC = () => {
 
                   {activeTab === 'scent' && (
                     <div className="space-y-3">
-                      <div className="p-3 bg-[#041e25] border border-[#D4AF37]/20">
+                      <div className="p-3 bg-[#006073] border border-[#D4AF37]/20">
                         <span className="text-[10px] uppercase font-cinzel text-[#D4AF37] block mb-1 tracking-widest">
                           Olfactory Profile
                         </span>
@@ -205,15 +205,15 @@ export const QuickViewModal: React.FC = () => {
                       </div>
                       {product.scentNotes?.top && (
                         <div className="grid grid-cols-3 gap-2 text-[10px] text-center">
-                          <div className="p-1.5 bg-[#083542]/50 border border-[#D4AF37]/10">
+                          <div className="p-1.5 bg-[#007288]/50 border border-[#D4AF37]/10">
                             <span className="text-[#D4AF37] block font-cinzel">Top</span>
                             <span>{product.scentNotes.top.join(', ')}</span>
                           </div>
-                          <div className="p-1.5 bg-[#083542]/50 border border-[#D4AF37]/10">
+                          <div className="p-1.5 bg-[#007288]/50 border border-[#D4AF37]/10">
                             <span className="text-[#D4AF37] block font-cinzel">Heart</span>
                             <span>{product.scentNotes.heart?.join(', ') || 'Blossoms'}</span>
                           </div>
-                          <div className="p-1.5 bg-[#083542]/50 border border-[#D4AF37]/10">
+                          <div className="p-1.5 bg-[#007288]/50 border border-[#D4AF37]/10">
                             <span className="text-[#D4AF37] block font-cinzel">Base</span>
                             <span>{product.scentNotes.base?.join(', ') || 'Amber Woods'}</span>
                           </div>
@@ -228,7 +228,7 @@ export const QuickViewModal: React.FC = () => {
               <div className="mt-6 pt-4 border-t border-[#D4AF37]/20 space-y-3">
                 <div className="flex items-center gap-3">
                   {/* Quantity selector */}
-                  <div className="flex items-center border border-[#D4AF37]/40 bg-[#041e25] px-2 py-1">
+                  <div className="flex items-center border border-[#D4AF37]/40 bg-[#006073] px-2 py-1">
                     <button
                       onClick={() => setQuantity((q) => Math.max(1, q - 1))}
                       className="px-2 py-1 text-[#D4AF37] hover:text-[#F3E5AB]"
@@ -267,7 +267,7 @@ export const QuickViewModal: React.FC = () => {
                   {/* Wishlist Button */}
                   <button
                     onClick={() => toggleWishlist(product.id)}
-                    className="p-3 border border-[#D4AF37]/40 hover:border-[#D4AF37] bg-[#041e25] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#062B35] transition-all"
+                    className="p-3 border border-[#D4AF37]/40 hover:border-[#D4AF37] bg-[#006073] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#062B35] transition-all"
                     aria-label="Save to wishlist"
                   >
                     <Heart
