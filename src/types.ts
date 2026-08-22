@@ -40,6 +40,7 @@ export interface CampaignSlide {
   secondaryCtaLink?: string;
   accentTheme: 'teal-gold' | 'citrus-gold' | 'summer-sun' | 'founder-luxury';
   image: string;
+  mobileImage: string; // Added for dedicated mobile banner support
   productOverlayImage?: string;
   locationBadge?: string;
   quote?: string;

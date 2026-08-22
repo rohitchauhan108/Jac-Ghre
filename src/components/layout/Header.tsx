@@ -106,7 +106,7 @@ export const Header: React.FC = () => {
               <img 
                 src={logoLight} 
                 alt="GHRÉ Paris Logo" 
-                className="h-10 sm:h-28 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+                className="h-20 sm:h-28 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
               />
             </button>
           </div>
@@ -321,7 +321,7 @@ export const Header: React.FC = () => {
                     <img 
                       src={logoLight} 
                       alt="GHRÉ Paris Logo" 
-                      className="h-8 w-auto object-contain" 
+                      className="h-24 w-auto object-contain" 
                     />
                   </div>
                   <button

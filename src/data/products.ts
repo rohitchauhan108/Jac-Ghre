@@ -9,10 +9,16 @@ import ghreOilBotanic from '../assets/images/ghre_oil_botanic_1787204418411.jpg'
 import ghreLeaveIn from '../assets/images/ghre_leave_in_1787204430544.jpg';
 import jacGhrePortrait from '../assets/images/founder.jpeg';
 import ghreRepairShampooImg from '../assets/images/ghre_repair_shampoo_1787204461932.jpg';
-import banner1 from '../assets/images/banner1.jpeg'
-import banner2 from '../assets/images/banner2.jpeg'
-import banner3 from '../assets/images/banner3.jpeg'
-import banner4 from '../assets/images/banner4.jpeg'
+
+import banner1 from '../assets/images/banner1.jpg';
+import banner2 from '../assets/images/banner2.jpg';
+import banner3 from '../assets/images/banner3.jpg';
+import banner4 from '../assets/images/banner4.jpg';
+
+import mobileBanner1 from '../assets/images/mobile-banner1.jpeg';
+import mobileBanner2 from '../assets/images/mobile-banner2.jpeg';
+import mobileBanner3 from '../assets/images/mobile-banner3.jpeg';
+import mobileBanner4 from '../assets/images/mobile-banner4.jpeg';
 
 export const CAMPAIGN_IMAGES = {
   heroModel: ghreModelCampaign,
@@ -57,6 +63,7 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     secondaryCtaLink: 'hair-care',
     accentTheme: 'teal-gold',
     image: banner1,
+    mobileImage: mobileBanner1,
     locationBadge: 'PARIS • SAINT-TROPEZ • MIAMI',
   },
   {
@@ -71,6 +78,7 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     secondaryCtaLink: 'sun-body',
     accentTheme: 'summer-sun',
     image: banner2,
+    mobileImage: mobileBanner2,
     locationBadge: 'SAINT-TROPEZ • RIVIERA',
   },
   {
@@ -85,6 +93,7 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     secondaryCtaLink: 'shop',
     accentTheme: 'summer-sun',
     image: banner3,
+    mobileImage: mobileBanner3,
     locationBadge: 'SAINT-TROPEZ • MIAMI',
   },
   {
@@ -99,6 +108,7 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     secondaryCtaLink: 'shop',
     accentTheme: 'teal-gold',
     image: banner4,
+    mobileImage: mobileBanner4,
     locationBadge: 'SAINT-TROPEZ • MIAMI',
   },
 ];
