@@ -15,10 +15,10 @@ import banner2 from '../assets/images/banner2.jpg';
 import banner3 from '../assets/images/banner3.jpg';
 import banner4 from '../assets/images/banner4.jpg';
 
-import mobileBanner1 from '../assets/images/mobile-banner1.jpeg';
-import mobileBanner2 from '../assets/images/mobile-banner2.jpeg';
-import mobileBanner3 from '../assets/images/mobile-banner3.jpeg';
-import mobileBanner4 from '../assets/images/mobile-banner4.jpeg';
+import mobileBanner1 from '../assets/images/mobile-banner1.jpg';
+import mobileBanner2 from '../assets/images/mobile-banner2.jpg';
+import mobileBanner3 from '../assets/images/mobile-banner3.jpg';
+import mobileBanner4 from '../assets/images/mobile-banner4.jpg';
 
 export const CAMPAIGN_IMAGES = {
   heroModel: ghreModelCampaign,
