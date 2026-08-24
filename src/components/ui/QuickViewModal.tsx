@@ -251,7 +251,7 @@ export const QuickViewModal: React.FC = () => {
                   {/* Add to Bag Button */}
                   <button
                     onClick={handleAddToCart}
-                    className="flex-1 py-3 px-6 bg-gradient-to-r from-[#D4AF37] via-[#E5C365] to-[#B89028] text-[#062B35] hover:brightness-110 font-cinzel text-xs font-bold tracking-[0.2em] uppercase flex items-center justify-center gap-2 shadow-lg transition-all"
+                    className="flex-1 py-3 px-6 bg-gradient-to-r from-[#D4AF37] via-[#E5C365] to-[#B89028] text-[#0E4C5A] hover:brightness-110 font-cinzel text-xs font-bold tracking-[0.2em] uppercase flex items-center justify-center gap-2 shadow-lg transition-all"
                   >
                     {isAdded ? (
                       <>

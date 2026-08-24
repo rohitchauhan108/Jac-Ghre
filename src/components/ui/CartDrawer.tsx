@@ -103,7 +103,7 @@ export const CartDrawer: React.FC = () => {
                   </p>
                   <button
                     onClick={() => setIsCartOpen(false)}
-                    className="py-2.5 px-6 border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#062B35] font-cinzel text-xs tracking-widest uppercase transition-all"
+                    className="py-2.5 px-6 border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0E4C5A] font-cinzel text-xs tracking-widest uppercase transition-all"
                   >
                     Explore Creations
                   </button>
@@ -198,7 +198,7 @@ export const CartDrawer: React.FC = () => {
 
                 <button
                   onClick={() => alert('Proceeding to luxury encrypted checkout... Ready for payment gateway connection.')}
-                  className="w-full py-3.5 px-4 bg-gradient-to-r from-[#D4AF37] via-[#E5C365] to-[#B89028] text-[#062B35] hover:brightness-110 font-cinzel text-xs font-bold tracking-[0.2em] uppercase flex items-center justify-center gap-2 shadow-xl transition-all"
+                  className="w-full py-3.5 px-4 bg-gradient-to-r from-[#D4AF37] via-[#E5C365] to-[#B89028] text-[#0E4C5A] hover:brightness-110 font-cinzel text-xs font-bold tracking-[0.2em] uppercase flex items-center justify-center gap-2 shadow-xl transition-all"
                 >
                   <span>Proceed to Checkout</span>
                   <ArrowRight className="w-4 h-4" />
@@ -287,7 +287,7 @@ export const WishlistDrawer: React.FC = () => {
                   </p>
                   <button
                     onClick={() => setIsWishlistOpen(false)}
-                    className="py-2.5 px-6 border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#062B35] font-cinzel text-xs tracking-widest uppercase transition-all"
+                    className="py-2.5 px-6 border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0E4C5A] font-cinzel text-xs tracking-widest uppercase transition-all"
                   >
                     Browse Collection
                   </button>
@@ -333,7 +333,7 @@ export const WishlistDrawer: React.FC = () => {
                           addToCart(product);
                           toggleWishlist(product.id);
                         }}
-                        className="mt-2 py-1.5 px-3 bg-[#D4AF37] text-[#062B35] font-cinzel text-[10px] font-bold tracking-widest uppercase flex items-center justify-center gap-1.5 hover:brightness-110"
+                        className="mt-2 py-1.5 px-3 bg-[#D4AF37] text-[#0E4C5A] font-cinzel text-[10px] font-bold tracking-widest uppercase flex items-center justify-center gap-1.5 hover:brightness-110"
                       >
                         <ShoppingBag className="w-3 h-3" /> Move to Bag
                       </button>
@@ -350,7 +350,7 @@ export const WishlistDrawer: React.FC = () => {
                   setIsWishlistOpen(false);
                 }}
                 disabled={wishlistProducts.length === 0}
-                className="w-full py-3 px-4 border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#062B35] disabled:opacity-40 disabled:pointer-events-none font-cinzel text-xs font-bold tracking-[0.2em] uppercase transition-all"
+                className="w-full py-3 px-4 border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0E4C5A] disabled:opacity-40 disabled:pointer-events-none font-cinzel text-xs font-bold tracking-[0.2em] uppercase transition-all"
               >
                 Add All to Bag
               </button>

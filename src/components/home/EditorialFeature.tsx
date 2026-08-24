@@ -107,7 +107,7 @@ export const EditorialFeature: React.FC = () => {
             <div className="pt-4 flex items-center gap-4">
               <a
                 href="#collection"
-                className="px-8 py-3.5 bg-gradient-to-r from-[#D4AF37] via-[#E5C365] to-[#B89028] text-[#062B35] font-cinzel text-xs font-bold tracking-[0.25em] uppercase hover:brightness-110 shadow-lg flex items-center gap-2 group transition-all"
+                className="px-8 py-3.5 bg-gradient-to-r from-[#D4AF37] via-[#E5C365] to-[#B89028] text-[#0E4C5A] font-cinzel text-xs font-bold tracking-[0.25em] uppercase hover:brightness-110 shadow-lg flex items-center gap-2 group transition-all"
               >
                 <span>Explore Hair Care</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />

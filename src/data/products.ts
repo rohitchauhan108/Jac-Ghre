@@ -1,36 +1,16 @@
 import { Product, CampaignSlide, BotanicalIngredient } from '../types';
 
-import ghreModelCampaign from '../assets/images/modelcompaign.jpeg';
-import ghreFullLineup from '../assets/images/ghre_full_lineup_1787204386926.jpg';
-import ghreSunArt from '../assets/images/ghre_sun_art_1787204403014.jpg';
-import ghreSummerDream from '../assets/images/summerhair.jpeg';
-import ghreOrangeBlossom from '../assets/images/ghre_orange_blossom_banner_1787206177953.jpg';
-import ghreOilBotanic from '../assets/images/ghre_oil_botanic_1787204418411.jpg';
-import ghreLeaveIn from '../assets/images/ghre_leave_in_1787204430544.jpg';
-import jacGhrePortrait from '../assets/images/founder.jpeg';
-import ghreRepairShampooImg from '../assets/images/ghre_repair_shampoo_1787204461932.jpg';
-
-import banner1 from '../assets/images/banner1.jpg';
-import banner2 from '../assets/images/banner2.jpg';
-import banner3 from '../assets/images/banner3.jpg';
-import banner4 from '../assets/images/banner4.jpg';
-
-import mobileBanner1 from '../assets/images/mobile-banner1.jpg';
-import mobileBanner2 from '../assets/images/mobile-banner2.jpg';
-import mobileBanner3 from '../assets/images/mobile-banner3.jpg';
-import mobileBanner4 from '../assets/images/mobile-banner4.jpg';
-
 export const CAMPAIGN_IMAGES = {
-  heroModel: ghreModelCampaign,
-  fullLineup: ghreFullLineup,
-  sunArt: ghreSunArt,
-  summerDream: ghreSummerDream,
-  orangeBlossom: ghreOrangeBlossom,
-  oilBotanic: ghreOilBotanic,
-  leaveIn: ghreLeaveIn,
-  jacGhre: jacGhrePortrait,
-  repairShampoo: ghreRepairShampooImg,
-  blossom: ghreSunArt,
+  heroModel: '/images/modelcompaign.jpeg',
+  fullLineup: '/images/ghre_full_lineup_1787204386926.jpg',
+  sunArt: '/images/ghre_sun_art_1787204403014.jpg',
+  summerDream: '/images/summerhair.jpeg',
+  orangeBlossom: '/images/ghre_orange_blossom_banner_1787206177953.jpg',
+  oilBotanic: '/images/ghre_oil_botanic_1787204418411.jpg',
+  leaveIn: '/images/ghre_leave_in_1787204430544.jpg',
+  jacGhre: '/images/founder.jpeg',
+  repairShampoo: '/images/ghre_repair_shampoo_1787204461932.jpg',
+  blossom: '/images/ghre_sun_art_1787204403014.jpg',
 };
 
 export const BRAND_INFO = {
@@ -62,8 +42,8 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     secondaryCtaText: 'VIEW RITUALS',
     secondaryCtaLink: 'hair-care',
     accentTheme: 'teal-gold',
-    image: banner1,
-    mobileImage: mobileBanner1,
+    image: '/images/banner1.jpg',
+    mobileImage: '/images/mobile-banner1.jpg',
     locationBadge: 'PARIS • SAINT-TROPEZ • MIAMI',
   },
   {
@@ -77,8 +57,8 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     secondaryCtaText: 'SHOP MISTS',
     secondaryCtaLink: 'sun-body',
     accentTheme: 'summer-sun',
-    image: banner2,
-    mobileImage: mobileBanner2,
+    image: '/images/banner2.jpg',
+    mobileImage: '/images/mobile-banner2.jpg',
     locationBadge: 'SAINT-TROPEZ • RIVIERA',
   },
   {
@@ -92,8 +72,8 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     secondaryCtaText: 'SHOP HAIR CARE',
     secondaryCtaLink: 'shop',
     accentTheme: 'summer-sun',
-    image: banner3,
-    mobileImage: mobileBanner3,
+    image: '/images/banner3.jpg',
+    mobileImage: '/images/mobile-banner3.jpg',
     locationBadge: 'SAINT-TROPEZ • MIAMI',
   },
   {
@@ -107,8 +87,8 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     secondaryCtaText: 'SHOP COLLECTION',
     secondaryCtaLink: 'shop',
     accentTheme: 'teal-gold',
-    image: banner4,
-    mobileImage: mobileBanner4,
+    image: '/images/banner4.jpg',
+    mobileImage: '/images/mobile-banner4.jpg',
     locationBadge: 'SAINT-TROPEZ • MIAMI',
   },
 ];
@@ -141,7 +121,7 @@ export const PRODUCTS: Product[] = [
       'Protects against heat styling, UV oxidation, and sea salt damage',
       'Ideal for dry, damaged, colored, or over-processed hair',
     ],
-    image: ghreRepairShampooImg,
+    image: '/images/ghre_repair_shampoo_1787204461932.jpg',
     accentColor: '#074553',
     rating: 4.98,
     reviewsCount: 184,
@@ -174,7 +154,7 @@ export const PRODUCTS: Product[] = [
       'Leaves a silky, glass-smooth luminous finish on hair & décolleté',
       'Featherweight, fast-absorbing botanical dry-oil formulation',
     ],
-    image: ghreOilBotanic,
+    image: '/images/ghre_oil_botanic_1787204418411.jpg',
     accentColor: '#D4AF37',
     rating: 5.0,
     reviewsCount: 260,
@@ -202,7 +182,7 @@ export const PRODUCTS: Product[] = [
       'Instant detangling and mirror-smooth blow-dry priming',
       'Shields against Miami sun, UV rays, and Riviera sea salt',
     ],
-    image: ghreLeaveIn,
+    image: '/images/ghre_leave_in_1787204430544.jpg',
     accentColor: '#074553',
     rating: 4.95,
     reviewsCount: 92,
@@ -229,8 +209,8 @@ export const PRODUCTS: Product[] = [
       'Seals hair fiber against UV degradation and humidity swelling',
       'Leaves hair silky smooth with a radiant natural bounce',
     ],
-    image: ghreRepairShampooImg,
-    accentColor: '#084F5F',
+    image: '/images/ghre_repair_shampoo_1787204461932.jpg',
+    accentColor: '#0C6573',
     rating: 4.88,
     reviewsCount: 114,
   },
@@ -256,7 +236,7 @@ export const PRODUCTS: Product[] = [
       'Restores natural lipid moisture barrier in 5 to 10 minutes',
       'Imparts deep plush softness and velvet slip',
     ],
-    image: ghreFullLineup,
+    image: '/images/ghre_full_lineup_1787204386926.jpg',
     accentColor: '#063B46',
     rating: 4.96,
     reviewsCount: 142,
@@ -283,7 +263,7 @@ export const PRODUCTS: Product[] = [
       'Dramatic reduction in split end visibility in a single use',
       'Non-greasy, featherweight satin finish',
     ],
-    image: ghreFullLineup,
+    image: '/images/ghre_full_lineup_1787204386926.jpg',
     accentColor: '#C59B27',
     rating: 4.92,
     reviewsCount: 88,
@@ -311,16 +291,68 @@ export const PRODUCTS: Product[] = [
       'Deeply enhances natural tan with subtle sunlit luminescence',
       'Nourishes and softens sun-exposed skin instantly',
     ],
-    image: ghreSunArt,
+    image: '/images/ghre_sun_art_1787204403014.jpg',
     accentColor: '#E5C365',
     rating: 4.95,
     reviewsCount: 198,
   },
-  
-  
- 
- 
- 
+  {
+    id: 'blossom-positano-edp',
+    name: 'GHRÉ Blossom Positano Eau de Parfum',
+    frenchName: 'Eau de Parfum Blossom Positano — Amalfi Lemon & Neroli',
+    category: 'fragrance',
+    categoryLabel: 'Haute Parfumerie',
+    tagline: 'Coastal Amalfi • Neroli • Solar Musk',
+    shortDescription: 'A luminous citrus-floral eau de parfum capturing the golden hour glow of Positano cliffs at sunset, handcrafted in Grasse, France.',
+    fullDescription: 'Top notes of Amalfi Primo Fiore lemon and Calabrian bergamot give way to a heart of orange blossom absolute, Grasse neroli, and Mediterranean jasmine sambac. Dries down to warm solar amber, white musk, and cashmere woods for a radiant lasting trail.',
+    price: 148,
+    size: '100 ml | 3.4 fl.oz',
+    badge: 'Signature EDP',
+    isHeroFeatured: true,
+    isNew: true,
+    composition: ['Grasse Neroli Absolute', 'Amalfi Lemon Oil', 'Orange Blossom Concrete', 'Solar Musk Accord', 'Cashmere Woods'],
+    scentNotes: {
+      top: ['Amalfi Lemon', 'Calabrian Bergamot', 'Pink Pepper'],
+      heart: ['Orange Blossom Absolute', 'Grasse Neroli', 'Jasmine Sambac'],
+      base: ['Solar Amber', 'White Musk', 'Cashmere Cedar'],
+      displaySummary: 'Amalfi Lemon, Neroli, Orange Blossom, Solar Amber',
+    },
+    benefits: [
+      '8-10 hour long-lasting luxury sillage',
+      'Handcrafted in Grasse, France in small artisanal batches',
+      'Perfect for day and evening — sunlit elegance',
+    ],
+    image: '/images/ghre_orange_blossom_banner_1787206177953.jpg',
+    accentColor: '#F9B77C',
+    rating: 4.99,
+    reviewsCount: 312,
+  },
+  {
+    id: 'body-hair-mist',
+    name: 'GHRÉ Riviera Body & Hair Mist',
+    frenchName: 'Brume Parfumée Corps & Cheveux — French Riviera',
+    category: 'bodycare',
+    categoryLabel: 'GHRÉ SUN Collection',
+    tagline: 'Cooling • Scented • Hydrating Mist',
+    shortDescription: 'Ultra-fine refreshing body and hair mist scented with signature orange blossom, bamboo, and sea breeze notes for instant Saint-Tropez freshness.',
+    fullDescription: 'Silky hydrating mist infused with aloe vera, bamboo hydrosol, and provitamin B5 that instantly cools and scents skin and hair with a veil of Mediterranean solar freshness. Perfect for post-beach, post-gym, or a midday pick-me-up.',
+    price: 62,
+    size: '200 ml | 6.8 fl.oz',
+    badge: 'Riviera Mist',
+    composition: ['Aloe Vera Gel', 'Bamboo Hydrosol', 'Provitamin B5', 'Orange Blossom Water'],
+    scentNotes: {
+      displaySummary: 'Sea Breeze, Orange Blossom, Bamboo Leaf, White Musk',
+    },
+    benefits: [
+      'Instant cooling refreshment in a single spritz',
+      'Lightweight hydrating layer on skin and hair',
+      'Signature GHRÉ scent layering companion',
+    ],
+    image: '/images/ghre_campaign_model_1787204370781.jpg',
+    accentColor: '#7CC3D2',
+    rating: 4.91,
+    reviewsCount: 127,
+  },
 ];
 
 export const BOTANICAL_INGREDIENTS: BotanicalIngredient[] = [

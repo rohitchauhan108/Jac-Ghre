@@ -38,7 +38,7 @@ export const WelcomeModal: React.FC = () => {
             {/* Close Button */}
             <button
               onClick={handleClose}
-              className="absolute top-4 right-4 p-2 transition-all border border-[#D4AF37]/40 text-[#D4AF37] hover:text-[#FFF3C4] hover:bg-[#007288] cursor-pointer"
+              className="absolute top-4 right-4 p-2 transition-all border border-[#D4AF37]/40 text-[#D4AF37] hover:text-[#FFF3C4] hover:bg-[#0C8A9B] cursor-pointer"
               aria-label="Close modal"
             >
               <X className="w-4 h-4" />
@@ -74,7 +74,7 @@ export const WelcomeModal: React.FC = () => {
               <div className="pt-2">
                 <button
                   onClick={handleClose}
-                  className="px-8 py-3 bg-gradient-to-r from-[#D4AF37] via-[#E2C365] to-[#B8860B] text-[#062B35] font-cinzel text-xs font-bold uppercase tracking-[0.2em] hover:brightness-110 shadow-[0_8px_25px_rgba(212,175,55,0.35)] transition-all cursor-pointer"
+                  className="px-8 py-3 bg-gradient-to-r from-[#D4AF37] via-[#E2C365] to-[#B8860B] text-[#0E4C5A] font-cinzel text-xs font-bold uppercase tracking-[0.2em] hover:brightness-110 shadow-[0_8px_25px_rgba(212,175,55,0.35)] transition-all cursor-pointer"
                 >
                   Explore Preview
                 </button>

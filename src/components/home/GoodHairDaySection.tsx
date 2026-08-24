@@ -53,7 +53,7 @@ export const GoodHairDaySection: React.FC = () => {
               onClick={() => setActiveTab('all')}
               className={`px-5 py-2 text-xs font-cinzel tracking-[0.2em] uppercase transition-all ${
                 activeTab === 'all'
-                  ? 'bg-[#D4AF37] text-[#062B35] font-bold'
+                  ? 'bg-[#D4AF37] text-[#0E4C5A] font-bold'
                   : 'text-[#B0C5CA] hover:text-[#F3E5AB]'
               }`}
             >
@@ -63,7 +63,7 @@ export const GoodHairDaySection: React.FC = () => {
               onClick={() => setActiveTab('oils')}
               className={`px-5 py-2 text-xs font-cinzel tracking-[0.2em] uppercase transition-all ${
                 activeTab === 'oils'
-                  ? 'bg-[#D4AF37] text-[#062B35] font-bold'
+                  ? 'bg-[#D4AF37] text-[#0E4C5A] font-bold'
                   : 'text-[#B0C5CA] hover:text-[#F3E5AB]'
               }`}
             >
@@ -73,7 +73,7 @@ export const GoodHairDaySection: React.FC = () => {
               onClick={() => setActiveTab('mists')}
               className={`px-5 py-2 text-xs font-cinzel tracking-[0.2em] uppercase transition-all ${
                 activeTab === 'mists'
-                  ? 'bg-[#D4AF37] text-[#062B35] font-bold'
+                  ? 'bg-[#D4AF37] text-[#0E4C5A] font-bold'
                   : 'text-[#B0C5CA] hover:text-[#F3E5AB]'
               }`}
             >
@@ -115,7 +115,7 @@ export const GoodHairDaySection: React.FC = () => {
               <div className="pt-2 flex items-center gap-3">
                 <button
                   onClick={() => addToCart(sunProducts[0])}
-                  className="px-6 py-3 bg-gradient-to-r from-[#D4AF37] via-[#E5C365] to-[#B89028] text-[#062B35] font-cinzel text-xs font-bold tracking-[0.2em] uppercase hover:brightness-110 shadow-lg transition-all"
+                  className="px-6 py-3 bg-gradient-to-r from-[#D4AF37] via-[#E5C365] to-[#B89028] text-[#0E4C5A] font-cinzel text-xs font-bold tracking-[0.2em] uppercase hover:brightness-110 shadow-lg transition-all"
                 >
                   Acquire Summer Glow Oil ($78)
                 </button>
@@ -196,7 +196,7 @@ export const GoodHairDaySection: React.FC = () => {
 
                     <button
                       onClick={() => addToCart(p)}
-                      className="px-4 py-2 bg-[#D4AF37] text-[#062B35] hover:brightness-110 font-cinzel text-xs font-bold tracking-wider uppercase flex items-center gap-1.5 transition-all"
+                      className="px-4 py-2 bg-[#D4AF37] text-[#0E4C5A] hover:brightness-110 font-cinzel text-xs font-bold tracking-wider uppercase flex items-center gap-1.5 transition-all"
                     >
                       <ShoppingBag className="w-3.5 h-3.5" />
                       <span>Add</span>

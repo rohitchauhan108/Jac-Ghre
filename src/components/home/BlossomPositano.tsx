@@ -133,7 +133,7 @@ export const BlossomPositano: React.FC = () => {
                   onClick={() => setSelectedSize('50ml')}
                   className={`px-4 py-2 text-xs font-cinzel uppercase border transition-all ${
                     selectedSize === '50ml'
-                      ? 'border-[#D4AF37] bg-[#D4AF37] text-[#062B35] font-bold'
+                      ? 'border-[#D4AF37] bg-[#D4AF37] text-[#0E4C5A] font-bold'
                       : 'border-[#D4AF37]/30 bg-[#006073] text-[#E8DCC4] hover:border-[#D4AF37]'
                   }`}
                 >
@@ -143,7 +143,7 @@ export const BlossomPositano: React.FC = () => {
                   onClick={() => setSelectedSize('100ml')}
                   className={`px-4 py-2 text-xs font-cinzel uppercase border transition-all ${
                     selectedSize === '100ml'
-                      ? 'border-[#D4AF37] bg-[#D4AF37] text-[#062B35] font-bold'
+                      ? 'border-[#D4AF37] bg-[#D4AF37] text-[#0E4C5A] font-bold'
                       : 'border-[#D4AF37]/30 bg-[#006073] text-[#E8DCC4] hover:border-[#D4AF37]'
                   }`}
                 >
@@ -156,7 +156,7 @@ export const BlossomPositano: React.FC = () => {
             <div className="flex items-center gap-4 pt-4">
               <button
                 onClick={() => addToCart(perfume)}
-                className="flex-1 py-3.5 px-6 bg-gradient-to-r from-[#D4AF37] via-[#E5C365] to-[#B89028] text-[#062B35] font-cinzel text-xs font-bold tracking-[0.2em] uppercase hover:brightness-110 shadow-lg flex items-center justify-center gap-2 transition-all"
+                className="flex-1 py-3.5 px-6 bg-gradient-to-r from-[#D4AF37] via-[#E5C365] to-[#B89028] text-[#0E4C5A] font-cinzel text-xs font-bold tracking-[0.2em] uppercase hover:brightness-110 shadow-lg flex items-center justify-center gap-2 transition-all"
               >
                 <ShoppingBag className="w-4 h-4" />
                 <span>Acquire Flacon • {currentPrice}</span>

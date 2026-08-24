@@ -430,7 +430,7 @@ export const HeroCarousel: React.FC = () => {
               bg-[#006073]/90
               hover:bg-[#D4AF37]
               text-[#F3E5AB]
-              hover:text-[#062B35]
+              hover:text-[#0E4C5A]
               border
               border-[#D4AF37]/70
               backdrop-blur-md
@@ -459,7 +459,7 @@ export const HeroCarousel: React.FC = () => {
                 w-3.5
                 h-3.5
                 text-[#D4AF37]
-                group-hover:text-[#062B35]
+                group-hover:text-[#0E4C5A]
                 transition-transform
                 group-hover:translate-x-1
               "

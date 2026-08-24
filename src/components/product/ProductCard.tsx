@@ -153,7 +153,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
                   border-[#D4AF37]/50
                   hover:border-[#D4AF37]
                   hover:bg-[#D4AF37]
-                  hover:text-[#062B35]
+                  hover:text-[#0E4C5A]
                 `
             }
           `}
@@ -414,7 +414,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
                   ${
                     isDark
                       ? 'text-[#F3E5AB]'
-                      : 'text-[#062B35]'
+                      : 'text-[#0E4C5A]'
                   }
                 `}
               >
@@ -454,7 +454,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
                     group-hover:text-[#F3E5AB]
                   `
                   : `
-                    text-[#062B35]
+                    text-[#0E4C5A]
                     group-hover:text-[#B8860B]
                   `
               }
@@ -514,7 +514,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
                     : `
                       bg-[#FAF7F2]
                       border-[#D4AF37]/20
-                      text-[#062B35]
+                      text-[#0E4C5A]
                     `
                 }
               `}
@@ -585,7 +585,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
                 ${
                   isDark
                     ? 'text-[#F7F4EB]'
-                    : 'text-[#062B35]'
+                    : 'text-[#0E4C5A]'
                 }
               `}
             >
@@ -630,7 +630,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
                   `
                   : `
                     text-[#B8860B]
-                    hover:text-[#062B35]
+                    hover:text-[#0E4C5A]
                   `
               }
             `}

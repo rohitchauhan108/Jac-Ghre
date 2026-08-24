@@ -1,9 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import {
-  Search,
   ShoppingBag,
-  Heart,
   User,
   Menu,
   X,
@@ -13,15 +11,12 @@ import {
 } from 'lucide-react';
 import { useShop, PageType } from '../../context/ShopContext';
 import { PRODUCTS } from '../../data/products';
-import logoLight from "../../assets/images/logo-light.png";
+const logoLight = "/images/logo-light.png";
 
 export const Header: React.FC = () => {
   const {
     cartCount,
-    wishlist,
     setIsCartOpen,
-    setIsWishlistOpen,
-    setIsSearchOpen,
     setIsWelcomePopupOpen,
     setQuickViewProduct,
     currentPage,
@@ -66,8 +61,9 @@ export const Header: React.FC = () => {
   const navLinks: { name: string; page: PageType; hasDropdown?: boolean }[] = [
     { name: 'HOME', page: 'home' },
     { name: 'SHOP', page: 'shop', hasDropdown: true },
+    { name: 'ABOUT', page: 'about-company' },
     { name: 'ABOUT THE FOUNDER', page: 'about-founder' },
-    { name: 'ABOUT THE COMPANY', page: 'about-company' },
+    { name: 'GALLERY', page: 'gallery' },
     { name: 'CONTACT US', page: 'contact' },
   ];
 
@@ -242,39 +238,16 @@ export const Header: React.FC = () => {
             })}
           </nav>
 
-          {/* Right Action Icons (Search, Account, Wishlist, Cart) */}
+          {/* Right Action Icons (Account, Cart) */}
           <div className="flex items-center space-x-2.5 sm:space-x-4">
-            {/* Search Trigger */}
-            <button
-              onClick={() => setIsSearchOpen(true)}
-              className="p-2 transition-colors cursor-pointer text-[#E8DCC4] hover:text-[#D4AF37]"
-              aria-label="Search"
-            >
-              <Search className="w-4 h-4 sm:w-5 sm:h-5" />
-            </button>
-
             {/* Account / Concierge */}
             <button
               onClick={() => navigateToPage('contact')}
-              className="hidden sm:block p-2 transition-colors cursor-pointer text-[#E8DCC4] hover:text-[#D4AF37]"
+              className="p-2 transition-colors cursor-pointer text-[#E8DCC4] hover:text-[#D4AF37]"
               aria-label="Concierge"
               title="GHRÉ Client Concierge"
             >
               <User className="w-4 h-4 sm:w-5 sm:h-5" />
-            </button>
-
-            {/* Wishlist */}
-            <button
-              onClick={() => setIsWishlistOpen(true)}
-              className="relative p-2 transition-colors cursor-pointer text-[#E8DCC4] hover:text-[#D4AF37]"
-              aria-label="Wishlist"
-            >
-              <Heart className="w-4 h-4 sm:w-5 sm:h-5" />
-              {wishlist.length > 0 && (
-                <span className="absolute top-1 right-1 w-4 h-4 bg-[#D4AF37] text-[#062B35] font-cinzel text-[9px] font-bold rounded-full flex items-center justify-center shadow">
-                  {wishlist.length}
-                </span>
-              )}
             </button>
 
             {/* Shopping Bag */}
@@ -285,7 +258,7 @@ export const Header: React.FC = () => {
             >
               <ShoppingBag className="w-4 h-4 sm:w-5 sm:h-5 text-[#D4AF37]" />
               {cartCount > 0 && (
-                <span className="absolute top-1 right-1 w-4 h-4 bg-gradient-to-r from-[#F9E8B2] to-[#D4AF37] text-[#062B35] font-cinzel text-[9px] font-bold rounded-full flex items-center justify-center shadow-lg animate-pulse">
+                <span className="absolute top-1 right-1 w-4 h-4 bg-gradient-to-r from-[#F9E8B2] to-[#D4AF37] text-[#0E4C5A] font-cinzel text-[9px] font-bold rounded-full flex items-center justify-center shadow-lg animate-pulse">
                   {cartCount}
                 </span>
               )}

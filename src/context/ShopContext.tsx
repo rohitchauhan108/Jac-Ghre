@@ -1,4 +1,7 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+'use client';
+
+import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
 import { Product } from '../types';
 import { PRODUCTS } from '../data/products';
 
@@ -8,7 +11,7 @@ export interface CartItem {
   selectedSize: string;
 }
 
-export type PageType = 'home' | 'shop' | 'about-founder' | 'about-company' | 'contact' | 'jac-ghre' | 'hair-care' | 'sun-body' | 'fragrance' | 'journal';
+export type PageType = 'home' | 'shop' | 'about-founder' | 'about-company' | 'contact' | 'jac-ghre' | 'hair-care' | 'sun-body' | 'fragrance' | 'journal' | 'gallery';
 export type ThemeMode = 'dark' | 'light';
 
 interface ShopContextType {
@@ -47,25 +50,68 @@ interface ShopContextType {
 
 const ShopContext = createContext<ShopContextType | undefined>(undefined);
 
-export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  // Initialize cart with sample items for instant rich preview
-  const [cart, setCart] = useState<CartItem[]>([
-    {
-      product: PRODUCTS[0], // Repair Shampoo
-      quantity: 1,
-      selectedSize: PRODUCTS[0].size,
-    },
-    {
-      product: PRODUCTS[2], // Prickly Pear Gold Oil
-      quantity: 1,
-      selectedSize: PRODUCTS[2].size,
-    },
-  ]);
+const pathnameToPageType = (pathname: string): PageType => {
+  switch (pathname) {
+    case '/shop': return 'shop';
+    case '/hair-care': return 'hair-care';
+    case '/sun-body': return 'sun-body';
+    case '/fragrance': return 'fragrance';
+    case '/jac-ghre':
+    case '/about-founder': return 'jac-ghre';
+    case '/about-company': return 'about-company';
+    case '/contact': return 'contact';
+    case '/journal': return 'journal';
+    case '/gallery': return 'gallery';
+    case '/':
+    default: return 'home';
+  }
+};
 
-  const [wishlist, setWishlist] = useState<string[]>([
-    PRODUCTS[0].id,
-    PRODUCTS[6].id, // Blossom Positano EDP
-  ]);
+const pageTypeToPath = (page: PageType): string => {
+  switch (page) {
+    case 'home': return '/';
+    case 'shop': return '/shop';
+    case 'hair-care': return '/hair-care';
+    case 'sun-body': return '/sun-body';
+    case 'fragrance': return '/fragrance';
+    case 'jac-ghre':
+    case 'about-founder': return '/jac-ghre';
+    case 'about-company': return '/about-company';
+    case 'contact': return '/contact';
+    case 'journal': return '/journal';
+    case 'gallery': return '/gallery';
+    default: return '/';
+  }
+};
+
+const findProduct = (id: string) => PRODUCTS.find(p => p.id === id) || PRODUCTS[0];
+
+export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const [cart, setCart] = useState<CartItem[]>(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('ghre_cart');
+      if (saved) {
+        try { return JSON.parse(saved); } catch {}
+      }
+    }
+    return [
+      { product: findProduct('repair-shampoo'), quantity: 1, selectedSize: findProduct('repair-shampoo').size },
+      { product: findProduct('oil-hair-body'), quantity: 1, selectedSize: findProduct('oil-hair-body').size },
+    ];
+  });
+
+  const [wishlist, setWishlist] = useState<string[]>(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('ghre_wishlist');
+      if (saved) {
+        try { return JSON.parse(saved); } catch {}
+      }
+    }
+    return ['repair-shampoo', 'blossom-positano-edp'];
+  });
 
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isWishlistOpen, setIsWishlistOpen] = useState(false);
@@ -76,7 +122,22 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [currentPage, setCurrentPage] = useState<PageType>('home');
   const [shopCategoryFilter, setShopCategoryFilter] = useState<string>('all');
 
-  // Theme Management (Dark by default, persisted in localStorage)
+  useEffect(() => {
+    setCurrentPage(pathnameToPageType(pathname ?? '/'));
+  }, [pathname]);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('ghre_cart', JSON.stringify(cart));
+    }
+  }, [cart]);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('ghre_wishlist', JSON.stringify(wishlist));
+    }
+  }, [wishlist]);
+
   const [theme, setThemeState] = useState<ThemeMode>(() => {
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('ghre_theme');
@@ -98,7 +159,6 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   }, [theme]);
 
-  // First time popup trigger
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const hasSeenPopup = sessionStorage.getItem('ghre_welcome_seen');
@@ -119,13 +179,15 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setThemeState(mode);
   };
 
-  const navigateToPage = (page: PageType, categoryFilter?: string) => {
+  const navigateToPage = useCallback((page: PageType, categoryFilter?: string) => {
+    const path = pageTypeToPath(page);
     setCurrentPage(page);
     if (categoryFilter !== undefined) {
       setShopCategoryFilter(categoryFilter);
     }
+    router.push(path);
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  }, [router]);
 
   const getCurrencySymbol = (curr: string) => {
     switch (curr) {

@@ -2,12 +2,12 @@
 
 @layer base {
   :root {
-    --font-serif: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
-    --font-cinzel: 'Cinzel', serif;
-    --font-cinzel-decorative: 'Cinzel Decorative', 'Cinzel', serif;
-    --font-script: 'Pinyon Script', 'Alex Brush', cursive;
-    --font-sans: 'Plus Jakarta Sans', 'Outfit', sans-serif;
-    --font-outfit: 'Outfit', sans-serif;
+    --font-serif: var(--font-playfair, 'Playfair Display'), var(--font-garamond, 'Cormorant Garamond'), Georgia, serif;
+    --font-cinzel: var(--font-cinzel, 'Cinzel'), serif;
+    --font-cinzel-decorative: var(--font-cinzel-decorative, 'Cinzel Decorative'), var(--font-cinzel, 'Cinzel'), serif;
+    --font-script: var(--font-pinyon, 'Pinyon Script'), var(--font-alex, 'Alex Brush'), cursive;
+    --font-sans: var(--font-plus-jakarta, 'Plus Jakarta Sans'), var(--font-outfit, 'Outfit'), sans-serif;
+    --font-outfit: var(--font-outfit, 'Outfit'), sans-serif;
   }
 
   body {
@@ -50,7 +50,7 @@ html.lenis body {
 /* Dark Theme Default */
 html.dark-theme body,
 body {
-  background-color: #007288;
+  background-color: #0C8A9B;
   color: #F7F4EB;
 }
 
@@ -64,7 +64,7 @@ body {
 /* Light Theme */
 html.light-theme body {
   background-color: #FAF7F2;
-  color: #062B35;
+  color: #0E4C5A;
 }
 
 .font-outfit {
@@ -131,11 +131,11 @@ html.light-theme body {
 }
 
 .teal-card-bg {
-  background: radial-gradient(120% 120% at 50% 0%, #007288 0%, #006073 100%);
+  background: radial-gradient(120% 120% at 50% 0%, #0C8A9B 0%, #097B8A 100%);
 }
 
 .teal-deep-gradient {
-  background: linear-gradient(180deg, #007288 0%, #006073 100%);
+  background: linear-gradient(180deg, #0C8A9B 0%, #097B8A 100%);
 }
 
 .sun-warm-gradient {
@@ -154,10 +154,10 @@ html.light-theme body {
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #006073;
+  background: #097B8A;
 }
 ::-webkit-scrollbar-thumb {
-  background: #007288;
+  background: #0C8A9B;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {

@@ -1,10 +1,13 @@
+'use client';
+
 import React, { useEffect, useRef } from 'react';
 import Lenis from 'lenis';
+import { usePathname } from 'next/navigation';
 import { useShop } from '../../context/ShopContext';
 
 export const SmoothScroll: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const pathname = usePathname();
   const {
-    currentPage,
     isCartOpen,
     isWishlistOpen,
     isSearchOpen,
@@ -14,49 +17,57 @@ export const SmoothScroll: React.FC<{ children: React.ReactNode }> = ({ children
 
   const lenisRef = useRef<Lenis | null>(null);
 
-  // Initialize Lenis smooth scroll
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.2,
+      duration: 1.0,
       easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: 'vertical',
       gestureOrientation: 'vertical',
       smoothWheel: true,
-      wheelMultiplier: 0.95,
-      touchMultiplier: 1.2,
+      wheelMultiplier: 0.85,
+      touchMultiplier: 1.0,
       infinite: false,
     });
 
     lenisRef.current = lenis;
-
-    // Attach to global window for any anchor or programmatic scrolls
     (window as unknown as { lenis?: Lenis }).lenis = lenis;
 
-    let rafId: number;
-    function raf(time: number) {
+    let rafId = 0;
+    let running = true;
+    const raf = (time: number) => {
+      if (!running) return;
       lenis.raf(time);
       rafId = requestAnimationFrame(raf);
-    }
+    };
     rafId = requestAnimationFrame(raf);
 
     return () => {
+      running = false;
       cancelAnimationFrame(rafId);
-      lenis.destroy();
+      try {
+        lenis.destroy();
+      } catch {
+        // ignore
+      }
       lenisRef.current = null;
-      delete (window as unknown as { lenis?: Lenis }).lenis;
+      if ((window as unknown as { lenis?: Lenis }).lenis === lenis) {
+        delete (window as unknown as { lenis?: Lenis }).lenis;
+      }
     };
   }, []);
 
-  // Scroll to top on page transition
   useEffect(() => {
     if (lenisRef.current) {
       lenisRef.current.scrollTo(0, { immediate: true });
     } else {
-      window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior });
+      try {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior });
+      } catch {
+        window.scrollTo(0, 0);
+      }
     }
-  }, [currentPage]);
+  }, [pathname]);
 
-  // Pause page smooth scroll when a modal or drawer is active to prevent background scroll jitter
   const isAnyModalOpen =
     isCartOpen ||
     isWishlistOpen ||
@@ -65,11 +76,16 @@ export const SmoothScroll: React.FC<{ children: React.ReactNode }> = ({ children
     Boolean(quickViewProduct);
 
   useEffect(() => {
-    if (!lenisRef.current) return;
-    if (isAnyModalOpen) {
-      lenisRef.current.stop();
-    } else {
-      lenisRef.current.start();
+    const lenis = lenisRef.current;
+    if (!lenis) return;
+    try {
+      if (isAnyModalOpen) {
+        lenis.stop();
+      } else {
+        lenis.start();
+      }
+    } catch {
+      // ignore start/stop errors
     }
   }, [isAnyModalOpen]);
 

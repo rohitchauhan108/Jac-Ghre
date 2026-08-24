@@ -13,8 +13,7 @@ import {
 } from 'lucide-react';
 import { useShop } from '../../context/ShopContext';
 
-// SAME LOGO USED IN NAVBAR
-import logoLight from '../../assets/images/logo-light.png';
+const logoLight = '/images/logo-light.png';
 
 export const Footer: React.FC = () => {
   const { navigateToPage, setIsWelcomePopupOpen } = useShop();
@@ -88,7 +87,7 @@ export const Footer: React.FC = () => {
             items-center
             justify-between
             gap-4
-            bg-[#007288]
+            bg-[#0C8A9B]
             border-[#D4AF37]/40
             text-[#F7F4EB]
           "
@@ -216,7 +215,7 @@ export const Footer: React.FC = () => {
                   transition-all
                   shadow-md
                   border-[#D4AF37]/30
-                  bg-[#007288]
+                  bg-[#0C8A9B]
                   text-[#D4AF37]
                   hover:bg-[#D4AF37]
                   hover:text-[#062B35]
@@ -239,7 +238,7 @@ export const Footer: React.FC = () => {
                   transition-all
                   shadow-md
                   border-[#D4AF37]/30
-                  bg-[#007288]
+                  bg-[#0C8A9B]
                   text-[#D4AF37]
                   hover:bg-[#D4AF37]
                   hover:text-[#062B35]
@@ -260,7 +259,7 @@ export const Footer: React.FC = () => {
                   transition-all
                   shadow-md
                   border-[#D4AF37]/30
-                  bg-[#007288]
+                  bg-[#0C8A9B]
                   text-[#D4AF37]
                   hover:bg-[#D4AF37]
                   hover:text-[#062B35]
@@ -300,6 +299,15 @@ export const Footer: React.FC = () => {
                   className="hover:text-[#D4AF37] transition-colors text-left text-[#C5D5D8] cursor-pointer"
                 >
                   Shop All Creations
+                </button>
+              </li>
+
+              <li>
+                <button
+                  onClick={() => navigateToPage('gallery')}
+                  className="hover:text-[#D4AF37] transition-colors text-left text-[#C5D5D8] cursor-pointer"
+                >
+                  The Gallery
                 </button>
               </li>
 
