@@ -5,7 +5,6 @@ import {
   Eye,
   ShoppingBag,
   Sparkles,
-  Star,
 } from 'lucide-react';
 import { Product } from '../../types';
 import { useShop } from '../../context/ShopContext';
@@ -61,120 +60,20 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         ${
           isDark
             ? `
-              bg-[#007288]
-              border-[#D4AF37]/30
-              hover:border-[#D4AF37]/80
-              hover:shadow-[0_15px_45px_rgba(0,96,115,0.35)]
-            `
+                bg-[#007288]
+                border-[#D4AF37]/30
+                hover:border-[#D4AF37]/80
+                hover:shadow-[0_15px_45px_rgba(0,96,115,0.35)]
+              `
             : `
-              bg-[#FFFFFF]
-              border-[#D4AF37]/35
-              hover:border-[#D4AF37]
-              hover:shadow-[0_12px_30px_rgba(0,0,0,0.08)]
-            `
+                bg-[#FFFFFF]
+                border-[#D4AF37]/35
+                hover:border-[#D4AF37]
+                hover:shadow-[0_12px_30px_rgba(0,0,0,0.08)]
+              `
         }
       `}
     >
-      {/* =========================================================
-          TOP BADGES + WISHLIST
-      ========================================================= */}
-
-      <div className="absolute top-3.5 inset-x-3.5 z-20 flex items-center justify-between pointer-events-none">
-        {product.badge ? (
-          <span
-            className={`
-              pointer-events-auto
-              inline-flex
-              items-center
-              gap-1.5
-              px-3
-              py-1
-              text-[10px]
-              uppercase
-              font-cinzel
-              tracking-[0.2em]
-              border
-              backdrop-blur-md
-
-              ${
-                isDark
-                  ? `
-                    bg-[#006073]/95
-                    text-[#F3E5AB]
-                    border-[#D4AF37]/50
-                  `
-                  : `
-                    bg-[#FFFFFF]/90
-                    text-[#B8860B]
-                    border-[#D4AF37]/60
-                  `
-              }
-            `}
-          >
-            <Sparkles className="w-2.5 h-2.5 text-[#D4AF37]" />
-            {product.badge}
-          </span>
-        ) : (
-          <span />
-        )}
-
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            toggleWishlist(product.id);
-          }}
-          aria-label="Add to wishlist"
-          className={`
-            pointer-events-auto
-            w-9
-            h-9
-            flex
-            items-center
-            justify-center
-            rounded-full
-            border
-            transition-all
-            duration-300
-            backdrop-blur-md
-
-            ${
-              isDark
-                ? `
-                  bg-[#006073]/90
-                  text-[#D4AF37]
-                  border-[#D4AF37]/40
-                  hover:border-[#D4AF37]
-                  hover:bg-[#D4AF37]
-                  hover:text-[#007288]
-                `
-                : `
-                  bg-[#FFFFFF]/90
-                  text-[#B8860B]
-                  border-[#D4AF37]/50
-                  hover:border-[#D4AF37]
-                  hover:bg-[#D4AF37]
-                  hover:text-[#0E4C5A]
-                `
-            }
-          `}
-        >
-          <Heart
-            className={`
-              w-4
-              h-4
-              transition-transform
-              active:scale-125
-
-              ${
-                isFavorited
-                  ? 'fill-[#D4AF37] text-[#D4AF37]'
-                  : ''
-              }
-            `}
-          />
-        </button>
-      </div>
-
       {/* =========================================================
           PRODUCT IMAGE STAGE
       ========================================================= */}
@@ -188,7 +87,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           flex
           items-center
           justify-center
-          p-6
+          p-0
 
           ${
             isDark
@@ -262,7 +161,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             z-10
             w-full
             h-full
-            object-contain
+            object-cover
             object-center
             transition-transform
             duration-700
@@ -275,7 +174,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         />
 
         {/* =======================================================
-            HOVER QUICK ACTION
+            HOVER QUICK ACTION (Quick View & Add to Bag)
         ======================================================= */}
 
         <div
@@ -351,8 +250,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
       </div>
 
       {/* =========================================================
-          PRODUCT INFORMATION
-          NO DARK TEAL HERE
+          PRODUCT INFORMATION (Name, Price & Discover Button)
       ========================================================= */}
 
       <div
@@ -379,62 +277,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         `}
       >
         <div>
-
-          {/* =====================================================
-              CATEGORY + RATING
-          ===================================================== */}
-
-          <div className="flex items-center justify-between mb-2">
-            <span
-              className={`
-                text-[10px]
-                font-cinzel
-                tracking-[0.25em]
-                uppercase
-                font-semibold
-
-                ${
-                  isDark
-                    ? 'text-[#D4AF37]'
-                    : 'text-[#B8860B]'
-                }
-              `}
-            >
-              {product.categoryLabel}
-            </span>
-
-            {product.rating && (
-              <div
-                className={`
-                  flex
-                  items-center
-                  gap-1
-                  text-[11px]
-
-                  ${
-                    isDark
-                      ? 'text-[#F3E5AB]'
-                      : 'text-[#0E4C5A]'
-                  }
-                `}
-              >
-                <Star className="w-3 h-3 fill-[#D4AF37] text-[#D4AF37]" />
-
-                <span className="font-poppins font-medium">
-                  {product.rating}
-                </span>
-
-                <span className="text-[#B7CBD0] text-[10px]">
-                  ({product.reviewsCount})
-                </span>
-              </div>
-            )}
-          </div>
-
-          {/* =====================================================
-              PRODUCT TITLE
-          ===================================================== */}
-
+          {/* PRODUCT TITLE */}
           <h3
             onClick={() => setQuickViewProduct(product)}
             className={`
@@ -462,99 +305,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           >
             {product.name}
           </h3>
-
-          {/* =====================================================
-              FRENCH NAME
-          ===================================================== */}
-
-          {/* {product.frenchName && (
-            <p
-              className={`
-                text-[12px]
-                font-editorial
-                italic
-                line-clamp-1
-                mb-2
-
-                ${
-                  isDark
-                    ? 'text-[#D4AF37]/85'
-                    : 'text-[#B8860B]/85'
-                }
-              `}
-            >
-              {product.frenchName}
-            </p>
-          )} */}
-
-          {/* =====================================================
-              SCENT NOTES
-          ===================================================== */}
-
-          {/* {product.scentNotes?.displaySummary && (
-            <div
-              className={`
-                my-2
-                py-1
-                px-2
-                border
-                text-[11px]
-                flex
-                items-center
-                gap-1.5
-                line-clamp-1
-
-                ${
-                  isDark
-                    ? `
-                      bg-[#006073]
-                      border-[#D4AF37]/20
-                      text-[#E8DCC4]
-                    `
-                    : `
-                      bg-[#FAF7F2]
-                      border-[#D4AF37]/20
-                      text-[#0E4C5A]
-                    `
-                }
-              `}
-            >
-              <span className="text-[#D4AF37] text-[10px] uppercase tracking-wider font-cinzel font-bold">
-                Notes:
-              </span>
-
-              <span className="truncate">
-                {product.scentNotes.displaySummary}
-              </span>
-            </div>
-          )} */}
-
-          {/* =====================================================
-              DESCRIPTION
-          ===================================================== */}
-
-          <p
-            className={`
-              text-[12px]
-              font-poppins
-              font-light
-              line-clamp-2
-              leading-relaxed
-              mt-1
-
-              ${
-                isDark
-                  ? 'text-[#D0E1E4]'
-                  : 'text-[#556E77]'
-              }
-            `}
-          >
-            {product.shortDescription}
-          </p>
         </div>
 
         {/* =======================================================
-            PRICE + CTA
+            PRICE + DISCOVER CTA
         ======================================================= */}
 
         <div
@@ -590,22 +344,6 @@ export const ProductCard: React.FC<ProductCardProps> = ({
               `}
             >
               {formattedPrice}
-            </span>
-
-            <span
-              className={`
-                block
-                text-[10px]
-                tracking-wider
-
-                ${
-                  isDark
-                    ? 'text-[#B7CBD0]'
-                    : 'text-[#7A98A1]'
-                }
-              `}
-            >
-              {product.size}
             </span>
           </div>
 
