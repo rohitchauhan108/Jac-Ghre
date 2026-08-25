@@ -161,7 +161,7 @@ export const HeroCarousel: React.FC = () => {
                   block
                   w-full
                   h-full
-                  object-cover
+                  object-contain
                   object-center
                   transition-transform
                   duration-1000

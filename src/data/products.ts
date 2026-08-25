@@ -43,7 +43,7 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     secondaryCtaLink: 'hair-care',
     accentTheme: 'teal-gold',
     image: '/images/banner1.jpg',
-    mobileImage: '/images/banner1.jpg',
+    mobileImage: '/images/mobile-banner1.jpg',
     locationBadge: 'PARIS • SAINT-TROPEZ • MIAMI',
   },
   {
@@ -58,7 +58,7 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     secondaryCtaLink: 'sun-body',
     accentTheme: 'summer-sun',
     image: '/images/banner2.jpg',
-    mobileImage: '/images/banner2.jpg',
+    mobileImage: '/images/mobile-banner2.jpg',
     locationBadge: 'SAINT-TROPEZ • RIVIERA',
   },
   {
