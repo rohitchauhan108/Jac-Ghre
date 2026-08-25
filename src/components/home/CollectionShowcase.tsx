@@ -134,7 +134,7 @@ export const CollectionShowcase: React.FC = () => {
 
         <div className="flex items-center justify-center flex-wrap gap-2 sm:gap-3 mb-14">
 
-          {categories.map((cat) => {
+          {/* {categories.map((cat) => {
             const isActive = activeCategory === cat.id;
 
             return (
@@ -176,7 +176,7 @@ export const CollectionShowcase: React.FC = () => {
                 {cat.label}
               </button>
             );
-          })}
+          })} */}
 
         </div>
 
