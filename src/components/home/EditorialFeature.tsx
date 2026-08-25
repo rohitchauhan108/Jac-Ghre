@@ -33,20 +33,20 @@ export const EditorialFeature: React.FC = () => {
               />
 
               {/* Gold Crest in Bottom Corner */}
-              <div className="absolute bottom-6 right-6 p-4 bg-[#006073]/90 border border-[#D4AF37]/60 backdrop-blur-md">
+              {/* <div className="absolute bottom-6 right-6 p-4 bg-[#006073]/90 border border-[#D4AF37]/60 backdrop-blur-md">
                 <GoldEmblem size={32} withGlow />
                 <span className="block text-[9px] font-cinzel tracking-[0.25em] text-[#F3E5AB] uppercase mt-1 text-center font-bold">
                   GHRÉ PARIS
                 </span>
-              </div>
+              </div> */}
 
               {/* Floating Badge */}
-              <div className="absolute top-6 left-6 px-3.5 py-1.5 bg-[#006073]/90 border border-[#D4AF37]/40 backdrop-blur-md">
+              {/* <div className="absolute top-6 left-6 px-3.5 py-1.5 bg-[#006073]/90 border border-[#D4AF37]/40 backdrop-blur-md">
                 <span className="text-[10px] font-cinzel font-semibold tracking-[0.25em] text-[#D4AF37] uppercase flex items-center gap-1.5">
                   <Sparkles className="w-3 h-3 text-[#D4AF37]" />
                   Haute Trichology
                 </span>
-              </div>
+              </div> */}
             </div>
           </motion.div>
 

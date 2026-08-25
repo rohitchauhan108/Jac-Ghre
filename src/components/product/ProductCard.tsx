@@ -467,7 +467,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
               FRENCH NAME
           ===================================================== */}
 
-          {product.frenchName && (
+          {/* {product.frenchName && (
             <p
               className={`
                 text-[12px]
@@ -485,13 +485,13 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             >
               {product.frenchName}
             </p>
-          )}
+          )} */}
 
           {/* =====================================================
               SCENT NOTES
           ===================================================== */}
 
-          {product.scentNotes?.displaySummary && (
+          {/* {product.scentNotes?.displaySummary && (
             <div
               className={`
                 my-2
@@ -527,7 +527,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
                 {product.scentNotes.displaySummary}
               </span>
             </div>
-          )}
+          )} */}
 
           {/* =====================================================
               DESCRIPTION
