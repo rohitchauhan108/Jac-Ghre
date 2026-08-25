@@ -22,6 +22,7 @@ export interface Product {
   };
   benefits?: string[];
   image: string;
+  ritualDetails?: string;
   bgAtmosphere?: string;
   accentColor?: string;
   rating?: number;

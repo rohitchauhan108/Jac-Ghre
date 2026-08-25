@@ -540,7 +540,7 @@ export const PRODUCTS: Product[] = [
   id: "monoi-silk-shampoo",
   name: "Monoi Silk Shampoo &Conditioner",
   frenchName: "Shampoo — Monoi Silk",
-  category: "hair-care",
+  category: "haircare",
   categoryLabel: "Hair Care",
   tagline: "Cleanse • Nourish • Shine",
   shortDescription:
