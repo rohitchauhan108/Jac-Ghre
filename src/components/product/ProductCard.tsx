@@ -288,7 +288,6 @@ export const ProductCard: React.FC<ProductCardProps> = ({
               tracking-wide
               transition-colors
               cursor-pointer
-              line-clamp-1
 
               ${
                 isDark

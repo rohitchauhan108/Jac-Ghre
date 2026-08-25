@@ -42,7 +42,7 @@ export const ProductSpotlight: React.FC = () => {
           <div className="h-0.5 w-24 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto mt-4" />
 
           {/* Product Switcher Pills */}
-          <div className="mt-8 inline-flex p-1.5 bg-[#03151b]/90 border border-[#D4AF37]/40 shadow-xl backdrop-blur-md">
+          {/* <div className="mt-8 inline-flex p-1.5 bg-[#03151b]/90 border border-[#D4AF37]/40 shadow-xl backdrop-blur-md">
             {spotlightProducts.map((p, idx) => (
               <button
                 key={p.id}
@@ -59,7 +59,7 @@ export const ProductSpotlight: React.FC = () => {
                 {idx === 0 ? '1. GHRÉ Repair Shampoo' : '9. GHRÉ Oil Hair & Body'}
               </button>
             ))}
-          </div>
+          </div> */}
         </div>
 
         {/* Spotlight Layout Grid */}

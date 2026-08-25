@@ -100,7 +100,7 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
 export const PRODUCTS: Product[] = [
   {
     id: "repair-shampoo",
-    name: "1. GHRÉ Repair Shampoo",
+    name: "GHRÉ Repair Shampoo",
     frenchName: "Shampooing Réparateur — Purify • Repair • Hydrate",
     category: "haircare",
     categoryLabel: "Luxury Hair Care",
@@ -114,20 +114,23 @@ export const PRODUCTS: Product[] = [
     badge: "1. Repair Shampoo",
     isHeroFeatured: true,
     isBestseller: true,
+
+    ritualDetails:
+      "Gently cleanses while repairing and strengthening hair. Restores softness, shine, and elasticity. Ideal for dry, damaged, or over-processed hair.",
+
     composition: [
-      "Keratin Complex",
+      "Keratin",
       "Prickly Pear Oil",
       "Panthenol (Pro-Vitamin B5)",
       "Vitamin E",
       "Amino Acids",
       "Hydrolyzed Silk Protein",
     ],
+
     scentNotes: {
-      top: ["Calabrian Bergamot", "Green Lemon Zest"],
-      heart: ["Orange Blossom Petals", "Bamboo Water"],
-      base: ["Warm White Cedar", "Solar Amber"],
       displaySummary: "Bergamot, Orange Blossom, Bamboo, Lemon",
     },
+
     benefits: [
       "Gently cleanses while repairing and strengthening hair fibers",
       "Restores softness, mirror-like shine, and natural elasticity",
@@ -139,10 +142,12 @@ export const PRODUCTS: Product[] = [
     rating: 4.98,
     reviewsCount: 184,
   },
+
   {
     id: "oil-hair-body",
-    name: "9. GHRÉ Oil Hair and Body",
-    frenchName: "Huile Précieuse Cheveux & Corps — Nourish • Glow • Protect",
+    name: "GHRÉ Oil Hair and Body",
+    frenchName:
+      "Huile Précieuse Cheveux & Corps — Nourish • Glow • Protect",
     category: "elixir",
     categoryLabel: "Precious Elixirs",
     tagline: "Nourish • Glow • Protect",
@@ -155,19 +160,21 @@ export const PRODUCTS: Product[] = [
     badge: "9. Oil Hair & Body",
     isHeroFeatured: true,
     isBestseller: true,
+
+    ritualDetails:
+      "Multi-use oil that deeply nourishes hair and skin. Illuminates, hydrates, and softens. Leaves skin silky and radiant, hair shiny and revitalized.",
+
     composition: [
-      "Moroccan Prickly Pear Oil",
-      "Pure Argan Oil",
-      "Organic Jojoba Oil",
+      "100% Prickly Pear Oil",
       "Vitamin E",
-      "Bio-Antioxidants",
+      "Essential Fatty Acids",
+      "Antioxidants",
     ],
+
     scentNotes: {
-      top: ["Italian Bergamot", "Sunlit Lemon Zest"],
-      heart: ["Orange Blossom", "Green Bamboo Shoot"],
-      base: ["Warm Gold Amber", "Satin Woods"],
       displaySummary: "Bergamot, Orange Blossom, Bamboo, Lemon",
     },
+
     benefits: [
       "Deeply nourishes hair lengths and skin with cold-pressed omegas",
       "Enhances natural glow and softness with zero greasy residue",
@@ -180,6 +187,7 @@ export const PRODUCTS: Product[] = [
     rating: 5.0,
     reviewsCount: 260,
   },
+
   {
     id: "leave-in-conditioner",
     name: "GHRÉ Leave-In Conditioner",
@@ -197,15 +205,23 @@ export const PRODUCTS: Product[] = [
     badge: "New Launch",
     isHeroFeatured: true,
     isNew: true,
+
+    ritualDetails:
+      "Lightweight leave-in treatment that hydrates, detangles, and smooths. Controls frizz, enhances shine and protects from heat styling and UV damage.",
+
     composition: [
-      "Orange Blossom Flower Water",
-      "Hydrolyzed Wheat Protein",
-      "Bamboo Shoot Extract",
-      "Pro-Vitamin B5",
+      "Prickly Pear Oil",
+      "Panthenol",
+      "Hydrolyzed Keratin",
+      "Vitamin E",
+      "Silk Protein",
+      "UV Filter",
     ],
+
     scentNotes: {
-      displaySummary: "Orange Blossom, Bamboo, Crisp Citrus",
+      displaySummary: "Bergamot, Orange Blossom, Bamboo, Lemon",
     },
+
     benefits: [
       "24-hour continuous moisture retention without weighing hair down",
       "Instant detangling and mirror-smooth blow-dry priming",
@@ -216,6 +232,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.95,
     reviewsCount: 92,
   },
+
   {
     id: "repair-conditioner",
     name: "GHRÉ Nourish & Repair Conditioner",
@@ -231,15 +248,23 @@ export const PRODUCTS: Product[] = [
     size: "250 ml | 8.4 fl.oz",
     badge: "Award Winner",
     isHeroFeatured: true,
+
+    ritualDetails:
+      "Nourishes deeply, detangles and smooths the hair. Helps reduce frizz and leaves hair soft, silky, and easy to style.",
+
     composition: [
-      "Bamboo Marrow",
-      "Organic Monoï Butter",
-      "Silk Amino Complex",
-      "Argan Kernel Elixir",
+      "Prickly Pear Oil",
+      "Keratin",
+      "Shea Butter",
+      "Panthenol",
+      "Vitamin E",
+      "Silk Amino Acids",
     ],
+
     scentNotes: {
-      displaySummary: "Orange Blossom, Vanilla Nectar, Bamboo Leaf",
+      displaySummary: "Bergamot, Orange Blossom, Bamboo, Lemon",
     },
+
     benefits: [
       "Instant detangling without weighing down fine or medium textures",
       "Seals hair fiber against UV degradation and humidity swelling",
@@ -250,6 +275,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.88,
     reviewsCount: 114,
   },
+
   {
     id: "hair-mask-masque",
     name: "GHRÉ Masque Capillaire Luxury Hair Mask",
@@ -265,15 +291,24 @@ export const PRODUCTS: Product[] = [
     size: "250 ml | 8.4 fl.oz",
     badge: "Weekly Ritual",
     isHeroFeatured: true,
+
+    ritualDetails:
+      "Intense nourishment and repair. Strengthens the hair fiber, restores softness and shine. Ideal for very dry or damaged hair.",
+
     composition: [
-      "Raw Shea Butter",
-      "Triple Keratin Complex",
-      "Cold-Pressed Cactus Seed Oil",
-      "Silk Peptides",
+      "Prickly Pear Oil",
+      "Keratin",
+      "Shea Butter",
+      "Argan Oil",
+      "Panthenol",
+      "Vitamin E",
+      "Hydrolyzed Silk Protein",
     ],
+
     scentNotes: {
-      displaySummary: "Mediterranean Jasmine, Neroli, Warm Amber Resin",
+      displaySummary: "Bergamot, Orange Blossom, Bamboo, Lemon",
     },
+
     benefits: [
       "Visibly reduces hair breakage by 89% after first application",
       "Restores natural lipid moisture barrier in 5 to 10 minutes",
@@ -284,6 +319,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.96,
     reviewsCount: 142,
   },
+
   {
     id: "gold-serum",
     name: "GHRÉ Sérum d’Or Luxury Gold Serum",
@@ -299,15 +335,23 @@ export const PRODUCTS: Product[] = [
     size: "30 ml | 1 fl.oz",
     badge: "Pro Salon Exclusive",
     isHeroFeatured: true,
+
+    ritualDetails:
+      "Luxurious finishing serum that adds instant shine, frizz control, and softness. Leaves hair luminous and perfectly polished.",
+
     composition: [
-      "Pure Gold Flake Infusion",
-      "Hydrolyzed Silk Protein",
-      "Abyssinian Oil",
-      "Ceramide Complex",
+      "Prickly Pear Oil",
+      "Argan Oil",
+      "Jojoba Oil",
+      "Vitamin E",
+      "Silk Protein",
+      "Gold Particles",
     ],
+
     scentNotes: {
-      displaySummary: "Sparkling Bergamot, Orange Flower, Cashmere Woods",
+      displaySummary: "Bergamot, Orange Blossom, Bamboo, Lemon",
     },
+
     benefits: [
       "Thermal heat protection up to 230°C / 450°F",
       "Dramatic reduction in split end visibility in a single use",
@@ -318,39 +362,38 @@ export const PRODUCTS: Product[] = [
     rating: 4.92,
     reviewsCount: 88,
   },
+
   {
     id: "summer-glow-oil",
-
     name: "Repair Shampoo Sulfate Free",
-
     frenchName: "Repair Shampoo Sulfate Free",
-
     category: "haircare",
-
     categoryLabel: "Luxury Hair Care",
-
     tagline: "Cleanse • Protect • Hydrate",
-
     shortDescription:
       "Gentle sulfate-free formula that cleanses without stripping. Protects moisture and improves softness and elasticity.",
-
     fullDescription:
       "Gentle sulfate-free formula that cleanses without stripping. Protects moisture and improves softness and elasticity.",
-
     price: 78,
-
     size: "150 ml | 5.1 fl.oz",
-
     badge: "Repair Shampoo Sulfate Free",
-
     isHeroFeatured: true,
-
     isBestseller: true,
 
-    composition: ["Sulfate-Free Formula"],
+    ritualDetails:
+      "Sulfate-free formula that cleanses without stripping. Protects natural moisture, strengthens, and improves softness and shine.",
+
+    composition: [
+      "Keratin",
+      "Prickly Pear Oil",
+      "Panthenol (Pro-Vitamin B5)",
+      "Vitamin E",
+      "Amino Acids",
+      "Hydrolyzed Silk Protein",
+    ],
 
     scentNotes: {
-      displaySummary: "Cleanse, Protect, Hydrate",
+      displaySummary: "Bergamot, Orange Blossom, Bamboo, Lemon",
     },
 
     benefits: [
@@ -358,48 +401,44 @@ export const PRODUCTS: Product[] = [
       "Protects moisture",
       "Improves softness and elasticity",
     ],
-
     image: "/product/3.webp",
-
     accentColor: "#E5C365",
-
     rating: 4.95,
-
     reviewsCount: 198,
   },
+
   {
     id: "blossom-positano-edp",
-
     name: "Thermal Protection Spray",
-
-    frenchName: "Spray de Protection Thermique — Thermal Protection Spray",
-
+    frenchName:
+      "Spray de Protection Thermique — Thermal Protection Spray",
     category: "haircare",
-
     categoryLabel: "Luxury Hair Care",
-
     tagline: "Protect • Smooth • Shine",
-
     shortDescription:
       "Protects hair from heat styling and thermal damage. Helps prevent breakage, leaving hair soft, smooth and glossy.",
-
     fullDescription:
       "Protects hair from heat styling and thermal damage. Helps prevent breakage, leaving hair soft, smooth and glossy.",
-
     price: 148,
-
     size: "100 ml | 3.4 fl.oz",
-
     badge: "Thermal Protection Spray",
-
     isHeroFeatured: true,
-
     isNew: true,
 
-    composition: ["Thermal Protection Formula"],
+    ritualDetails:
+      "Protects hair from heat styling up to 230°C / 450°F. Helps prevent breakage, leaving hair soft, smooth, and glossy.",
+
+    composition: [
+      "Prickly Pear Oil",
+      "Hydrolyzed Keratin",
+      "Panthenol",
+      "Vitamin E",
+      "Amino Acids",
+      "Heat Protectant",
+    ],
 
     scentNotes: {
-      displaySummary: "Bergamot, Bamboo, Orange Blossom, Lemon",
+      displaySummary: "Bergamot, Orange Blossom, Bamboo, Lemon",
     },
 
     benefits: [
@@ -407,44 +446,41 @@ export const PRODUCTS: Product[] = [
       "Helps prevent breakage",
       "Leaves hair soft, smooth and glossy",
     ],
-
     image: "/product/6.webp",
-
     accentColor: "#F9B77C",
-
     rating: 4.99,
-
     reviewsCount: 312,
   },
+
   {
     id: "body-hair-mist",
-
     name: "Marrakech Blossom",
-
     frenchName: "Eau de Parfum — Marrakech Blossom",
-
     category: "fragrance",
-
     categoryLabel: "Haute Parfumerie",
-
     tagline: "Scent • Freshness • Elegance",
-
     shortDescription:
       "A radiant fragrance with Bergamot, Bamboo, Orange Blossom and Lemon. Fresh, elegant and unforgettable.",
-
     fullDescription:
       "A radiant fragrance with Bergamot, Bamboo, Orange Blossom and Lemon. Fresh, elegant and unforgettable.",
-
     price: 62,
-
     size: "100 ml | 3.4 fl.oz",
-
     badge: "Marrakech Blossom Eau de Parfum",
 
-    composition: ["Bergamot", "Bamboo", "Orange Blossom", "Lemon"],
+    ritualDetails:
+      "A radiant and elegant fragrance that awakens the senses. Fresh, floral and uplifting, with a warm, refined signature that lingers beautifully.",
+
+    composition: [
+      "Bergamot",
+      "Orange Blossom",
+      "Jasmine",
+      "Bamboo",
+      "Lemon",
+      "Fig Accord",
+    ],
 
     scentNotes: {
-      displaySummary: "Bergamot, Bamboo, Orange Blossom, Lemon",
+      displaySummary: "Bergamot, Orange Blossom, Bamboo, Lemon",
     },
 
     benefits: [
@@ -452,15 +488,97 @@ export const PRODUCTS: Product[] = [
       "Elegant blend of Bergamot, Bamboo, Orange Blossom and Lemon",
       "Leaves a fresh and unforgettable impression",
     ],
-
     image: "/product/9.webp",
-
     accentColor: "#7CC3D2",
-
     rating: 4.91,
-
     reviewsCount: 127,
   },
+{
+  id: "blossom-positano",
+  name: "Blossom Positano",
+  frenchName: "Eau de Parfum — Blossom Positano",
+  category: "fragrance",
+  categoryLabel: "Haute Parfumerie",
+  tagline: "Citrus • Blossom • Elegance",
+  shortDescription:
+    "A radiant citrus fragrance inspired by the beauty of Positano, blending sparkling citrus freshness with delicate floral notes.",
+  fullDescription:
+    "A radiant and elegant Eau de Parfum inspired by the sun-kissed beauty of Positano. Bright citrus accords meet delicate blossoms to create a fresh, refined and effortlessly luxurious scent.",
+
+  price: 62,
+  size: "100 ml | 3.4 fl.oz",
+  badge: "Blossom Positano Eau de Parfum",
+
+  ritualDetails:
+    "A luminous fragrance ritual that awakens the senses with sparkling citrus freshness and soft floral elegance. Designed to leave a refined, fresh and memorable signature throughout the day.",
+
+  composition: [
+    "Citrus Zest",
+    "Lemon Blossom",
+    "Orange Blossom",
+    "Jasmine",
+    "Bergamot",
+    "Soft Floral Accord",
+  ],
+
+  scentNotes: {
+    displaySummary: "Citrus Zest, Lemon Blossom, Orange Blossom, Jasmine",
+  },
+
+  benefits: [
+    "Bright and refreshing citrus fragrance",
+    "Elegant blend of citrus and delicate blossom notes",
+    "Leaves a fresh, sophisticated and memorable impression",
+  ],
+
+  image: "/product/10.webp",
+  accentColor: "#D9A441",
+  rating: 4.91,
+  reviewsCount: 127,
+},
+{
+  id: "monoi-silk-shampoo",
+  name: "Monoi Silk Shampoo &Conditioner",
+  frenchName: "Shampoo — Monoi Silk",
+  category: "hair-care",
+  categoryLabel: "Hair Care",
+  tagline: "Cleanse • Nourish • Shine",
+  shortDescription:
+    "A luxurious Monoi-infused shampoo that gently cleanses the hair while leaving it soft, smooth and beautifully refreshed.",
+  fullDescription:
+    "A luxurious Monoi Silk Shampoo designed to gently cleanse and care for the hair. Its silky formula helps leave hair feeling soft, smooth, nourished and naturally radiant.",
+
+  price: 42,
+  size: "500 ml | 16.9 fl.oz",
+  badge: "Monoi Silk Shampoo",
+
+  ritualDetails:
+    "A gentle cleansing ritual that refreshes the hair while enveloping it in a silky Monoi-inspired care experience. Leaves hair feeling clean, soft, smooth and beautifully conditioned.",
+
+  composition: [
+    "Monoi",
+    "Silk Protein",
+    "Nourishing Hair Care Complex",
+    "Moisturizing Agents",
+    "Smoothing Agents",
+  ],
+
+  scentNotes: {
+    displaySummary: "Monoi, Soft Floral, Silky Clean",
+  },
+
+  benefits: [
+    "Gently cleanses the hair",
+    "Helps leave hair soft, smooth and nourished",
+    "Provides a silky, refreshed feel",
+    "Leaves hair looking healthy and radiant",
+  ],
+
+  image: "/product/11.webp",
+  accentColor: "#C7A15A",
+  rating: 4.91,
+  reviewsCount: 127,
+},
 ];
 
 export const BOTANICAL_INGREDIENTS: BotanicalIngredient[] = [

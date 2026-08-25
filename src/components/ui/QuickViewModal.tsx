@@ -65,12 +65,12 @@ export const QuickViewModal: React.FC = () => {
             <div className="md:col-span-5 bg-gradient-to-b from-[#007288] via-[#006073] to-[#006073] p-8 flex flex-col items-center justify-center relative border-b md:border-b-0 md:border-r border-[#D4AF37]/20">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.18)_0%,transparent_70%)] pointer-events-none" />
 
-              {product.badge && (
+              {/* {product.badge && (
                 <span className="absolute top-4 left-4 z-10 inline-flex items-center gap-1.5 px-3 py-1 text-[10px] uppercase font-cinzel tracking-[0.2em] bg-[#006073]/90 text-[#F3E5AB] border border-[#D4AF37]/40">
                   <Sparkles className="w-2.5 h-2.5 text-[#D4AF37]" />
                   {product.badge}
                 </span>
-              )}
+              )} */}
 
               <img
                 src={product.image}
@@ -87,7 +87,7 @@ export const QuickViewModal: React.FC = () => {
             {/* Right Information */}
             <div className="md:col-span-7 p-6 md:p-8 flex flex-col justify-between bg-gradient-to-b from-[#007288] to-[#006073]">
               <div>
-                <div className="flex items-center justify-between mb-1.5">
+                {/* <div className="flex items-center justify-between mb-1.5">
                   <span className="text-[11px] font-cinzel tracking-[0.3em] text-[#D4AF37] uppercase">
                     {product.categoryLabel}
                   </span>
@@ -98,17 +98,17 @@ export const QuickViewModal: React.FC = () => {
                       <span className="text-[#D4AF37]/60">({product.reviewsCount} reviews)</span>
                     </div>
                   )}
-                </div>
+                </div> */}
 
                 <h2 className="font-cinzel text-2xl md:text-3xl text-[#F7F4EB] tracking-wide">
                   {product.name}
                 </h2>
-
+{/* 
                 {product.frenchName && (
                   <p className="text-sm font-editorial italic text-[#D4AF37]/90 mt-0.5 mb-2">
                     {product.frenchName}
                   </p>
-                )}
+                )} */}
 
                 <div className="flex items-baseline gap-3 my-3">
                   <span className="text-2xl font-cinzel font-semibold text-[#F3E5AB]">
