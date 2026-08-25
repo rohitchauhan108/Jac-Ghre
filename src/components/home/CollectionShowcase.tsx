@@ -29,7 +29,6 @@ export const CollectionShowcase: React.FC = () => {
     >
       {/* =========================================================
           BACKGROUND
-          Main Teal: #007288
       ========================================================= */}
 
       {/* Soft Teal Depth */}
@@ -133,8 +132,7 @@ export const CollectionShowcase: React.FC = () => {
         ======================================================= */}
 
         <div className="flex items-center justify-center flex-wrap gap-2 sm:gap-3 mb-14">
-
-          {/* {categories.map((cat) => {
+          {categories.map((cat) => {
             const isActive = activeCategory === cat.id;
 
             return (
@@ -176,8 +174,7 @@ export const CollectionShowcase: React.FC = () => {
                 {cat.label}
               </button>
             );
-          })} */}
-
+          })}
         </div>
 
         {/* =======================================================
@@ -186,7 +183,16 @@ export const CollectionShowcase: React.FC = () => {
 
         <motion.div
           layout
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8"
+          className="
+            grid
+            grid-cols-1
+            sm:grid-cols-2
+            lg:grid-cols-4
+            gap-6
+            sm:gap-8
+            items-stretch
+            auto-rows-fr
+          "
         >
           {filteredProducts.map((product) => (
             <motion.div
@@ -195,8 +201,30 @@ export const CollectionShowcase: React.FC = () => {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.35 }}
+              className="
+                h-full
+                min-h-0
+                flex
+              "
             >
-              <ProductCard product={product} />
+              {/* 
+                Force the ProductCard to fill the entire grid cell.
+                The [&>*] selector makes its root element stretch too.
+              */}
+              <div
+                className="
+                  w-full
+                  h-full
+                  min-h-0
+                  flex
+                  flex-col
+                  [&>*]:h-full
+                  [&>*]:flex
+                  [&>*]:flex-col
+                "
+              >
+                <ProductCard product={product} />
+              </div>
             </motion.div>
           ))}
         </motion.div>
@@ -221,7 +249,6 @@ export const CollectionShowcase: React.FC = () => {
             overflow-hidden
           "
         >
-
           {/* Panel Glow */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(212,175,55,0.07)_0%,transparent_45%)] pointer-events-none" />
 
@@ -261,7 +288,6 @@ export const CollectionShowcase: React.FC = () => {
               />
 
               <div>
-
                 <span className="text-[9px] font-cinzel tracking-[0.3em] text-[#D4AF37] uppercase">
                   PRIVATE BEAUTY CONCIERGE
                 </span>
@@ -274,9 +300,7 @@ export const CollectionShowcase: React.FC = () => {
                   Speak directly with a GHRÉ beauty concierge for tailor-made
                   hair rituals and scent profiling.
                 </p>
-
               </div>
-
             </div>
 
             {/* CTA */}
@@ -301,7 +325,6 @@ export const CollectionShowcase: React.FC = () => {
             >
               Request VIP Consultation
             </button>
-
           </div>
         </motion.div>
 
