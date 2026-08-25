@@ -33,7 +33,7 @@ export const WelcomeModal: React.FC = () => {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full max-w-lg border-2 p-8 sm:p-12 shadow-[0_25px_70px_rgba(0,96,115,0.85)] z-10 overflow-hidden text-center bg-gradient-to-b from-[#007288] via-[#006073] to-[#006073] border-[#D4AF37]/70 text-[#F7F4EB]"
+            className="relative w-full max-w-lg border-2 p-8 sm:p-12 shadow-[0_25px_70px_rgba(0,96,115,0.85)] z-10 overflow-hidden text-center bg-[#0a8697] border-[#D4AF37]/70 text-[#F7F4EB]"
           >
             {/* Close Button */}
             <button
@@ -50,8 +50,12 @@ export const WelcomeModal: React.FC = () => {
 
             {/* Logo from user image */}
             <div className="relative z-10 flex flex-col items-center justify-center space-y-6">
-              <div className="py-2">
+              {/* <div className="py-2">
                 <BrandLogo variant="stacked" size="lg" withScriptTagline withGlow />
+              </div> */}
+              <div>
+                <img src="/images/logo-light.png" alt="" 
+                width={300}/>
               </div>
 
               {/* Decorative Gold Divider */}

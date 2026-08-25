@@ -152,13 +152,17 @@ export const BrandPhilosophy: React.FC = () => {
                 {/* Logo Aura */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-32 bg-[radial-gradient(ellipse_at_center,rgba(212,175,55,0.12)_0%,transparent_70%)] pointer-events-none" />
 
-                <div className="relative">
+                {/* <div className="relative">
                   <BrandLogo
                     variant="stacked"
                     size="xl"
                     withScriptTagline
                     withGlow
                   />
+                </div> */}
+                <div>
+                  <img src="/images/logo-light.png" alt=""
+                  width={500} />
                 </div>
 
               </div>
