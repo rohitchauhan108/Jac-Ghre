@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import React, { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "motion/react";
 import {
   ShoppingBag,
   User,
@@ -8,9 +8,9 @@ import {
   ChevronDown,
   Clock,
   Gift,
-} from 'lucide-react';
-import { useShop, PageType } from '../../context/ShopContext';
-import { PRODUCTS } from '../../data/products';
+} from "lucide-react";
+import { useShop, PageType } from "../../context/ShopContext";
+import { PRODUCTS } from "../../data/products";
 const logoLight = "/images/logo-light.png";
 
 export const Header: React.FC = () => {
@@ -46,7 +46,10 @@ export const Header: React.FC = () => {
           setIsVisible(true);
         }
         // Scrolling DOWN -> hide header
-        else if (currentScrollY > lastScrollY.current + 5 && currentScrollY > 120) {
+        else if (
+          currentScrollY > lastScrollY.current + 5 &&
+          currentScrollY > 120
+        ) {
           setIsVisible(false);
         }
       }
@@ -54,30 +57,34 @@ export const Header: React.FC = () => {
       lastScrollY.current = currentScrollY;
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navLinks: { name: string; page: PageType; hasDropdown?: boolean }[] = [
-    { name: 'HOME', page: 'home' },
-    { name: 'SHOP', page: 'shop', hasDropdown: true },
-    { name: 'ABOUT', page: 'about-company' },
-    { name: 'ABOUT THE FOUNDER', page: 'about-founder' },
-    { name: 'GALLERY', page: 'gallery' },
-    { name: 'CONTACT US', page: 'contact' },
+    { name: "HOME", page: "home" },
+    { name: "SHOP", page: "shop", hasDropdown: true },
+    { name: "ABOUT", page: "about-company" },
+    { name: "ABOUT THE FOUNDER", page: "about-founder" },
+    { name: "GALLERY", page: "gallery" },
+    { name: "CONTACT US", page: "contact" },
   ];
 
   const featuredCreations = PRODUCTS.slice(0, 3);
+  const [mounted, setMounted] = useState(false);
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   return (
     <>
       <header
         className={`sticky top-0 z-40 w-full transition-all duration-400 ease-out transform ${
-          isVisible ? 'translate-y-0' : '-translate-y-full pointer-events-none'
+          isVisible ? "translate-y-0" : "-translate-y-full pointer-events-none"
         } ${
           isScrolled
-            ? 'bg-[#006073]/98 backdrop-blur-lg border-b border-[#D4AF37]/35 py-3 shadow-[0_12px_35px_rgba(0,96,115,0.6)]'
-            : 'bg-gradient-to-b from-[#006073]/95 via-[#007288]/80 to-transparent py-4 sm:py-5 border-b border-[#D4AF37]/20'
+            ? "bg-[#006073]/98 backdrop-blur-lg border-b border-[#D4AF37]/35 py-3 shadow-[0_12px_35px_rgba(0,96,115,0.6)]"
+            : "bg-gradient-to-b from-[#006073]/95 via-[#007288]/80 to-transparent py-4 sm:py-5 border-b border-[#D4AF37]/20"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -95,14 +102,14 @@ export const Header: React.FC = () => {
           {/* Brand Logo - Updated to display logoDark Image */}
           <div className="flex items-center">
             <button
-              onClick={() => navigateToPage('home')}
+              onClick={() => navigateToPage("home")}
               className="group flex items-center text-left focus:outline-none cursor-pointer"
               aria-label="GHRÉ Paris Home"
             >
-              <img 
-                src={logoLight} 
-                alt="GHRÉ Paris Logo" 
-                className="h-20 sm:h-28 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+              <img
+                src={logoLight}
+                alt="GHRÉ Paris Logo"
+                className="h-20 sm:h-28 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </button>
           </div>
@@ -112,20 +119,24 @@ export const Header: React.FC = () => {
             {navLinks.map((link) => {
               const isActive =
                 currentPage === link.page ||
-                (link.page === 'about-founder' && currentPage === 'jac-ghre');
+                (link.page === "about-founder" && currentPage === "jac-ghre");
               return (
                 <div
                   key={link.name}
                   className="relative"
-                  onMouseEnter={() => link.hasDropdown && setShopDropdownOpen(true)}
-                  onMouseLeave={() => link.hasDropdown && setShopDropdownOpen(false)}
+                  onMouseEnter={() =>
+                    link.hasDropdown && setShopDropdownOpen(true)
+                  }
+                  onMouseLeave={() =>
+                    link.hasDropdown && setShopDropdownOpen(false)
+                  }
                 >
                   <button
                     onClick={() => navigateToPage(link.page)}
                     className={`font-cinzel text-xs xl:text-[13px] tracking-[0.2em] py-2 inline-flex items-center gap-1.5 transition-all duration-200 cursor-pointer ${
                       isActive
-                        ? 'text-[#D4AF37] font-bold border-b-2 border-[#D4AF37]'
-                        : 'text-[#E8DCC4] hover:text-[#D4AF37]'
+                        ? "text-[#D4AF37] font-bold border-b-2 border-[#D4AF37]"
+                        : "text-[#E8DCC4] hover:text-[#D4AF37]"
                     }`}
                   >
                     <span>{link.name}</span>
@@ -153,7 +164,7 @@ export const Header: React.FC = () => {
                             <button
                               onClick={() => {
                                 setShopDropdownOpen(false);
-                                navigateToPage('hair-care');
+                                navigateToPage("hair-care");
                               }}
                               className="block text-left w-full font-cinzel text-xs tracking-wider transition-colors text-[#F7F4EB] hover:text-[#D4AF37]"
                             >
@@ -162,7 +173,7 @@ export const Header: React.FC = () => {
                             <button
                               onClick={() => {
                                 setShopDropdownOpen(false);
-                                navigateToPage('sun-body');
+                                navigateToPage("sun-body");
                               }}
                               className="block text-left w-full font-cinzel text-xs tracking-wider transition-colors text-[#F7F4EB] hover:text-[#D4AF37]"
                             >
@@ -171,7 +182,7 @@ export const Header: React.FC = () => {
                             <button
                               onClick={() => {
                                 setShopDropdownOpen(false);
-                                navigateToPage('fragrance');
+                                navigateToPage("fragrance");
                               }}
                               className="block text-left w-full font-cinzel text-xs tracking-wider transition-colors text-[#F7F4EB] hover:text-[#D4AF37]"
                             >
@@ -180,7 +191,7 @@ export const Header: React.FC = () => {
                             <button
                               onClick={() => {
                                 setShopDropdownOpen(false);
-                                navigateToPage('shop', 'haircare');
+                                navigateToPage("shop", "haircare");
                               }}
                               className="block text-left w-full font-cinzel text-xs tracking-wider transition-colors text-[#F7F4EB] hover:text-[#D4AF37]"
                             >
@@ -242,7 +253,7 @@ export const Header: React.FC = () => {
           <div className="flex items-center space-x-2.5 sm:space-x-4">
             {/* Account / Concierge */}
             <button
-              onClick={() => navigateToPage('contact')}
+              onClick={() => navigateToPage("contact")}
               className="p-2 transition-colors cursor-pointer text-[#E8DCC4] hover:text-[#D4AF37]"
               aria-label="Concierge"
               title="GHRÉ Client Concierge"
@@ -280,9 +291,9 @@ export const Header: React.FC = () => {
             />
 
             <motion.div
-              initial={{ x: '-100%' }}
+              initial={{ x: "-100%" }}
               animate={{ x: 0 }}
-              exit={{ x: '-100%' }}
+              exit={{ x: "-100%" }}
               transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
               data-lenis-prevent
               className="fixed inset-y-0 left-0 w-4/5 max-w-sm border-r-2 shadow-2xl p-6 flex flex-col justify-between overflow-y-auto bg-[#007288] border-[#D4AF37]/40 text-[#F7F4EB]"
@@ -291,10 +302,10 @@ export const Header: React.FC = () => {
                 {/* Header inside drawer */}
                 <div className="flex items-center justify-between border-b border-[#D4AF37]/20 pb-4 mb-5">
                   <div className="flex items-center gap-2">
-                    <img 
-                      src={logoLight} 
-                      alt="GHRÉ Paris Logo" 
-                      className="h-24 w-auto object-contain" 
+                    <img
+                      src={logoLight}
+                      alt="GHRÉ Paris Logo"
+                      className="h-24 w-auto object-contain"
                     />
                   </div>
                   <button
@@ -327,9 +338,10 @@ export const Header: React.FC = () => {
                       }}
                       className={`block w-full text-left font-cinzel text-sm tracking-[0.22em] py-2.5 border-b border-[#D4AF37]/10 transition-colors ${
                         currentPage === link.page ||
-                        (link.page === 'about-founder' && currentPage === 'jac-ghre')
-                          ? 'text-[#D4AF37] font-bold'
-                          : 'text-[#E8DCC4] hover:text-[#D4AF37]'
+                        (link.page === "about-founder" &&
+                          currentPage === "jac-ghre")
+                          ? "text-[#D4AF37] font-bold"
+                          : "text-[#E8DCC4] hover:text-[#D4AF37]"
                       }`}
                     >
                       {link.name}
