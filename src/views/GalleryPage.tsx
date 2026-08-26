@@ -170,16 +170,16 @@ export const GalleryPage: React.FC = () => {
                 alt={image.alt}
                 loading="lazy"
                 decoding="async"
-                className="w-full h-full object-cover filter contrast-105 group-hover:scale-105 transition-transform duration-700 ease-out"
+                className="w-full h-full object-cover filter group-hover:scale-105 transition-transform duration-700 ease-out"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#021318]/85 via-[#021318]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              {/* <div className="absolute inset-0 bg-gradient-to-t from-[#021318]/85 via-[#021318]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" /> */}
               <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                <span className="inline-block px-2.5 py-1 bg-[#097B8A]/95 text-[10px] font-cinzel text-[#D4AF37] uppercase tracking-widest border border-[#D4AF37]/40">
+                {/* <span className="inline-block px-2.5 py-1 bg-[#097B8A]/95 text-[10px] font-cinzel text-[#D4AF37] uppercase tracking-widest border border-[#D4AF37]/40">
                   {image.category}
-                </span>
-                <p className="mt-2 font-poppins text-sm text-[#F7F4EB] leading-snug">
+                </span> */}
+                {/* <p className="mt-2 font-poppins text-sm text-[#F7F4EB] leading-snug">
                   {image.alt}
-                </p>
+                </p> */}
               </div>
             </button>
           ))}
@@ -256,7 +256,7 @@ export const GalleryPage: React.FC = () => {
                 alt={filteredImagesRef.current[lightboxIndex].alt}
                 className="w-full h-auto max-h-[85vh] object-contain border border-[#D4AF37]/30"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#021318] via-[#021318]/70 to-transparent p-5 sm:p-6">
+              <div className="absolute bottom-0 left-0 right-0 gradient-to-t from-[#021318] via-[#021318]/70 to-transparent p-5 sm:p-6">
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <div>
                     <span className="inline-block px-2.5 py-1 bg-[#097B8A] text-[10px] font-cinzel text-[#D4AF37] uppercase tracking-widest border border-[#D4AF37]/40">
