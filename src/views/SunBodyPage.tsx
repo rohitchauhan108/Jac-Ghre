@@ -54,9 +54,9 @@ export const SunBodyPage: React.FC = () => {
               <h2 className="font-cinzel text-2xl sm:text-3xl font-bold text-[#F7F4EB] uppercase">
                 GHRÉ Summer Glow Oil
               </h2>
-              <p className="font-editorial text-lg italic text-[#D4AF37] mt-1">
+              {/* <p className="font-editorial text-lg italic text-[#D4AF37] mt-1">
                 Huile Solaire Pailletée • 24K Golden Refraction
-              </p>
+              </p> */}
               <p className="font-poppins text-sm sm:text-base text-[#B5CAD0] mt-3 leading-relaxed">
                 Suspends multi-tonal gold micro-pearls in a dry-touch botanical oil matrix. Enhances your natural tan, hydrates dry skin, and leaves hair glistening without greasiness.
               </p>
@@ -101,9 +101,9 @@ export const SunBodyPage: React.FC = () => {
               <h2 className="font-cinzel text-2xl sm:text-3xl font-bold text-[#F7F4EB] uppercase">
                 GHRÉ Body Watch Monoï
               </h2>
-              <p className="font-editorial text-lg italic text-[#D4AF37] mt-1">
+              {/* <p className="font-editorial text-lg italic text-[#D4AF37] mt-1">
                 Gel Douche Haute Hydratation • Tahitian Flower Essence
-              </p>
+              </p> */}
               <p className="font-poppins text-sm sm:text-base text-[#B5CAD0] mt-3 leading-relaxed">
                 A gentle foaming botanical bath elixir that dissolves sea salt, sunscreen residues, and environmental impurities while soothing sun-heated skin with aloe and coconut monoï.
               </p>

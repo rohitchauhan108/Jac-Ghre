@@ -8,7 +8,7 @@ type Category = 'all' | 'banner' | 'catalogues' | 'founder' | 'product';
 
 const GALLERY_IMAGES: { category: Exclude<Category, 'all'>; src: string; alt: string }[] = [
   { category: 'banner', src: '/gallery/banner/banner.jpeg', alt: 'Brand Banner 1' },
-  { category: 'banner', src: '/gallery/banner/banner2.jpeg', alt: 'Brand Banner 2' },
+  { category: 'banner', src: '/gallery/banner/banner2.webp', alt: 'Brand Banner 2' },
   { category: 'catalogues', src: '/gallery/catalogues/0.jpeg', alt: 'Catalogue 0' },
   { category: 'catalogues', src: '/gallery/catalogues/1.jpeg', alt: 'Catalogue 1' },
   { category: 'catalogues', src: '/gallery/catalogues/2.jpeg', alt: 'Catalogue 2' },

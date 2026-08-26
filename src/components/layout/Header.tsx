@@ -186,7 +186,7 @@ export const Header: React.FC = () => {
                             >
                               Repair Shampoos & Masks
                             </button>
-                            <button
+                            {/* <button
                               onClick={() => {
                                 setShopDropdownOpen(false);
                                 navigateToPage('shop', 'all');
@@ -194,7 +194,7 @@ export const Header: React.FC = () => {
                               className="block text-left w-full text-[#D4AF37] hover:text-[#FFF3C4] font-cinzel text-xs font-bold tracking-wider pt-1"
                             >
                               View All 9 Creations →
-                            </button>
+                            </button> */}
                           </div>
                         </div>
 

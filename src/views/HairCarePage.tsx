@@ -216,12 +216,12 @@ export const HairCarePage: React.FC = () => {
                     >
                       {p.name}
                     </h4>
-                    <p className="text-xs font-editorial italic text-[#D4AF37] mt-1">
+                    {/* <p className="text-xs font-editorial italic text-[#D4AF37] mt-1">
                       {p.tagline}
-                    </p>
-                    <p className="text-xs sm:text-sm text-[#8EAAB0] font-poppins mt-2 leading-relaxed line-clamp-3">
+                    </p> */}
+                    {/* <p className="text-xs sm:text-sm text-[#8EAAB0] font-poppins mt-2 leading-relaxed line-clamp-3">
                       {p.shortDescription}
-                    </p>
+                    </p> */}
                   </div>
 
                   <div className="mt-6 pt-4 border-t border-[#D4AF37]/20 flex items-center justify-between">

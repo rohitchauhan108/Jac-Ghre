@@ -1,10 +1,22 @@
-import React from 'react';
-import { motion } from 'motion/react';
-import { ShieldCheck, Sparkles, Droplets, Sun, Award, Globe, MapPin, ArrowRight, Heart, Star, CheckCircle } from 'lucide-react';
-import { GoldEmblem } from '../components/ui/GoldEmblem';
-import { BrandLogo } from '../components/ui/BrandLogo';
-import { CAMPAIGN_IMAGES } from '../data/products';
-import { useShop } from '../context/ShopContext';
+import React from "react";
+import { motion } from "motion/react";
+import {
+  ShieldCheck,
+  Sparkles,
+  Droplets,
+  Sun,
+  Award,
+  Globe,
+  MapPin,
+  ArrowRight,
+  Heart,
+  Star,
+  CheckCircle,
+} from "lucide-react";
+import { GoldEmblem } from "../components/ui/GoldEmblem";
+import { BrandLogo } from "../components/ui/BrandLogo";
+import { CAMPAIGN_IMAGES } from "../data/products";
+import { useShop } from "../context/ShopContext";
 
 export const AboutCompanyPage: React.FC = () => {
   const { navigateToPage } = useShop();
@@ -12,52 +24,52 @@ export const AboutCompanyPage: React.FC = () => {
   const pillars = [
     {
       icon: <Award className="w-6 h-6 text-[#D4AF37]" />,
-      title: 'PARISIAN HAUTE COIFFURE',
-      tagline: 'Runway-Tested Excellence',
+      title: "PARISIAN HAUTE COIFFURE",
+      tagline: "Runway-Tested Excellence",
       description:
-        'Born from legendary Paris and Milan fashion week runways under master hair directorship, our formulas were initially created to protect, style, and restore supermodel hair under extreme backstage lighting.',
+        "Born from legendary Paris and Milan fashion week runways under master hair directorship, our formulas were initially created to protect, style, and restore supermodel hair under extreme backstage lighting.",
     },
     {
       icon: <Droplets className="w-6 h-6 text-[#D4AF37]" />,
-      title: 'PRICKLY PEAR BOTANICAL ALCHEMY',
-      tagline: 'The Crown of Rare Oils',
+      title: "PRICKLY PEAR BOTANICAL ALCHEMY",
+      tagline: "The Crown of Rare Oils",
       description:
-        'We harness 100% cold-pressed Moroccan Prickly Pear Seed Oil (Opuntia Ficus-Indica)—nature’s richest source of Vitamin E, sterols, and omega fatty acids, offering 3x the restorative power of traditional argan oil.',
+        "We harness 100% cold-pressed Moroccan Prickly Pear Seed Oil (Opuntia Ficus-Indica)—nature’s richest source of Vitamin E, sterols, and omega fatty acids, offering 3x the restorative power of traditional argan oil.",
     },
     {
       icon: <Sun className="w-6 h-6 text-[#D4AF37]" />,
-      title: 'COASTAL SOLAR & HUMIDITY SHIELD',
-      tagline: 'Riviera & Miami Climate Defense',
+      title: "COASTAL SOLAR & HUMIDITY SHIELD",
+      tagline: "Riviera & Miami Climate Defense",
       description:
-        'Engineered specifically to combat UV solar degradation, salt water crystallization, and coastal humidity experienced across Saint-Tropez, the French Riviera, and Fisher Island, Miami.',
+        "Engineered specifically to combat UV solar degradation, salt water crystallization, and coastal humidity experienced across Saint-Tropez, the French Riviera, and Fisher Island, Miami.",
     },
     {
       icon: <ShieldCheck className="w-6 h-6 text-[#D4AF37]" />,
-      title: 'CLEAN HAUTE FORMULATION',
-      tagline: 'Purity Without Compromise',
+      title: "CLEAN HAUTE FORMULATION",
+      tagline: "Purity Without Compromise",
       description:
-        'Every GHRÉ creation is 100% free of sulfates, parabens, harsh phthalates, and synthetic heavy fillers. Dermatologist-tested, color-safe, keratin-safe, and cruelty-free.',
+        "Every GHRÉ creation is 100% free of sulfates, parabens, harsh phthalates, and synthetic heavy fillers. Dermatologist-tested, color-safe, keratin-safe, and cruelty-free.",
     },
   ];
 
   const ateliers = [
     {
-      city: 'FISHER ISLAND, MIAMI',
-      name: 'Fisher Island Club Atelier',
-      desc: 'Private VIP sanctuary serving elite members and international clientele.',
-      status: 'Flagship Private Atelier',
+      city: "FISHER ISLAND, MIAMI",
+      name: "Fisher Island Club Atelier",
+      desc: "Private VIP sanctuary serving elite members and international clientele.",
+      status: "Flagship Private Atelier",
     },
     {
-      city: 'PARIS, FRANCE',
-      name: 'Place Vendôme & Haute Couture',
-      desc: 'Backstage runway direction, editorial creations, and haute coiffure.',
-      status: 'Haute Couture Studio',
+      city: "PARIS, FRANCE",
+      name: "Place Vendôme & Haute Couture",
+      desc: "Backstage runway direction, editorial creations, and haute coiffure.",
+      status: "Haute Couture Studio",
     },
     {
-      city: 'SAINT-TROPEZ, RIVIERA',
-      name: 'Ramatuelle Coastal Suite',
-      desc: 'Summer yacht appointments and sun-defense restorative haircare.',
-      status: 'Riviera Atelier',
+      city: "SAINT-TROPEZ, RIVIERA",
+      name: "Ramatuelle Coastal Suite",
+      desc: "Summer yacht appointments and sun-defense restorative haircare.",
+      status: "Riviera Atelier",
     },
   ];
 
@@ -86,7 +98,10 @@ export const AboutCompanyPage: React.FC = () => {
           <div className="h-0.5 w-32 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto my-8" />
 
           <p className="font-outfit text-sm sm:text-base text-[#C4D8DC] font-light max-w-2xl mx-auto leading-relaxed">
-            Founded on the runway capitals of Paris and refined across the exclusive shores of Fisher Island, Miami, GHRÉ is a luxury haircare and beauty house dedicated to elevating daily care into an exquisite ritual of renewal.
+            Founded on the runway capitals of Paris and refined across the
+            exclusive shores of Fisher Island, Miami, GHRÉ is a luxury haircare
+            and beauty house dedicated to elevating daily care into an exquisite
+            ritual of renewal.
           </p>
         </div>
       </section>
@@ -115,7 +130,8 @@ export const AboutCompanyPage: React.FC = () => {
                     THE EMBLEM OF LUXURY — THE SOUL OF GHRÉ
                   </span>
                   <p className="text-xs font-outfit text-[#FBF9F3] mt-0.5">
-                    Barbary Fig Flower & Lotus — Inspired by Moroccan nature. Rare & Powerful.
+                    Barbary Fig Flower & Lotus — Inspired by Moroccan nature.
+                    Rare & Powerful.
                   </p>
                 </div>
               </div>
@@ -139,21 +155,37 @@ export const AboutCompanyPage: React.FC = () => {
               </div>
 
               <p className="font-outfit text-sm sm:text-base text-[#C4D8DC] font-light leading-relaxed">
-                For over two decades, GHRÉ has operated at the intersection of haute couture fashion and trichological science. What began as custom backstage elixir formulations for top supermodels during Paris Fashion Week has evolved into a globally celebrated beauty maison.
+                For over two decades, GHRÉ has operated at the intersection of
+                haute couture fashion and trichological science. What began as
+                custom backstage elixir formulations for top supermodels during
+                Paris Fashion Week has evolved into a globally celebrated beauty
+                maison.
               </p>
 
               <p className="font-outfit text-sm sm:text-base text-[#C4D8DC] font-light leading-relaxed">
-                Every formulation is crafted in France and the United States under strict clean-luxury guidelines. We select only the most potent cold-pressed botanicals, pairing Moroccan Prickly Pear Seed Oil with cellular Keratin complexes to transform damaged hair into vibrant, touchable silk.
+                Every formulation is crafted in France and the United States
+                under strict clean-luxury guidelines. We select only the most
+                potent cold-pressed botanicals, pairing Moroccan Prickly Pear
+                Seed Oil with cellular Keratin complexes to transform damaged
+                hair into vibrant, touchable silk.
               </p>
 
               <div className="grid grid-cols-2 gap-4 pt-2">
                 <div className="p-4 bg-[#097B8A] border border-[#D4AF37]/30">
-                  <span className="font-cinzel text-2xl font-bold text-[#D4AF37] block">100%</span>
-                  <span className="text-xs font-outfit text-[#8EAAB0]">Clean & Cruelty-Free Formulation</span>
+                  <span className="font-cinzel text-2xl font-bold text-[#D4AF37] block">
+                    100%
+                  </span>
+                  <span className="text-xs font-outfit text-[#8EAAB0]">
+                    Clean & Cruelty-Free Formulation
+                  </span>
                 </div>
                 <div className="p-4 bg-[#097B8A] border border-[#D4AF37]/30">
-                  <span className="font-cinzel text-2xl font-bold text-[#D4AF37] block">3x</span>
-                  <span className="text-xs font-outfit text-[#8EAAB0]">Antioxidant Power vs. Argan Oil</span>
+                  <span className="font-cinzel text-2xl font-bold text-[#D4AF37] block">
+                    3x
+                  </span>
+                  <span className="text-xs font-outfit text-[#8EAAB0]">
+                    Antioxidant Power vs. Argan Oil
+                  </span>
                 </div>
               </div>
             </motion.div>
@@ -173,7 +205,8 @@ export const AboutCompanyPage: React.FC = () => {
               The GHRÉ Pillars of Craft
             </h2>
             <p className="font-outfit text-sm text-[#8EAAB0] mt-3">
-              Meticulous standards governing our research, sustainable sourcing, and artisanal creation.
+              Meticulous standards governing our research, sustainable sourcing,
+              and artisanal creation.
             </p>
           </div>
 
@@ -207,6 +240,14 @@ export const AboutCompanyPage: React.FC = () => {
         </div>
       </section>
 
+      <section className="flex items-center justify-center w-full p-10">
+        <img
+          src="/gallery/catalogues/about.jpeg"
+          alt="GHRÉ Emblem — Barbary Fig Flower & Lotus"
+          className="lg:w-[50%] object-contain bg-[#006073] filter contrast-105 brightness-100 rounded-xl"
+        />
+      </section>
+
       {/* 4. Global Flagship Ateliers */}
       <section className="py-24 bg-[#0C8A9B] border-t border-b border-[#D4AF37]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -218,7 +259,8 @@ export const AboutCompanyPage: React.FC = () => {
               Our International Ateliers
             </h2>
             <p className="font-outfit text-sm text-[#8EAAB0] mt-3">
-              Serving our private patrons across the world’s most prestigious luxury destinations.
+              Serving our private patrons across the world’s most prestigious
+              luxury destinations.
             </p>
           </div>
 
@@ -235,9 +277,7 @@ export const AboutCompanyPage: React.FC = () => {
                 <h3 className="font-cinzel text-xl font-bold text-[#FBF9F3] uppercase">
                   {a.city}
                 </h3>
-                <h4 className="font-cinzel text-sm text-[#F3E5AB]">
-                  {a.name}
-                </h4>
+                <h4 className="font-cinzel text-sm text-[#F3E5AB]">{a.name}</h4>
                 <p className="font-outfit text-xs text-[#8EAAB0] font-light leading-relaxed">
                   {a.desc}
                 </p>
@@ -251,24 +291,25 @@ export const AboutCompanyPage: React.FC = () => {
               Experience the GHRÉ Haute Ritual
             </h3>
             <p className="font-outfit text-xs sm:text-sm text-[#B3CBD1] max-w-xl mx-auto">
-              Discover our signature hair care creations or request a private consultation at our Fisher Island Club Flagship Atelier.
+              Discover our signature hair care creations or request a private
+              consultation at our Fisher Island Club Flagship Atelier.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
               <button
-                onClick={() => navigateToPage('shop')}
+                onClick={() => navigateToPage("shop")}
                 className="px-6 py-3 bg-[#D4AF37] text-[#0E4C5A] font-cinzel text-xs font-bold tracking-widest uppercase hover:brightness-110 transition-all flex items-center gap-2 cursor-pointer"
               >
                 <span>Explore The Shop</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
               <button
-                onClick={() => navigateToPage('about-founder')}
+                onClick={() => navigateToPage("about-founder")}
                 className="px-6 py-3 bg-[#097B8A] border border-[#D4AF37] text-[#F3E5AB] font-cinzel text-xs font-bold tracking-widest uppercase hover:bg-[#0C8A9B] transition-all cursor-pointer"
               >
                 About The Founder
               </button>
               <button
-                onClick={() => navigateToPage('contact')}
+                onClick={() => navigateToPage("contact")}
                 className="px-6 py-3 bg-transparent border border-[#8EAAB0]/40 text-[#8EAAB0] hover:text-[#FBF9F3] font-cinzel text-xs font-bold tracking-widest uppercase hover:border-[#D4AF37] transition-all cursor-pointer"
               >
                 Contact Us

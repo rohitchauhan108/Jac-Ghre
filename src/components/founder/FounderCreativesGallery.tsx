@@ -126,15 +126,15 @@ export const FounderCreativesGallery: React.FC = () => {
                   decoding="async"
                   className="w-full h-full object-cover filter contrast-100 saturate-105 group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#021318]/92 via-[#021318]/10 to-transparent" />
+                {/* <div className="absolute inset-0 bg-gradient-to-t from-[#021318]/92 via-[#021318]/10 to-transparent" /> */}
 
                 {/* Numbered Badge */}
-                <div className="absolute top-3 left-3 z-10">
+                {/* <div className="absolute top-3 left-3 z-10">
                   <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#006073]/90 border border-[#D4AF37]/50 text-[10px] font-cinzel tracking-[0.22em] uppercase text-[#F3E5AB]">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" />
                     {String(index + 1).padStart(2, '0')}
                   </span>
-                </div>
+                </div> */}
 
                 {/* Hover Zoom Badge */}
                 <div className="absolute top-3 right-3 z-10 opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300">
@@ -146,14 +146,14 @@ export const FounderCreativesGallery: React.FC = () => {
               </button>
 
               {/* Caption Footer */}
-              <figcaption className="p-4 sm:p-5 border-t border-[#D4AF37]/25 bg-gradient-to-b from-[#006073] to-[#005566]">
+              {/* <figcaption className="p-4 sm:p-5 border-t border-[#D4AF37]/25 bg-gradient-to-b from-[#006073] to-[#005566]">
                 <h3 className="font-cinzel text-sm sm:text-base font-bold tracking-[0.14em] text-[#FBF9F3] uppercase">
                   {creative.label}
                 </h3>
                 <p className="mt-1 font-editorial italic text-[#D4AF37] text-xs sm:text-sm">
                   {creative.caption}
                 </p>
-              </figcaption>
+              </figcaption> */}
             </motion.figure>
           ))}
         </div>
@@ -237,7 +237,7 @@ export const FounderCreativesGallery: React.FC = () => {
               </div>
 
               {/* Caption / Text Panel */}
-              <div className="mt-4 p-4 sm:p-5 border border-[#D4AF37]/40 bg-gradient-to-br from-[#006073] via-[#007288] to-[#005566]">
+              {/* <div className="mt-4 p-4 sm:p-5 border border-[#D4AF37]/40 bg-gradient-to-br from-[#006073] via-[#007288] to-[#005566]">
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
                   <div className="flex items-start gap-4">
                     <div className="shrink-0 w-10 h-10 border border-[#D4AF37]/60 bg-[#021318] flex items-center justify-center">
@@ -266,7 +266,7 @@ export const FounderCreativesGallery: React.FC = () => {
                     </span>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </motion.div>
           </motion.div>
         )}

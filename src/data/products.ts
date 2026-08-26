@@ -59,8 +59,8 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     secondaryCtaText: "SHOP MISTS",
     secondaryCtaLink: "sun-body",
     accentTheme: "summer-sun",
-    image: "/images/banner2.jpg",
-    mobileImage: "/images/mobile-banner2.jpg",
+    image: "/images/banner3.jpg",
+    mobileImage: "/images/mobile-banner3.jpg",
     locationBadge: "SAINT-TROPEZ • RIVIERA",
   },
   {
@@ -75,8 +75,8 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     secondaryCtaText: "SHOP HAIR CARE",
     secondaryCtaLink: "shop",
     accentTheme: "summer-sun",
-    image: "/images/banner3.jpg",
-    mobileImage: "/images/mobile-banner3.jpg",
+    image: "/images/banner2.jpg",
+    mobileImage: "/images/mobile-banner2.jpg",
     locationBadge: "SAINT-TROPEZ • MIAMI",
   },
   {
@@ -91,8 +91,8 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     secondaryCtaText: "SHOP COLLECTION",
     secondaryCtaLink: "shop",
     accentTheme: "teal-gold",
-    image: "/images/banner4.jpg",
-    mobileImage: "/images/mobile-banner4.jpg",
+    image: "/images/banner.webp",
+    mobileImage: "/images/mobile-banner5.webp",
     locationBadge: "SAINT-TROPEZ • MIAMI",
   },
 ];

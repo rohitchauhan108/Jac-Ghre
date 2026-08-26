@@ -5,13 +5,8 @@ import {
   ShoppingBag,
   Heart,
   Eye,
-  SlidersHorizontal,
-  Search,
-  Check,
   Star,
-  RefreshCw,
-  ArrowUpDown,
-  Filter,
+  Check,
 } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
 import { PRODUCTS } from '../data/products';
@@ -27,24 +22,16 @@ export const ShopPage: React.FC = () => {
     currencySymbol,
     currencyRate,
     shopCategoryFilter,
-    setShopCategoryFilter,
   } = useShop();
 
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedSort, setSelectedSort] = useState<'featured' | 'price-low' | 'price-high' | 'rating'>('featured');
-  const [activeBadge, setActiveBadge] = useState<string>('all');
-
-  const categories = [
-    { id: 'all', label: 'All Creations (9)' },
-    { id: 'haircare', label: 'Haute Hair Care' },
-    { id: 'elixir', label: 'Precious Elixirs' },
-    { id: 'bodycare', label: 'Sun & Body' },
-    { id: 'fragrance', label: 'Haute Parfumerie' },
-  ];
+  // If you no longer use search, sort, or badge states elsewhere, they can be cleaned up as well.
+  const [searchQuery] = useState('');
+  const [selectedSort] = useState<'featured' | 'price-low' | 'price-high' | 'rating'>('featured');
+  const [activeBadge] = useState<string>('all');
 
   const filteredProducts = useMemo(() => {
     return PRODUCTS.filter((product) => {
-      // Category filter
+      // Category filter based on context
       if (shopCategoryFilter !== 'all') {
         if (shopCategoryFilter === 'hair-care' && product.category !== 'haircare' && product.category !== 'elixir') return false;
         if (shopCategoryFilter === 'sun-care' && product.category !== 'bodycare') return false;
@@ -107,71 +94,8 @@ export const ShopPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Main Filter & Products Area */}
+      {/* Main Products Area */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
-        {/* Controls Bar: Search, Category Pills, Sort */}
-        <div className="bg-[#097B8A] border border-[#D4AF37]/35 p-6 shadow-xl mb-10 space-y-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            {/* Search Input */}
-            <div className="relative w-full md:w-80">
-              <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-[#D4AF37]" />
-              <input
-                type="text"
-                placeholder="Search creations or ingredients..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 bg-[#097B8A] border border-[#D4AF37]/40 text-xs sm:text-sm text-[#F7F4EB] placeholder-[#8EAAB0] font-poppins outline-none focus:border-[#D4AF37]"
-              />
-              {searchQuery && (
-                <button
-                  onClick={() => setSearchQuery('')}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-[#8EAAB0] hover:text-[#D4AF37]"
-                >
-                  Clear
-                </button>
-              )}
-            </div>
-
-            {/* Sort Dropdown & Result Count */}
-            <div className="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end">
-              <span className="text-xs font-poppins text-[#B5CAD0]">
-                Showing <strong>{filteredProducts.length}</strong> creations
-              </span>
-
-              <div className="flex items-center gap-2">
-                <ArrowUpDown className="w-3.5 h-3.5 text-[#D4AF37]" />
-                <select
-                  value={selectedSort}
-                  onChange={(e) => setSelectedSort(e.target.value as any)}
-                  className="bg-[#097B8A] border border-[#D4AF37]/40 text-xs text-[#F7F4EB] font-poppins px-3 py-2 outline-none focus:border-[#D4AF37] cursor-pointer"
-                >
-                  <option value="featured">Featured Curated</option>
-                  <option value="price-low">Price: Low to High</option>
-                  <option value="price-high">Price: High to Low</option>
-                  <option value="rating">Highest Rated</option>
-                </select>
-              </div>
-            </div>
-          </div>
-
-          {/* Category Tabs */}
-          <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-[#D4AF37]/20">
-            {categories.map((cat) => (
-              <button
-                key={cat.id}
-                onClick={() => setShopCategoryFilter(cat.id)}
-                className={`px-4 py-2 text-xs font-cinzel tracking-wider uppercase transition-all ${
-                  shopCategoryFilter === cat.id
-                    ? 'bg-[#D4AF37] text-[#0E4C5A] font-bold shadow-md'
-                    : 'bg-[#097B8A] text-[#C7D9DC] border border-[#D4AF37]/25 hover:border-[#D4AF37]/60 hover:text-white'
-                }`}
-              >
-                {cat.label}
-              </button>
-            ))}
-          </div>
-        </div>
-
         {/* Products Grid */}
         {filteredProducts.length === 0 ? (
           <div className="text-center py-20 bg-[#097B8A] border border-[#D4AF37]/30 p-8">
@@ -180,18 +104,8 @@ export const ShopPage: React.FC = () => {
               No Creations Found
             </h3>
             <p className="font-poppins text-sm text-[#B5CAD0] mt-2">
-              No products match your search "{searchQuery}". Try resetting filters.
+              No products match your current view.
             </p>
-            <button
-              onClick={() => {
-                setSearchQuery('');
-                setShopCategoryFilter('all');
-                setActiveBadge('all');
-              }}
-              className="mt-6 px-6 py-2.5 bg-[#D4AF37] text-[#0E4C5A] font-cinzel text-xs font-bold uppercase tracking-wider hover:brightness-110"
-            >
-              Reset All Filters
-            </button>
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -206,7 +120,7 @@ export const ShopPage: React.FC = () => {
                 >
                   <div>
                     {/* Top Row: Badge & Wishlist */}
-                    <div className="flex items-center justify-between mb-3">
+                    {/* <div className="flex items-center justify-between mb-3">
                       <span className="text-[10px] font-cinzel font-semibold tracking-widest text-[#D4AF37] uppercase bg-[#097B8A] px-2 py-0.5 border border-[#D4AF37]/30">
                         {product.badge || product.categoryLabel}
                       </span>
@@ -221,7 +135,7 @@ export const ShopPage: React.FC = () => {
                       >
                         <Heart className="w-3.5 h-3.5" fill={inWish ? 'currentColor' : 'none'} />
                       </button>
-                    </div>
+                    </div> */}
 
                     {/* Product Image Area */}
                     <div
@@ -243,7 +157,7 @@ export const ShopPage: React.FC = () => {
 
                     {/* Product Meta */}
                     <div className="space-y-1.5">
-                      <div className="flex items-center justify-between text-xs text-[#8EAAB0] font-poppins">
+                      {/* <div className="flex items-center justify-between text-xs text-[#8EAAB0] font-poppins">
                         <span>{product.size}</span>
                         <div className="flex items-center gap-1 text-[#D4AF37]">
                           <Star className="w-3.5 h-3.5 fill-[#D4AF37]" />
@@ -251,22 +165,22 @@ export const ShopPage: React.FC = () => {
                             {product.rating || 5.0}
                           </span>
                         </div>
-                      </div>
+                      </div> */}
 
                       <h3
                         onClick={() => setQuickViewProduct(product)}
-                        className="font-cinzel text-lg font-bold text-[#F7F4EB] hover:text-[#D4AF37] cursor-pointer transition-colors leading-snug line-clamp-1"
+                        className="font-cinzel text-lg font-bold text-[#F7F4EB] hover:text-[#D4AF37] cursor-pointer transition-colors leading-snug "
                       >
                         {product.name}
                       </h3>
 
-                      <p className="text-xs font-editorial italic text-[#D4AF37] line-clamp-1">
+                      {/* <p className="text-xs font-editorial italic text-[#D4AF37] line-clamp-1">
                         {product.tagline}
-                      </p>
+                      </p> */}
 
-                      <p className="text-xs sm:text-sm text-[#8EAAB0] font-poppins line-clamp-2 pt-1 leading-relaxed">
+                      {/* <p className="text-xs sm:text-sm text-[#8EAAB0] font-poppins line-clamp-2 pt-1 leading-relaxed">
                         {product.shortDescription}
-                      </p>
+                      </p> */}
                     </div>
                   </div>
 
