@@ -38,16 +38,19 @@ export const CampaignBanner: React.FC = () => {
           <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-[#D4AF37] z-20" />
 
           {/* Panoramic Campaign Banner Image */}
-          <div className="relative aspect-[16/9] sm:aspect-[16/8] md:aspect-[21/9] w-full overflow-hidden bg-[#006073] group cursor-pointer" onClick={() => navigateToPage('hair-care')}>
+          <div 
+            className="relative lg:h-screen w-full overflow-hidden bg-[#006073] group cursor-pointer" 
+            onClick={() => navigateToPage('hair-care')}
+          >
             <img
               src={CAMPAIGN_IMAGES.summerDream}
               alt="GHRÉ PARIS Your Summ'Hair Dream Campaign"
               className="w-full h-full object-cover object-center transform group-hover:scale-[1.015] transition-transform duration-700"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#006073]/80 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#006073]/60 via-transparent to-transparent pointer-events-none" />
 
-            <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 z-20 flex flex-wrap items-center gap-3">
-              <span className="px-3.5 py-1.5 bg-[#006073]/90 border border-[#D4AF37]/50 text-[#F3E5AB] font-cinzel text-xs tracking-[0.2em] uppercase backdrop-blur-md">
+            <div className="lg:absolute p-5 bottom-4 left-4 sm:bottom-6 sm:left-6 z-20 flex flex-wrap items-center gap-3">
+              <span className="px-3.5 py-1.5 bg-[#006073]/90 border border-[#D4AF37]/50 text-[#F3E5AB] font-cinzel text-xs tracking-[0.2em] uppercase backdrop-blur-md lg:w-auto w-full flex justify-center" >
                 SAINT-TROPEZ • MIAMI
               </span>
               <button
@@ -55,7 +58,7 @@ export const CampaignBanner: React.FC = () => {
                   e.stopPropagation();
                   navigateToPage('hair-care');
                 }}
-                className="px-5 py-1.5 bg-[#D4AF37] text-[#062B35] font-cinzel text-xs font-bold tracking-[0.2em] uppercase hover:brightness-110 shadow-lg flex items-center gap-1.5 transition-all"
+                className="px-5 py-1.5 bg-[#D4AF37] text-[#062B35] font-cinzel text-xs font-bold tracking-[0.2em] uppercase hover:brightness-110 shadow-lg flex items-center gap-1.5 transition-all lg:w-auto w-full justify-center"
               >
                 <span>EXPLORE RITUAL</span>
                 <ArrowRight className="w-3.5 h-3.5" />
