@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, Sparkles } from 'lucide-react';
+import { X } from 'lucide-react';
 import { useShop } from '../../context/ShopContext';
-import { BrandLogo } from './BrandLogo';
 
 export const WelcomeModal: React.FC = () => {
   const { isWelcomePopupOpen, setIsWelcomePopupOpen } = useShop();
@@ -24,56 +23,33 @@ export const WelcomeModal: React.FC = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={handleClose}
-            className="fixed inset-0 bg-[#021317]/85 backdrop-blur-md transition-opacity"
+            className="fixed inset-0 bg-[#088395]/20 backdrop-blur-md transition-opacity"
           />
 
-          {/* Modal Container with Solid 	#1f727e Background */}
+          {/* Modal Container holding only the image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full max-w-lg border-2 p-8 sm:p-12 shadow-[0_25px_70px_rgba(0,0,0,0.5)] z-10 overflow-hidden text-center bg-[#1f727e] border-[#D4AF37]/70 text-[#F7F4EB]"
+            className="relative w-full max-w-lg border-2 shadow-[0_25px_70px_rgba(0,0,0,0.5)] z-10 overflow-hidden bg-[#1f727e] border-[#D4AF37]/70"
           >
             {/* Close Button */}
             <button
               onClick={handleClose}
-              className="absolute top-4 right-4 p-2 transition-all border border-[#D4AF37]/40 text-[#D4AF37] hover:text-[#FFF3C4] hover:bg-[#287f98] cursor-pointer"
+              className="absolute top-4 right-4 z-20 p-2 transition-all border border-[#D4AF37]/40 bg-[#1f727e]/80 text-[#D4AF37] hover:text-[#FFF3C4] hover:bg-[#287f98] cursor-pointer"
               aria-label="Close modal"
             >
               <X className="w-4 h-4" />
             </button>
 
-            {/* Logo container */}
-            <div className="relative z-10 flex flex-col items-center justify-center space-y-6">
-              <div>
-                <img src="/images/logo-light.png" alt="GHRÉ Paris Logo" width={300} />
-              </div>
-
-              {/* Decorative Gold Divider */}
-              <div className="w-32 h-px bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto" />
-
-              {/* Main Messages */}
-              <div className="space-y-3">
-                <h3 className="font-cinzel text-xl sm:text-2xl font-bold tracking-[0.16em] uppercase text-white">
-                  Welcome to GHRÉ Paris
-                </h3>
-
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-[#D4AF37]/60 bg[#1f727e] backdrop-blur-sm">
-                  <Sparkles className="w-3.5 h-3.5 text-[#D4AF37] animate-pulse" />
-                  <span className="font-cinzel text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase text-white">
-                    Website is launching soon
-                  </span>
-                </div>
-              </div>
-
-              <div className="pt-2">
-                <button
-                  onClick={handleClose}
-                  className="px-8 py-3 bg-gradient-to-r from-[#D4AF37] via-[#E2C365] to-[#B8860B] text-[#0E4C5A] font-cinzel text-xs font-bold uppercase tracking-[0.2em] hover:brightness-110 shadow-[0_8px_25px_rgba(212,175,55,0.35)] transition-all cursor-pointer">
-                  Explore Preview
-                </button>
-              </div>
+            {/* Popup Image Only */}
+            <div className="relative w-full flex items-center justify-center">
+              <img 
+                src="/images/popup.jpg" 
+                alt="Welcome Preview" 
+                className="w-full h-auto object-cover block" 
+              />
             </div>
           </motion.div>
         </div>

@@ -23,12 +23,14 @@ const GALLERY_IMAGES: { category: Exclude<Category, 'all'>; src: string; alt: st
   { category: 'catalogues', src: '/gallery/catalogues/about1.jpeg', alt: 'About Catalogue 1' },
   { category: 'catalogues', src: '/gallery/catalogues/product-details.jpeg', alt: 'Product Details Catalogue' },
   { category: 'founder', src: '/gallery/founder/founder.jpeg', alt: 'Founder Portrait' },
-  { category: 'founder', src: '/gallery/founder/founder1.jpeg', alt: 'Founder 1' },
-  { category: 'founder', src: '/gallery/founder/founder2.jpeg', alt: 'Founder 2' },
-  { category: 'founder', src: '/gallery/founder/founder3.jpeg', alt: 'Founder 3' },
   { category: 'product', src: '/gallery/product/product1.jpeg', alt: 'Product 1' },
   { category: 'product', src: '/gallery/product/product2.jpeg', alt: 'Product 2' },
   { category: 'product', src: '/gallery/product/product3.jpeg', alt: 'Product 3' },
+  { category: 'product', src: '/gallery/product/product4.jpg', alt: 'Product 4' },
+  { category: 'founder', src: '/gallery/founder/founder1.jpeg', alt: 'Founder 1' },
+  { category: 'founder', src: '/gallery/founder/founder2.jpeg', alt: 'Founder 2' },
+  { category: 'founder', src: '/gallery/founder/founder3.jpeg', alt: 'Founder 3' },
+
 ];
 
 const TABS: { key: Category; label: string }[] = [
@@ -170,7 +172,7 @@ export const GalleryPage: React.FC = () => {
                 alt={image.alt}
                 loading="lazy"
                 decoding="async"
-                className="w-full h-full object-cover filter group-hover:scale-105 transition-transform duration-700 ease-out"
+                className="w-full h-full object-contain filter group-hover:scale-105 transition-transform duration-700 ease-out"
               />
               {/* <div className="absolute inset-0 bg-gradient-to-t from-[#021318]/85 via-[#021318]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" /> */}
               <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">

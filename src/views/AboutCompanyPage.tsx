@@ -118,9 +118,14 @@ export const AboutCompanyPage: React.FC = () => {
               transition={{ duration: 0.8 }}
               className="lg:col-span-6 relative"
             >
-              <div className="relative border-2 border-[#D4AF37] p-3 bg-[#097B8A] shadow-[0_20px_50px_rgba(0,96,115,0.8)]">
+              <img
+                  src="/gallery/founder/founder2.jpeg"
+                  alt="GHRÉ Emblem — Barbary Fig Flower & Lotus"
+                  className="w-full aspect-[3/4] sm:aspect-[4/5] object-contain bg-[#006073] filter contrast-105 brightness-100"
+                />
+              {/* <div className="relative border-2 border-[#D4AF37] p-3 bg-[#097B8A] shadow-[0_20px_50px_rgba(0,96,115,0.8)]">
                 <img
-                  src="/gallery/catalogues/about.jpeg"
+                  src="/gallery/founder/founder2.jpeg"
                   alt="GHRÉ Emblem — Barbary Fig Flower & Lotus"
                   className="w-full aspect-[3/4] sm:aspect-[4/5] object-contain bg-[#006073] filter contrast-105 brightness-100"
                 />
@@ -134,7 +139,7 @@ export const AboutCompanyPage: React.FC = () => {
                     Rare & Powerful.
                   </p>
                 </div>
-              </div>
+              </div> */}
             </motion.div>
 
             {/* Right: Company Philosophy Narrative */}

@@ -60,7 +60,7 @@ export const CampaignBanner: React.FC = () => {
                 }}
                 className="px-5 py-1.5 bg-[#D4AF37] text-[#062B35] font-cinzel text-xs font-bold tracking-[0.2em] uppercase hover:brightness-110 shadow-lg flex items-center gap-1.5 transition-all lg:w-auto w-full justify-center"
               >
-                <span>EXPLORE RITUAL</span>
+                <span>EXPLORE PRODUCTS</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
             </div>
