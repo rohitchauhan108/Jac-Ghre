@@ -2,7 +2,7 @@
 
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Camera, Sparkles, X, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react';
+import { Camera, Sparkles, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { GoldEmblem } from '../ui/GoldEmblem';
 
 const FOUNDER_CREATIVES = [
@@ -13,13 +13,13 @@ const FOUNDER_CREATIVES = [
     caption: 'Paris Haute Couture Week',
   },
   {
-    src: '/gallery/founder/founder2.jpeg',
+    src: '/gallery/founder/founder3.jpeg',
     alt: 'Jac Ghré Creative 2',
     label: 'Runway Hair Direction',
     caption: 'Milan Fashion Week — Thierry Mugler',
   },
   {
-    src: '/gallery/founder/founder3.jpeg',
+    src: '/gallery/founder/founder31.jpeg',
     alt: 'Jac Ghré Creative 3',
     label: 'Brand Creative Shoot',
     caption: 'Côte d\'Azur — Saint-Tropez Salon',
@@ -105,55 +105,22 @@ export const FounderCreativesGallery: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-80px' }}
               transition={{ duration: 0.6, delay: index * 0.08, ease: [0.16, 1, 0.3, 1] }}
-              className="group relative bg-[#006073] border border-[#D4AF37]/30 hover:border-[#D4AF37]/80 transition-all duration-300 shadow-xl shadow-[#004B5C]/50"
+              className="relative"
             >
-              {/* Gold Corner Accents */}
-              <div className="absolute top-1.5 left-1.5 w-3 h-3 border-t border-l border-[#D4AF37]/70 z-10 pointer-events-none" />
-              <div className="absolute top-1.5 right-1.5 w-3 h-3 border-t border-r border-[#D4AF37]/70 z-10 pointer-events-none" />
-              <div className="absolute bottom-1.5 left-1.5 w-3 h-3 border-b border-l border-[#D4AF37]/70 z-10 pointer-events-none" />
-              <div className="absolute bottom-1.5 right-1.5 w-3 h-3 border-b border-r border-[#D4AF37]/70 z-10 pointer-events-none" />
-
               {/* Image Wrapper */}
               <button
                 type="button"
                 onClick={() => openLightbox(index)}
-                className="relative block w-full aspect-[3/4] overflow-hidden bg-[#021318] text-left focus:outline-none focus:ring-2 focus:ring-[#D4AF37]"
+                className="relative block w-full aspect-[3/4] overflow-hidden bg-transparent text-left focus:outline-none focus:ring-2 focus:ring-[#D4AF37]"
               >
                 <img
                   src={creative.src}
                   alt={creative.alt}
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-cover filter contrast-100 saturate-105 group-hover:scale-105 transition-transform duration-700 ease-out"
+                  className="w-full h-full object-contain filter contrast-100 saturate-105 transition-transform duration-700"
                 />
-                {/* <div className="absolute inset-0 bg-gradient-to-t from-[#021318]/92 via-[#021318]/10 to-transparent" /> */}
-
-                {/* Numbered Badge */}
-                {/* <div className="absolute top-3 left-3 z-10">
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#006073]/90 border border-[#D4AF37]/50 text-[10px] font-cinzel tracking-[0.22em] uppercase text-[#F3E5AB]">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" />
-                    {String(index + 1).padStart(2, '0')}
-                  </span>
-                </div> */}
-
-                {/* Hover Zoom Badge */}
-                <div className="absolute top-3 right-3 z-10 opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300">
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#D4AF37] text-[10px] font-cinzel tracking-[0.2em] uppercase text-[#021318] font-bold">
-                    <ZoomIn className="w-3 h-3" />
-                    View
-                  </span>
-                </div>
               </button>
-
-              {/* Caption Footer */}
-              {/* <figcaption className="p-4 sm:p-5 border-t border-[#D4AF37]/25 bg-gradient-to-b from-[#006073] to-[#005566]">
-                <h3 className="font-cinzel text-sm sm:text-base font-bold tracking-[0.14em] text-[#FBF9F3] uppercase">
-                  {creative.label}
-                </h3>
-                <p className="mt-1 font-editorial italic text-[#D4AF37] text-xs sm:text-sm">
-                  {creative.caption}
-                </p>
-              </figcaption> */}
             </motion.figure>
           ))}
         </div>
@@ -228,45 +195,13 @@ export const FounderCreativesGallery: React.FC = () => {
               onClick={(e) => e.stopPropagation()}
             >
               {/* Full-size Image */}
-              <div className="flex-1 min-h-0 flex items-center justify-center bg-[#001a20]/80 border border-[#D4AF37]/30 p-3 sm:p-5">
+              <div className="flex-1 min-h-0 flex items-center justify-center bg-transparent p-3 sm:p-5">
                 <img
                   src={itemsRef.current[lightboxIndex].src}
                   alt={itemsRef.current[lightboxIndex].alt}
                   className="max-w-full max-h-[62vh] sm:max-h-[68vh] w-auto h-auto object-contain shadow-[0_30px_80px_rgba(0,0,0,0.7)]"
                 />
               </div>
-
-              {/* Caption / Text Panel */}
-              {/* <div className="mt-4 p-4 sm:p-5 border border-[#D4AF37]/40 bg-gradient-to-br from-[#006073] via-[#007288] to-[#005566]">
-                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
-                  <div className="flex items-start gap-4">
-                    <div className="shrink-0 w-10 h-10 border border-[#D4AF37]/60 bg-[#021318] flex items-center justify-center">
-                      <GoldEmblem size={18} />
-                    </div>
-                    <div>
-                      <h4 className="font-cinzel text-base sm:text-lg font-bold tracking-[0.18em] text-[#FBF9F3] uppercase">
-                        {itemsRef.current[lightboxIndex].label}
-                      </h4>
-                      <p className="mt-1 font-editorial italic text-[#D4AF37] text-sm sm:text-base">
-                        {itemsRef.current[lightboxIndex].caption}
-                      </p>
-                      <p className="mt-2 font-poppins text-xs sm:text-sm text-[#B5CAD0] leading-relaxed max-w-2xl">
-                        {itemsRef.current[lightboxIndex].alt}. Click the arrows or use
-                        your keyboard &larr; / &rarr; to browse the full archive. Press Esc to close.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-3 shrink-0">
-                    <span className="inline-flex items-center justify-center px-3 py-1.5 bg-[#021318] border border-[#D4AF37]/50 text-[10px] font-cinzel tracking-[0.24em] uppercase text-[#D4AF37] font-bold">
-                      Founder Archive
-                    </span>
-                    <span className="font-cinzel text-xs tracking-widest text-[#F3E5AB]">
-                      {lightboxIndex + 1} / {itemsRef.current.length}
-                    </span>
-                  </div>
-                </div>
-              </div> */}
             </motion.div>
           </motion.div>
         )}

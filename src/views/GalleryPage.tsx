@@ -7,30 +7,28 @@ import { Images, X, ChevronLeft, ChevronRight } from 'lucide-react';
 type Category = 'all' | 'banner' | 'catalogues' | 'founder' | 'product';
 
 const GALLERY_IMAGES: { category: Exclude<Category, 'all'>; src: string; alt: string }[] = [
-  { category: 'banner', src: '/gallery/banner/banner.jpeg', alt: 'Brand Banner 1' },
-  { category: 'banner', src: '/gallery/banner/banner2.webp', alt: 'Brand Banner 2' },
+  { category: 'banner', src: '/gallery/banner/1.png', alt: 'Brand Banner 1' },
+  { category: 'banner', src: '/gallery/banner/new2.jpg', alt: 'Brand Banner 2' },
   { category: 'catalogues', src: '/gallery/catalogues/0.jpeg', alt: 'Catalogue 0' },
   { category: 'catalogues', src: '/gallery/catalogues/1.jpeg', alt: 'Catalogue 1' },
   { category: 'catalogues', src: '/gallery/catalogues/2.jpeg', alt: 'Catalogue 2' },
   { category: 'catalogues', src: '/gallery/catalogues/3.jpeg', alt: 'Catalogue 3' },
-  { category: 'catalogues', src: '/gallery/catalogues/4.jpeg', alt: 'Catalogue 4' },
-  { category: 'catalogues', src: '/gallery/catalogues/6.jpeg', alt: 'Catalogue 6' },
-  { category: 'catalogues', src: '/gallery/catalogues/7.jpeg', alt: 'Catalogue 7' },
+  { category: 'catalogues', src: '/gallery/catalogues/4.jpg', alt: 'Catalogue 4' },
+  { category: 'catalogues', src: '/gallery/catalogues/6.jpg', alt: 'Catalogue 6' },
+  { category: 'catalogues', src: '/gallery/catalogues/7.jpg', alt: 'Catalogue 7' },
   { category: 'catalogues', src: '/gallery/catalogues/8.jpeg', alt: 'Catalogue 8' },
   { category: 'catalogues', src: '/gallery/catalogues/9.jpeg', alt: 'Catalogue 9' },
   { category: 'catalogues', src: '/gallery/catalogues/10.jpeg', alt: 'Catalogue 10' },
-  { category: 'catalogues', src: '/gallery/catalogues/about.jpeg', alt: 'About Catalogue' },
+  { category: 'catalogues', src: '/gallery/catalogues/newabout.jpg', alt: 'About Catalogue' },
   { category: 'catalogues', src: '/gallery/catalogues/about1.jpeg', alt: 'About Catalogue 1' },
-  { category: 'catalogues', src: '/gallery/catalogues/product-details.jpeg', alt: 'Product Details Catalogue' },
   { category: 'founder', src: '/gallery/founder/founder.jpeg', alt: 'Founder Portrait' },
   { category: 'product', src: '/gallery/product/product1.jpeg', alt: 'Product 1' },
   { category: 'product', src: '/gallery/product/product2.jpeg', alt: 'Product 2' },
-  { category: 'product', src: '/gallery/product/product3.jpeg', alt: 'Product 3' },
-  { category: 'product', src: '/gallery/product/product4.jpg', alt: 'Product 4' },
   { category: 'founder', src: '/gallery/founder/founder1.jpeg', alt: 'Founder 1' },
   { category: 'founder', src: '/gallery/founder/founder2.jpeg', alt: 'Founder 2' },
   { category: 'founder', src: '/gallery/founder/founder3.jpeg', alt: 'Founder 3' },
-
+  { category: 'product', src: '/gallery/product/product3.jpeg', alt: 'Product 3' },
+  { category: 'product', src: '/gallery/product/product4.jpg', alt: 'Product 4' },
 ];
 
 const TABS: { key: Category; label: string }[] = [
@@ -165,24 +163,15 @@ export const GalleryPage: React.FC = () => {
               key={image.src}
               type="button"
               onClick={() => openLightbox(index)}
-              className="group relative aspect-[4/5] overflow-hidden bg-[#097B8A] border border-[#D4AF37]/25 hover:border-[#D4AF37]/70 transition-all duration-300 text-left shadow-md hover:shadow-2xl hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] will-change-transform"
+              className="group relative aspect-[4/5] overflow-hidden transition-all duration-300 text-left hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] will-change-transform"
             >
               <img
                 src={image.src}
                 alt={image.alt}
                 loading="lazy"
                 decoding="async"
-                className="w-full h-full object-contain filter group-hover:scale-105 transition-transform duration-700 ease-out"
+                className="w-full h-full object-contain filter"
               />
-              {/* <div className="absolute inset-0 bg-gradient-to-t from-[#021318]/85 via-[#021318]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" /> */}
-              <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                {/* <span className="inline-block px-2.5 py-1 bg-[#097B8A]/95 text-[10px] font-cinzel text-[#D4AF37] uppercase tracking-widest border border-[#D4AF37]/40">
-                  {image.category}
-                </span> */}
-                {/* <p className="mt-2 font-poppins text-sm text-[#F7F4EB] leading-snug">
-                  {image.alt}
-                </p> */}
-              </div>
             </button>
           ))}
         </motion.div>
@@ -256,9 +245,9 @@ export const GalleryPage: React.FC = () => {
               <img
                 src={filteredImagesRef.current[lightboxIndex].src}
                 alt={filteredImagesRef.current[lightboxIndex].alt}
-                className="w-full h-auto max-h-[85vh] object-contain border border-[#D4AF37]/30"
+                className="w-full h-auto max-h-[85vh] object-contain border border-[#D4AF37]/30 bg-[#021318]"
               />
-              <div className="absolute bottom-0 left-0 right-0 gradient-to-t from-[#021318] via-[#021318]/70 to-transparent p-5 sm:p-6">
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#021318] via-[#021318]/70 to-transparent p-5 sm:p-6">
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <div>
                     <span className="inline-block px-2.5 py-1 bg-[#097B8A] text-[10px] font-cinzel text-[#D4AF37] uppercase tracking-widest border border-[#D4AF37]/40">

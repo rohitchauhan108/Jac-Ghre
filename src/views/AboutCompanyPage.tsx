@@ -55,7 +55,7 @@ export const AboutCompanyPage: React.FC = () => {
   const ateliers = [
     {
       city: "FISHER ISLAND, MIAMI",
-      name: "Fisher Island Club Atelier",
+      name: "Fisher Island Club",
       desc: "Private VIP sanctuary serving elite members and international clientele.",
       status: "Flagship Private Atelier",
     },
