@@ -95,7 +95,7 @@ export const ShopPage: React.FC = () => {
   return (
     <div className="pt-8 pb-28 bg-[#0C8A9B] min-h-screen">
       {/* Header Banner */}
-      {/* <section className="relative py-16 sm:py-20 border-b border-[#D4AF37]/30 bg-gradient-to-b from-[#097B8A] via-[#0C8A9B] to-[#097B8A] overflow-hidden">
+      <section className="relative py-16 sm:py-20 border-b border-[#D4AF37]/30 bg-gradient-to-b from-[#097B8A] via-[#0C8A9B] to-[#097B8A] overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.12)_0%,transparent_70%)] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <div className="inline-flex items-center gap-2.5 px-4 py-1.5 bg-[#097B8A] border border-[#D4AF37]/50 mb-4 shadow-md">
@@ -115,39 +115,6 @@ export const ShopPage: React.FC = () => {
 
           <p className="mt-3 max-w-2xl mx-auto font-poppins text-sm sm:text-base text-[#B5CAD0] font-normal leading-relaxed">
             Explore all 9 signature creations formulated in France and the French Riviera by Master Hair Artist Jac Ghré.
-          </p>
-        </div>
-      </section> */}
-      {/* Header Banner */}
-      <section
-        className="relative py-16 sm:py-20 border-b border-[#D4AF37]/30 bg-cover bg-center overflow-hidden"
-        style={{ backgroundImage: 'url("/images/banner2.jpg")' }}
-      >
-        {/* Darkened overlay for better contrast */}
-        <div className="absolute inset-0 bg-[#088395]/20 pointer-events-none" />
-        <div className="absolute inset-0 bg-[#088395]/50 pointer-events-none" />
-        {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.12)_0%,transparent_70%)] pointer-events-none" /> */}
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 bg-[#097B8A] border border-[#D4AF37]/50 mb-4 shadow-md">
-            <Sparkles className="w-4 h-4 text-[#D4AF37]" />
-            <span className="text-xs font-cinzel font-semibold tracking-[0.3em] text-[#F3E5AB] uppercase">
-              PARISIAN HAUTE FORMULATIONS
-            </span>
-          </div>
-
-          <h1 className="font-cinzel text-3xl sm:text-5xl lg:text-6xl font-bold tracking-[0.12em] text-[#F7F4EB] uppercase drop-shadow-md">
-            The Complete GHRÉ Catalog
-          </h1>
-
-          <p className="mt-4 max-w-2xl mx-auto font-editorial text-2xl sm:text-3xl italic text-[#F7F4EB] drop-shadow-sm">
-            “Artisanal Moroccan Prickly Pear, Polynesian Monoï & Grasse
-            Essences.”
-          </p>
-
-          <p className="mt-3 max-w-2xl mx-auto font-poppins text-sm sm:text-base text-[#F7F4EB] font-normal leading-relaxed drop-shadow-sm">
-            Explore all 9 signature creations formulated in France and the
-            French Riviera by Master Hair Artist Jac Ghré.
           </p>
         </div>
       </section>
