@@ -107,7 +107,7 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     secondaryCtaText: "SHOP COLLECTION",
     secondaryCtaLink: "shop",
     accentTheme: "teal-gold",
-    image: "/images/banner5.jpeg",
+    image: "/images/banner5.jpg",
     mobileImage: "/images/mobile-banner5.jpeg",
     locationBadge: "SAINT-TROPEZ • MIAMI",
   },
@@ -674,7 +674,7 @@ export const PRODUCTS: Product[] = [
     "Evokes the essence of an exotic summer getaway",
   ],
 
-  image: "/product/13.jpeg",
+  image: "/images/mobile-banner5.jpeg",
   accentColor: "#D4AF37",
   rating: 4.98,
   reviewsCount: 142,
