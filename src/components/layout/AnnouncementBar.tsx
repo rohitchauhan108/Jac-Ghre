@@ -36,11 +36,7 @@ export const AnnouncementBar: React.FC = () => {
 
   return (
     <div
-      className={`border-b text-[11px] tracking-[0.16em] py-2 px-4 relative z-40 transition-colors duration-300 ${
-        isDark
-          ? 'bg-[#d4af37] border-[#D4AF37]/30 text-[#E8DCC4]'
-          : 'bg-[#F3EDE2] border-[#D4AF37]/40 text-[#062B35]'
-      }`}
+      className={`border-b text-[11px] tracking-[0.16em] py-2 px-4 relative z-40 transition-colors duration-300 bg-[#005F73] border-[#005F73]/30 text-white`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
         {/* Left: Coming Soon Live Badge */}
@@ -53,7 +49,7 @@ export const AnnouncementBar: React.FC = () => {
             <span>LAUNCHING SOON</span>
           </button>
 
-          <span className="text-[10px] font-cinzel font-semibold tracking-widest text-[#031920]">
+          <span className="text-[10px] font-cinzel font-semibold tracking-widest text-[#E8DCC4]">
             PARIS • ST-TROPEZ • MIAMI
           </span>
         </div>
@@ -72,9 +68,7 @@ export const AnnouncementBar: React.FC = () => {
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.35 }}
               onClick={() => setIsWelcomePopupOpen(true)}
-              className={`flex items-center justify-center gap-2 font-cinzel text-[10px] sm:text-[11px] font-bold cursor-pointer hover:underline underline-offset-2 ${
-                isDark ? 'text-[#031920]' : 'text-[#062B35]'
-              }`}
+              className={`flex items-center justify-center gap-2 font-cinzel text-[10px] sm:text-[11px] font-bold cursor-pointer hover:underline underline-offset-2 text-white`}
             >
               <Sparkles className="w-3 h-3 text-[#D4AF37] shrink-0" />
 
