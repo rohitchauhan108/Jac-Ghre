@@ -56,7 +56,7 @@ export const CampaignBanner: React.FC = () => {
               <button
                 onClick={(e) => {
                   e.stopPropagation();
-                  navigateToPage('hair-care');
+                  navigateToPage('shop');
                 }}
                 className="px-5 py-1.5 bg-[#D4AF37] text-[#062B35] font-cinzel text-xs font-bold tracking-[0.2em] uppercase hover:brightness-110 shadow-lg flex items-center gap-1.5 transition-all lg:w-auto w-full justify-center"
               >

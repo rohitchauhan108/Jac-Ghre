@@ -579,6 +579,48 @@ export const PRODUCTS: Product[] = [
   rating: 4.91,
   reviewsCount: 127,
 },
+{
+  id: "monoi-body-mist",
+  name: "Monoï Body Mist",
+  frenchName: "Brume Corps — Monoï",
+  category: "bodycare",
+  categoryLabel: "Body Care",
+  tagline: "A Tropical Escape In Every Spray",
+  shortDescription:
+    "A tropical Monoi-infused body mist that instantly transports your senses to paradise while leaving skin lightly scented and refreshed.",
+  fullDescription:
+    "A luxurious Monoï Body Mist designed to envelop the skin in a tropical, sun-kissed fragrance. Its refreshing formula provides an exotic escape in every spray, leaving the skin delicately scented and radiant.",
+
+  price: 38,
+  size: "250 ml | 8.4 fl.oz",
+  badge: "Monoï Body Mist",
+
+  ritualDetails:
+    "A sensory misting ritual that refreshes the skin while capturing the essence of a tropical getaway. Leaves the body feeling revitalized, cool, and beautifully fragrant.",
+
+  composition: [
+    "Monoï de Tahiti",
+    "Tropical Floral Extracts",
+    "Hydrating Essence",
+    "Refreshing Agents"
+  ],
+
+  scentNotes: {
+    displaySummary: "Monoï, Tiare Flower, Coconut, Warm Sand",
+  },
+
+  benefits: [
+    "Delicately scents the skin with a tropical fragrance",
+    "Provides an instant burst of freshness",
+    "Leaves skin feeling revitalized and refreshed",
+    "Evokes the essence of a sun-kissed getaway",
+  ],
+
+  image: "/product/12.jpg",
+  accentColor: "#E3B448",
+  rating: 4.95,
+  reviewsCount: 98,
+}
 ];
 
 export const BOTANICAL_INGREDIENTS: BotanicalIngredient[] = [

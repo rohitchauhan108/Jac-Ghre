@@ -70,7 +70,7 @@ export const Header: React.FC = () => {
     { name: "CONTACT US", page: "contact" },
   ];
 
-  const featuredCreations = PRODUCTS.slice(0, 3);
+  // const featuredCreations = PRODUCTS.slice(0, 3);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -99,7 +99,7 @@ export const Header: React.FC = () => {
             </button>
           </div>
 
-          {/* Brand Logo - Updated to display logoDark Image */}
+          {/* Brand Logo */}
           <div className="flex items-center">
             <button
               onClick={() => navigateToPage("home")}
@@ -145,22 +145,21 @@ export const Header: React.FC = () => {
                     )}
                   </button>
 
-                  {/* Dropdown Mega Menu for SHOP */}
+                  {/* Refined Dropdown Menu for SHOP (Single Column Layout) */}
                   {link.hasDropdown && shopDropdownOpen && (
-                    <div className="absolute top-full -left-20 w-[640px] pt-3 z-50">
+                    <div className="absolute top-full -left-6 w-72 pt-3 z-50">
                       <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
                         transition={{ duration: 0.2 }}
-                        className="border-2 shadow-2xl p-6 grid grid-cols-12 gap-6 bg-[#006073] border-[#D4AF37]/50 text-[#F7F4EB]"
+                        className="border-2 shadow-2xl p-5 bg-[#006073] border-[#D4AF37]/50 text-[#F7F4EB]"
                       >
-                        {/* Left: Collections Categories */}
-                        <div className="col-span-5 border-r border-[#D4AF37]/20 pr-4 space-y-3">
-                          <span className="text-[11px] font-cinzel tracking-[0.3em] text-[#D4AF37] uppercase block border-b border-[#D4AF37]/20 pb-1.5 font-bold">
+                        <div className="space-y-3">
+                          <span className="text-[11px] font-cinzel tracking-[0.3em] text-[#D4AF37] uppercase block border-b border-[#D4AF37]/20 pb-2 font-bold">
                             Curated Collections
                           </span>
-                          <div className="space-y-2.5 text-xs font-poppins">
+                          <div className="space-y-3 text-xs font-poppins pt-1">
                             <button
                               onClick={() => {
                                 setShopDropdownOpen(false);
@@ -197,50 +196,15 @@ export const Header: React.FC = () => {
                             >
                               Repair Shampoos & Masks
                             </button>
-                            {/* <button
-                              onClick={() => {
-                                setShopDropdownOpen(false);
-                                navigateToPage('shop', 'all');
-                              }}
-                              className="block text-left w-full text-[#D4AF37] hover:text-[#FFF3C4] font-cinzel text-xs font-bold tracking-wider pt-1"
-                            >
-                              View All 9 Creations →
-                            </button> */}
                           </div>
                         </div>
 
-                        {/* Right: Featured Products Mini-Showcase */}
-                        <div className="col-span-7 space-y-3">
-                          <span className="text-[11px] font-cinzel tracking-[0.3em] text-[#D4AF37] uppercase block border-b border-[#D4AF37]/20 pb-1.5 font-bold">
-                            Iconic Formulations
-                          </span>
-                          <div className="grid grid-cols-3 gap-2.5">
-                            {featuredCreations.map((p) => (
-                              <div
-                                key={p.id}
-                                onClick={() => {
-                                  setShopDropdownOpen(false);
-                                  setQuickViewProduct(p);
-                                }}
-                                className="group/item cursor-pointer p-2.5 border transition-all text-center bg-[#007288] border-[#D4AF37]/20 hover:border-[#D4AF37]"
-                              >
-                                <div className="h-16 w-full flex items-center justify-center overflow-hidden mb-1">
-                                  <img
-                                    src={p.image}
-                                    alt={p.name}
-                                    className="max-h-full object-contain group-hover/item:scale-105 transition-transform"
-                                  />
-                                </div>
-                                <span className="font-cinzel text-[11px] line-clamp-1 block text-[#F7F4EB]">
-                                  {p.name}
-                                </span>
-                                <span className="text-xs text-[#D4AF37] font-cinzel font-bold block mt-0.5">
-                                  ${p.price}
-                                </span>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
+                        {/* 
+                          {/* ICONIC FORMULATIONS SECTION COMMENTED OUT 
+                          <div className="col-span-7 space-y-3">
+                            ...
+                          </div> 
+                        */}
                       </motion.div>
                     </div>
                   )}

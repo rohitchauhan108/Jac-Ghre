@@ -1,17 +1,10 @@
-import React, { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import {
-  Sparkles,
-  ShoppingBag,
-  Heart,
-  Eye,
-  Star,
-  Check,
-} from 'lucide-react';
-import { useShop } from '../context/ShopContext';
-import { PRODUCTS } from '../data/products';
-import { Product } from '../types';
-import { GoldEmblem } from '../components/ui/GoldEmblem';
+import React, { useState, useMemo } from "react";
+import { motion, AnimatePresence } from "motion/react";
+import { Sparkles, ShoppingBag, Heart, Eye, Star, Check } from "lucide-react";
+import { useShop } from "../context/ShopContext";
+import { PRODUCTS } from "../data/products";
+import { Product } from "../types";
+import { GoldEmblem } from "../components/ui/GoldEmblem";
 
 export const ShopPage: React.FC = () => {
   const {
@@ -25,44 +18,76 @@ export const ShopPage: React.FC = () => {
   } = useShop();
 
   // If you no longer use search, sort, or badge states elsewhere, they can be cleaned up as well.
-  const [searchQuery] = useState('');
-  const [selectedSort] = useState<'featured' | 'price-low' | 'price-high' | 'rating'>('featured');
-  const [activeBadge] = useState<string>('all');
+  const [searchQuery] = useState("");
+  const [selectedSort] = useState<
+    "featured" | "price-low" | "price-high" | "rating"
+  >("featured");
+  const [activeBadge] = useState<string>("all");
 
   const filteredProducts = useMemo(() => {
     return PRODUCTS.filter((product) => {
       // Category filter based on context
-      if (shopCategoryFilter !== 'all') {
-        if (shopCategoryFilter === 'hair-care' && product.category !== 'haircare' && product.category !== 'elixir') return false;
-        if (shopCategoryFilter === 'sun-care' && product.category !== 'bodycare') return false;
-        if (shopCategoryFilter === 'fragrance' && product.category !== 'fragrance') return false;
-        if (shopCategoryFilter === 'haircare' && product.category !== 'haircare') return false;
-        if (shopCategoryFilter === 'elixir' && product.category !== 'elixir') return false;
-        if (shopCategoryFilter === 'bodycare' && product.category !== 'bodycare') return false;
+      if (shopCategoryFilter !== "all") {
+        if (
+          shopCategoryFilter === "hair-care" &&
+          product.category !== "haircare" &&
+          product.category !== "elixir"
+        )
+          return false;
+        if (
+          shopCategoryFilter === "sun-care" &&
+          product.category !== "bodycare"
+        )
+          return false;
+        if (
+          shopCategoryFilter === "fragrance" &&
+          product.category !== "fragrance"
+        )
+          return false;
+        if (
+          shopCategoryFilter === "haircare" &&
+          product.category !== "haircare"
+        )
+          return false;
+        if (shopCategoryFilter === "elixir" && product.category !== "elixir")
+          return false;
+        if (
+          shopCategoryFilter === "bodycare" &&
+          product.category !== "bodycare"
+        )
+          return false;
       }
 
       // Badge filter
-      if (activeBadge !== 'all') {
-        if (activeBadge === 'bestseller' && !product.isBestseller) return false;
-        if (activeBadge === 'hero' && !product.isHeroFeatured) return false;
-        if (activeBadge === 'new' && !product.isNew) return false;
+      if (activeBadge !== "all") {
+        if (activeBadge === "bestseller" && !product.isBestseller) return false;
+        if (activeBadge === "hero" && !product.isHeroFeatured) return false;
+        if (activeBadge === "new" && !product.isNew) return false;
       }
 
       // Search query
-      if (searchQuery.trim() !== '') {
+      if (searchQuery.trim() !== "") {
         const q = searchQuery.toLowerCase();
         const matchesName = product.name.toLowerCase().includes(q);
         const matchesTagline = product.tagline.toLowerCase().includes(q);
         const matchesDesc = product.shortDescription.toLowerCase().includes(q);
-        const matchesComposition = product.composition?.some((c) => c.toLowerCase().includes(q));
-        if (!matchesName && !matchesTagline && !matchesDesc && !matchesComposition) return false;
+        const matchesComposition = product.composition?.some((c) =>
+          c.toLowerCase().includes(q),
+        );
+        if (
+          !matchesName &&
+          !matchesTagline &&
+          !matchesDesc &&
+          !matchesComposition
+        )
+          return false;
       }
 
       return true;
     }).sort((a, b) => {
-      if (selectedSort === 'price-low') return a.price - b.price;
-      if (selectedSort === 'price-high') return b.price - a.price;
-      if (selectedSort === 'rating') return (b.rating || 5) - (a.rating || 5);
+      if (selectedSort === "price-low") return a.price - b.price;
+      if (selectedSort === "price-high") return b.price - a.price;
+      if (selectedSort === "rating") return (b.rating || 5) - (a.rating || 5);
       return 0; // 'featured' retains curated order
     });
   }, [shopCategoryFilter, activeBadge, searchQuery, selectedSort]);
@@ -70,7 +95,7 @@ export const ShopPage: React.FC = () => {
   return (
     <div className="pt-8 pb-28 bg-[#0C8A9B] min-h-screen">
       {/* Header Banner */}
-      <section className="relative py-16 sm:py-20 border-b border-[#D4AF37]/30 bg-gradient-to-b from-[#097B8A] via-[#0C8A9B] to-[#097B8A] overflow-hidden">
+      {/* <section className="relative py-16 sm:py-20 border-b border-[#D4AF37]/30 bg-gradient-to-b from-[#097B8A] via-[#0C8A9B] to-[#097B8A] overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.12)_0%,transparent_70%)] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <div className="inline-flex items-center gap-2.5 px-4 py-1.5 bg-[#097B8A] border border-[#D4AF37]/50 mb-4 shadow-md">
@@ -92,8 +117,40 @@ export const ShopPage: React.FC = () => {
             Explore all 9 signature creations formulated in France and the French Riviera by Master Hair Artist Jac Ghré.
           </p>
         </div>
-      </section>
+      </section> */}
+      {/* Header Banner */}
+      <section
+        className="relative py-16 sm:py-20 border-b border-[#D4AF37]/30 bg-cover bg-center overflow-hidden"
+        style={{ backgroundImage: 'url("/images/banner2.jpg")' }}
+      >
+        {/* Darkened overlay for better contrast */}
+        <div className="absolute inset-0 bg-[#088395]/20 pointer-events-none" />
+        <div className="absolute inset-0 bg-[#088395]/50 pointer-events-none" />
+        {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.12)_0%,transparent_70%)] pointer-events-none" /> */}
 
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 bg-[#097B8A] border border-[#D4AF37]/50 mb-4 shadow-md">
+            <Sparkles className="w-4 h-4 text-[#D4AF37]" />
+            <span className="text-xs font-cinzel font-semibold tracking-[0.3em] text-[#F3E5AB] uppercase">
+              PARISIAN HAUTE FORMULATIONS
+            </span>
+          </div>
+
+          <h1 className="font-cinzel text-3xl sm:text-5xl lg:text-6xl font-bold tracking-[0.12em] text-[#F7F4EB] uppercase drop-shadow-md">
+            The Complete GHRÉ Catalog
+          </h1>
+
+          <p className="mt-4 max-w-2xl mx-auto font-editorial text-2xl sm:text-3xl italic text-[#F7F4EB] drop-shadow-sm">
+            “Artisanal Moroccan Prickly Pear, Polynesian Monoï & Grasse
+            Essences.”
+          </p>
+
+          <p className="mt-3 max-w-2xl mx-auto font-poppins text-sm sm:text-base text-[#F7F4EB] font-normal leading-relaxed drop-shadow-sm">
+            Explore all 9 signature creations formulated in France and the
+            French Riviera by Master Hair Artist Jac Ghré.
+          </p>
+        </div>
+      </section>
       {/* Main Products Area */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
         {/* Products Grid */}
