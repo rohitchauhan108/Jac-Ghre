@@ -23,7 +23,7 @@ export const WelcomeModal: React.FC = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={handleClose}
-            className="fixed inset-0 bg-[#088395]/20 backdrop-blur-md transition-opacity"
+            className="fixed inset-0 bg-[#088395]/90 transition-opacity"
           />
 
           {/* Modal Container holding only the image */}

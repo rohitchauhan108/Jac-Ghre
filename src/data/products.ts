@@ -95,6 +95,22 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     mobileImage: "/images/mobile-banner5.webp",
     locationBadge: "SAINT-TROPEZ • MIAMI",
   },
+  {
+    id: "orange-blossom-duo",
+    eyebrow: "GOOD HAIR DAY",
+    title: "ORANGE BLOSSOM & BAMBOO MARROW",
+    subtitle: "Intensive Restorative Duet",
+    tagline:
+      "Deep nutritive botanical hair bath formulated for sun, salt, and heat revitalisation",
+    ctaText: "DISCOVER BAMBOO MARROW",
+    ctaLink: "hair-care",
+    secondaryCtaText: "SHOP COLLECTION",
+    secondaryCtaLink: "shop",
+    accentTheme: "teal-gold",
+    image: "/images/banner5.jpeg",
+    mobileImage: "/images/mobile-banner5.jpeg",
+    locationBadge: "SAINT-TROPEZ • MIAMI",
+  },
 ];
 
 export const PRODUCTS: Product[] = [
@@ -620,6 +636,48 @@ export const PRODUCTS: Product[] = [
   accentColor: "#E3B448",
   rating: 4.95,
   reviewsCount: 98,
+},
+{
+    id: "monoi-vanilla-silk-hair-duo",
+  name: "Monoï Vanilla Silk Hair Duo",
+  frenchName: "Duo Cheveux Soie — Monoï & Vanille",
+  category: "haircare",
+  categoryLabel: "Hair Care",
+  tagline: "Your Summ'hair Dream",
+  shortDescription:
+    "A luxurious shampoo and conditioner duo infused with Monoï and Vanilla Silk to deeply nourish, smooth, and transform your hair into a tropical dream.",
+  fullDescription:
+    "Transport your daily routine to Saint-Tropez and Miami with the Monoï Vanilla Silk Hair Duo. Formulated to provide ultimate hydration and silky manageability, this set cleanses and conditions while enveloping your hair in a sun-kissed, exotic fragrance.",
+
+  price: 54,
+  size: "2 x 400 ml | 13.5 fl.oz",
+  badge: "Hair Duo",
+
+  ritualDetails:
+    "A sensory hair-cleansing ritual that leaves locks feeling silky soft, deeply nourished, and beautifully fragrant with notes of tropical Monoï and sweet Vanilla.",
+
+  composition: [
+    "Monoï de Tahiti",
+    "Vanilla Extract",
+    "Silk Proteins",
+    "Nourishing Botanicals"
+  ],
+
+  scentNotes: {
+    displaySummary: "Monoï, Vanilla Silk, Coconut Water, Tropical Blossoms",
+  },
+
+  benefits: [
+    "Deeply cleanses and conditions hair for a silky-smooth finish",
+    "Infuses locks with a luxurious Monoï and vanilla fragrance",
+    "Leaves hair feeling soft, manageable, and radiant",
+    "Evokes the essence of an exotic summer getaway",
+  ],
+
+  image: "/product/13.jpeg",
+  accentColor: "#D4AF37",
+  rating: 4.98,
+  reviewsCount: 142,
 }
 ];
 
