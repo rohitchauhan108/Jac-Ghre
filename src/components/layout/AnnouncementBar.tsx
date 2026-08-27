@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Sparkles, Clock } from 'lucide-react';
 import { useShop } from '../../context/ShopContext';
 
-// Move static arrays outside the component to prevent re-creation on every render
+// Static messages
 const MESSAGES = [
   '✨ OFFICIAL WEBSITE LAUNCH COMING SOON • PRE-ORDER ATELIER ALLOTMENTS NOW OPEN ✨',
   '✨ GHRÉ PARIS INAUGURAL PREVIEW • USE VIP CODE "GHRE15" FOR 15% OFF PRE-ORDERS ✨',
@@ -13,16 +13,22 @@ const MESSAGES = [
 
 export const AnnouncementBar: React.FC = () => {
   const { setIsWelcomePopupOpen, theme } = useShop();
+
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(0); // 0 for playing, 1 (or boolean) for paused
+
+  // Boolean state because it represents paused / not paused
+  const [isPaused, setIsPaused] = useState(false);
 
   const nextMessage = useCallback(() => {
     setCurrentMessageIndex((prev) => (prev + 1) % MESSAGES.length);
   }, []);
 
   useEffect(() => {
+    // Don't change messages while paused
     if (isPaused) return;
+
     const timer = setInterval(nextMessage, 4000);
+
     return () => clearInterval(timer);
   }, [isPaused, nextMessage]);
 
@@ -46,13 +52,14 @@ export const AnnouncementBar: React.FC = () => {
             <Clock className="w-3 h-3" />
             <span>LAUNCHING SOON</span>
           </button>
+
           <span className="text-[10px] font-cinzel font-semibold tracking-widest text-[#031920]">
             PARIS • ST-TROPEZ • MIAMI
           </span>
         </div>
 
         {/* Center: Dynamic Announcement */}
-        <div 
+        <div
           className="flex-1 flex items-center justify-center text-center overflow-hidden h-5 px-2"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
@@ -70,7 +77,10 @@ export const AnnouncementBar: React.FC = () => {
               }`}
             >
               <Sparkles className="w-3 h-3 text-[#D4AF37] shrink-0" />
-              <span className="truncate">{MESSAGES[currentMessageIndex]}</span>
+
+              <span className="truncate">
+                {MESSAGES[currentMessageIndex]}
+              </span>
             </motion.div>
           </AnimatePresence>
         </div>
