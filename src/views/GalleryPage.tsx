@@ -20,7 +20,7 @@ const GALLERY_IMAGES: { category: Exclude<Category, 'all'>; src: string; alt: st
   { category: 'catalogues', src: '/gallery/catalogues/9.jpeg', alt: 'Catalogue 9' },
   { category: 'catalogues', src: '/gallery/catalogues/10.jpeg', alt: 'Catalogue 10' },
   { category: 'catalogues', src: '/gallery/catalogues/newabout.jpg', alt: 'About Catalogue' },
-  { category: 'catalogues', src: '/gallery/catalogues/about1.jpeg', alt: 'About Catalogue 1' },
+  // { category: 'catalogues', src: '/gallery/catalogues/about1.jpeg', alt: 'About Catalogue 1' },
   { category: 'founder', src: '/gallery/founder/founder.jpeg', alt: 'Founder Portrait' },
   { category: 'product', src: '/gallery/product/product1.jpeg', alt: 'Product 1' },
   { category: 'product', src: '/gallery/product/product2.jpeg', alt: 'Product 2' },
