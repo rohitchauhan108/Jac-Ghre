@@ -200,20 +200,19 @@ export const Footer: React.FC = () => {
               </span>
             </div>
 
-            <div className="space-y-1.5 text-[11px] sm:text-xs text-[#C5D5D8] leading-relaxed">
-              <p className="font-cinzel text-[#D4AF37] uppercase tracking-[0.18em] text-[10px]">
-                {BRAND_INFO.contact.title}
-              </p>
-              <p className="font-semibold text-[#F7F4EB] uppercase">{BRAND_INFO.contact.name}</p>
-              <p>{BRAND_INFO.contact.secondaryTitle}</p>
-              <p>{BRAND_INFO.contact.specialty}</p>
-              <p>{BRAND_INFO.contact.offering}</p>
-              <p>{BRAND_INFO.contact.company}</p>
-              <p>Cell USA: {BRAND_INFO.contact.cellUsa}</p>
-              <a href={`mailto:${BRAND_INFO.contact.email}`} className="hover:text-[#D4AF37] transition-colors">
-                Email: {BRAND_INFO.contact.email}
-              </a>
-            </div>
+              {/* <div className="space-y-1.5 text-[11px] sm:text-xs text-[#C5D5D8] leading-relaxed">
+                <p className="font-cinzel text-[#D4AF37] uppercase tracking-[0.18em] text-[10px]">
+                  {BRAND_INFO.contact.title}
+                </p>
+                <p className="font-semibold text-[#F7F4EB] uppercase">{BRAND_INFO.contact.name}</p>
+                <p>{BRAND_INFO.contact.specialty}</p>
+                <p>{BRAND_INFO.contact.offering}</p>
+                <p>{BRAND_INFO.contact.company}</p>
+                <p>Cell USA: {BRAND_INFO.contact.cellUsa}</p>
+                <a href={`mailto:${BRAND_INFO.contact.email}`} className="hover:text-[#D4AF37] transition-colors">
+                  Email: {BRAND_INFO.contact.email}
+                </a>
+              </div> */}
 
             {/* Social Icons */}
             <div className="flex items-center gap-3 pt-2">
@@ -362,7 +361,7 @@ export const Footer: React.FC = () => {
 
           <div className="space-y-3">
             <span className="text-[11px] font-cinzel tracking-[0.25em] text-[#D4AF37] uppercase block font-semibold">
-              Signature Rituals
+              Signature Products
             </span>
 
             <ul className="space-y-2.5 text-xs sm:text-sm">
@@ -410,7 +409,7 @@ export const Footer: React.FC = () => {
               ATELIERS
           ===================================================== */}
 
-          <div className="space-y-3">
+          {/* <div className="space-y-3">
             <span className="text-[11px] font-cinzel tracking-[0.25em] text-[#D4AF37] uppercase block font-semibold">
               Maison Ateliers
             </span>
@@ -445,7 +444,21 @@ export const Footer: React.FC = () => {
               </div>
 
             </div>
-          </div>
+          </div> */}
+          <div className="space-y-1.5 text-[11px] sm:text-xs text-[#C5D5D8] leading-relaxed">
+              <p className="font-cinzel text-[#D4AF37] uppercase tracking-[0.18em] text-[10px]">
+                {BRAND_INFO.contact.title}
+              </p>
+              <p className="font-semibold text-[#F7F4EB] uppercase">{BRAND_INFO.contact.name}</p>
+              {/* <p>{BRAND_INFO.contact.secondaryTitle}</p> */}
+              <p>{BRAND_INFO.contact.specialty}</p>
+              <p>{BRAND_INFO.contact.offering}</p>
+              <p>{BRAND_INFO.contact.company}</p>
+              <p>Cell USA: {BRAND_INFO.contact.cellUsa}</p>
+              <a href={`mailto:${BRAND_INFO.contact.email}`} className="hover:text-[#D4AF37] transition-colors">
+                Email: {BRAND_INFO.contact.email}
+              </a>
+            </div>
 
         </div>
 
