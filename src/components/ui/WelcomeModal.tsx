@@ -32,7 +32,7 @@ export const WelcomeModal: React.FC = () => {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full max-w-lg border-2 shadow-[0_25px_70px_rgba(0,0,0,0.5)] z-10 overflow-hidden bg-[#1f727e] border-[#D4AF37]/70"
+            className="relative w-full max-w-lg rounded-lg shadow-[0_25px_70px_rgba(0,0,0,0.5)] z-10 overflow-hidden bg-[#1f727e]"
           >
             {/* Close Button */}
             <button
@@ -46,7 +46,7 @@ export const WelcomeModal: React.FC = () => {
             {/* Popup Image Only */}
             <div className="relative w-full flex items-center justify-center">
               <img 
-                src="/images/popup.jpg" 
+                src="/images/popup.webp" 
                 alt="Welcome Preview" 
                 className="w-full h-auto object-cover block" 
               />

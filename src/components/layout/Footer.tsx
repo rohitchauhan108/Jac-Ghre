@@ -12,6 +12,7 @@ import {
   Clock,
 } from 'lucide-react';
 import { useShop } from '../../context/ShopContext';
+import { BRAND_INFO } from '../../data/products';
 
 const logoLight = '/images/logo-light.png';
 
@@ -197,6 +198,21 @@ export const Footer: React.FC = () => {
               <span className="text-[10px] tracking-widest uppercase text-[#8EAAB0]">
                 Artistic Director
               </span>
+            </div>
+
+            <div className="space-y-1.5 text-[11px] sm:text-xs text-[#C5D5D8] leading-relaxed">
+              <p className="font-cinzel text-[#D4AF37] uppercase tracking-[0.18em] text-[10px]">
+                {BRAND_INFO.contact.title}
+              </p>
+              <p className="font-semibold text-[#F7F4EB] uppercase">{BRAND_INFO.contact.name}</p>
+              <p>{BRAND_INFO.contact.secondaryTitle}</p>
+              <p>{BRAND_INFO.contact.specialty}</p>
+              <p>{BRAND_INFO.contact.offering}</p>
+              <p>{BRAND_INFO.contact.company}</p>
+              <p>Cell USA: {BRAND_INFO.contact.cellUsa}</p>
+              <a href={`mailto:${BRAND_INFO.contact.email}`} className="hover:text-[#D4AF37] transition-colors">
+                Email: {BRAND_INFO.contact.email}
+              </a>
             </div>
 
             {/* Social Icons */}

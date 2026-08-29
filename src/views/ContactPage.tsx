@@ -28,7 +28,7 @@ export const ContactPage: React.FC = () => {
     },
     {
       q: 'How do I book a private consultation with Jac Ghré?',
-      a: 'You can submit an inquiry through our Atelier Concierge form on the Jac Ghré page, or contact our private client styling desk at concierge@ghreparis.com.',
+      a: 'You can submit an inquiry through our Atelier Concierge form on the Jac Ghré page, or contact our private client styling desk at Ghrebeauty@gmail.com.',
     },
   ];
 
@@ -62,35 +62,58 @@ export const ContactPage: React.FC = () => {
             <div className="bg-[#097B8A] border border-[#D4AF37]/35 p-6 sm:p-8 shadow-xl">
               <h3 className="font-cinzel text-xl font-bold text-[#F7F4EB] uppercase mb-6 flex items-center gap-2">
                 <GoldEmblem size={20} withGlow />
-                <span>Global Flagship Ateliers</span>
+                <span>MIÀMI SPA & BEAUTY SALON</span>
               </h3>
 
+              <div className="space-y-4 mb-6 border-b border-[#D4AF37]/20 pb-6">
+                <div className="text-[#F7F4EB] space-y-2">
+                  <div className="font-cinzel text-xs uppercase tracking-[0.25em] text-[#D4AF37]">
+                    JAC GHRÉ
+                  </div>
+                  <div className="font-cinzel text-base font-bold text-[#F3E5AB] uppercase">
+                    AMBASSADOR FOR EXCELLENCE
+                  </div>
+                  <div className="font-cinzel text-base font-bold text-[#F3E5AB] uppercase">
+                    BEAUTY EXPERT & CONSULTANT
+                  </div>
+                  <p className="font-poppins text-xs sm:text-sm text-[#C5D5D8]">
+                    International Hair Designer
+                  </p>
+                  <p className="font-poppins text-xs sm:text-sm text-[#C5D5D8]">
+                    Luxury Hair Care
+                  </p>
+                  <p className="font-poppins text-xs sm:text-sm text-[#C5D5D8]">
+                    American Beauty Company. LLC
+                  </p>
+                </div>
+              </div>
+
               <div className="space-y-6">
-                <div className="flex items-start gap-4">
+                {/* <div className="flex items-start gap-4">
                   <MapPin className="w-5 h-5 text-[#D4AF37] shrink-0 mt-1" />
                   <div>
                     <h4 className="font-cinzel text-sm font-bold text-[#F3E5AB] uppercase">
                       Paris Flagship
                     </h4>
                     <p className="font-poppins text-xs sm:text-sm text-[#8EAAB0] mt-0.5">
-                      Place Vendôme, 75001 Paris, France
+                      New York
                     </p>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="flex items-start gap-4">
                   <MapPin className="w-5 h-5 text-[#D4AF37] shrink-0 mt-1" />
                   <div>
                     <h4 className="font-cinzel text-sm font-bold text-[#F3E5AB] uppercase">
-                      Miami Atelier
+                      MIÀMI SPA & BEAUTY SALON
                     </h4>
                     <p className="font-poppins text-xs sm:text-sm text-[#8EAAB0] mt-0.5">
-                      Brickell Avenue & South Beach, Miami, FL 33131
+                      New York
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
+                {/* <div className="flex items-start gap-4">
                   <MapPin className="w-5 h-5 text-[#D4AF37] shrink-0 mt-1" />
                   <div>
                     <h4 className="font-cinzel text-sm font-bold text-[#F3E5AB] uppercase">
@@ -100,17 +123,17 @@ export const ContactPage: React.FC = () => {
                       Route des Plages, 83350 Ramatuelle, France
                     </p>
                   </div>
-                </div>
+                </div> */}
               </div>
 
               <div className="mt-8 pt-6 border-t border-[#D4AF37]/20 space-y-3">
                 <div className="flex items-center gap-3 text-xs sm:text-sm text-[#B5CAD0] font-poppins">
                   <Mail className="w-4 h-4 text-[#D4AF37]" />
-                  <span>concierge@ghreparis.com</span>
+                  <span>Ghrebeauty@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-3 text-xs sm:text-sm text-[#B5CAD0] font-poppins">
                   <Phone className="w-4 h-4 text-[#D4AF37]" />
-                  <span>+1 (800) 542-GHRE (USA) / +33 1 42 68 00 00 (FR)</span>
+                  <span>Cell USA: (1) 786 238 3631</span>
                 </div>
                 <div className="flex items-center gap-3 text-xs sm:text-sm text-[#B5CAD0] font-poppins">
                   <Clock className="w-4 h-4 text-[#D4AF37]" />

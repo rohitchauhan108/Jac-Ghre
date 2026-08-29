@@ -20,6 +20,15 @@ export const BRAND_INFO = {
   founderTitle: "Beauty Expert & Master Hair Artist",
   tagline: "Beautifully Yours",
   subTagline: "The Art of Sun-Kissed Beauty",
+  contact: {
+    name: "JAC GHRÉ",
+    title: "BEAUTY EXPERT & CONSULTANT",
+    specialty: "International Hair Designer",
+    offering: "Luxury Hair Care",
+    company: "American Beauty Company. LLC",
+    cellUsa: "(1) 786 238 3631",
+    email: "Ghrebeauty@gmail.com",
+  },
   locations: [
     { city: "Paris", label: "8 Place Vendôme, 75001 Paris" },
     { city: "Saint-Tropez", label: "Place des Lices, French Riviera" },
@@ -43,8 +52,8 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     secondaryCtaText: "VIEW RITUALS",
     secondaryCtaLink: "hair-care",
     accentTheme: "teal-gold",
-    image: "/images/banner1.jpg",
-    mobileImage: "/images/mobile-banner1.jpg",
+    image: "/images/newbanner.jpg",
+    mobileImage: "/images/mobile.jpg",
     locationBadge: "PARIS • SAINT-TROPEZ • MIAMI",
   },
   {

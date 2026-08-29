@@ -13,18 +13,18 @@ export const FloatingConcierge: React.FC = () => {
   const isDark = theme === 'dark';
 
   const defaultWhatsappMessage = encodeURIComponent(
-    'Bonjour GHRÉ Paris Atelier. I am visiting your boutique and would like personal hair diagnostic & fragrance consultation.'
+    'Bonjour JAC GHRÉ Miami. I am looking for an ambassador for excellence, beauty expert consultation, luxury hair care guidance, and an international hair designer appointment.'
   );
 
   const handleOpenDirectWhatsapp = (customMsg?: string) => {
     const text = customMsg ? encodeURIComponent(customMsg) : defaultWhatsappMessage;
-    window.open(`https://wa.me/18005424473?text=${text}`, '_blank');
+    window.open(`https://wa.me/17862383631?text=${text}`, '_blank');
   };
 
   const quickQuestions = [
-    'Which formula is best for damaged bleached hair?',
-    'How do I pre-order the Blossom Positano Parfum?',
-    'Can I book a private consultation with Jac Ghré in Miami / St-Tropez?',
+    'Which luxury hair care formula is best for damaged bleached hair?',
+    'How do I book an ambassador for excellence consultation in Miami?',
+    'Can I book a private consultation with Jac Ghré for international hair design?',
     'What is the status of worldwide courier delivery?',
   ];
 
@@ -112,7 +112,7 @@ export const FloatingConcierge: React.FC = () => {
                 }`}
               >
                 <Phone className="w-3.5 h-3.5" />
-                <span>Atelier Phone</span>
+                <span>Phone</span>
               </button>
             </div>
 
@@ -199,7 +199,7 @@ export const FloatingConcierge: React.FC = () => {
 
                   <div className="space-y-2">
                     <a
-                      href="tel:+18005424473"
+                      href="tel:+17862383631"
                       className={`block p-3 border transition-all ${
                         isDark
                           ? 'bg-[#006073] border-[#D4AF37]/30 text-[#F7F4EB] hover:border-[#D4AF37]'
@@ -209,9 +209,9 @@ export const FloatingConcierge: React.FC = () => {
                       <div className="flex items-center justify-between">
                         <div>
                           <strong className="text-[11px] font-cinzel text-[#D4AF37] block">
-                            NORTH AMERICA & MIAMI STUDIO
+                            CELL USA
                           </strong>
-                          <span className="text-xs font-mono font-bold">+1 (800) 542-GHRE (Toll-Free)</span>
+                          <span className="text-xs font-mono font-bold">(1) 786 238 3631</span>
                           <span className="text-[10px] text-[#8EAAB0] block">Mon–Sat 9AM–8PM EST</span>
                         </div>
                         <Phone className="w-4 h-4 text-[#D4AF37]" />
@@ -241,7 +241,7 @@ export const FloatingConcierge: React.FC = () => {
 
                   <div className="pt-2">
                     <a
-                      href="tel:+18005424473"
+                      href="tel:+17862383631"
                       className="w-full py-2.5 bg-[#D4AF37] text-[#062B35] font-cinzel text-xs font-bold uppercase tracking-wider hover:brightness-110 flex items-center justify-center gap-2 shadow"
                     >
                       <Phone className="w-3.5 h-3.5" />
@@ -262,12 +262,12 @@ export const FloatingConcierge: React.FC = () => {
           {/* Tooltip Label */}
           <div className="absolute right-full mr-3.5 px-3 py-1.5 bg-[#006073]/95 text-[#F3E5AB] border border-[#D4AF37]/70 text-[11px] font-cinzel tracking-wider whitespace-nowrap opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 shadow-[0_8px_20px_rgba(0,96,115,0.6)] pointer-events-none z-50 flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" />
-            <span>Call Atelier (+1 800 542-GHRE)</span>
+            <span>Call JAC GHRÉ (+1 786 238 3631)</span>
           </div>
 
           <a
-            href="tel:+18005424473"
-            aria-label="Call GHRÉ Atelier Hotline"
+            href="tel:+17862383631"
+            aria-label="Call JAC GHRÉ"
             className="relative w-13 h-13 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 cursor-pointer select-none"
             style={{
               background:
