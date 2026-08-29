@@ -108,7 +108,7 @@ export const ContactPage: React.FC = () => {
                       MIÀMI SPA & BEAUTY SALON
                     </h4>
                     <p className="font-poppins text-xs sm:text-sm text-[#8EAAB0] mt-0.5">
-                      New York
+                      PARIS STTROPEZ NEW YORK MIAMI
                     </p>
                   </div>
                 </div>

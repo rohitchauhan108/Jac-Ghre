@@ -23,32 +23,32 @@ export const WelcomeModal: React.FC = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={handleClose}
-            className="fixed inset-0 bg-[#088395]/90 transition-opacity"
+            className="fixed inset-0 bg-[#088395]/80 backdrop-blur-sm transition-opacity"
           />
 
-          {/* Modal Container holding only the image */}
+          {/* Modal Container */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full max-w-lg rounded-lg shadow-[0_25px_70px_rgba(0,0,0,0.5)] z-10 overflow-hidden bg-[#1f727e]"
+            className="relative w-full max-w-md max-h-[90vh] rounded-xl shadow-2xl z-10 overflow-hidden bg-transparent flex flex-col items-center justify-center"
           >
-            {/* Close Button */}
+            {/* Highly Visible Floating Close Button */}
             <button
               onClick={handleClose}
-              className="absolute top-4 right-4 z-20 p-2 transition-all border border-[#D4AF37]/40 bg-[#1f727e]/80 text-[#D4AF37] hover:text-[#FFF3C4] hover:bg-[#287f98] cursor-pointer"
+              className="absolute top-3 right-3 z-30 p-2 rounded-full border border-white/20 bg-black/60 text-white hover:bg-black/80 hover:scale-105 transition-all cursor-pointer shadow-md backdrop-blur-md"
               aria-label="Close modal"
             >
-              <X className="w-4 h-4" />
+              <X className="w-5 h-5" />
             </button>
 
-            {/* Popup Image Only */}
-            <div className="relative w-full flex items-center justify-center">
+            {/* Popup Image */}
+            <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded-xl">
               <img 
-                src="/images/popup.webp" 
+                src="/images/welcome.webp" 
                 alt="Welcome Preview" 
-                className="w-full h-auto object-cover block" 
+                className="w-full h-auto max-h-[85vh] object-contain rounded-xl block" 
               />
             </div>
           </motion.div>
