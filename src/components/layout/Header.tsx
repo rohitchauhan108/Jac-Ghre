@@ -111,6 +111,19 @@ export const Header: React.FC = () => {
               />
             </button>
           </div>
+          {/* <div className="lg:hidden flex items-center p-0">
+            <button
+              onClick={() => navigateToPage("home")}
+              className="group flex items-center text-left focus:outline-none cursor-pointer"
+              aria-label="GHRÉ Paris Home"
+            >
+              <img
+                src="/home/logo.webp"
+                alt="GHRÉ Paris Logo"
+                className="h-20 sm:h-28 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              />
+            </button>
+          </div> */}
 
           {/* Desktop Navigation (Center) */}
           <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
