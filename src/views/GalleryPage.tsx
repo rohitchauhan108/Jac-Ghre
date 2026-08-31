@@ -28,7 +28,7 @@ const GALLERY_IMAGES: { category: Exclude<Category, 'all'>; src: string; alt: st
   { category: 'founder', src: '/gallery/founder/founder2.jpeg', alt: 'Founder 2' },
   { category: 'founder', src: '/gallery/founder/founder3.jpeg', alt: 'Founder 3' },
   { category: 'product', src: '/gallery/product/product3.jpeg', alt: 'Product 3' },
-  { category: 'product', src: '/gallery/product/product4.jpg', alt: 'Product 4' },
+  { category: 'product', src: '/gallery/product/product4.webp', alt: 'Product 4' },
 ];
 
 const TABS: { key: Category; label: string }[] = [

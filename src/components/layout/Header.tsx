@@ -79,20 +79,18 @@ export const Header: React.FC = () => {
   return (
     <>
       <header
-        className={`sticky top-0 z-40 w-full transition-all duration-400 ease-out transform ${
-          isVisible ? "translate-y-0" : "-translate-y-full pointer-events-none"
-        } ${
-          isScrolled
-            ? "bg-[#006073]/98 backdrop-blur-lg border-b border-[#D4AF37]/35 py-3 shadow-[0_12px_35px_rgba(0,96,115,0.6)]"
-            : "bg-gradient-to-b from-[#006073]/95 via-[#007288]/80 to-transparent py-4 sm:py-5 border-b border-[#D4AF37]/20"
-        }`}
+        className={`sticky top-0 z-40 w-full transition-all duration-400 ease-out transform ${isVisible ? "translate-y-0" : "-translate-y-full pointer-events-none"
+          } ${isScrolled
+            ? "bg-white md:bg-[#006073]/98 backdrop-blur-lg border-b border-[#D4AF37]/35 py-3 shadow-md md:shadow-[0_12px_35px_rgba(0,96,115,0.6)]"
+            : "bg-white md:bg-gradient-to-b md:from-[#006073]/95 md:via-[#007288]/80 md:to-[#006073]/90 py-4 sm:py-5 border-b border-[#D4AF37]/20"
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Mobile Hamburger (Left on mobile) */}
           <div className="flex items-center gap-2 lg:hidden">
             <button
               onClick={() => setMobileMenuOpen(true)}
-              className="p-2 transition-colors focus:outline-none text-[#D4AF37] hover:text-[#FFF3C4]"
+              className="p-2 transition-colors focus:outline-none text-[#D4AF37] hover:text-[#006073]"
               aria-label="Open menu"
             >
               <Menu className="w-6 h-6" />
@@ -133,11 +131,10 @@ export const Header: React.FC = () => {
                 >
                   <button
                     onClick={() => navigateToPage(link.page)}
-                    className={`font-cinzel text-xs xl:text-[13px] tracking-[0.2em] py-2 inline-flex items-center gap-1.5 transition-all duration-200 cursor-pointer ${
-                      isActive
-                        ? "text-[#D4AF37] font-bold border-b-2 border-[#D4AF37]"
-                        : "text-[#E8DCC4] hover:text-[#D4AF37]"
-                    }`}
+                    className={`font-cinzel text-xs xl:text-[13px] tracking-[0.2em] py-2 inline-flex items-center gap-1.5 transition-all duration-200 cursor-pointer ${isActive
+                      ? "text-[#D4AF37] font-bold border-b-2 border-[#D4AF37]"
+                      : "text-[#E8DCC4] hover:text-[#D4AF37]"
+                      }`}
                   >
                     <span>{link.name}</span>
                     {link.hasDropdown && (
@@ -218,7 +215,7 @@ export const Header: React.FC = () => {
             {/* Account / Concierge */}
             <button
               onClick={() => navigateToPage("contact")}
-              className="p-2 transition-colors cursor-pointer text-[#E8DCC4] hover:text-[#D4AF37]"
+              className="p-2 transition-colors cursor-pointer text-[#D4AF37] hover:text-[#006073]"
               aria-label="Concierge"
               title="GHRÉ Client Concierge"
             >
@@ -228,7 +225,7 @@ export const Header: React.FC = () => {
             {/* Shopping Bag */}
             <button
               onClick={() => setIsCartOpen(true)}
-              className="relative p-2 transition-colors cursor-pointer text-[#F3E5AB] hover:text-white"
+              className="relative p-2 transition-colors cursor-pointer text-[#006073] hover:text-white"
               aria-label="Shopping Bag"
             >
               <ShoppingBag className="w-4 h-4 sm:w-5 sm:h-5 text-[#D4AF37]" />
@@ -300,13 +297,12 @@ export const Header: React.FC = () => {
                         setMobileMenuOpen(false);
                         navigateToPage(link.page);
                       }}
-                      className={`block w-full text-left font-cinzel text-sm tracking-[0.22em] py-2.5 border-b border-[#D4AF37]/10 transition-colors ${
-                        currentPage === link.page ||
+                      className={`block w-full text-left font-cinzel text-sm tracking-[0.22em] py-2.5 border-b border-[#D4AF37]/10 transition-colors ${currentPage === link.page ||
                         (link.page === "about-founder" &&
                           currentPage === "jac-ghre")
-                          ? "text-[#D4AF37] font-bold"
-                          : "text-[#E8DCC4] hover:text-[#D4AF37]"
-                      }`}
+                        ? "text-[#D4AF37] font-bold"
+                        : "text-[#E8DCC4] hover:text-[#D4AF37]"
+                        }`}
                     >
                       {link.name}
                     </button>

@@ -641,7 +641,7 @@ export const PRODUCTS: Product[] = [
     "Evokes the essence of a sun-kissed getaway",
   ],
 
-  image: "/product/12.jpg",
+  image: "/product/12.webp",
   accentColor: "#E3B448",
   rating: 4.95,
   reviewsCount: 98,

@@ -36,9 +36,9 @@ export const AnnouncementBar: React.FC = () => {
 
   return (
     <div
-      className={`border-b text-[11px] tracking-[0.16em] py-2 px-4 relative z-40 transition-colors duration-300 bg-[#005F73] border-[#005F73]/30 text-white`}
+      className={`border-b text-[11px] tracking-[0.16em] py-2 px-4 relative z-40 transition-colors duration-300 bg-white lg:bg-[#005F73] border-none lg:border-[#005F73]/30 text-white`}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto hidden lg:flex items-center justify-between gap-4">
         {/* Left: Coming Soon Live Badge */}
         <div className="hidden md:flex items-center gap-2">
           <button
