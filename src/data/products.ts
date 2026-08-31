@@ -52,8 +52,8 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     secondaryCtaText: "VIEW RITUALS",
     secondaryCtaLink: "hair-care",
     accentTheme: "teal-gold",
-    image: "/images/newbanner.jpg",
-    mobileImage: "/images/mobile.jpg",
+    image: "/home/banner1.jpg",
+    mobileImage: "/home/mobile-banner.jpg",
     locationBadge: "PARIS • SAINT-TROPEZ • MIAMI",
   },
   {
@@ -68,8 +68,8 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     secondaryCtaText: "SHOP MISTS",
     secondaryCtaLink: "sun-body",
     accentTheme: "summer-sun",
-    image: "/images/banner3.jpg",
-    mobileImage: "/images/mobile-banner3.jpg",
+    image: "/home/banner3.jpg",
+    mobileImage: "/home/mobile-banner3.jpg",
     locationBadge: "SAINT-TROPEZ • RIVIERA",
   },
   {
@@ -100,8 +100,8 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     secondaryCtaText: "SHOP COLLECTION",
     secondaryCtaLink: "shop",
     accentTheme: "teal-gold",
-    image: "/images/banner.webp",
-    mobileImage: "/images/mobile-banner5.webp",
+    image: "/home/banner4.webp",
+    mobileImage: "/home/mobile-banner4.webp",
     locationBadge: "SAINT-TROPEZ • MIAMI",
   },
   {
