@@ -84,8 +84,8 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     secondaryCtaText: "SHOP HAIR CARE",
     secondaryCtaLink: "shop",
     accentTheme: "summer-sun",
-    image: "/images/banner2.jpg",
-    mobileImage: "/images/mobile-banner2.jpg",
+    image: "/home/banner2.webp",
+    mobileImage: "/home/mobile-banner2.webp",
     locationBadge: "SAINT-TROPEZ • MIAMI",
   },
   {
