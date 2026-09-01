@@ -7,7 +7,7 @@ export const WelcomeModal: React.FC = () => {
   const { isWelcomePopupOpen, setIsWelcomePopupOpen } = useShop();
 
   useEffect(() => {
-    // Check if the current URL path is the home page ("/" or empty path depending on setup)
+    // Check if the current URL path is strictly the home page
     const isHomePage = window.location.pathname === '/' || window.location.pathname === '';
 
     if (isHomePage) {
