@@ -66,6 +66,7 @@ export const Header: React.FC = () => {
     { name: "SHOP", page: "shop", hasDropdown: true },
     { name: "ABOUT", page: "about-company" },
     { name: "ABOUT THE FOUNDER", page: "about-founder" },
+    { name: "THE ARTIST", page: "artist" },
     { name: "GALLERY", page: "gallery" },
     { name: "CONTACT US", page: "contact" },
   ];

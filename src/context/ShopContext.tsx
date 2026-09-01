@@ -11,7 +11,7 @@ export interface CartItem {
   selectedSize: string;
 }
 
-export type PageType = 'home' | 'shop' | 'about-founder' | 'about-company' | 'contact' | 'jac-ghre' | 'hair-care' | 'sun-body' | 'fragrance' | 'journal' | 'gallery';
+export type PageType = 'home' | 'shop' | 'about-founder' | 'about-company' | 'artist' | 'contact' | 'jac-ghre' | 'hair-care' | 'sun-body' | 'fragrance' | 'journal' | 'gallery';
 export type ThemeMode = 'dark' | 'light';
 
 interface ShopContextType {
@@ -59,6 +59,7 @@ const pathnameToPageType = (pathname: string): PageType => {
     case '/jac-ghre':
     case '/about-founder': return 'jac-ghre';
     case '/about-company': return 'about-company';
+    case '/artist': return 'artist';
     case '/contact': return 'contact';
     case '/journal': return 'journal';
     case '/gallery': return 'gallery';
@@ -77,6 +78,7 @@ const pageTypeToPath = (page: PageType): string => {
     case 'jac-ghre':
     case 'about-founder': return '/jac-ghre';
     case 'about-company': return '/about-company';
+    case 'artist': return '/artist';
     case 'contact': return '/contact';
     case 'journal': return '/journal';
     case 'gallery': return '/gallery';

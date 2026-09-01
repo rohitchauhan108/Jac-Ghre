@@ -53,7 +53,7 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     secondaryCtaLink: "hair-care",
     accentTheme: "teal-gold",
     image: "/home/banner1.jpg",
-    mobileImage: "/home/mobile-banner.jpg",
+    mobileImage: "/home/mobile-banner1.jpg",
     locationBadge: "PARIS • SAINT-TROPEZ • MIAMI",
   },
   {
@@ -89,7 +89,7 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     locationBadge: "SAINT-TROPEZ • MIAMI",
   },
   {
-    id: "orange-blossom-duo",
+    id: "orange-blossom-duo-1",
     eyebrow: "GOOD HAIR DAY",
     title: "ORANGE BLOSSOM & BAMBOO MARROW",
     subtitle: "Intensive Restorative Duet",
