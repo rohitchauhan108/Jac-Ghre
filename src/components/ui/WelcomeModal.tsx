@@ -1,24 +1,26 @@
+'client'; // Ensure it's a client component if needed, though standard client directive syntax or existing setup applies
+
 import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X } from 'lucide-react';
-import { useLocation } from 'react-router-dom'; // Import useLocation
+import { usePathname } from 'next/navigation'; // Use Next.js pathname hook
 import { useShop } from '../../context/ShopContext';
 
 export const WelcomeModal: React.FC = () => {
   const { isWelcomePopupOpen, setIsWelcomePopupOpen } = useShop();
-  const location = useLocation(); // Get current router location safely
+  const pathname = usePathname(); // Get current route pathname in Next.js
 
   useEffect(() => {
-    // Strictly check if the router path is the home page
-    const isHomePage = location.pathname === '/' || location.pathname === '';
+    // Strictly check if the current path is the home page
+    const isHomePage = pathname === '/' || pathname === '';
 
     if (isHomePage) {
       setIsWelcomePopupOpen(true);
     } else {
-      // Ensure it stays closed if we are on any other page (like /about-company)
+      // Force closed if on any other page (like /about-company)
       setIsWelcomePopupOpen(false);
     }
-  }, [location.pathname, setIsWelcomePopupOpen]);
+  }, [pathname, setIsWelcomePopupOpen]);
 
   const handleClose = () => {
     setIsWelcomePopupOpen(false);
