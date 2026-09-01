@@ -1,19 +1,24 @@
 import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X } from 'lucide-react';
+import { useLocation } from 'react-router-dom'; // Import useLocation
 import { useShop } from '../../context/ShopContext';
 
 export const WelcomeModal: React.FC = () => {
   const { isWelcomePopupOpen, setIsWelcomePopupOpen } = useShop();
+  const location = useLocation(); // Get current router location safely
 
   useEffect(() => {
-    // Check if the current URL path is strictly the home page
-    const isHomePage = window.location.pathname === '/' || window.location.pathname === '';
+    // Strictly check if the router path is the home page
+    const isHomePage = location.pathname === '/' || location.pathname === '';
 
     if (isHomePage) {
       setIsWelcomePopupOpen(true);
+    } else {
+      // Ensure it stays closed if we are on any other page (like /about-company)
+      setIsWelcomePopupOpen(false);
     }
-  }, [setIsWelcomePopupOpen]);
+  }, [location.pathname, setIsWelcomePopupOpen]);
 
   const handleClose = () => {
     setIsWelcomePopupOpen(false);
