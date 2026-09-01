@@ -6,13 +6,16 @@ import { useShop } from '../../context/ShopContext';
 export const WelcomeModal: React.FC = () => {
   const { isWelcomePopupOpen, setIsWelcomePopupOpen } = useShop();
 
-  // Automatically open the modal every time the component mounts (on page load or refresh)
   useEffect(() => {
-    setIsWelcomePopupOpen(true);
+    // Check if the current URL path is the home page ("/" or empty path depending on setup)
+    const isHomePage = window.location.pathname === '/' || window.location.pathname === '';
+
+    if (isHomePage) {
+      setIsWelcomePopupOpen(true);
+    }
   }, [setIsWelcomePopupOpen]);
 
   const handleClose = () => {
-    // sessionStorage logic removed so closing it won't prevent it from showing on refresh
     setIsWelcomePopupOpen(false);
   };
 
