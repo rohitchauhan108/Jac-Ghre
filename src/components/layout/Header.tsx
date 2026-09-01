@@ -82,8 +82,8 @@ export const Header: React.FC = () => {
       <header
         className={`sticky top-0 z-40 w-full transition-all duration-400 ease-out transform ${isVisible ? "translate-y-0" : "-translate-y-full pointer-events-none"
           } ${isScrolled
-            ? "bg-white md:bg-[#005F73]/98 backdrop-blur-lg border-b border-[#D4AF37]/35 py-3 shadow-md md:shadow-[0_12px_35px_rgba(0,95,115,0.6)]"
-            : "bg-[#005F73]/95 md:bg-gradient-to-r md:from-[#005F73]/95 md:via-[#007288]/80 md:to-[#005F73]/90 py-4 sm:py-5 border-b border-[#D4AF37]/20"
+            ? "bg-[#005F73] md:bg-[#005F73]/98 backdrop-blur-lg border-b border-[#D4AF37]/35 py-3 shadow-md md:shadow-[0_12px_35px_rgba(0,95,115,0.6)]"
+            : "bg-[#005F73] md:bg-gradient-to-r md:from-[#005F73]/95 md:via-[#007288]/80 md:to-[#005F73]/90 py-4 sm:py-5 border-b border-[#D4AF37]/20"
           }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
