@@ -35,7 +35,7 @@ export const WelcomeModal: React.FC = () => {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="relative lg:top-0 top-12 w-full max-w-md max-h-[90vh] rounded-xl shadow-2xl z-10 overflow-hidden bg-transparent flex flex-col items-center justify-center"
+            className="relative lg:top-0 top-10 w-full max-w-md max-h-[90vh] rounded-xl shadow-2xl z-10 overflow-hidden bg-transparent flex flex-col items-center justify-center"
           >
             {/* Highly Visible Floating Close Button */}
             <button

@@ -1,52 +1,56 @@
-'use client'
+"use client";
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react";
 
 interface GalleryItem {
-  id: number
-  path: string
-  category: string
+  id: number;
+  path: string;
+  category: string;
 }
 
 export default function ArchiveGallery() {
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   // Combined and structured datasets to prevent index mismatch bugs
   const ivanaData: GalleryItem[] = Array.from({ length: 21 }, (_, index) => ({
     id: index + 1,
     path: `/IVANA TRUMP/${index + 1}.jpeg`,
-    category: 'Ivana Trump Archive',
-  }))
+    category: "Ivana Trump Archive",
+  }));
 
   const kateData: GalleryItem[] = Array.from({ length: 9 }, (_, index) => ({
     id: index + 1,
     path: `/KATE MOSS/${index + 1}.jpeg`,
-    category: 'Kate Moss Archive',
-  }))
+    category: "Kate Moss Archive",
+  }));
 
-  const allItems = [...ivanaData, ...kateData]
+  const allItems = [...ivanaData, ...kateData];
 
   const handleNext = (e?: React.MouseEvent) => {
-    e?.stopPropagation()
-    setSelectedIndex((prev) => (prev !== null ? (prev + 1) % allItems.length : 0))
-  }
+    e?.stopPropagation();
+    setSelectedIndex((prev) =>
+      prev !== null ? (prev + 1) % allItems.length : 0,
+    );
+  };
 
   const handlePrev = (e?: React.MouseEvent) => {
-    e?.stopPropagation()
-    setSelectedIndex((prev) => (prev !== null ? (prev - 1 + allItems.length) % allItems.length : 0))
-  }
+    e?.stopPropagation();
+    setSelectedIndex((prev) =>
+      prev !== null ? (prev - 1 + allItems.length) % allItems.length : 0,
+    );
+  };
 
   // Keyboard navigation support
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (selectedIndex === null) return
-      if (e.key === 'ArrowRight') handleNext()
-      if (e.key === 'ArrowLeft') handlePrev()
-      if (e.key === 'Escape') setSelectedIndex(null)
-    }
-    window.addEventListener('keydown', handleKeyDown)
-    return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [selectedIndex])
+      if (selectedIndex === null) return;
+      if (e.key === "ArrowRight") handleNext();
+      if (e.key === "ArrowLeft") handlePrev();
+      if (e.key === "Escape") setSelectedIndex(null);
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedIndex]);
 
   return (
     <main className="min-h-screen bg-[#005F73] text-[#f5f5f7] px-4 py-16 md:px-16 selection:bg-[#d4af37] selection:text-[#005F73]">
@@ -63,9 +67,10 @@ export default function ArchiveGallery() {
 
       {/* Ivana Trump Section */}
       <section className="mb-16">
-        <h2 className="text-center text-xl md:text-2xl tracking-[0.2em] font-light mb-8 text-[#d4af37]">
+        <h2 className="text-center text-xl md:text-2xl tracking-[0.2em] mb-3 font-light text-[#d4af37]">
           IVANA TRUMP
         </h2>
+        <div className="w-16 h-[1px] bg-[#d4af37] mx-auto mb-8" />
         <div className="max-w-7xl mx-auto columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-6 [column-fill:_balance]">
           {ivanaData.map((item, index) => (
             <div
@@ -86,12 +91,13 @@ export default function ArchiveGallery() {
 
       {/* Kate Moss Section */}
       <section className="mb-16">
-        <h2 className="text-center text-xl md:text-2xl tracking-[0.2em] font-light mb-8 text-[#d4af37]">
+        <h2 className="text-center text-xl md:text-2xl tracking-[0.2em] font-light mb-3 text-[#d4af37]">
           KATE MOSS
         </h2>
+        <div className="w-16 h-[1px] bg-[#d4af37] mx-auto mb-8" />
         <div className="max-w-7xl mx-auto columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-6 [column-fill:_balance]">
           {kateData.map((item, index) => {
-            const globalIndex = ivanaData.length + index
+            const globalIndex = ivanaData.length + index;
             return (
               <div
                 key={`kate-${item.id}`}
@@ -105,7 +111,7 @@ export default function ArchiveGallery() {
                   loading="lazy"
                 />
               </div>
-            )
+            );
           })}
         </div>
       </section>
@@ -149,7 +155,9 @@ export default function ArchiveGallery() {
               <span>{allItems[selectedIndex].category}</span>
               <span className="text-neutral-600">|</span>
               <span>
-                {selectedIndex + 1} <span className="text-neutral-600 mx-1">/</span> {allItems.length}
+                {selectedIndex + 1}{" "}
+                <span className="text-neutral-600 mx-1">/</span>{" "}
+                {allItems.length}
               </span>
             </div>
           </div>
@@ -165,5 +173,5 @@ export default function ArchiveGallery() {
         </div>
       )}
     </main>
-  )
+  );
 }
