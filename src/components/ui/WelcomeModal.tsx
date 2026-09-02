@@ -88,7 +88,7 @@ export const WelcomeModal: React.FC = () => {
             {/* Close Button */}
             <button
               onClick={handleClose}
-              className="absolute top-3 right-3 z-30 p-2 rounded-full border border-white/20 bg-[#d4af37] text-black hover:bg-black/80 hover:scale-105 transition-all cursor-pointer shadow-md backdrop-blur-md"
+              className="absolute top-3 right-3 z-30 p-2 rounded-full text-[#d4af37] hover:scale-105 transition-all cursor-pointer"
               aria-label="Close modal"
             >
               <X className="w-5 h-5" />
