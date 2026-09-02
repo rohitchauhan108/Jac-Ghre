@@ -97,7 +97,7 @@ export const WelcomeModal: React.FC = () => {
             {/* Popup Image */}
             <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded-xl">
               <img
-                src="/images/welcome.webp"
+                src="/home/welcome.webp"
                 alt="Welcome Preview"
                 className="w-full h-auto max-h-[85vh] object-contain rounded-xl block"
               />
