@@ -14,7 +14,7 @@ export const HeroCarousel: React.FC = () => {
   const currentSlide = slides[currentIndex];
 
   /* =========================================================
-      AUTO PLAY
+     AUTO PLAY
   ========================================================= */
   useEffect(() => {
     if (!isPlaying || slides.length <= 1) return;
@@ -27,21 +27,21 @@ export const HeroCarousel: React.FC = () => {
   }, [isPlaying, slides.length]);
 
   /* =========================================================
-      NEXT SLIDE
+     NEXT SLIDE
   ========================================================= */
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % slides.length);
   };
 
   /* =========================================================
-      PREVIOUS SLIDE
+     PREVIOUS SLIDE
   ========================================================= */
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
   /* =========================================================
-      SLIDE NAVIGATION
+     SLIDE NAVIGATION
   ========================================================= */
   const handleSlideClick = (slide: typeof currentSlide) => {
     if (
@@ -69,13 +69,21 @@ export const HeroCarousel: React.FC = () => {
         <div className="absolute inset-0 z-[1] pointer-events-none bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.06)_0%,transparent_65%)]" />
 
         {/* =====================================================
-            SLIDE IMAGE
-        ===================================================== */}
-        <AnimatePresence mode="wait">
-          <motion.div key={currentSlide.id} initial={{ opacity: 0, scale: 1.015 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.995 }} transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }} onClick={() => handleSlideClick(currentSlide)} className="absolute inset-0 w-full h-full cursor-pointer group">
+            SLIDE IMAGES CONTAINER (Smooth Crossfade Layer)
+        ==================================================== */}
+        <AnimatePresence>
+          <motion.div 
+            key={currentSlide.id} 
+            initial={{ opacity: 0, scale: 1.03 }} 
+            animate={{ opacity: 1, scale: 1 }} 
+            exit={{ opacity: 0, scale: 0.98 }} 
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }} 
+            onClick={() => handleSlideClick(currentSlide)} 
+            className="absolute inset-0 w-full h-full cursor-pointer group"
+          >
             {/* =================================================
                 RESPONSIVE BANNER IMAGE (PICTURE ELEMENT)
-            ================================================= */}
+            ================================================. */}
             <picture className="w-full h-full block">
               {currentSlide.mobileImage ? (
                 <source media="(max-width: 767px)" srcSet={currentSlide.mobileImage} />
@@ -85,12 +93,12 @@ export const HeroCarousel: React.FC = () => {
 
             {/* =================================================
                 LUXURY OVERLAY
-            ================================================= */}
+            ================================================ *\/} */}
             <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#006073]/25 via-transparent to-[#006073]/10" />
 
             {/* =================================================
                 GOLD INNER BORDER
-            ================================================= */}
+            ================================================ */}
             <div className="absolute inset-2 sm:inset-3 lg:inset-4 hidden sm:block border border-[#D4AF37]/20 pointer-events-none group-hover:border-[#D4AF37]/40 transition-colors duration-500" />
           </motion.div>
         </AnimatePresence>
