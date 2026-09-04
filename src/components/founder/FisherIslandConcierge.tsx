@@ -20,17 +20,14 @@ export const FisherIslandConcierge: React.FC = () => {
   const ateliers = [
     {
       name: 'Fisher Island Club, Miami, Florida',
-      address: 'Fisher Island Drive, Miami FL 33109',
       tag: 'FLAGSHIP ATELIER',
     },
     {
       name: 'Paris — Place Vendôme',
-      address: 'Rue de la Paix, 75001 Paris, France',
       tag: 'HAUTE COIFFURE',
     },
     {
       name: 'Saint-Tropez — Ramatuelle',
-      address: 'Route des Plages, 83350 Ramatuelle',
       tag: 'COASTAL RIVIERA',
     },
   ];
@@ -87,9 +84,6 @@ export const FisherIslandConcierge: React.FC = () => {
                       {item.tag}
                     </span>
                   </div>
-                  <p className="text-xs font-outfit text-[#8EAAB0] mt-1">
-                    {item.address}
-                  </p>
                 </div>
               </button>
             ))}

@@ -34,7 +34,7 @@ export const SupermodelsPortfolio: React.FC = () => {
     <section className="relative py-24 bg-[#006073] text-[#F7F4EB] overflow-hidden border-b border-[#D4AF37]/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        {/* <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#006073] border border-[#D4AF37]/40 mb-3 shadow-md">
             <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
             <span className="text-[11px] font-cinzel font-bold tracking-[0.3em] text-[#D4AF37] uppercase">
@@ -49,10 +49,10 @@ export const SupermodelsPortfolio: React.FC = () => {
           <p className="mt-4 font-outfit text-sm sm:text-base text-[#B3CBD1] font-light max-w-2xl mx-auto leading-relaxed">
             Throughout his celebrated career, Jac Ghré has created signature runway looks and editorial hair artistry for the world's most iconic supermodels, film legends, and haute couture houses.
           </p>
-        </div>
+        </div> */}
 
         {/* Supermodel Grid Showcase */}
-        <div className="mb-16">
+        {/* <div className="mb-16">
           <div className="flex items-center gap-3 mb-6">
             <Crown className="w-4 h-4 text-[#D4AF37]" />
             <h3 className="font-cinzel text-xs sm:text-sm font-bold tracking-[0.3em] text-[#D4AF37] uppercase">
@@ -86,10 +86,10 @@ export const SupermodelsPortfolio: React.FC = () => {
               </motion.div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* High-Profile Celebrities & VIPs */}
-        <div className="mb-16">
+        {/* <div className="mb-16">
           <div className="flex items-center gap-3 mb-6">
             <Star className="w-4 h-4 text-[#D4AF37]" />
             <h3 className="font-cinzel text-xs sm:text-sm font-bold tracking-[0.3em] text-[#D4AF37] uppercase">
@@ -113,7 +113,7 @@ export const SupermodelsPortfolio: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Global Fashion Capitals Ticker */}
         <div className="p-8 bg-[#006073] border border-[#D4AF37]/50">

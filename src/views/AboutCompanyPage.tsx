@@ -55,19 +55,16 @@ export const AboutCompanyPage: React.FC = () => {
   const ateliers = [
     {
       city: "FISHER ISLAND, MIAMI",
-      name: "Fisher Island Club",
       desc: "Private VIP sanctuary serving elite members and international clientele.",
       status: "Flagship Private Atelier",
     },
     {
       city: "PARIS, FRANCE",
-      name: "Place Vendôme & Haute Couture",
       desc: "Backstage runway direction, editorial creations, and haute coiffure.",
       status: "Haute Couture Studio",
     },
     {
       city: "SAINT-TROPEZ, RIVIERA",
-      name: "Ramatuelle Coastal Suite",
       desc: "Summer yacht appointments and sun-defense restorative haircare.",
       status: "Riviera Atelier",
     },
@@ -282,7 +279,6 @@ export const AboutCompanyPage: React.FC = () => {
                 <h3 className="font-cinzel text-xl font-bold text-[#FBF9F3] uppercase">
                   {a.city}
                 </h3>
-                <h4 className="font-cinzel text-sm text-[#F3E5AB]">{a.name}</h4>
                 <p className="font-outfit text-xs text-[#8EAAB0] font-light leading-relaxed">
                   {a.desc}
                 </p>
