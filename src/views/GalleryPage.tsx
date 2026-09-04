@@ -8,8 +8,8 @@ type Category = 'all' | 'banner' | 'catalogues' | 'founder' | 'product';
 
 const GALLERY_IMAGES: { category: Exclude<Category, 'all'>; src: string; alt: string }[] = [
   { category: 'banner', src: '/gallery/banner/1.png', alt: 'Brand Banner 1' },
-  { category: 'banner', src: '/gallery/banner/new2.jpg', alt: 'Brand Banner 2' },
-  { category: 'catalogues', src: '/gallery/catalogues/0.jpeg', alt: 'Catalogue 0' },
+  { category: 'banner', src: '/gallery/banner/products.webp', alt: 'Brand Banner 2' },
+  { category: 'catalogues', src: '/gallery/catalogues/0.webp', alt: 'Catalogue 0' },
   { category: 'catalogues', src: '/gallery/catalogues/1.jpeg', alt: 'Catalogue 1' },
   { category: 'catalogues', src: '/gallery/catalogues/2.jpeg', alt: 'Catalogue 2' },
   { category: 'catalogues', src: '/gallery/catalogues/3.jpeg', alt: 'Catalogue 3' },
@@ -247,7 +247,7 @@ export const GalleryPage: React.FC = () => {
                 alt={filteredImagesRef.current[lightboxIndex].alt}
                 className="w-full h-auto max-h-[85vh] object-contain border border-[#D4AF37]/30 bg-[#021318]"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#021318] via-[#021318]/70 to-transparent p-5 sm:p-6">
+              <div className="absolute bottom-0 left-0 right-0 gradient-to-t from-[#021318] via-[#021318]/70 to-transparent p-5 sm:p-6">
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <div>
                     <span className="inline-block px-2.5 py-1 bg-[#097B8A] text-[10px] font-cinzel text-[#D4AF37] uppercase tracking-widest border border-[#D4AF37]/40">

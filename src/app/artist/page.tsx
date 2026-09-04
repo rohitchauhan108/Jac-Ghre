@@ -67,9 +67,6 @@ export default function ArchiveGallery() {
 
       {/* Ivana Trump Section */}
       <section className="mb-16">
-        <h2 className="text-center text-xl md:text-2xl tracking-[0.2em] mb-3 font-light text-[#d4af37]">
-          IVANA TRUMP
-        </h2>
         <div className="w-16 h-[1px] bg-[#d4af37] mx-auto mb-8" />
         <div className="max-w-7xl mx-auto columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-6 [column-fill:_balance]">
           {ivanaData.map((item, index) => (
@@ -91,9 +88,6 @@ export default function ArchiveGallery() {
 
       {/* Kate Moss Section */}
       <section className="mb-16">
-        <h2 className="text-center text-xl md:text-2xl tracking-[0.2em] font-light mb-3 text-[#d4af37]">
-          KATE MOSS
-        </h2>
         <div className="w-16 h-[1px] bg-[#d4af37] mx-auto mb-8" />
         <div className="max-w-7xl mx-auto columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-6 [column-fill:_balance]">
           {kateData.map((item, index) => {
