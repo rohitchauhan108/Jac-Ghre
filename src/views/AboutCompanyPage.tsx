@@ -23,10 +23,10 @@ export const AboutCompanyPage: React.FC = () => {
   const pillars = [
     {
       icon: <Award className="w-6 h-6 text-[#D4AF37]" />,
-      title: "PARISIAN HAUTE COIFFURE",
+      title: "HAUTE COIFFURE",
       tagline: "Runway-Tested Excellence",
       description:
-        "Born from legendary Paris and Milan fashion week runways under master hair directorship, our formulas were initially created to protect, style, and restore supermodel hair under extreme backstage lighting.",
+        "Born from legendary fashion week runways under master hair directorship, our formulas were initially created to protect, style, and restore supermodel hair under extreme backstage lighting.",
     },
     {
       icon: <Droplets className="w-6 h-6 text-[#D4AF37]" />,
@@ -38,9 +38,9 @@ export const AboutCompanyPage: React.FC = () => {
     {
       icon: <Sun className="w-6 h-6 text-[#D4AF37]" />,
       title: "COASTAL SOLAR & HUMIDITY SHIELD",
-      tagline: "Riviera & Miami Climate Defense",
+      tagline: "Coastal Climate Defense",
       description:
-        "Engineered specifically to combat UV solar degradation, salt water crystallization, and coastal humidity experienced across Saint-Tropez, the French Riviera, and Fisher Island, Miami.",
+        "Engineered specifically to combat UV solar degradation, salt water crystallization, and coastal humidity.",
     },
     {
       icon: <ShieldCheck className="w-6 h-6 text-[#D4AF37]" />,
@@ -48,24 +48,6 @@ export const AboutCompanyPage: React.FC = () => {
       tagline: "Purity Without Compromise",
       description:
         "Every GHRÉ creation is 100% free of sulfates, parabens, harsh phthalates, and synthetic heavy fillers. Dermatologist-tested, color-safe, keratin-safe, and cruelty-free.",
-    },
-  ];
-
-  const ateliers = [
-    {
-      city: "FISHER ISLAND, MIAMI",
-      desc: "Private VIP sanctuary serving elite members and international clientele.",
-      status: "Flagship Private Atelier",
-    },
-    {
-      city: "PARIS, FRANCE",
-      desc: "Backstage runway direction, editorial creations, and haute coiffure.",
-      status: "Haute Couture Studio",
-    },
-    {
-      city: "SAINT-TROPEZ, RIVIERA",
-      desc: "Summer yacht appointments and sun-defense restorative haircare.",
-      status: "Riviera Atelier",
     },
   ];
 
@@ -79,7 +61,7 @@ export const AboutCompanyPage: React.FC = () => {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#097B8A] border border-[#D4AF37]/50 mb-6 shadow-xl">
             <GoldEmblem size={18} />
             <span className="text-[11px] font-cinzel font-bold tracking-[0.35em] text-[#D4AF37] uppercase">
-              THE HOUSE OF GHRÉ PARIS
+              THE HOUSE OF GHRÉ
             </span>
           </div>
 
@@ -88,14 +70,13 @@ export const AboutCompanyPage: React.FC = () => {
           </h1>
 
           <p className="font-playfair text-xl sm:text-3xl italic text-[#F3E5AB] max-w-3xl mx-auto mt-4 leading-snug">
-            “Where Parisian Haute Couture Craft Meets Pure Botanical Alchemy.”
+            “Where Haute Couture Craft Meets Pure Botanical Alchemy.”
           </p>
 
           <div className="h-0.5 w-32 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto my-8" />
 
           <p className="font-outfit text-sm sm:text-base text-[#C4D8DC] font-light max-w-2xl mx-auto leading-relaxed">
-            Founded on the runway capitals of Paris and refined across the
-            exclusive shores of Fisher Island, Miami, GHRÉ is a luxury haircare
+            Founded on the world's most influential runways, GHRÉ is a luxury haircare
             and beauty house dedicated to elevating daily care into an exquisite
             ritual of renewal.
           </p>
@@ -159,7 +140,7 @@ export const AboutCompanyPage: React.FC = () => {
                 For over two decades, GHRÉ has operated at the intersection of
                 haute couture fashion and trichological science. What began as
                 custom backstage elixir formulations for top supermodels during
-                Paris Fashion Week has evolved into a globally celebrated beauty
+                Fashion Week has evolved into a globally celebrated beauty
                 maison.
               </p>
 
@@ -292,7 +273,7 @@ export const AboutCompanyPage: React.FC = () => {
             </h3>
             <p className="font-outfit text-xs sm:text-sm text-[#B3CBD1] max-w-xl mx-auto">
               Discover our signature hair care creations or request a private
-              consultation at our Fisher Island Club Flagship Atelier.
+              consultation at our Flagship Atelier.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
               <button

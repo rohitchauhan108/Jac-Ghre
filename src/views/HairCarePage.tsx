@@ -182,7 +182,7 @@ export const HairCarePage: React.FC = () => {
               The Full Hair Care Collection
             </h3>
             <p className="font-editorial text-xl italic text-[#D4AF37] mt-1">
-              “Crafted with artisanal care in Paris and Saint-Tropez.”
+              “Crafted with artisanal care and botanical precision.”
             </p>
           </div>
 

@@ -121,7 +121,7 @@ export const Footer: React.FC = () => {
               </div>
 
               <p className="text-xs text-[#A5BFC4]">
-                Pre-order our limited Parisian atelier batch today. Use VIP
+                Pre-order our limited atelier batch today. Use VIP
                 Voucher Code <strong>GHRE15</strong> for 15% inaugural savings.
               </p>
             </div>
@@ -177,11 +177,11 @@ export const Footer: React.FC = () => {
                   focus:outline-none
                   cursor-pointer
                 "
-                aria-label="GHRÉ Paris Home"
+                aria-label="GHRÉ Home"
               >
                 <img
                   src={logoLight}
-                  alt="GHRÉ Paris Logo"
+                  alt="GHRÉ Logo"
                   className="
                     h-16
                     sm:h-20
@@ -436,7 +436,7 @@ export const Footer: React.FC = () => {
                   onClick={() => navigateToPage('about-founder')}
                   className="hover:text-[#D4AF37] transition-colors text-left text-[#C5D5D8] cursor-pointer"
                 >
-                  Fisher Island VIP Atelier
+                  VIP Atelier
                 </button>
               </li>
 
@@ -456,28 +456,28 @@ export const Footer: React.FC = () => {
 
               <div>
                 <strong className="font-cinzel block text-[11px] text-[#F7F4EB]">
-                  FISHER ISLAND ATELIER
+                  PRIVATE CLIENT ATELIER
                 </strong>
                 <span className="text-xs">
-                  Fisher Island Club, Miami, FL 33109
+                  Private Client Club
                 </span>
               </div>
 
               <div>
                 <strong className="font-cinzel block text-[11px] text-[#F7F4EB]">
-                  PARIS ATELIER
+                  HAUTE COUTURE ATELIER
                 </strong>
                 <span className="text-xs">
-                  Place Vendôme, 75001 Paris
+                  Private Appointment Studio
                 </span>
               </div>
 
               <div>
                 <strong className="font-cinzel block text-[11px] text-[#F7F4EB]">
-                  SAINT-TROPEZ SALON
+                  COASTAL SALON
                 </strong>
                 <span className="text-xs">
-                  Place des Lices, 83990 Saint-Tropez
+                  Private Appointment Studio
                 </span>
               </div>
 
@@ -507,7 +507,7 @@ export const Footer: React.FC = () => {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs gap-4 text-[#8FAAB0]">
 
           <p>
-            © {new Date().getFullYear()} GHRÉ PARIS & JAC GHRÉ BEAUTY.
+            © {new Date().getFullYear()} GHRÉ & JAC GHRÉ BEAUTY.
             ALL RIGHTS RESERVED.
           </p>
 

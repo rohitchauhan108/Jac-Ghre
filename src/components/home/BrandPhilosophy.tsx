@@ -185,7 +185,7 @@ export const BrandPhilosophy: React.FC = () => {
               ================================================= */}
               <p className="max-w-3xl mx-auto text-base sm:text-lg lg:text-xl text-[#E0ECEF] font-sans font-light leading-[1.9] tracking-wide">
                 From the golden light of the Mediterranean to the tropical
-                warmth of Miami,{' '}
+                warmth of the sun,{' '}
                 <span className="text-[#F3E5AB] font-medium">
                   GHRÉ
                 </span>{' '}
@@ -195,7 +195,7 @@ export const BrandPhilosophy: React.FC = () => {
 
               <p className="max-w-2xl mx-auto mt-5 text-sm sm:text-base text-[#BFD5DA] font-sans font-light leading-[1.85]">
                 Every formula, every fragrance, and every detail is designed
-                to bring a touch of Parisian luxury into your daily hair
+                to bring a touch of atelier luxury into your daily hair
                 ritual.
               </p>
 
@@ -216,11 +216,11 @@ export const BrandPhilosophy: React.FC = () => {
 
                   {/* Locations */}
                   <span className="text-[9px] sm:text-[10px] font-cinzel tracking-[0.35em] text-[#A8C1C7] uppercase font-bold">
-                    PARIS
+                    GLOBAL
                     <span className="mx-2 text-[#D4AF37]">•</span>
-                    SAINT-TROPEZ
+                    BOTANICAL
                     <span className="mx-2 text-[#D4AF37]">•</span>
-                    MIAMI
+                    SUNLIT
                   </span>
 
                 </div>
@@ -244,7 +244,7 @@ export const BrandPhilosophy: React.FC = () => {
           <span className="w-1 h-1 rounded-full bg-[#D4AF37]" />
 
           <span className="text-[9px] sm:text-[10px] font-cinzel tracking-[0.3em] text-[#9DBBC2] uppercase">
-            PARISIAN BEAUTY • COASTAL BOTANICALS • TIMELESS RITUALS
+            TIMELESS BEAUTY • COASTAL BOTANICALS • TIMELESS RITUALS
           </span>
 
           <span className="w-1 h-1 rounded-full bg-[#D4AF37]" />

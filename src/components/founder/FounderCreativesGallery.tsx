@@ -11,19 +11,19 @@ const FOUNDER_CREATIVES = [
     src: '/gallery/founder/founder1.jpeg',
     alt: 'Jac Ghré Creative 1',
     label: 'Backstage Fashion Week',
-    caption: 'Paris Haute Couture Week',
+    caption: 'Haute Couture Week',
   },
   {
     src: '/gallery/founder/founder3.jpeg',
     alt: 'Jac Ghré Creative 2',
     label: 'Runway Hair Direction',
-    caption: 'Milan Fashion Week — Thierry Mugler',
+    caption: 'Fashion Week — Thierry Mugler',
   },
   {
     src: '/gallery/founder/founder31.jpeg',
     alt: 'Jac Ghré Creative 3',
     label: 'Brand Creative Shoot',
-    caption: 'Côte d\'Azur — Saint-Tropez Salon',
+    caption: 'Coastal Salon',
   },
 ];
 
@@ -99,7 +99,7 @@ export const FounderCreativesGallery: React.FC = () => {
           </p>
 
           <p className="mt-3 font-poppins text-sm sm:text-base text-[#B5CAD0] leading-relaxed max-w-2xl mx-auto">
-            A curated selection of moments captured backstage at international fashion weeks, private atelier sessions, and masterclass appointments across Paris, Milan, and the French Riviera. Click any image to view in full detail.
+            A curated selection of moments captured backstage at international fashion weeks, private atelier sessions, and masterclass appointments. Click any image to view in full detail.
           </p>
         </div>
 

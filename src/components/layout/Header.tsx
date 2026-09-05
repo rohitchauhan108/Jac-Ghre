@@ -103,11 +103,11 @@ export const Header: React.FC = () => {
             <button
               onClick={() => navigateToPage("home")}
               className="group flex items-center text-left focus:outline-none cursor-pointer"
-              aria-label="GHRÉ Paris Home"
+              aria-label="GHRÉ Home"
             >
               <img
                 src={logoLight}
-                alt="GHRÉ Paris Logo"
+                alt="GHRÉ Logo"
                 className="h-20 sm:h-28 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </button>
@@ -116,11 +116,11 @@ export const Header: React.FC = () => {
             <button
               onClick={() => navigateToPage("home")}
               className="group flex items-center text-left focus:outline-none cursor-pointer"
-              aria-label="GHRÉ Paris Home"
+              aria-label="GHRÉ Home"
             >
               <img
                 src="/home/logo.webp"
-                alt="GHRÉ Paris Logo"
+                alt="GHRÉ Logo"
                 className="h-20 sm:h-28 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </button>
@@ -279,7 +279,7 @@ export const Header: React.FC = () => {
                   <div className="flex items-center gap-2">
                     <img
                       src={logoLight}
-                      alt="GHRÉ Paris Logo"
+                      alt="GHRÉ Logo"
                       className="h-24 w-auto object-contain"
                     />
                   </div>
@@ -298,7 +298,7 @@ export const Header: React.FC = () => {
                     <span>LAUNCHING SOON</span>
                   </div>
                   <span className="text-[10px] font-cinzel text-[#8EAAB0]">
-                    GHRÉ PARIS
+                    GHRÉ
                   </span>
                 </div>
 
@@ -339,7 +339,7 @@ export const Header: React.FC = () => {
                     Luxury Salons & Ateliers
                   </span>
                   <p className="text-xs text-[#8EAAB0] font-poppins">
-                    Fisher Island, Miami • Paris • Saint-Tropez
+                    Global Private Client Atelier
                   </p>
                 </div>
               </div>

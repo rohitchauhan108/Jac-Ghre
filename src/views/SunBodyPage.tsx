@@ -19,7 +19,7 @@ export const SunBodyPage: React.FC = () => {
           <div className="inline-flex items-center gap-2.5 px-4 py-1.5 bg-[#097B8A] border border-[#D4AF37]/50 mb-4 shadow-md">
             <Sun className="w-4 h-4 text-[#D4AF37]" />
             <span className="text-xs font-cinzel font-semibold tracking-[0.3em] text-[#F3E5AB] uppercase">
-              GHRÉ SUN • ST-TROPEZ ✕ MIAMI
+              GHRÉ SUN • BOTANICAL BODY RITUALS
             </span>
           </div>
 
@@ -32,7 +32,7 @@ export const SunBodyPage: React.FC = () => {
           </p>
 
           <p className="mt-3 max-w-2xl mx-auto font-poppins text-sm sm:text-base text-[#B5CAD0] font-normal leading-relaxed">
-            Crafted for sun-worshippers who demand pure botanical protection, irresistible shimmer reflectivity, and all-day hydration under the Caribbean and French Riviera sun.
+            Crafted for sun-worshippers who demand pure botanical protection, irresistible shimmer reflectivity, and all-day hydration under the sun.
           </p>
         </div>
       </section>
@@ -141,7 +141,7 @@ export const SunBodyPage: React.FC = () => {
           <div className="text-center max-w-2xl mx-auto mb-12">
             <GoldEmblem size={24} withGlow className="mb-2" />
             <h2 className="font-cinzel text-3xl sm:text-4xl font-bold uppercase text-[#F7F4EB]">
-              The Scented Riviera Mists & Oils
+              The Scented Mists & Oils
             </h2>
             <p className="font-editorial text-xl italic text-[#D4AF37] mt-1">
               “Weightless hydration veil for hair, body, and beachside indulgence.”
@@ -207,7 +207,7 @@ export const SunBodyPage: React.FC = () => {
         {/* Resort Ritual Guide */}
         <div className="p-8 sm:p-12 bg-[#097B8A] border-2 border-[#D4AF37]/50 shadow-2xl">
           <h3 className="font-cinzel text-2xl font-bold text-[#F7F4EB] uppercase text-center mb-8">
-            The Saint-Tropez to Miami Beach Ritual
+            The Sunlit Body Ritual
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-5 bg-[#097B8A] border border-[#D4AF37]/25">

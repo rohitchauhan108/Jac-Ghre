@@ -6,9 +6,9 @@ import { useShop } from '../../context/ShopContext';
 // Static messages
 const MESSAGES = [
   '✨ OFFICIAL WEBSITE LAUNCH COMING SOON • PRE-ORDER ATELIER ALLOTMENTS NOW OPEN ✨',
-  '✨ GHRÉ PARIS INAUGURAL PREVIEW • USE VIP CODE "GHRE15" FOR 15% OFF PRE-ORDERS ✨',
+  '✨ GHRÉ INAUGURAL PREVIEW • USE VIP CODE "GHRE15" FOR 15% OFF PRE-ORDERS ✨',
   '✨ COMPLIMENTARY WORLDWIDE EXPRESS COURIER ON ALL INAUGURAL ORDERS ✨',
-  '✨ JAC GHRÉ PRIVATE ATELIER CONSULTATIONS • PLACE VENDÔME & SOUTH BEACH ✨',
+  '✨ JAC GHRÉ PRIVATE ATELIER CONSULTATIONS • GLOBAL BOOKINGS ✨',
 ];
 
 export const AnnouncementBar: React.FC = () => {
@@ -50,7 +50,7 @@ export const AnnouncementBar: React.FC = () => {
           </button>
 
           <span className="text-[10px] font-cinzel font-semibold tracking-widest text-[#E8DCC4]">
-            PARIS • ST-TROPEZ • MIAMI
+            GLOBAL BOTANICAL BEAUTY
           </span>
         </div>
 

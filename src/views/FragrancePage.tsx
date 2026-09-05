@@ -156,7 +156,7 @@ export const FragrancePage: React.FC = () => {
                 Experience All GHRÉ Fragrances at Home
               </h3>
               <p className="font-poppins text-sm sm:text-base text-[#B5CAD0] max-w-xl">
-                Receive 4 x 5ml luxury glass flacons of our iconic fragrances: Blossom Positano, Monoï Gardenia, Orange Blossom Riviera, and Mediterranean Citrus. Includes a $45 voucher redeemable on any full-size bottle.
+                Receive 4 x 5ml luxury glass flacons of our iconic fragrances: Blossom Positano, Monoï Gardenia, Orange Blossom, and Mediterranean Citrus. Includes a $45 voucher redeemable on any full-size bottle.
               </p>
             </div>
             <div className="lg:col-span-4 flex justify-center lg:justify-end">

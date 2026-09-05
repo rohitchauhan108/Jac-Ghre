@@ -18,13 +18,13 @@ export const CategoryShowcase: React.FC = () => {
       title: 'Sun & Shimmer Body',
       subtitle: 'MONOÏ DE TAHITI & SOLAR GLOW',
       image: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?q=80&w=1000&auto=format&fit=crop',
-      tag: 'Saint-Tropez Scent',
+      tag: 'Sunlit Scent',
       link: '#collection',
     },
     {
       id: 'fragrance',
       title: 'Haute Parfumerie',
-      subtitle: 'BLOSSOM POSITANO & RIVIERA MISTS',
+      subtitle: 'BLOSSOM BOTANICAL & SUNLIT MISTS',
       image: 'https://images.unsplash.com/photo-1547887537-6158d64c35b3?q=80&w=1000&auto=format&fit=crop',
       tag: 'Grasse Distillations',
       link: '#fragrance',
@@ -57,7 +57,7 @@ export const CategoryShowcase: React.FC = () => {
             Shop By Category
           </h2>
           <p className="mt-3 text-base sm:text-xl font-editorial italic text-[#F3E5AB]">
-            Explore the bespoke realms of GHRÉ Paris.
+            Explore the bespoke realms of GHRÉ.
           </p>
           <div className="h-0.5 w-20 bg-[#D4AF37] mx-auto mt-4" />
         </div>

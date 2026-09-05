@@ -51,10 +51,10 @@ export const FounderSection: React.FC = () => {
                 </span>
               </div>
 
-              {/* Miami / Global Atelier Location Overlay */}
+              {/* Global Atelier Identity Overlay */}
               <div className="absolute bottom-4 inset-x-4 p-3.5 bg-[#006073]/95 border border-[#D4AF37]/50 backdrop-blur-md flex items-center justify-between text-xs font-cinzel text-[#F3E5AB]">
                 <span className="flex items-center gap-1.5 text-[11px] tracking-wider text-[#F3E5AB]">
-                  <MapPin className="w-3.5 h-3.5 text-[#D4AF37]" /> Fisher Island, Miami
+                  <MapPin className="w-3.5 h-3.5 text-[#D4AF37]" /> Private Client Atelier
                 </span>
                 <span className="flex items-center gap-1.5 text-[11px] tracking-wider text-[#D4AF37]">
                   <Globe className="w-3.5 h-3.5" /> Jacghre.com
@@ -97,7 +97,7 @@ export const FounderSection: React.FC = () => {
               </span>
 
               <p className="text-xs sm:text-sm text-[#E8DCC4] font-outfit font-light leading-relaxed">
-                Jac Ghré is widely recognized for his visionary work in the global runway and fashion industry. He notably collaborated with legendary designer <strong className="text-[#F3E5AB]">Thierry Mugler</strong>, serving as <strong>Hair Director</strong> across Paris, Milan, London, Los Angeles, Shanghai, and Hong Kong.
+                Jac Ghré is widely recognized for his visionary work in the global runway and fashion industry. He notably collaborated with legendary designer <strong className="text-[#F3E5AB]">Thierry Mugler</strong>, serving as <strong>Hair Director</strong> across major international fashion shows.
               </p>
 
               {/* Supermodels worked with mini-bar */}
@@ -168,7 +168,7 @@ export const FounderSection: React.FC = () => {
               Private Atelier Inquiry
             </h3>
             <p className="text-xs text-[#B5CAD0] text-center mb-6 font-outfit">
-              Schedule a private luxury styling consultation with Jac Ghré in Miami (Fisher Island), Paris, or Saint-Tropez.
+              Schedule a private luxury styling consultation with Jac Ghré through our private client concierge.
             </p>
 
             {booked ? (
@@ -197,9 +197,9 @@ export const FounderSection: React.FC = () => {
                   className="w-full px-4 py-2.5 bg-[#006073] border border-[#D4AF37]/40 text-xs text-[#F7F4EB] placeholder-[#8EAAB0] outline-none font-outfit"
                 />
                 <select className="w-full px-4 py-2.5 bg-[#006073] border border-[#D4AF37]/40 text-xs text-[#F7F4EB] outline-none font-outfit cursor-pointer">
-                  <option>Fisher Island Club, Miami, Florida</option>
-                  <option>Paris (Place Vendôme)</option>
-                  <option>Saint-Tropez (Ramatuelle)</option>
+                  <option>Private Client Atelier</option>
+                  <option>Haute Couture Consultation</option>
+                  <option>Signature Botanical Ritual</option>
                 </select>
                 <div className="flex gap-2 pt-2">
                   <button

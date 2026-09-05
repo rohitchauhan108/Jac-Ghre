@@ -42,7 +42,7 @@ export const FounderVisionQuote: React.FC = () => {
               JAC GHRÉ — BEAUTY EXPERT
             </span>
             <span className="text-[10px] font-cinzel tracking-[0.25em] text-[#8EAAB0] uppercase mt-0.5">
-              FISHER ISLAND, MIAMI • PARIS • SAINT-TROPEZ
+              GLOBAL BEAUTY • BOTANICAL RITUALS • TIMELESS CRAFT
             </span>
           </div>
         </motion.div>

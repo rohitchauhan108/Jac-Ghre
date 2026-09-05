@@ -36,7 +36,7 @@ export const EditorialFeature: React.FC = () => {
               {/* <div className="absolute bottom-6 right-6 p-4 bg-[#006073]/90 border border-[#D4AF37]/60 backdrop-blur-md">
                 <GoldEmblem size={32} withGlow />
                 <span className="block text-[9px] font-cinzel tracking-[0.25em] text-[#F3E5AB] uppercase mt-1 text-center font-bold">
-                  GHRÉ PARIS
+                  GHRÉ
                 </span>
               </div> */}
 
@@ -60,7 +60,7 @@ export const EditorialFeature: React.FC = () => {
           >
             <div>
               <span className="text-xs font-cinzel font-semibold tracking-[0.35em] text-[#D4AF37] uppercase block mb-3">
-                Parisian Hair Architecture
+                Atelier Hair Architecture
               </span>
               <h2 className="font-cinzel text-3xl sm:text-4xl md:text-5xl font-bold tracking-[0.12em] text-[#F7F4EB] leading-tight uppercase">
                 The Art of Luxury Hair Care
@@ -97,7 +97,7 @@ export const EditorialFeature: React.FC = () => {
                     Anti-Humidity & Coastal UV Shield
                   </h4>
                   <p className="text-[11px] text-[#8EAAB0] mt-0.5 font-light">
-                    Engineered to protect hair through the intense sun and humidity of Miami and Saint-Tropez.
+                    Engineered to protect hair through intense sun, salt, and humidity.
                   </p>
                 </div>
               </div>

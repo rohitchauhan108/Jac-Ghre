@@ -80,7 +80,7 @@ export const QuickViewModal: React.FC = () => {
 
               <div className="mt-6 flex items-center gap-2 text-xs text-[#D4AF37]/90 font-cinzel tracking-widest uppercase">
                 <GoldEmblem size={18} />
-                <span>Paris • Saint-Tropez • Miami</span>
+                <span>Global Private Client Atelier</span>
               </div>
             </div>
 

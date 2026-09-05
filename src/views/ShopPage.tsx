@@ -101,7 +101,7 @@ export const ShopPage: React.FC = () => {
           <div className="inline-flex items-center gap-2.5 px-4 py-1.5 bg-[#097B8A] border border-[#D4AF37]/50 mb-4 shadow-md">
             <Sparkles className="w-4 h-4 text-[#D4AF37]" />
             <span className="text-xs font-cinzel font-semibold tracking-[0.3em] text-[#F3E5AB] uppercase">
-              PARISIAN HAUTE FORMULATIONS
+              HAUTE FORMULATIONS
             </span>
           </div>
 
@@ -114,7 +114,7 @@ export const ShopPage: React.FC = () => {
           </p>
 
           <p className="mt-3 max-w-2xl mx-auto font-poppins text-sm sm:text-base text-[#B5CAD0] font-normal leading-relaxed">
-            Explore all 9 signature creations formulated in France and the French Riviera by Master Hair Artist Jac Ghré.
+            Explore all 9 signature creations formulated by Master Hair Artist Jac Ghré.
           </p>
         </div>
       </section>

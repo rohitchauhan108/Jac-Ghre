@@ -37,7 +37,7 @@ export const ProductSpotlight: React.FC = () => {
             Pure, Excellence
           </h2>
           <p className="mt-3 text-base sm:text-xl font-editorial italic text-[#F3E5AB]">
-            Explore the precise formulations of our flagship Parisian master creations.
+            Explore the precise formulations of our flagship master creations.
           </p>
           <div className="h-0.5 w-24 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto mt-4" />
 
@@ -213,7 +213,7 @@ export const ProductSpotlight: React.FC = () => {
                         Sulfate-Free • Paraben-Free • UV Protection Shield
                       </span>
                     </div>
-                    <span className="text-[11px] font-editorial italic text-[#D4AF37]">Paris Tested</span>
+                    <span className="text-[11px] font-editorial italic text-[#D4AF37]">Runway Tested</span>
                   </div>
                 </div>
               )}

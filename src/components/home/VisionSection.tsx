@@ -51,7 +51,7 @@ export const VisionSection: React.FC = () => {
               FOUNDER & MASTER BEAUTY ARTIST
             </span>
             <span className="text-[11px] text-[#8EAAB0] font-sans mt-1">
-              PARIS • SAINT-TROPEZ • MIAMI
+              GLOBAL BEAUTY • BOTANICAL RITUALS
             </span>
           </div>
 

@@ -22,7 +22,6 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
     sm: {
       jac: 'text-[9px] tracking-[0.35em]',
       ghre: 'text-lg tracking-[0.22em]',
-      paris: 'text-[8px] tracking-[0.45em]',
       script: 'text-base -mt-1',
       horizontalMain: 'text-base sm:text-lg tracking-[0.2em]',
       horizontalSub: 'text-[8px] tracking-[0.35em]',
@@ -30,7 +29,6 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
     md: {
       jac: 'text-[11px] tracking-[0.4em]',
       ghre: 'text-2xl sm:text-3xl tracking-[0.24em]',
-      paris: 'text-[10px] tracking-[0.5em]',
       script: 'text-xl sm:text-2xl -mt-1.5',
       horizontalMain: 'text-xl sm:text-2xl tracking-[0.22em]',
       horizontalSub: 'text-[9px] tracking-[0.4em]',
@@ -38,7 +36,6 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
     lg: {
       jac: 'text-[13px] tracking-[0.45em]',
       ghre: 'text-4xl sm:text-5xl tracking-[0.26em]',
-      paris: 'text-[12px] tracking-[0.55em]',
       script: 'text-3xl sm:text-4xl -mt-2',
       horizontalMain: 'text-2xl sm:text-3xl tracking-[0.24em]',
       horizontalSub: 'text-[11px] tracking-[0.45em]',
@@ -46,7 +43,6 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
     xl: {
       jac: 'text-base sm:text-lg tracking-[0.5em]',
       ghre: 'text-5xl sm:text-6xl md:text-7xl tracking-[0.28em]',
-      paris: 'text-sm sm:text-base tracking-[0.6em]',
       script: 'text-4xl sm:text-5xl md:text-6xl -mt-3',
       horizontalMain: 'text-3xl sm:text-4xl tracking-[0.25em]',
       horizontalSub: 'text-xs tracking-[0.5em]',
@@ -70,7 +66,6 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
         <div className="relative z-10 flex flex-col items-center justify-center p-2 rounded-full border border-[#D4AF37]/40 bg-[#006073]/80 backdrop-blur-sm shadow-[0_4px_20px_rgba(0,96,115,0.4)]">
           <span className="font-cinzel text-[8px] tracking-[0.3em] text-[#D4AF37] font-semibold">JAC</span>
           <span className="font-cinzel text-sm font-bold tracking-widest text-[#F3E5AB] leading-none my-0.5">GHRÉ</span>
-          <span className="font-cinzel text-[6px] tracking-[0.4em] text-[#D4AF37] uppercase">PARIS</span>
         </div>
       </div>
     );
@@ -97,13 +92,6 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
           style={{ textShadow: '0 4px 12px rgba(0,0,0,0.45)' }}
         >
           GHRÉ
-        </span>
-
-        {/* PARIS */}
-        <span
-          className={`font-cinzel font-medium uppercase ${scaleStyles.paris} ${goldGradientClass} block leading-tight mb-1`}
-        >
-          PARIS
         </span>
 
         {/* Beautifully Yours */}
@@ -136,11 +124,6 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
             className={`font-cinzel font-bold ${scaleStyles.horizontalMain} ${goldGradientClass} leading-tight`}
           >
             JAC GHRÉ
-          </span>
-          <span
-            className={`font-cinzel font-semibold text-[9px] sm:text-[10px] tracking-[0.35em] text-[#D4AF37] uppercase`}
-          >
-            PARIS
           </span>
         </div>
 

@@ -93,10 +93,10 @@ export const ContactPage: React.FC = () => {
                   <MapPin className="w-5 h-5 text-[#D4AF37] shrink-0 mt-1" />
                   <div>
                     <h4 className="font-cinzel text-sm font-bold text-[#F3E5AB] uppercase">
-                      Paris Flagship
+                      Flagship Atelier
                     </h4>
                     <p className="font-poppins text-xs sm:text-sm text-[#8EAAB0] mt-0.5">
-                      New York
+                      Global Service
                     </p>
                   </div>
                 </div> */}
@@ -105,10 +105,10 @@ export const ContactPage: React.FC = () => {
                   <MapPin className="w-5 h-5 text-[#D4AF37] shrink-0 mt-1" />
                   <div>
                     <h4 className="font-cinzel text-sm font-bold text-[#F3E5AB] uppercase">
-                      MIÀMI SPA & BEAUTY SALON
+                      PRIVATE SPA & BEAUTY SALON
                     </h4>
                     <p className="font-poppins text-xs sm:text-sm text-[#8EAAB0] mt-0.5">
-                      PARIS STTROPEZ NEW YORK MIAMI
+                      GLOBAL PRIVATE CLIENT SERVICE
                     </p>
                   </div>
                 </div>
@@ -117,7 +117,7 @@ export const ContactPage: React.FC = () => {
                   <MapPin className="w-5 h-5 text-[#D4AF37] shrink-0 mt-1" />
                   <div>
                     <h4 className="font-cinzel text-sm font-bold text-[#F3E5AB] uppercase">
-                      Saint-Tropez Private Studio
+                      Private Studio
                     </h4>
                     <p className="font-poppins text-xs sm:text-sm text-[#8EAAB0] mt-0.5">
                       Route des Plages, 83350 Ramatuelle, France
@@ -159,7 +159,7 @@ export const ContactPage: React.FC = () => {
                   Message Sent Successfully
                 </h4>
                 <p className="font-poppins text-sm text-[#B5CAD0] mt-2">
-                  Thank you for contacting GHRÉ Paris. A dedicated beauty advisor will reply to your inquiry within 4 business hours.
+                  Thank you for contacting GHRÉ. A dedicated beauty advisor will reply to your inquiry within 4 business hours.
                 </p>
               </div>
             ) : (

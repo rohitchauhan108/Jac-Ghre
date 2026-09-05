@@ -33,7 +33,7 @@ export const GoodHairDaySection: React.FC = () => {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#006073] border border-[#D4AF37]/40 mb-3 shadow-md">
             <Sun className="w-4 h-4 text-[#D4AF37]" />
             <span className="text-[11px] font-cinzel font-semibold tracking-[0.3em] text-[#F3E5AB] uppercase">
-              SAINT-TROPEZ • MIAMI RIVIERA
+                SUNLIT BOTANICAL RITUALS
             </span>
           </div>
 

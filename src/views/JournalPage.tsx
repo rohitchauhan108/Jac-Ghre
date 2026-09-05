@@ -13,7 +13,7 @@ export const JournalPage: React.FC = () => {
       id: 'prickly-pear',
       category: 'Phyto-Trichology',
       title: 'The Science of Moroccan Prickly Pear: Why It Outperforms Argan Oil',
-      date: 'GHRÉ Research Lab • Paris',
+      date: 'GHRÉ Research Lab',
       readTime: '4 min read',
       excerpt: 'With 150% more Vitamin E than traditional argan oil and a rare profile of linoleic acid, cold-pressed cactus seed oil penetrates the hair cuticle rather than coating it.',
       image: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=80&w=1000&auto=format&fit=crop',
@@ -32,7 +32,7 @@ export const JournalPage: React.FC = () => {
     {
       id: 'monoi-tahiti',
       category: 'Sun & Coastal Science',
-      title: 'Protecting Hair from UV and Sea Salt: Lessons from the French Riviera & Miami',
+      title: 'Protecting Hair from UV and Sea Salt',
       date: 'Resort Hair Care Guide',
       readTime: '5 min read',
       excerpt: 'Why traditional sunscreens leave hair brittle and how multi-lipid Tahitian Monoï creates a breathable, non-greasy shield against free radical damage.',

@@ -13,7 +13,7 @@ export const FloatingConcierge: React.FC = () => {
   const isDark = theme === 'dark';
 
   const defaultWhatsappMessage = encodeURIComponent(
-    'Bonjour JAC GHRÉ Miami. I am looking for an ambassador for excellence, beauty expert consultation, luxury hair care guidance, and an international hair designer appointment.'
+    'Bonjour JAC GHRÉ. I am looking for an ambassador for excellence, beauty expert consultation, luxury hair care guidance, and an international hair designer appointment.'
   );
 
   const handleOpenDirectWhatsapp = (customMsg?: string) => {
@@ -23,7 +23,7 @@ export const FloatingConcierge: React.FC = () => {
 
   const quickQuestions = [
     'Which luxury hair care formula is best for damaged bleached hair?',
-    'How do I book an ambassador for excellence consultation in Miami?',
+    'How do I book an ambassador for excellence consultation?',
     'Can I book a private consultation with Jac Ghré for international hair design?',
     'What is the status of worldwide courier delivery?',
   ];
@@ -66,7 +66,7 @@ export const FloatingConcierge: React.FC = () => {
                   </h4>
                   <div className="flex items-center gap-1.5 text-[10px] text-[#25D366] font-medium">
                     <span className="w-2 h-2 rounded-full bg-[#25D366] animate-pulse" />
-                    <span>Live Stylists Online (Paris • Miami)</span>
+                    <span>Live Stylists Online</span>
                   </div>
                 </div>
               </div>
@@ -193,7 +193,7 @@ export const FloatingConcierge: React.FC = () => {
                     }`}
                   >
                     <p className="font-editorial text-sm italic text-[#D4AF37] mb-1">
-                      “Private telephone consultations with our Parisian maison specialists.”
+                      “Private telephone consultations with our maison specialists.”
                     </p>
                   </div>
 
@@ -229,7 +229,7 @@ export const FloatingConcierge: React.FC = () => {
                       <div className="flex items-center justify-between">
                         <div>
                           <strong className="text-[11px] font-cinzel text-[#D4AF37] block">
-                            PARIS PLACE VENDÔME FLAGSHIP
+                            PRIVATE CLIENT FLAGSHIP
                           </strong>
                           <span className="text-xs font-mono font-bold">+33 (0) 1 42 68 55 00</span>
                           <span className="text-[10px] text-[#8EAAB0] block">Tue–Sat 10AM–7PM CET</span>

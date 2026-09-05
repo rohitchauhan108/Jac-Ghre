@@ -17,17 +17,7 @@ export const SupermodelsPortfolio: React.FC = () => {
   const celebrities = [
     { name: 'Ivana Trump', title: 'International Business Icon & Socialite' },
     { name: 'Sharon Stone', title: 'Golden Globe Winning Film Actress & Icon' },
-    { name: 'Paris Hilton', title: 'Global Celebrity, Entrepreneur & Icon' },
-  ];
-
-  const fashionCapitals = [
-    { city: 'PARIS', note: 'Place Vendôme & Haute Couture Week' },
-    { city: 'MILAN', note: 'Via Montenapoleone Runway Shows' },
-    { city: 'LONDON', note: 'British Fashion Council Direction' },
-    { city: 'NEW YORK', note: 'Artistic Director Salon Flagships' },
-    { city: 'LOS ANGELES', note: 'Red Carpet & Celebrity Campaigns' },
-    { city: 'SHANGHAI', note: 'International Haute Coiffure Tour' },
-    { city: 'HONG KONG', note: 'Global Luxury Fashion Events' },
+    { name: 'Celebrity Portfolio', title: 'Global Celebrity, Entrepreneur & Icon' },
   ];
 
   return (
@@ -115,32 +105,19 @@ export const SupermodelsPortfolio: React.FC = () => {
           </div>
         </div> */}
 
-        {/* Global Fashion Capitals Ticker */}
         <div className="p-8 bg-[#006073] border border-[#D4AF37]/50">
           <div className="text-center mb-6">
             <span className="text-[11px] font-cinzel font-bold tracking-[0.3em] text-[#D4AF37] uppercase block">
-              INTERNATIONAL RUNWAY CAPITALS
+              INTERNATIONAL RUNWAY ARTISTRY
             </span>
             <h4 className="font-cinzel text-lg sm:text-xl font-bold text-[#FBF9F3] uppercase mt-1">
               Where Jac Ghré Directed Haute Couture Hair Artistry
             </h4>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2.5">
-            {fashionCapitals.map((cap) => (
-              <div
-                key={cap.city}
-                className="p-3 bg-[#006073] border border-[#D4AF37]/20 text-center group hover:border-[#D4AF37] transition-colors"
-              >
-                <span className="font-cinzel text-xs font-bold text-[#F3E5AB] block">
-                  {cap.city}
-                </span>
-                <span className="text-[9px] font-outfit text-[#8EAAB0] block mt-1 leading-tight line-clamp-2">
-                  {cap.note}
-                </span>
-              </div>
-            ))}
-          </div>
+          <p className="max-w-2xl mx-auto text-center text-sm font-outfit text-[#8EAAB0] leading-relaxed">
+            Signature hair artistry shaped by haute couture, editorial campaigns, and unforgettable runway moments.
+          </p>
         </div>
       </div>
     </section>

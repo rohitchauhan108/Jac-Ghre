@@ -38,8 +38,8 @@ export const ThierryMuglerLegacy: React.FC = () => {
             <p className="font-outfit text-sm sm:text-base text-[#C2D6DC] font-light leading-relaxed">
               Serving as Hair Director for legendary French couturier{' '}
               <strong>Thierry Mugler</strong>, Jac Ghré commanded backstage
-              teams for defining fashion moments in Paris, Milan, London,
-              Los Angeles, Shanghai, and Hong Kong.
+              teams for defining fashion moments across the world's leading
+              fashion stages.
             </p>
 
             <p className="font-outfit text-sm sm:text-base text-[#C2D6DC] font-light leading-relaxed">
@@ -58,7 +58,7 @@ export const ThierryMuglerLegacy: React.FC = () => {
 
                 <div>
                   <h4 className="font-cinzel text-xs font-bold text-[#F3E5AB] uppercase tracking-wider">
-                    Prestigious New York Artistic Directorship
+                    Prestigious Artistic Directorship
                   </h4>
 
                   <p className="font-outfit text-xs text-[#8EAAB0] mt-0.5 font-light">

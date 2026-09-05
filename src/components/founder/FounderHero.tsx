@@ -98,14 +98,14 @@ export const FounderHero: React.FC = () => {
             </p>
 
             <p className="font-outfit text-sm sm:text-base text-[#C5D9DE] font-light leading-relaxed">
-              He notably collaborated with legendary designer <strong className="text-[#F3E5AB]">Thierry Mugler</strong>, serving as <strong>Hair Director</strong> for major international fashion shows in Paris, Milan, London, Los Angeles, Shanghai, Hong Kong, and other top fashion capitals.
+              He notably collaborated with legendary designer <strong className="text-[#F3E5AB]">Thierry Mugler</strong>, serving as <strong>Hair Director</strong> for major international fashion shows and top fashion capitals.
             </p>
 
             {/* Quick Stats Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3.5 pt-4">
               <div className="p-4 bg-[#006073] border border-[#D4AF37]/30 text-center">
                 <span className="font-cinzel text-2xl sm:text-3xl font-bold text-[#D4AF37] block">
-                  PARIS
+                  GLOBAL
                 </span>
                 <span className="text-[10px] font-cinzel tracking-wider text-[#8EAAB0] mt-1 block">
                   THIERRY MUGLER HAIR DIRECTOR
@@ -121,10 +121,10 @@ export const FounderHero: React.FC = () => {
               </div>
               <div className="p-4 bg-[#006073] border border-[#D4AF37]/30 text-center col-span-2 sm:col-span-1">
                 <span className="font-cinzel text-2xl sm:text-3xl font-bold text-[#D4AF37] block">
-                  MIAMI
+                  ELITE
                 </span>
                 <span className="text-[10px] font-cinzel tracking-wider text-[#8EAAB0] mt-1 block">
-                  FISHER ISLAND PRIVATE ATELIER
+                  PRIVATE ATELIER
                 </span>
               </div>
             </div>
@@ -133,7 +133,7 @@ export const FounderHero: React.FC = () => {
             <div className="pt-4 border-t border-[#D4AF37]/25 flex flex-wrap items-center justify-between gap-4 text-xs font-cinzel text-[#8EAAB0]">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-[#D4AF37]" />
-                <span className="tracking-wider text-[#F3E5AB]">FISHER ISLAND CLUB, MIAMI, FLORIDA</span>
+                <span className="tracking-wider text-[#F3E5AB]">PRIVATE CLIENT ATELIER</span>
               </div>
               <div className="flex items-center gap-2">
                 <Globe className="w-4 h-4 text-[#D4AF37]" />

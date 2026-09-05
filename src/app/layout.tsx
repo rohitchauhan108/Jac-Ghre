@@ -56,9 +56,9 @@ const alexBrush = Alex_Brush({
 });
 
 export const metadata: Metadata = {
-  title: 'GHRÉ PARIS — Luxury Hair Care, Sun & Body, and Haute Parfumerie',
+  title: 'GHRÉ — Luxury Hair Care, Sun & Body, and Haute Parfumerie',
   description:
-    'GHRÉ PARIS by Jac Ghré — pure luxury botanical hair care, shimmering sun & body oils, and signature haute parfumerie. Paris • Saint-Tropez • Miami.',
+    'GHRÉ by Jac Ghré — pure luxury botanical hair care, shimmering sun & body oils, and signature haute parfumerie.',
   keywords: [
     'luxury hair care',
     'haute parfumerie',
@@ -66,11 +66,11 @@ export const metadata: Metadata = {
     'botanical shampoo',
     'prickly pear oil',
     'Jac Ghre',
-    'GHRE Paris',
+    'GHRE',
   ],
   authors: [{ name: 'Jac Ghré' }],
   openGraph: {
-    title: 'GHRÉ PARIS — The Art of Sun-Kissed Beauty',
+    title: 'GHRÉ — The Art of Sun-Kissed Beauty',
     description:
       'Luxury botanical hair rituals, shimmering sun oils, and Grasse-distilled signature perfumes by Jac Ghré.',
     type: 'website',

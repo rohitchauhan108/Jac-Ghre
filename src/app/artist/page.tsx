@@ -21,24 +21,12 @@ interface GalleryItem {
 }
 
 const WORKS: GalleryItem[] = [
-  { id: 1, path: "/artist/1.jpeg", alt: "Riviera Golden Hour", title: "Golden Hour" },
+  { id: 1, path: "/artist/1.jpeg", alt: "Golden Hour", title: "Golden Hour" },
   { id: 2, path: "/artist/2.jpeg", alt: "Haute Couture Backstage", title: "Backstage" },
   { id: 3, path: "/artist/3.jpeg", alt: "Bridal Atelier", title: "The Atelier" },
-  { id: 4, path: "/artist/4.jpeg", alt: "Miami Beach Campaign", title: "Miami Heat" },
+  { id: 4, path: "/artist/4.jpeg", alt: "Sunlit Campaign", title: "Sunlit" },
   { id: 5, path: "/artist/5.jpeg", alt: "Noir Editorial", title: "Noir" },
   { id: 6, path: "/artist/6.jpeg", alt: "Runway Finale — Thierry Mugler Legacy", title: "The Finale" },
-];
-
-const FASHION_CAPITALS = [
-  "PARIS",
-  "MILAN",
-  "LONDON",
-  "NEW YORK",
-  "MIAMI",
-  "LOS ANGELES",
-  "SHANGHAI",
-  "HONG KONG",
-  "SAINT-TROPEZ",
 ];
 
 export default function ArchiveGallery() {
@@ -144,7 +132,7 @@ export default function ArchiveGallery() {
             <div className="inline-flex items-center gap-3">
               <Calendar className="w-3.5 h-3.5 text-[#D4AF37]" />
               <span className="text-[10px] sm:text-[11px] font-cinzel tracking-[0.3em] text-[#D4AF37] uppercase font-semibold">
-                Paris · Saint-Tropez · Miami
+                Global Beauty Archive
               </span>
             </div>
           </div>
@@ -164,7 +152,7 @@ export default function ArchiveGallery() {
             <h1 className="font-cinzel font-bold text-[#FBF9F3] uppercase tracking-[0.08em] leading-[0.92] text-5xl sm:text-7xl lg:text-[120px] xl:text-[140px]">
               Visual
               <br className="hidden sm:block" />
-              <span className="inline-block mt-2">Works</span>
+              <span className="inline-block mt-2">Work</span>
             </h1>
             <div className="mt-8 flex items-center justify-center gap-6 flex-wrap">
               <div className="flex items-center gap-3">
@@ -181,24 +169,7 @@ export default function ArchiveGallery() {
           </div>
         </div>
 
-        {/* Capitals Marquee */}
-        <div className="relative mt-12 sm:mt-18 border-y border-[#D4AF37]/30 bg-[#004a59]/60 overflow-hidden">
-          <div className="flex items-center gap-10 sm:gap-16 py-3.5 animate-[marquee_48s_linear_infinite] whitespace-nowrap">
-            {[...Array(3)].flatMap((_, loop) =>
-              FASHION_CAPITALS.map((city, idx) => (
-                <React.Fragment key={`${loop}-${idx}`}>
-                  <span className="flex items-center gap-10 sm:gap-16">
-                    <span className="font-cinzel text-[11px] sm:text-sm tracking-[0.5em] text-[#D4AF37] font-bold uppercase">
-                      {city}
-                    </span>
-                    <GoldEmblem size={12} />
-                  </span>
-                </React.Fragment>
-              ))
-            )}
-          </div>
-        </div>
-        <style>{`@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-33.3333%); } }`}</style>
+      
       </header>
 
       {/* ================= SECTION 2: CLIENT WORKS — MAGAZINE GRID ================ */}

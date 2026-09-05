@@ -25,7 +25,7 @@ export const JacGhrePage: React.FC = () => {
       {/* 5. Thierry Mugler & Elite Model World Runway Legacy */}
       <ThierryMuglerLegacy />
 
-      {/* 6. Fisher Island Club Concierge & Atelier Booking */}
+      {/* 6. Private Concierge & Atelier Booking */}
       <FisherIslandConcierge />
     </div>
   );

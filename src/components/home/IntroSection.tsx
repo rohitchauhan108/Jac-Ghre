@@ -18,7 +18,7 @@ export const IntroSection: React.FC = () => {
     {
       icon: Award,
       badge: "HAUTE COIFFURE",
-      title: "PARISIAN ATELIER CRAFT",
+      title: "ATELIER CRAFT",
       subtitle: "Formulated by Jac Ghré",
       description:
         "Backstage runway direction for Thierry Mugler synthesized into daily transformative hair rituals.",
@@ -37,9 +37,9 @@ export const IntroSection: React.FC = () => {
     },
     {
       icon: SunMedium,
-      badge: "DUAL-COASTAL LUXURY",
+      badge: "SOLAR LUXURY",
       title: "COASTAL SOLAR SHIELD",
-      subtitle: "Saint-Tropez & Miami",
+      subtitle: "Sunlit Rituals",
       description:
         "Engineered for UV radiation, sea salt, and tropical humidity to preserve radiant color and mirror gloss.",
       linkAction: () => navigateToPage("sun-body"),
@@ -151,9 +151,6 @@ export const IntroSection: React.FC = () => {
           {/* Eyebrow */}
           <div className="flex flex-col gap-3 text-[11px] sm:text-xs font-cinzel font-bold tracking-[0.4em] uppercase text-[#D4AF37] mb-3">
             <span>L'ART DE VIVRE</span>
-            <span>BEAUTÉ • PARIS</span>
-            <span>SAINT-TROPEZ</span>
-            <span>MIAMI</span>
           </div>
 
           {/* Heading */}
@@ -194,38 +191,12 @@ export const IntroSection: React.FC = () => {
               isDark ? "text-[#D0E1E5]" : "text-[#415C65]"
             }`}
           >
-            Born from the sun-drenched coasts of Saint-Tropez and the vibrant
-            runway glamour of Miami,{" "}
-            <strong className="font-semibold text-[#D4AF37]">GHRÉ PARIS</strong>{" "}
-            marries Parisian cosmetic excellence with cold-pressed Mediterranean
+            Born from sunlit beauty rituals and runway glamour,{" "}
+            <strong className="font-semibold text-[#D4AF37]">GHRÉ</strong>{" "}
+            marries cosmetic excellence with cold-pressed botanical
             botanicals.
           </p>
 
-          {/* =====================================================
-              CITY BADGE
-          ===================================================== */}
-
-          <div
-            className={`mt-8 inline-flex flex-wrap items-center justify-center gap-2 sm:gap-4 px-6 py-2 border border-[#D4AF37]/30 ${
-              isDark ? "bg-[#006073]/90" : "bg-[#FAF7F2]/80"
-            }`}
-          >
-            <span className="text-[11px] font-cinzel tracking-[0.25em] text-[#D4AF37] font-semibold">
-              PARIS (PLACE VENDÔME)
-            </span>
-
-            <span className="text-[#D4AF37]/40">•</span>
-
-            <span className="text-[11px] font-cinzel tracking-[0.25em] text-[#D4AF37] font-semibold">
-              SAINT-TROPEZ
-            </span>
-
-            <span className="text-[#D4AF37]/40">•</span>
-
-            <span className="text-[11px] font-cinzel tracking-[0.25em] text-[#D4AF37] font-semibold">
-              MIAMI (FISHER ISLAND)
-            </span>
-          </div>
         </motion.div>
 
         {/* =========================================================

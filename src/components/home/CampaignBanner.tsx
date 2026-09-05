@@ -44,14 +44,14 @@ export const CampaignBanner: React.FC = () => {
           >
             <img
               src={CAMPAIGN_IMAGES.summerDream}
-              alt="GHRÉ PARIS Your Summ'Hair Dream Campaign"
+                alt="GHRÉ Your Summ'Hair Dream Campaign"
               className="w-full h-full object-cover object-center transform group-hover:scale-[1.015] transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#006073]/60 via-transparent to-transparent pointer-events-none" />
 
             <div className="lg:absolute p-5 bottom-4 left-4 sm:bottom-6 sm:left-6 z-20 flex flex-wrap items-center gap-3">
               <span className="px-3.5 py-1.5 bg-[#006073]/90 border border-[#D4AF37]/50 text-[#F3E5AB] font-cinzel text-xs tracking-[0.2em] uppercase backdrop-blur-md lg:w-auto w-full flex justify-center" >
-                SAINT-TROPEZ • MIAMI
+                SUNLIT BEAUTY • BOTANICAL RITUALS
               </span>
               <button
                 onClick={(e) => {

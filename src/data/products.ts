@@ -9,7 +9,7 @@ export const CAMPAIGN_IMAGES = {
 };
 
 export const BRAND_INFO = {
-  name: "GHRÉ PARIS",
+  name: "GHRÉ",
   fullName: "GHRÉ / JAC GHRÉ",
   founder: "Jac Ghré",
   founderTitle: "Beauty Expert & Master Hair Artist",
@@ -24,14 +24,10 @@ export const BRAND_INFO = {
     cellUsa: "(1) 786 238 3631",
     email: "Ghrebeauty@gmail.com",
   },
-  locations: [
-    { city: "Paris", label: "8 Place Vendôme, 75001 Paris" },
-    { city: "Saint-Tropez", label: "Place des Lices, French Riviera" },
-    { city: "Miami", label: "Miami, Florida • USA" },
-  ],
+  locations: [],
   visionQuote: "Making women beautiful is my passion.",
   founderBio:
-    "Jac Ghré is an international beauty expert known for his refined technique and luxury approach to hair. Working with models, fashion productions, and high-end clientele, Jac built a reputation for creating elegant and timeless hairstyles. Now based in Miami, he continues to bring his vision of luxury beauty to an international clientele.",
+    "Jac Ghré is an international beauty expert known for his refined technique and luxury approach to hair. Working with models, fashion productions, and high-end clientele, Jac built a reputation for creating elegant and timeless hairstyles.",
 };
 
 export const CAMPAIGN_SLIDES: CampaignSlide[] = [
@@ -49,7 +45,6 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     accentTheme: "teal-gold",
     image: "/home/banner1.jpg",
     mobileImage: "/home/mobile-banner1.jpg",
-    locationBadge: "PARIS • SAINT-TROPEZ • MIAMI",
   },
   {
     id: "ghre-sun-art",
@@ -57,7 +52,7 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     title: "GHRÉ SUN & BODY",
     subtitle: "Capturing the essence of the sun",
     tagline:
-      "Body Watch Monoï, Summer Glow Oils, and refreshing French Riviera Body & Hair Mists",
+      "Body Watch Monoï, Summer Glow Oils, and refreshing botanical Body & Hair Mists",
     ctaText: "DISCOVER SUN & BODY",
     ctaLink: "sun-body",
     secondaryCtaText: "SHOP MISTS",
@@ -65,13 +60,11 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     accentTheme: "summer-sun",
     image: "/home/banner3.jpg",
     mobileImage: "/home/mobile-banner3.jpg",
-    locationBadge: "SAINT-TROPEZ • RIVIERA",
   },
   {
     id: "summ-hair-dream",
     eyebrow: "YOUR SUMM’HAIR DREAM",
     title: "GOOD HAIR DAY — MONOÏ VANILLA",
-    subtitle: "Saint-Tropez & Miami Edition",
     tagline:
       "Monoï Vanilla Silk Conditioner & Silk Shampoo for lustrous summer hydration and sea breeze shine",
     ctaText: "DISCOVER MONOÏ SILK",
@@ -81,7 +74,6 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     accentTheme: "summer-sun",
     image: "/home/banner2.webp",
     mobileImage: "/home/mobile-banner2.webp",
-    locationBadge: "SAINT-TROPEZ • MIAMI",
   },
   {
     id: "orange-blossom-duo-1",
@@ -97,7 +89,6 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     accentTheme: "teal-gold",
     image: "/home/banner4.webp",
     mobileImage: "/home/mobile-banner4.webp",
-    locationBadge: "SAINT-TROPEZ • MIAMI",
   },
   {
     id: "orange-blossom-duo",
@@ -113,7 +104,6 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     accentTheme: "teal-gold",
     image: "/images/banner5.jpg",
     mobileImage: "/images/mobile-banner5.jpeg",
-    locationBadge: "SAINT-TROPEZ • MIAMI",
   },
 ];
 
@@ -245,7 +235,7 @@ export const PRODUCTS: Product[] = [
     benefits: [
       "24-hour continuous moisture retention without weighing hair down",
       "Instant detangling and mirror-smooth blow-dry priming",
-      "Shields against Miami sun, UV rays, and Riviera sea salt",
+      "Shields against intense sun, UV rays, and sea salt",
     ],
     image: "/product/5.webp",
     accentColor: "#074553",
@@ -651,7 +641,7 @@ export const PRODUCTS: Product[] = [
   shortDescription:
     "A luxurious shampoo and conditioner duo infused with Monoï and Vanilla Silk to deeply nourish, smooth, and transform your hair into a tropical dream.",
   fullDescription:
-    "Transport your daily routine to Saint-Tropez and Miami with the Monoï Vanilla Silk Hair Duo. Formulated to provide ultimate hydration and silky manageability, this set cleanses and conditions while enveloping your hair in a sun-kissed, exotic fragrance.",
+    "Transport your daily routine into a sunlit ritual with the Monoï Vanilla Silk Hair Duo. Formulated to provide ultimate hydration and silky manageability, this set cleanses and conditions while enveloping your hair in a sun-kissed, exotic fragrance.",
 
   price: 54,
   size: "2 x 400 ml | 13.5 fl.oz",
@@ -800,7 +790,7 @@ export const CATEGORIES_DATA = [
     image:
       "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1000&auto=format&fit=crop",
     count: "8 Products",
-    accent: "Parisian Hair Artistry",
+    accent: "Atelier Hair Artistry",
   },
   {
     id: "sun-body",
@@ -811,7 +801,7 @@ export const CATEGORIES_DATA = [
     image:
       "https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?q=80&w=1000&auto=format&fit=crop",
     count: "6 Products",
-    accent: "Saint-Tropez & Miami",
+    accent: "Sunlit Botanical Rituals",
   },
   {
     id: "fragrance",
