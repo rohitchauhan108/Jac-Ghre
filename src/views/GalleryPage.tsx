@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Images, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import Lenis from 'lenis';
 
 type Category = 'all' | 'banner' | 'catalogues' | 'founder' | 'product';
 
@@ -83,12 +84,18 @@ export const GalleryPage: React.FC = () => {
 
   useEffect(() => {
     if (lightboxIndex === null) return;
+    const lenis = (window as unknown as { lenis?: Lenis }).lenis;
     window.addEventListener('keydown', onKeyDown);
-    const prevOverflow = document.body.style.overflow;
+    const prevBodyOverflow = document.body.style.overflow;
+    const prevHtmlOverflow = document.documentElement.style.overflow;
+    try { lenis?.stop(); } catch { /* ignore */ }
     document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
     return () => {
       window.removeEventListener('keydown', onKeyDown);
-      document.body.style.overflow = prevOverflow;
+      try { lenis?.start(); } catch { /* ignore */ }
+      document.body.style.overflow = prevBodyOverflow;
+      document.documentElement.style.overflow = prevHtmlOverflow;
     };
   }, [lightboxIndex, onKeyDown]);
 
@@ -193,6 +200,7 @@ export const GalleryPage: React.FC = () => {
             transition={{ duration: 0.2 }}
             className="fixed inset-0 z-50 bg-[#021318]/96 backdrop-blur-sm flex items-center justify-center p-4"
             onClick={closeLightbox}
+            data-lenis-prevent
           >
             <button
               type="button"
@@ -239,8 +247,9 @@ export const GalleryPage: React.FC = () => {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.97 }}
               transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
-              className="relative max-w-6xl max-h-[85vh] w-full"
+              className="relative max-w-6xl max-h-[85vh] w-full overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
+              data-lenis-prevent
             >
               <img
                 src={filteredImagesRef.current[lightboxIndex].src}

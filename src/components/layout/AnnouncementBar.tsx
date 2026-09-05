@@ -79,6 +79,6 @@ export const AnnouncementBar: React.FC = () => {
           </AnimatePresence>
         </div>
       </div>
-    </div>
+    </div> 
   );
 };

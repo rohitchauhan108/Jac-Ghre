@@ -15,7 +15,6 @@ import {
 } from "lucide-react";
 import { GoldEmblem } from "../components/ui/GoldEmblem";
 import { BrandLogo } from "../components/ui/BrandLogo";
-import { CAMPAIGN_IMAGES } from "../data/products";
 import { useShop } from "../context/ShopContext";
 
 export const AboutCompanyPage: React.FC = () => {

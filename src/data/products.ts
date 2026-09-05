@@ -2,14 +2,9 @@ import { Product, CampaignSlide, BotanicalIngredient } from "../types";
 
 export const CAMPAIGN_IMAGES = {
   heroModel: "/images/modelcompaign.jpeg",
-  fullLineup: "/images/ghre_full_lineup_1787204386926.jpg",
   sunArt: "/images/ghre_sun_art_1787204403014.jpg",
   summerDream: "/images/summerhair1.jpeg",
-  orangeBlossom: "/images/ghre_orange_blossom_banner_1787206177953.jpg",
-  oilBotanic: "/images/ghre_oil_botanic_1787204418411.jpg",
-  leaveIn: "/images/ghre_leave_in_1787204430544.jpg",
   jacGhre: "/images/founder.jpeg",
-  repairShampoo: "/images/ghre_repair_shampoo_1787204461932.jpg",
   blossom: "/images/ghre_sun_art_1787204403014.jpg",
 };
 
