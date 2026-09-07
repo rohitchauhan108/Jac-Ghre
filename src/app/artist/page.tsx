@@ -149,7 +149,7 @@ export default function ArchiveGallery() {
             <p className="text-[10px] sm:text-xs font-cinzel tracking-[0.55em] text-[#D4AF37] uppercase font-bold mb-4">
               Visual Archive
             </p>
-            <h1 className="font-cinzel font-bold text-[#FBF9F3] uppercase tracking-[0.08em] leading-[0.92] text-5xl sm:text-7xl lg:text-[120px] xl:text-[140px]">
+            <h1 className="font-cinzel font-bold text-[#FBF9F3] uppercase tracking-[0.08em] leading-[0.92] text-5xl sm:text-7xl lg:text-[120px] xl:text-[100px]">
               Visual
               <br className="hidden sm:block" />
               <span className="inline-block mt-2">Work</span>
