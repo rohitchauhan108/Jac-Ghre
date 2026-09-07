@@ -413,23 +413,23 @@ export const Footer: React.FC = () => {
                 </button>
               </li>
 
-              <li>
+              {/* <li>
                 <button
                   onClick={() => navigateToPage('sun-body')}
                   className="hover:text-[#D4AF37] transition-colors text-left text-[#C5D5D8] cursor-pointer"
                 >
                   Sun & Shimmer Body
                 </button>
-              </li>
+              </li> */}
 
-              <li>
+              {/* <li>
                 <button
                   onClick={() => navigateToPage('fragrance')}
                   className="hover:text-[#D4AF37] transition-colors text-left text-[#C5D5D8] cursor-pointer"
                 >
                   Blossom Positano Parfums
                 </button>
-              </li>
+              </li> */}
 
               <li>
                 <button

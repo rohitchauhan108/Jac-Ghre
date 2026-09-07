@@ -1,22 +1,19 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { Sparkles, Clock } from 'lucide-react';
-import { useShop } from '../../context/ShopContext';
+import React, { useState, useEffect, useCallback } from "react";
+import { motion, AnimatePresence } from "motion/react";
+import { Sparkles, Clock } from "lucide-react";
+import { useShop } from "../../context/ShopContext";
 
 // Static messages
 const MESSAGES = [
-  '✨ OFFICIAL WEBSITE LAUNCH COMING SOON • PRE-ORDER ATELIER ALLOTMENTS NOW OPEN ✨',
-  '✨ GHRÉ INAUGURAL PREVIEW • USE VIP CODE "GHRE15" FOR 15% OFF PRE-ORDERS ✨',
-  '✨ COMPLIMENTARY WORLDWIDE EXPRESS COURIER ON ALL INAUGURAL ORDERS ✨',
-  '✨ JAC GHRÉ PRIVATE ATELIER CONSULTATIONS • GLOBAL BOOKINGS ✨',
+  "✨ MIÀMI SPA & BEAUTY SALON ✨",
+  "✨ International Hair Designer ✨",
+  "✨ Luxury Hair Care ✨",
 ];
 
 export const AnnouncementBar: React.FC = () => {
-  const { setIsWelcomePopupOpen, theme } = useShop();
+  const { setIsWelcomePopupOpen } = useShop();
 
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
-
-  // Boolean state because it represents paused / not paused
   const [isPaused, setIsPaused] = useState(false);
 
   const nextMessage = useCallback(() => {
@@ -24,26 +21,20 @@ export const AnnouncementBar: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    // Don't change messages while paused
     if (isPaused) return;
 
     const timer = setInterval(nextMessage, 4000);
-
     return () => clearInterval(timer);
   }, [isPaused, nextMessage]);
 
-  const isDark = theme === 'dark';
-
   return (
-    <div
-      className={`border-b text-[11px] tracking-[0.16em] py-2 px-4 relative z-40 transition-colors duration-300 bg-white lg:bg-[#005F73] border-none lg:border-[#005F73]/30 text-white`}
-    >
-      <div className="max-w-7xl mx-auto hidden lg:flex items-center justify-between gap-4">
-        {/* Left: Coming Soon Live Badge */}
+    <div className="bg-[#005F73] text-white border-b border-[#005F73]/30 text-[11px] tracking-[0.16em] py-2 px-4 relative z-40 transition-colors duration-300">
+      <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
+        {/* Left: Launching Soon Badge & Brand */}
         <div className="hidden md:flex items-center gap-2">
           <button
             onClick={() => setIsWelcomePopupOpen(true)}
-            className="flex items-center gap-1.5 px-2.5 py-0.5 bg-[#031920] text-[#d4af37] font-cinzel text-[10px] font-bold tracking-widest uppercase hover:brightness-110 shadow-sm transition-all"
+            className="flex items-center gap-1.5 px-2.5 py-0.5 bg-[#031920] text-[#d4af37] font-cinzel text-[10px] font-bold tracking-widest uppercase hover:brightness-110 shadow-sm transition-all cursor-pointer"
           >
             <Clock className="w-3 h-3" />
             <span>LAUNCHING SOON</span>
@@ -56,7 +47,7 @@ export const AnnouncementBar: React.FC = () => {
 
         {/* Center: Dynamic Announcement */}
         <div
-          className="flex-1 flex items-center justify-center text-center overflow-hidden h-5 px-2"
+          className="flex-1 flex items-center justify-end text-end overflow-hidden h-5 px-2"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
@@ -68,17 +59,14 @@ export const AnnouncementBar: React.FC = () => {
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.35 }}
               onClick={() => setIsWelcomePopupOpen(true)}
-              className={`flex items-center justify-center gap-2 font-cinzel text-[10px] sm:text-[11px] font-bold cursor-pointer hover:underline underline-offset-2 text-white`}
+              className="flex items-center justify-center gap-2 font-cinzel text-[10px] sm:text-[11px] font-bold cursor-pointer hover:underline underline-offset-2 text-white"
             >
               <Sparkles className="w-3 h-3 text-[#D4AF37] shrink-0" />
-
-              <span className="truncate">
-                {MESSAGES[currentMessageIndex]}
-              </span>
+              <span className="truncate">{MESSAGES[currentMessageIndex]}</span>
             </motion.div>
           </AnimatePresence>
         </div>
       </div>
-    </div> 
+    </div>
   );
 };

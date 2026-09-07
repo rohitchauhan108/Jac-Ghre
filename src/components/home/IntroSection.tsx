@@ -42,7 +42,7 @@ export const IntroSection: React.FC = () => {
       subtitle: "Sunlit Rituals",
       description:
         "Engineered for UV radiation, sea salt, and tropical humidity to preserve radiant color and mirror gloss.",
-      linkAction: () => navigateToPage("sun-body"),
+      linkAction: () => navigateToPage("shop", "all"),
       actionLabel: "View Sun & Body",
     },
     {

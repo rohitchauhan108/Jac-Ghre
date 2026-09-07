@@ -189,11 +189,11 @@ export const HeroCarousel: React.FC = () => {
       <div className="hidden md:block w-full bg-[#006073] border-t border-[#D4AF37]/30 py-3 lg:py-4 px-4 lg:px-8">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-3 lg:gap-4">
           {/* BANNERS TAB SELECTOR */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 w-full lg:w-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-2 w-full lg:w-auto">
             {slides.map((slide, idx) => {
               const isActive = currentIndex === idx;
               return (
-                <button key={slide.id} type="button" onClick={() => setCurrentIndex(idx)} className={`text-left px-3 py-2 border transition-all duration-300 cursor-pointer flex items-center gap-2.5 min-w-0 ${isActive ? "bg-[#007288] border-[#D4AF37] shadow-[0_0_15px_rgba(212,175,55,0.25)]" : "bg-[#006073] border-[#D4AF37]/20 hover:border-[#D4AF37]/50 hover:bg-[#007288]"}`}>
+                <button key={slide.id} type="button" onClick={() => setCurrentIndex(idx)} className={`text-left px-2 py-2 border transition-all duration-300 cursor-pointer flex items-center gap-2.5 min-w-0 ${isActive ? "bg-[#007288] border-[#D4AF37] shadow-[0_0_15px_rgba(212,175,55,0.25)]" : "bg-[#006073] border-[#D4AF37]/20 hover:border-[#D4AF37]/50 hover:bg-[#007288]"}`}>
                   <span className={`font-cinzel text-[10px] font-bold shrink-0 ${isActive ? "text-[#D4AF37]" : "text-[#8EAAB0]"}`}>
                     {String(idx + 1).padStart(2, "0")}
                   </span>
@@ -211,7 +211,7 @@ export const HeroCarousel: React.FC = () => {
           </div>
 
           {/* CONTROLS */}
-          <div className="flex items-center justify-end gap-4 shrink-0">
+          {/* <div className="flex items-center justify-end gap-4 shrink-0">
             <button type="button" onClick={() => setIsPlaying(!isPlaying)} className="flex items-center gap-1.5 px-2.5 py-1 text-[#D4AF37] hover:text-[#FFF3C4] border border-[#D4AF37]/30 bg-[#006073] font-cinzel text-[10px] tracking-wider transition-colors cursor-pointer" aria-label={isPlaying ? "Pause slideshow" : "Play slideshow"}>
               {isPlaying ? <Pause className="w-3 h-3" /> : <Play className="w-3 h-3" />}
               <span>{isPlaying ? "AUTO" : "PAUSED"}</span>
@@ -222,7 +222,7 @@ export const HeroCarousel: React.FC = () => {
               <span className="mx-1">/</span>
               <span>{String(slides.length).padStart(2, "0")}</span>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

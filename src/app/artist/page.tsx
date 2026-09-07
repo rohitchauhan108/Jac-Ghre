@@ -217,10 +217,10 @@ export default function ArchiveGallery() {
             </div>
             <div className="sm:col-span-5 flex flex-col sm:flex-row sm:justify-end gap-3">
               <a
-                href="/jac-ghre"
+                href="/contact"
                 className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-[#D4AF37] text-[#062B35] font-cinzel text-xs font-bold tracking-[0.25em] uppercase hover:bg-[#E5C365] transition-colors shadow-xl"
               >
-                Book Atelier
+                Book Now
                 <ChevronRight className="w-3.5 h-3.5" />
               </a>
               <a

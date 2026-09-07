@@ -149,12 +149,12 @@ export const FounderSection: React.FC = () => {
                 <ArrowRight className="w-4 h-4" />
               </button>
 
-              <button
+              {/* <button
                 onClick={() => setShowBookingModal(true)}
                 className="px-5 py-3.5 bg-[#006073] border border-[#D4AF37]/60 text-[#F3E5AB] font-cinzel text-xs font-bold tracking-[0.15em] uppercase hover:bg-[#007288] transition-all cursor-pointer"
               >
                 Inquire Atelier Consultation
-              </button>
+              </button> */}
             </div>
           </motion.div>
         </div>

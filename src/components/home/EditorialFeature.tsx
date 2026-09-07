@@ -106,7 +106,7 @@ export const EditorialFeature: React.FC = () => {
             {/* CTA */}
             <div className="pt-4 flex items-center gap-4">
               <a
-                href="#collection"
+                href="/shop"
                 className="px-8 py-3.5 bg-gradient-to-r from-[#D4AF37] via-[#E5C365] to-[#B89028] text-[#0E4C5A] font-cinzel text-xs font-bold tracking-[0.25em] uppercase hover:brightness-110 shadow-lg flex items-center gap-2 group transition-all"
               >
                 <span>Explore Hair Care</span>
