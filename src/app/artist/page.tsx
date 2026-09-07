@@ -26,7 +26,6 @@ const WORKS: GalleryItem[] = [
   { id: 3, path: "/artist/2.webp", alt: "GHRÉ CELEBRITIES", title: "GHRÉ CELEBRITIES" },
   { id: 4, path: "/artist/4.webp", alt: "GHRÉ PHOTO SHOOTS", title: "GHRÉ PHOTO SHOOTS" },
   { id: 5, path: "/artist/5.webp", alt: "GHRÉ FASHION SHOWS", title: "GHRÉ FASHION SHOWS" },
-  // { id: 6, path: "/artist/6.webp", alt: "Runway Finale — Thierry Mugler Legacy", title: "The Finale" },
 ];
 
 export default function ArchiveGallery() {
@@ -176,7 +175,32 @@ export default function ArchiveGallery() {
       <section className="relative py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-            {WORKS.map((work, index) => (
+            {WORKS.slice(0,3).map((work, index) => (
+              <motion.button
+                key={work.id}
+                type="button"
+                onClick={openAt(index)}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.7, delay: index * 0.05, ease: [0.16, 1, 0.3, 1] }}
+                className="block w-full p-0 text-left leading-none break-inside-avoid relative group"
+              >
+                <div className="relative w-full overflow-hidden bg-transparent">
+                  <img
+                    src={work.path}
+                    alt={work.alt}
+                    loading={index === 0 ? "eager" : "lazy"}
+                    className="block w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.02]"
+                  />
+                  {/* Subtle fashion overlay on hover */}
+                  <div className="absolute inset-0 bg-[#006073]/0 group-hover:bg-[#006073]/10 transition-colors duration-500 pointer-events-none" />
+                </div>
+              </motion.button>
+            ))}
+          </div>
+          <div className="columns-1 sm:columns-2 lg:columns-2 gap-6 space-y-6">
+            {WORKS.slice(3,5).map((work, index) => (
               <motion.button
                 key={work.id}
                 type="button"
