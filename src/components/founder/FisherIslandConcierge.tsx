@@ -41,7 +41,7 @@ export const FisherIslandConcierge: React.FC = () => {
 
             {['Private Hair Artistry', 'Haute Couture Consultation', 'Signature Botanical Ritual'].map((item) => (
               <button
-                key={item.name}
+                key={item}
                 type="button"
                 onClick={() => undefined}
                 className={`w-full p-5 text-left border transition-all cursor-pointer flex items-start gap-4 ${

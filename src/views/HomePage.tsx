@@ -3,14 +3,9 @@ import { HeroCarousel } from '../components/home/HeroCarousel';
 import { IntroSection } from '../components/home/IntroSection';
 import { CollectionShowcase } from '../components/home/CollectionShowcase';
 import { EditorialFeature } from '../components/home/EditorialFeature';
-import { GoodHairDaySection } from '../components/home/GoodHairDaySection';
 import { CampaignBanner } from '../components/home/CampaignBanner';
-import { BlossomPositano } from '../components/home/BlossomPositano';
 import { FounderSection } from '../components/home/FounderSection';
 import { VisionSection } from '../components/home/VisionSection';
-import { IngredientStory } from '../components/home/IngredientStory';
-import { CategoryShowcase } from '../components/home/CategoryShowcase';
-import { ProductSpotlight } from '../components/home/ProductSpotlight';
 import { BrandPhilosophy } from '../components/home/BrandPhilosophy';
 import { Newsletter } from '../components/home/Newsletter';
 

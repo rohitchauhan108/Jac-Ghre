@@ -42,7 +42,7 @@ export const JournalPage: React.FC = () => {
   ];
 
   return (
-    <div className="pt-8 pb-28 bg-[#0C8A9B] min-h-screen">
+    <div className="pb-28 bg-[#0C8A9B] min-h-screen">
       {/* Hero Header Banner */}
       <section className="relative py-20 border-b border-[#D4AF37]/30 bg-gradient-to-b from-[#097B8A] via-[#0C8A9B] to-[#097B8A] overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">

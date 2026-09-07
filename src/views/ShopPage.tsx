@@ -93,7 +93,7 @@ export const ShopPage: React.FC = () => {
   }, [shopCategoryFilter, activeBadge, searchQuery, selectedSort]);
 
   return (
-    <div className="pt-8 pb-28 bg-[#0C8A9B] min-h-screen">
+    <div className="pb-28 bg-[#0C8A9B] min-h-screen">
       {/* Header Banner */}
       <section className="relative py-16 sm:py-20 border-b border-[#D4AF37]/30 bg-gradient-to-b from-[#097B8A] via-[#0C8A9B] to-[#097B8A] overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.12)_0%,transparent_70%)] pointer-events-none" />

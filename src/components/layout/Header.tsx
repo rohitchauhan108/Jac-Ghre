@@ -5,12 +5,10 @@ import {
   User,
   Menu,
   X,
-  ChevronDown,
   Clock,
   Gift,
 } from "lucide-react";
 import { useShop, PageType } from "../../context/ShopContext";
-import { PRODUCTS } from "../../data/products";
 const logoLight = "/images/logo-light.png";
 
 export const Header: React.FC = () => {
@@ -26,7 +24,6 @@ export const Header: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [shopDropdownOpen, setShopDropdownOpen] = useState(false);
 
   const lastScrollY = useRef(0);
 
@@ -61,9 +58,9 @@ export const Header: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks: { name: string; page: PageType; hasDropdown?: boolean }[] = [
+  const navLinks: { name: string; page: PageType }[] = [
     { name: "HOME", page: "home" },
-    { name: "SHOP", page: "shop", hasDropdown: true },
+    { name: "SHOP", page: "shop" },
     { name: "ABOUT", page: "about-company" },
     { name: "ABOUT THE FOUNDER", page: "about-founder" },
     { name: "THE ARTIST", page: "artist" },
@@ -71,7 +68,6 @@ export const Header: React.FC = () => {
     { name: "CONTACT US", page: "contact" },
   ];
 
-  // const featuredCreations = PRODUCTS.slice(0, 3);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -133,93 +129,16 @@ export const Header: React.FC = () => {
                 currentPage === link.page ||
                 (link.page === "about-founder" && currentPage === "jac-ghre");
               return (
-                <div
+                <button
                   key={link.name}
-                  className="relative"
-                  onMouseEnter={() =>
-                    link.hasDropdown && setShopDropdownOpen(true)
-                  }
-                  onMouseLeave={() =>
-                    link.hasDropdown && setShopDropdownOpen(false)
-                  }
+                  onClick={() => navigateToPage(link.page)}
+                  className={`font-cinzel text-xs xl:text-[13px] tracking-[0.2em] py-2 transition-all duration-200 cursor-pointer ${isActive
+                    ? "text-[#D4AF37] font-bold border-b-2 border-[#D4AF37]"
+                    : "text-[#E8DCC4] hover:text-[#D4AF37]"
+                    }`}
                 >
-                  <button
-                    onClick={() => navigateToPage(link.page)}
-                    className={`font-cinzel text-xs xl:text-[13px] tracking-[0.2em] py-2 inline-flex items-center gap-1.5 transition-all duration-200 cursor-pointer ${isActive
-                      ? "text-[#D4AF37] font-bold border-b-2 border-[#D4AF37]"
-                      : "text-[#E8DCC4] hover:text-[#D4AF37]"
-                      }`}
-                  >
-                    <span>{link.name}</span>
-                    {link.hasDropdown && (
-                      <ChevronDown className="w-3.5 h-3.5 text-[#D4AF37]/70 transition-transform duration-200 group-hover:rotate-180" />
-                    )}
-                  </button>
-
-                  {/* Refined Dropdown Menu for SHOP (Single Column Layout) */}
-                  {link.hasDropdown && shopDropdownOpen && (
-                    <div className="absolute top-full -left-6 w-72 pt-3 z-50">
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 10 }}
-                        transition={{ duration: 0.2 }}
-                        className="border-2 shadow-2xl p-5 bg-[#006073] border-[#D4AF37]/50 text-[#F7F4EB]"
-                      >
-                        <div className="space-y-3">
-                          <span className="text-[11px] font-cinzel tracking-[0.3em] text-[#D4AF37] uppercase block border-b border-[#D4AF37]/20 pb-2 font-bold">
-                            Curated Collections
-                          </span>
-                          <div className="space-y-3 text-xs font-poppins pt-1">
-                            <button
-                              onClick={() => {
-                                setShopDropdownOpen(false);
-                                navigateToPage("hair-care");
-                              }}
-                              className="block text-left w-full font-cinzel text-xs tracking-wider transition-colors text-[#F7F4EB] hover:text-[#D4AF37]"
-                            >
-                              Haute Hair Care Rituals
-                            </button>
-                            <button
-                              onClick={() => {
-                                setShopDropdownOpen(false);
-                                navigateToPage("sun-body");
-                              }}
-                              className="block text-left w-full font-cinzel text-xs tracking-wider transition-colors text-[#F7F4EB] hover:text-[#D4AF37]"
-                            >
-                              GHRÉ Sun & Shimmer Body
-                            </button>
-                            <button
-                              onClick={() => {
-                                setShopDropdownOpen(false);
-                                navigateToPage("fragrance");
-                              }}
-                              className="block text-left w-full font-cinzel text-xs tracking-wider transition-colors text-[#F7F4EB] hover:text-[#D4AF37]"
-                            >
-                              Blossom Positano Eau de Parfum
-                            </button>
-                            <button
-                              onClick={() => {
-                                setShopDropdownOpen(false);
-                                navigateToPage("shop", "haircare");
-                              }}
-                              className="block text-left w-full font-cinzel text-xs tracking-wider transition-colors text-[#F7F4EB] hover:text-[#D4AF37]"
-                            >
-                              Repair Shampoos & Masks
-                            </button>
-                          </div>
-                        </div>
-
-                        {/* 
-                          {/* ICONIC FORMULATIONS SECTION COMMENTED OUT 
-                          <div className="col-span-7 space-y-3">
-                            ...
-                          </div> 
-                        */}
-                      </motion.div>
-                    </div>
-                  )}
-                </div>
+                  <span>{link.name}</span>
+                </button>
               );
             })}
           </nav>

@@ -1,22 +1,17 @@
-import React from 'react';
-import { motion } from 'motion/react';
-import {
-  Heart,
-  Eye,
-  ShoppingBag,
-  Sparkles,
-} from 'lucide-react';
-import { Product } from '../../types';
-import { useShop } from '../../context/ShopContext';
+import React from "react";
+import { motion } from "motion/react";
+import { Heart, Eye, ShoppingBag, Sparkles } from "lucide-react";
+import { Product } from "../../types";
+import { useShop } from "../../context/ShopContext";
 
 interface ProductCardProps {
   product: Product;
-  variant?: 'editorial' | 'grid' | 'compact' | 'featured';
+  variant?: "editorial" | "grid" | "compact" | "featured";
 }
 
 export const ProductCard: React.FC<ProductCardProps> = ({
   product,
-  variant = 'grid',
+  variant = "grid",
 }) => {
   const {
     addToCart,
@@ -28,7 +23,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
     theme,
   } = useShop();
 
-  const isDark = theme === 'dark';
+  const isDark = theme === "dark";
 
   const formattedPrice = `${currencySymbol}${(
     product.price * currencyRate
@@ -40,7 +35,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-50px' }}
+      viewport={{ once: true, margin: "-50px" }}
       transition={{
         duration: 0.6,
         ease: [0.16, 1, 0.3, 1],
@@ -148,7 +143,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
                   transparent 49%
                 )
               `,
-              backgroundSize: '70px 70px',
+              backgroundSize: "70px 70px",
             }}
           />
         )}
@@ -319,11 +314,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             items-center
             justify-between
 
-            ${
-              isDark
-                ? 'border-[#D4AF37]/20'
-                : 'border-[#D4AF37]/20'
-            }
+            ${isDark ? "border-[#D4AF37]/20" : "border-[#D4AF37]/20"}
           `}
         >
           <div>
@@ -335,11 +326,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
                 font-semibold
                 tracking-wider
 
-                ${
-                  isDark
-                    ? 'text-[#F7F4EB]'
-                    : 'text-[#0E4C5A]'
-                }
+                ${isDark ? "text-[#F7F4EB]" : "text-[#0E4C5A]"}
               `}
             >
               {formattedPrice}

@@ -51,6 +51,12 @@ export const AboutCompanyPage: React.FC = () => {
     },
   ];
 
+  const ateliers = [
+    { city: "Miami", status: "Flagship", desc: "Private VIP styling & coastal beauty rituals in the heart of Florida's elite enclaves." },
+    { city: "Paris", status: "Coming Soon", desc: "The birthplace of haute couture and the original inspiration for the GHRÉ aesthetic." },
+    { city: "New York", status: "Coming Soon", desc: "Serving our high-fashion clientele and editorial runway partnerships." },
+  ];
+
   return (
     <div className="bg-[#0C8A9B] min-h-screen text-[#FBF9F3]">
       {/* 1. Hero Banner */}

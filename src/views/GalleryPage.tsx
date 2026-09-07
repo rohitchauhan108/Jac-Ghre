@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef, useState, useCallback } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'motion/react';
 import { Images, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import Lenis from 'lenis';
@@ -8,27 +9,27 @@ import Lenis from 'lenis';
 type Category = 'all' | 'banner' | 'catalogues' | 'founder' | 'product';
 
 const GALLERY_IMAGES: { category: Exclude<Category, 'all'>; src: string; alt: string }[] = [
-  { category: 'banner', src: '/gallery/banner/1.png', alt: 'Brand Banner 1' },
+  { category: 'banner', src: '/gallery/banner/1.webp', alt: 'Brand Banner 1' },
   { category: 'banner', src: '/gallery/banner/products.webp', alt: 'Brand Banner 2' },
   { category: 'catalogues', src: '/gallery/catalogues/0.webp', alt: 'Catalogue 0' },
-  { category: 'catalogues', src: '/gallery/catalogues/1.jpeg', alt: 'Catalogue 1' },
-  { category: 'catalogues', src: '/gallery/catalogues/2.jpeg', alt: 'Catalogue 2' },
-  { category: 'catalogues', src: '/gallery/catalogues/3.jpeg', alt: 'Catalogue 3' },
-  { category: 'catalogues', src: '/gallery/catalogues/4.jpg', alt: 'Catalogue 4' },
-  { category: 'catalogues', src: '/gallery/catalogues/6.jpg', alt: 'Catalogue 6' },
-  { category: 'catalogues', src: '/gallery/catalogues/7.jpg', alt: 'Catalogue 7' },
-  { category: 'catalogues', src: '/gallery/catalogues/8.jpeg', alt: 'Catalogue 8' },
-  { category: 'catalogues', src: '/gallery/catalogues/9.jpeg', alt: 'Catalogue 9' },
-  { category: 'catalogues', src: '/gallery/catalogues/10.jpeg', alt: 'Catalogue 10' },
-  { category: 'catalogues', src: '/gallery/catalogues/newabout.jpg', alt: 'About Catalogue' },
-  // { category: 'catalogues', src: '/gallery/catalogues/about1.jpeg', alt: 'About Catalogue 1' },
-  { category: 'founder', src: '/gallery/founder/founder.jpeg', alt: 'Founder Portrait' },
-  { category: 'product', src: '/gallery/product/product1.jpeg', alt: 'Product 1' },
-  { category: 'product', src: '/gallery/product/product2.jpeg', alt: 'Product 2' },
-  { category: 'founder', src: '/gallery/founder/founder1.jpeg', alt: 'Founder 1' },
-  { category: 'founder', src: '/gallery/founder/founder2.jpeg', alt: 'Founder 2' },
-  { category: 'founder', src: '/gallery/founder/founder3.jpeg', alt: 'Founder 3' },
-  { category: 'product', src: '/gallery/product/product3.jpeg', alt: 'Product 3' },
+  { category: 'catalogues', src: '/gallery/catalogues/1.webp', alt: 'Catalogue 1' },
+  { category: 'catalogues', src: '/gallery/catalogues/2.webp', alt: 'Catalogue 2' },
+  { category: 'catalogues', src: '/gallery/catalogues/3.webp', alt: 'Catalogue 3' },
+  { category: 'catalogues', src: '/gallery/catalogues/4.webp', alt: 'Catalogue 4' },
+  { category: 'catalogues', src: '/gallery/catalogues/6.webp', alt: 'Catalogue 6' },
+  { category: 'catalogues', src: '/gallery/catalogues/7.webp', alt: 'Catalogue 7' },
+  { category: 'catalogues', src: '/gallery/catalogues/8.webp', alt: 'Catalogue 8' },
+  { category: 'catalogues', src: '/gallery/catalogues/9.webp', alt: 'Catalogue 9' },
+  { category: 'catalogues', src: '/gallery/catalogues/10.webp', alt: 'Catalogue 10' },
+  { category: 'catalogues', src: '/gallery/catalogues/newabout.webp', alt: 'About Catalogue' },
+  // { category: 'catalogues', src: '/gallery/catalogues/about1.webp', alt: 'About Catalogue 1' },
+  { category: 'founder', src: '/gallery/founder/founder.webp', alt: 'Founder Portrait' },
+  { category: 'product', src: '/gallery/product/product1.webp', alt: 'Product 1' },
+  { category: 'product', src: '/gallery/product/product2.webp', alt: 'Product 2' },
+  { category: 'founder', src: '/gallery/founder/founder1.webp', alt: 'Founder 1' },
+  { category: 'founder', src: '/gallery/founder/founder2.webp', alt: 'Founder 2' },
+  { category: 'founder', src: '/gallery/founder/founder3.webp', alt: 'Founder 3' },
+  { category: 'product', src: '/gallery/product/product3.webp', alt: 'Product 3' },
   { category: 'product', src: '/gallery/product/product4.webp', alt: 'Product 4' },
 ];
 
@@ -103,7 +104,7 @@ export const GalleryPage: React.FC = () => {
   filteredImagesRef.current = filteredImages;
 
   return (
-    <div className="pt-8 pb-28 bg-[#0C8A9B] min-h-screen">
+    <div className="pb-28 bg-[#0C8A9B] min-h-screen">
       {/* Hero Header */}
       <section className="relative py-20 border-b border-[#D4AF37]/30 bg-gradient-to-b from-[#097B8A] via-[#0C8A9B] to-[#097B8A] overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
@@ -170,14 +171,17 @@ export const GalleryPage: React.FC = () => {
               key={image.src}
               type="button"
               onClick={() => openLightbox(index)}
-              className="group relative aspect-[4/5] overflow-hidden transition-all duration-300 text-left hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] will-change-transform"
+              className="group relative block aspect-[4/5] w-full overflow-hidden text-left transition-all duration-300 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] will-change-transform bg-[#097B8A]/30"
             >
-              <img
+              <Image
                 src={image.src}
                 alt={image.alt}
-                loading="lazy"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                priority={index < 8}
+                loading={index < 8 ? 'eager' : 'lazy'}
                 decoding="async"
-                className="w-full h-full object-contain filter"
+                className="object-contain transition-transform duration-500 ease-out group-hover:scale-105"
               />
             </button>
           ))}
@@ -247,15 +251,21 @@ export const GalleryPage: React.FC = () => {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.97 }}
               transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
-              className="relative max-w-6xl max-h-[85vh] w-full overflow-y-auto"
+              className="relative w-full max-w-6xl max-h-[85vh]"
               onClick={(e) => e.stopPropagation()}
               data-lenis-prevent
             >
-              <img
-                src={filteredImagesRef.current[lightboxIndex].src}
-                alt={filteredImagesRef.current[lightboxIndex].alt}
-                className="w-full h-auto max-h-[85vh] object-contain border border-[#D4AF37]/30 bg-[#021318]"
-              />
+              <div className="relative w-full max-h-[85vh] aspect-auto overflow-hidden border border-[#D4AF37]/30 bg-[#021318]">
+                <Image
+                  src={filteredImagesRef.current[lightboxIndex].src}
+                  alt={filteredImagesRef.current[lightboxIndex].alt}
+                  width={2400}
+                  height={1600}
+                  sizes="(max-width: 1280px) 100vw, 1152px"
+                  priority
+                  className="w-full h-auto max-h-[85vh] object-contain"
+                />
+              </div>
               <div className="absolute bottom-0 left-0 right-0 gradient-to-t from-[#021318] via-[#021318]/70 to-transparent p-5 sm:p-6">
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <div>

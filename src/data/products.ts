@@ -2,10 +2,8 @@ import { Product, CampaignSlide, BotanicalIngredient } from "../types";
 
 export const CAMPAIGN_IMAGES = {
   heroModel: "/images/modelcompaign.jpeg",
-  sunArt: "/images/ghre_sun_art_1787204403014.jpg",
   summerDream: "/images/summerhair1.jpeg",
-  jacGhre: "/images/founder.jpeg",
-  blossom: "/images/ghre_sun_art_1787204403014.jpg",
+  jacGhre: "/home/founder.jpeg",
 };
 
 export const BRAND_INFO = {
@@ -65,6 +63,7 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     id: "summ-hair-dream",
     eyebrow: "YOUR SUMM’HAIR DREAM",
     title: "GOOD HAIR DAY — MONOÏ VANILLA",
+    subtitle: "Monoï Vanilla Silk Conditioner",
     tagline:
       "Monoï Vanilla Silk Conditioner & Silk Shampoo for lustrous summer hydration and sea breeze shine",
     ctaText: "DISCOVER MONOÏ SILK",
@@ -102,8 +101,8 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     secondaryCtaText: "SHOP COLLECTION",
     secondaryCtaLink: "shop",
     accentTheme: "teal-gold",
-    image: "/images/banner5.jpg",
-    mobileImage: "/images/mobile-banner5.jpeg",
+    image: "/home/banner5.jpg",
+    mobileImage: "/home/mobile-banner5.jpeg",
   },
 ];
 
@@ -631,48 +630,7 @@ export const PRODUCTS: Product[] = [
   rating: 4.95,
   reviewsCount: 98,
 },
-{
-    id: "monoi-vanilla-silk-hair-duo",
-  name: "Monoï Vanilla Silk Hair Duo",
-  frenchName: "Duo Cheveux Soie — Monoï & Vanille",
-  category: "haircare",
-  categoryLabel: "Hair Care",
-  tagline: "Your Summ'hair Dream",
-  shortDescription:
-    "A luxurious shampoo and conditioner duo infused with Monoï and Vanilla Silk to deeply nourish, smooth, and transform your hair into a tropical dream.",
-  fullDescription:
-    "Transport your daily routine into a sunlit ritual with the Monoï Vanilla Silk Hair Duo. Formulated to provide ultimate hydration and silky manageability, this set cleanses and conditions while enveloping your hair in a sun-kissed, exotic fragrance.",
 
-  price: 54,
-  size: "2 x 400 ml | 13.5 fl.oz",
-  badge: "Hair Duo",
-
-  ritualDetails:
-    "A sensory hair-cleansing ritual that leaves locks feeling silky soft, deeply nourished, and beautifully fragrant with notes of tropical Monoï and sweet Vanilla.",
-
-  composition: [
-    "Monoï de Tahiti",
-    "Vanilla Extract",
-    "Silk Proteins",
-    "Nourishing Botanicals"
-  ],
-
-  scentNotes: {
-    displaySummary: "Monoï, Vanilla Silk, Coconut Water, Tropical Blossoms",
-  },
-
-  benefits: [
-    "Deeply cleanses and conditions hair for a silky-smooth finish",
-    "Infuses locks with a luxurious Monoï and vanilla fragrance",
-    "Leaves hair feeling soft, manageable, and radiant",
-    "Evokes the essence of an exotic summer getaway",
-  ],
-
-  image: "/images/mobile-banner5.jpeg",
-  accentColor: "#D4AF37",
-  rating: 4.98,
-  reviewsCount: 142,
-}
 ];
 
 export const BOTANICAL_INGREDIENTS: BotanicalIngredient[] = [
