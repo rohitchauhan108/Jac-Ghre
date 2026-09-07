@@ -28,7 +28,7 @@ export const AnnouncementBar: React.FC = () => {
   }, [isPaused, nextMessage]);
 
   return (
-    <div className="bg-[#005F73] text-white border-b border-[#005F73]/30 text-[11px] tracking-[0.16em] py-2 px-4 relative z-40 transition-colors duration-300">
+    <div className="bg-[#005F73] hidden lg:block text-white border-b border-[#005F73]/30 text-[11px] tracking-[0.16em] py-2 px-4 relative z-40 transition-colors duration-300">
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
         {/* Left: Launching Soon Badge & Brand */}
         <div className="hidden md:flex items-center gap-2">
