@@ -21,11 +21,11 @@ interface GalleryItem {
 }
 
 const WORKS: GalleryItem[] = [
-  { id: 1, path: "/artist/1.webp", alt: "Golden Hour", title: "Golden Hour" },
-  { id: 2, path: "/artist/2.webp", alt: "Haute Couture Backstage", title: "Backstage" },
-  { id: 3, path: "/artist/3.webp", alt: "Bridal Atelier", title: "The Atelier" },
-  { id: 4, path: "/artist/4.webp", alt: "Sunlit Campaign", title: "Sunlit" },
-  { id: 5, path: "/artist/5.webp", alt: "Noir Editorial", title: "Noir" },
+  { id: 1, path: "/artist/1.webp", alt: "GHRÉ ELITE MODEL", title: "GHRÉ ELITE MODEL" },
+  { id: 2, path: "/artist/3.webp", alt: "GHRÉ VISUALS HAIRSTYLES", title: "GHRÉ VISUALS HAIRSTYLES" },
+  { id: 3, path: "/artist/2.webp", alt: "GHRÉ CELEBRITIES", title: "GHRÉ CELEBRITIES" },
+  { id: 4, path: "/artist/4.webp", alt: "GHRÉ PHOTO SHOOTS", title: "GHRÉ PHOTO SHOOTS" },
+  { id: 5, path: "/artist/5.webp", alt: "GHRÉ FASHION SHOWS", title: "GHRÉ FASHION SHOWS" },
   // { id: 6, path: "/artist/6.webp", alt: "Runway Finale — Thierry Mugler Legacy", title: "The Finale" },
 ];
 
