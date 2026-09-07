@@ -120,21 +120,6 @@ export default function ArchiveGallery() {
       {/* ================= SECTION 1: MASTHEAD ================ */}
       <header className="relative pt-12 sm:pt-20 pb-12 sm:pb-16 border-b border-[#D4AF37]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Top Ribbon */}
-          <div className="flex flex-wrap items-center justify-between gap-3 mb-10 sm:mb-14">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#006073] border border-[#D4AF37]/50 shadow-lg">
-              <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
-              <span className="text-[10px] sm:text-[11px] font-cinzel font-bold tracking-[0.35em] text-[#F3E5AB] uppercase">
-                Vol. I — Visual Archive
-              </span>
-            </div>
-            <div className="inline-flex items-center gap-3">
-              <Calendar className="w-3.5 h-3.5 text-[#D4AF37]" />
-              <span className="text-[10px] sm:text-[11px] font-cinzel tracking-[0.3em] text-[#D4AF37] uppercase font-semibold">
-                Global Beauty Archive
-              </span>
-            </div>
-          </div>
 
           {/* Brand Lockup */}
           <div className="flex items-center justify-center gap-4 mb-6">
@@ -329,7 +314,7 @@ export default function ArchiveGallery() {
                   className="max-w-full max-h-[68vh] sm:max-h-[74vh] w-auto h-auto object-contain border border-[#D4AF37]/30 shadow-[0_30px_90px_rgba(0,0,0,0.75)]"
                 />
               </div>
-              <div className="mt-4 sm:mt-6 flex items-center gap-4 flex-wrap justify-center">
+              {/* <div className="mt-4 sm:mt-6 flex items-center gap-4 flex-wrap justify-center">
                 <span className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#006073] border border-[#D4AF37]/60">
                   <GoldEmblem size={14} />
                   <span className="font-cinzel text-[10px] tracking-[0.3em] text-[#F3E5AB] uppercase font-bold">
@@ -339,7 +324,7 @@ export default function ArchiveGallery() {
                 <span className="text-[10px] font-cinzel tracking-[0.3em] text-[#8EAAB0] uppercase">
                   Jac Ghré · Visual Archive
                 </span>
-              </div>
+              </div> */}
             </motion.div>
           </motion.div>
         )}
