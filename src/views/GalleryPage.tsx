@@ -23,7 +23,7 @@ const GALLERY_IMAGES: { category: Exclude<Category, 'all'>; src: string; alt: st
   { category: 'catalogues', src: '/gallery/catalogues/10.webp', alt: 'Catalogue 10' },
   { category: 'catalogues', src: '/gallery/catalogues/newabout.webp', alt: 'About Catalogue' },
   // { category: 'catalogues', src: '/gallery/catalogues/about1.webp', alt: 'About Catalogue 1' },
-  { category: 'founder', src: '/gallery/founder/founder.webp', alt: 'Founder Portrait' },
+  // { category: 'founder', src: '/gallery/founder/founder.webp', alt: 'Founder Portrait' },
   { category: 'product', src: '/gallery/product/product1.webp', alt: 'Product 1' },
   { category: 'product', src: '/gallery/product/product2.webp', alt: 'Product 2' },
   { category: 'founder', src: '/gallery/founder/founder1.webp', alt: 'Founder 1' },

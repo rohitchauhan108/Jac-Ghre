@@ -102,9 +102,9 @@ export const AboutCompanyPage: React.FC = () => {
               className="lg:col-span-6 relative"
             >
               <img
-                  src="/gallery/founder/founder2.jpeg"
+                  src="/gallery/founder/founder2.webp"
                   alt="GHRÉ Emblem — Barbary Fig Flower & Lotus"
-                  className="w-full aspect-[3/4] sm:aspect-[4/5] object-contain bg-[#006073] filter contrast-105 brightness-100"
+                  className=""
                 />
               {/* <div className="relative border-2 border-[#D4AF37] p-3 bg-[#097B8A] shadow-[0_20px_50px_rgba(0,96,115,0.8)]">
                 <img
