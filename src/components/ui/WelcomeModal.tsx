@@ -26,7 +26,9 @@ export const WelcomeModal: React.FC = () => {
 
     const isHomePage = pathname === '/';
 
-    if (!isHomePage) {
+    if (isHomePage) {
+      setIsWelcomePopupOpen(true);
+    } else {
       setIsWelcomePopupOpen(false);
     }
   }, [pathname, mounted, setIsWelcomePopupOpen]);
