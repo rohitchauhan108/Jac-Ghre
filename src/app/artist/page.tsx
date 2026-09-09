@@ -1,15 +1,15 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import Lenis from "lenis";
 import { motion, AnimatePresence } from "motion/react";
 import {
   Camera,
-  Sparkles,
   X,
   ChevronLeft,
   ChevronRight,
-  Calendar,
+  Pause,
+  Play,
 } from "lucide-react";
 import { GoldEmblem } from "@/components/ui/GoldEmblem";
 
@@ -30,6 +30,9 @@ const WORKS: GalleryItem[] = [
 
 export default function ArchiveGallery() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const [currentSlide, setCurrentSlide] = useState<number>(0);
+  const [isPaused, setIsPaused] = useState<boolean>(false);
+  
   const itemsRef = useRef<GalleryItem[]>(WORKS);
   const scrollStateRef = useRef<{
     bodyOverflow: string;
@@ -37,14 +40,35 @@ export default function ArchiveGallery() {
   } | null>(null);
   itemsRef.current = WORKS;
 
-  const handleNext = (e?: React.MouseEvent) => {
+  const handleNext = useCallback((e?: React.MouseEvent) => {
+    e?.stopPropagation();
+    setCurrentSlide((prev) => (prev + 1) % itemsRef.current.length);
+  }, []);
+
+  const handlePrev = useCallback((e?: React.MouseEvent) => {
+    e?.stopPropagation();
+    setCurrentSlide((prev) => (prev - 1 + itemsRef.current.length) % itemsRef.current.length);
+  }, []);
+
+  // 8-Second Auto-play Timer
+  useEffect(() => {
+    if (isPaused || selectedIndex !== null) return;
+
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % itemsRef.current.length);
+    }, 8000);
+
+    return () => clearInterval(timer);
+  }, [isPaused, selectedIndex]);
+
+  const handleLightboxNext = (e?: React.MouseEvent) => {
     e?.stopPropagation();
     setSelectedIndex((prev) =>
       prev !== null ? (prev + 1) % itemsRef.current.length : 0
     );
   };
 
-  const handlePrev = (e?: React.MouseEvent) => {
+  const handleLightboxPrev = (e?: React.MouseEvent) => {
     e?.stopPropagation();
     setSelectedIndex((prev) =>
       prev !== null
@@ -99,16 +123,18 @@ export default function ArchiveGallery() {
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (selectedIndex === null) return;
-      if (e.key === "ArrowRight") handleNext();
-      if (e.key === "ArrowLeft") handlePrev();
-      if (e.key === "Escape") setSelectedIndex(null);
+      if (selectedIndex !== null) {
+        if (e.key === "ArrowRight") handleLightboxNext();
+        if (e.key === "ArrowLeft") handleLightboxPrev();
+        if (e.key === "Escape") setSelectedIndex(null);
+      } else {
+        if (e.key === "ArrowRight") handleNext();
+        if (e.key === "ArrowLeft") handlePrev();
+      }
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [selectedIndex]);
-
-  const openAt = (index: number) => () => setSelectedIndex(index);
+  }, [selectedIndex, handleNext, handlePrev]);
 
   return (
     <section className="min-h-screen bg-[#006073] text-[#FBF9F3] selection:bg-[#D4AF37] selection:text-[#006073] overflow-hidden">
@@ -120,20 +146,17 @@ export default function ArchiveGallery() {
       {/* ================= SECTION 1: MASTHEAD ================ */}
       <header className="relative pt-12 sm:pt-20 pb-12 sm:pb-16 border-b border-[#D4AF37]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-          {/* Brand Lockup */}
           <div className="flex items-center justify-center gap-4 mb-6">
             <div className="h-px w-16 sm:w-24 bg-gradient-to-r from-transparent via-[#D4AF37]/60 to-[#D4AF37]" />
             <GoldEmblem size={22} withGlow />
             <div className="h-px w-16 sm:w-24 bg-gradient-to-l from-transparent via-[#D4AF37]/60 to-[#D4AF37]" />
           </div>
 
-          {/* Masthead Title */}
           <div className="text-center max-w-5xl mx-auto">
             <p className="text-[10px] sm:text-xs font-cinzel tracking-[0.55em] text-[#D4AF37] uppercase font-bold mb-4">
               Visual Archive
             </p>
-            <h1 className="font-cinzel font-bold text-[#FBF9F3] uppercase tracking-[0.08em] leading-[0.92] text-5xl sm:text-7xl lg:text-[120px] xl:text-[100px]">
+            <h1 className="font-cinzel font-bold text-[#FBF9F3] uppercase tracking-[0.08em] leading-[0.92] text-5xl sm:text-7xl lg:text-[100px]">
               Visual
               <br className="hidden sm:block" />
               <span className="inline-block mt-2">Work</span>
@@ -152,62 +175,87 @@ export default function ArchiveGallery() {
             </div>
           </div>
         </div>
-
-      
       </header>
 
-      {/* ================= SECTION 2: CLIENT WORKS — MAGAZINE GRID ================ */}
+      {/* ================= SECTION 2: CINEMATIC CAROUSEL ================ */}
       <section className="relative py-16 sm:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-            {WORKS.slice(0,3).map((work, index) => (
-              <motion.button
-                key={work.id}
-                type="button"
-                onClick={openAt(index)}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.7, delay: index * 0.05, ease: [0.16, 1, 0.3, 1] }}
-                className="block w-full p-0 text-left leading-none break-inside-avoid relative group"
-              >
-                <div className="relative w-full overflow-hidden bg-transparent">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div 
+            className="relative group"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+          >
+            {/* Carousel Main Container */}
+            <div className="relative w-full aspect-[4/5] sm:aspect-[16/10] overflow-hidden bg-[#004a59]/40 border border-[#D4AF37]/30 shadow-2xl">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentSlide}
+                  initial={{ opacity: 0, scale: 1.03 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.98 }}
+                  transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                  className="absolute inset-0 cursor-pointer"
+                  onClick={() => setSelectedIndex(currentSlide)}
+                >
                   <img
-                    src={work.path}
-                    alt={work.alt}
-                    loading={index === 0 ? "eager" : "lazy"}
-                    className="block w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.02]"
+                    src={WORKS[currentSlide].path}
+                    alt={WORKS[currentSlide].alt}
+                    className="w-full h-full object-contain"
                   />
-                  {/* Subtle fashion overlay on hover */}
-                  <div className="absolute inset-0 bg-[#006073]/0 group-hover:bg-[#006073]/10 transition-colors duration-500 pointer-events-none" />
-                </div>
-              </motion.button>
-            ))}
-          </div>
-          <div className="columns-1 sm:columns-2 lg:columns-2 gap-6 space-y-6">
-            {WORKS.slice(3,5).map((work, index) => (
-              <motion.button
-                key={work.id}
+                  
+                  {/* Slide Content Overlay */}
+                  {/* <div className="absolute bottom-0 inset-x-0 p-6 sm:p-10 flex flex-col justify-end">
+                    <span className="text-[10px] sm:text-xs font-cinzel tracking-[0.35em] text-[#D4AF37] uppercase font-bold mb-2">
+                      Editorial N°{String(currentSlide + 1).padStart(2, "0")} / {String(WORKS.length).padStart(2, "0")}
+                    </span>
+                    <h3 className="font-cinzel text-xl sm:text-3xl font-semibold text-[#FBF9F3] tracking-wide">
+                      {WORKS[currentSlide].title}
+                    </h3>
+                  </div> */}
+                </motion.div>
+              </AnimatePresence>
+
+              {/* Navigation Arrows */}
+              <button
                 type="button"
-                onClick={openAt(index)}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.7, delay: index * 0.05, ease: [0.16, 1, 0.3, 1] }}
-                className="block w-full p-0 text-left leading-none break-inside-avoid relative group"
+                onClick={handlePrev}
+                className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 flex items-center justify-center bg-[#006073]/80 backdrop-blur-sm border border-[#D4AF37]/60 text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#021318] transition-colors z-20 opacity-80 group-hover:opacity-100"
+                aria-label="Previous slide"
               >
-                <div className="relative w-full overflow-hidden bg-transparent">
-                  <img
-                    src={work.path}
-                    alt={work.alt}
-                    loading={index === 0 ? "eager" : "lazy"}
-                    className="block w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.02]"
-                  />
-                  {/* Subtle fashion overlay on hover */}
-                  <div className="absolute inset-0 bg-[#006073]/0 group-hover:bg-[#006073]/10 transition-colors duration-500 pointer-events-none" />
-                </div>
-              </motion.button>
-            ))}
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+              <button
+                type="button"
+                onClick={handleNext}
+                className="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 flex items-center justify-center bg-[#006073]/80 backdrop-blur-sm border border-[#D4AF37]/60 text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#021318] transition-colors z-20 opacity-80 group-hover:opacity-100"
+                aria-label="Next slide"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+
+              {/* Pause / Play State Indicator */}
+              <div className="absolute top-4 right-4 z-20 flex items-center gap-2 bg-[#006073]/80 backdrop-blur-sm px-3 py-1.5 border border-[#D4AF37]/40 text-[#D4AF37] text-[10px] font-cinzel tracking-widest">
+                {isPaused ? <Pause className="w-3 h-3" /> : <Play className="w-3 h-3" />}
+                <span>{isPaused ? "PAUSED" : "8s AUTO"}</span>
+              </div>
+            </div>
+
+            {/* Pagination Indicators / Dots */}
+            <div className="flex items-center justify-center gap-3 mt-6">
+              {WORKS.map((work, index) => (
+                <button
+                  key={work.id}
+                  type="button"
+                  onClick={() => setCurrentSlide(index)}
+                  className={`h-1.5 transition-all duration-300 ${
+                    currentSlide === index
+                      ? "w-10 bg-[#D4AF37]"
+                      : "w-3 bg-[#D4AF37]/30 hover:bg-[#D4AF37]/60"
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -271,10 +319,7 @@ export default function ArchiveGallery() {
               <>
                 <button
                   type="button"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    handlePrev(e);
-                  }}
+                  onClick={handleLightboxPrev}
                   className="absolute left-3 sm:left-8 w-11 h-11 flex items-center justify-center bg-[#006073] border border-[#D4AF37]/60 text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#021318] transition-colors z-10"
                   aria-label="Previous image"
                 >
@@ -282,10 +327,7 @@ export default function ArchiveGallery() {
                 </button>
                 <button
                   type="button"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    handleNext(e);
-                  }}
+                  onClick={handleLightboxNext}
                   className="absolute right-3 sm:right-8 w-11 h-11 flex items-center justify-center bg-[#006073] border border-[#D4AF37]/60 text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#021318] transition-colors z-10"
                   aria-label="Next image"
                 >
@@ -300,7 +342,7 @@ export default function ArchiveGallery() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.97 }}
               transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-              className="relative w-full max-w-6xl max-h-[90vh] flex flex-col items-center"
+              className="relative w-full max-w-5xl max-h-[90vh] flex flex-col items-center"
               onClick={(e) => e.stopPropagation()}
               data-lenis-prevent
             >
@@ -311,20 +353,17 @@ export default function ArchiveGallery() {
                 <img
                   src={itemsRef.current[selectedIndex].path}
                   alt={itemsRef.current[selectedIndex].alt}
-                  className="max-w-full max-h-[68vh] sm:max-h-[74vh] w-auto h-auto object-contain border border-[#D4AF37]/30 shadow-[0_30px_90px_rgba(0,0,0,0.75)]"
+                  className="max-w-full max-h-[70vh] w-auto h-auto object-contain border border-[#D4AF37]/30 shadow-[0_30px_90px_rgba(0,0,0,0.75)]"
                 />
               </div>
-              {/* <div className="mt-4 sm:mt-6 flex items-center gap-4 flex-wrap justify-center">
-                <span className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#006073] border border-[#D4AF37]/60">
-                  <GoldEmblem size={14} />
-                  <span className="font-cinzel text-[10px] tracking-[0.3em] text-[#F3E5AB] uppercase font-bold">
-                    N°{String(selectedIndex + 1).padStart(2, "0")} / {String(itemsRef.current.length).padStart(2, "0")}
-                  </span>
-                </span>
-                <span className="text-[10px] font-cinzel tracking-[0.3em] text-[#8EAAB0] uppercase">
-                  Jac Ghré · Visual Archive
-                </span>
-              </div> */}
+              <div className="mt-4 text-center">
+                <p className="font-cinzel text-xs tracking-[0.3em] text-[#D4AF37] uppercase font-bold">
+                  {itemsRef.current[selectedIndex].title}
+                </p>
+                <p className="text-[10px] font-cinzel tracking-[0.2em] text-[#8EAAB0] mt-1">
+                  N°{String(selectedIndex + 1).padStart(2, "0")} / {String(itemsRef.current.length).padStart(2, "0")}
+                </p>
+              </div>
             </motion.div>
           </motion.div>
         )}
