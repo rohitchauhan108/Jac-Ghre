@@ -219,7 +219,7 @@ export default function ArchiveGallery() {
               <button
                 type="button"
                 onClick={handlePrev}
-                className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 flex items-center justify-center bg-[#006073]/80 backdrop-blur-sm border border-[#D4AF37]/60 text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#021318] transition-colors z-20 opacity-80 group-hover:opacity-100"
+                className="absolute left-4 top-1/2 -translate-y-1/2 lg:w-11 lg:h-11 w-6 h-8 flex items-center justify-center bg-[#006073]/80 backdrop-blur-sm border border-[#D4AF37]/60 text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#021318] transition-colors z-20 opacity-80 group-hover:opacity-100"
                 aria-label="Previous slide"
               >
                 <ChevronLeft className="w-5 h-5" />
@@ -227,7 +227,7 @@ export default function ArchiveGallery() {
               <button
                 type="button"
                 onClick={handleNext}
-                className="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 flex items-center justify-center bg-[#006073]/80 backdrop-blur-sm border border-[#D4AF37]/60 text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#021318] transition-colors z-20 opacity-80 group-hover:opacity-100"
+                className="absolute right-4 top-1/2 -translate-y-1/2 lg:w-11 lg:h-11 w-6 h-8 flex items-center justify-center bg-[#006073]/80 backdrop-blur-sm border border-[#D4AF37]/60 text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#021318] transition-colors z-20 opacity-80 group-hover:opacity-100"
                 aria-label="Next slide"
               >
                 <ChevronRight className="w-5 h-5" />
