@@ -185,16 +185,16 @@ export default function ArchiveGallery() {
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
-            {/* Carousel Main Container */}
-            <div className="relative w-full aspect-[4/5] sm:aspect-[16/10] overflow-hidden bg-[#004a59]/40 border border-[#D4AF37]/30 shadow-2xl">
-              <AnimatePresence mode="wait">
+            {/* Carousel Main Container - Replaced bright blue background with a deep dark background (#021318) */}
+            <div className="relative w-full aspect-[4/5] sm:aspect-[16/10] overflow-hidden bg-[#006073] shadow-lg">
+              <AnimatePresence initial={false}>
                 <motion.div
                   key={currentSlide}
-                  initial={{ opacity: 0, scale: 1.03 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.98 }}
-                  transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                  className="absolute inset-0 cursor-pointer"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                  className="absolute inset-0 cursor-pointer bg-[#006073] flex items-center justify-center"
                   onClick={() => setSelectedIndex(currentSlide)}
                 >
                   <img
@@ -202,16 +202,6 @@ export default function ArchiveGallery() {
                     alt={WORKS[currentSlide].alt}
                     className="w-full h-full object-contain"
                   />
-                  
-                  {/* Slide Content Overlay */}
-                  {/* <div className="absolute bottom-0 inset-x-0 p-6 sm:p-10 flex flex-col justify-end">
-                    <span className="text-[10px] sm:text-xs font-cinzel tracking-[0.35em] text-[#D4AF37] uppercase font-bold mb-2">
-                      Editorial N°{String(currentSlide + 1).padStart(2, "0")} / {String(WORKS.length).padStart(2, "0")}
-                    </span>
-                    <h3 className="font-cinzel text-xl sm:text-3xl font-semibold text-[#FBF9F3] tracking-wide">
-                      {WORKS[currentSlide].title}
-                    </h3>
-                  </div> */}
                 </motion.div>
               </AnimatePresence>
 
@@ -299,7 +289,7 @@ export default function ArchiveGallery() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-50 bg-[#021318]/97 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 md:p-10"
+            className="fixed inset-0 z-50 bg-[#006073]/97 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 md:p-10"
             onClick={() => setSelectedIndex(null)}
             data-lenis-prevent
           >
