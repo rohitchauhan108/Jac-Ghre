@@ -45,6 +45,7 @@ export const SmoothScroll: React.FC<{ children: React.ReactNode }> = ({ children
       running = false;
       cancelAnimationFrame(rafId);
       try {
+        lenis.start();
         lenis.destroy();
       } catch {
         // ignore

@@ -26,14 +26,13 @@ export const WelcomeModal: React.FC = () => {
 
     const isHomePage = pathname === '/';
 
-    if (isHomePage) {
-      setIsWelcomePopupOpen(true);
-    } else {
+    if (!isHomePage) {
       setIsWelcomePopupOpen(false);
     }
   }, [pathname, mounted, setIsWelcomePopupOpen]);
 
   const handleClose = () => {
+    sessionStorage.setItem('ghre_welcome_seen', 'true');
     setIsWelcomePopupOpen(false);
   };
 

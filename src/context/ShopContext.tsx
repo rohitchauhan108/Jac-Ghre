@@ -161,18 +161,6 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   }, [theme]);
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const hasSeenPopup = sessionStorage.getItem('ghre_welcome_seen');
-      if (!hasSeenPopup) {
-        const timer = setTimeout(() => {
-          setIsWelcomePopupOpen(true);
-        }, 900);
-        return () => clearTimeout(timer);
-      }
-    }
-  }, []);
-
   const toggleTheme = () => {
     setThemeState((prev) => (prev === 'dark' ? 'light' : 'dark'));
   };

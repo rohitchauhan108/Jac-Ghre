@@ -56,7 +56,7 @@ export default function ArchiveGallery() {
 
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % itemsRef.current.length);
-    }, 8000);
+    }, 3000);
 
     return () => clearInterval(timer);
   }, [isPaused, selectedIndex]);
