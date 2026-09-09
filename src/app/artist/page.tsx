@@ -223,11 +223,6 @@ export default function ArchiveGallery() {
                 <ChevronRight className="w-5 h-5" />
               </button>
 
-              {/* Pause / Play State Indicator */}
-              <div className="absolute top-4 right-4 z-20 flex items-center gap-2 bg-[#006073]/80 backdrop-blur-sm px-3 py-1.5 border border-[#D4AF37]/40 text-[#D4AF37] text-[10px] font-cinzel tracking-widest">
-                {isPaused ? <Pause className="w-3 h-3" /> : <Play className="w-3 h-3" />}
-                <span>{isPaused ? "PAUSED" : "8s AUTO"}</span>
-              </div>
             </div>
 
             {/* Pagination Indicators / Dots */}
