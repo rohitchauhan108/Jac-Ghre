@@ -137,7 +137,7 @@ export const FounderHero: React.FC = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Globe className="w-4 h-4 text-[#D4AF37]" />
-                <span className="tracking-wider text-[#D4AF37] font-bold">JACGHRE.COM</span>
+                <span className="tracking-wider text-[#D4AF37] font-bold">GHRÉ.COM</span>
               </div>
             </div>
           </motion.div>

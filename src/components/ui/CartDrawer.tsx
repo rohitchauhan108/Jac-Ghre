@@ -1,11 +1,20 @@
-import React from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { X, Trash2, ShoppingBag, ArrowRight, Sparkles, ShieldCheck } from 'lucide-react';
-import { useShop } from '../../context/ShopContext';
-import { PRODUCTS } from '../../data/products';
-import { GoldEmblem } from './GoldEmblem';
+import React from "react";
+import { motion, AnimatePresence } from "motion/react";
+import {
+  X,
+  Trash2,
+  ShoppingBag,
+  ArrowRight,
+  Sparkles,
+  ShieldCheck,
+} from "lucide-react";
+import { useShop } from "../../context/ShopContext";
+import { PRODUCTS } from "../../data/products";
+import { GoldEmblem } from "./GoldEmblem";
+import { useRouter } from "next/navigation";
 
 export const CartDrawer: React.FC = () => {
+  const router = useRouter();
   const {
     cart,
     isCartOpen,
@@ -21,11 +30,16 @@ export const CartDrawer: React.FC = () => {
   const formattedTotal = `${currencySymbol}${(cartTotal * currencyRate).toFixed(2)}`;
   const freeShippingThreshold = 150;
   const currentTotalUSD = cartTotal;
-  const progressToFreeShipping = Math.min(100, (currentTotalUSD / freeShippingThreshold) * 100);
-  const remainingForFreeShipping = Math.max(0, freeShippingThreshold - currentTotalUSD);
+  const progressToFreeShipping = Math.min(
+    100,
+    (currentTotalUSD / freeShippingThreshold) * 100,
+  );
+  const remainingForFreeShipping = Math.max(
+    0,
+    freeShippingThreshold - currentTotalUSD,
+  );
 
   if (!isCartOpen) return null;
-
   return (
     <AnimatePresence>
       <div className="fixed inset-0 z-50 overflow-hidden">
@@ -40,9 +54,9 @@ export const CartDrawer: React.FC = () => {
 
         <div className="fixed inset-y-0 right-0 max-w-full flex pl-10">
           <motion.div
-            initial={{ x: '100%' }}
+            initial={{ x: "100%" }}
             animate={{ x: 0 }}
-            exit={{ x: '100%' }}
+            exit={{ x: "100%" }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
             className="w-screen max-w-md bg-[#007288] border-l border-[#D4AF37]/30 shadow-2xl flex flex-col justify-between relative"
           >
@@ -55,7 +69,7 @@ export const CartDrawer: React.FC = () => {
                     Your Ritual Bag
                   </h2>
                   <span className="text-[11px] text-[#D4AF37] tracking-widest font-cinzel">
-                    {cartCount} {cartCount === 1 ? 'ITEM' : 'ITEMS'}
+                    {cartCount} {cartCount === 1 ? "ITEM" : "ITEMS"}
                   </span>
                 </div>
               </div>
@@ -74,11 +88,17 @@ export const CartDrawer: React.FC = () => {
               <div className="flex items-center justify-between text-xs mb-1.5 font-sans">
                 {remainingForFreeShipping > 0 ? (
                   <span className="text-[#C5D5D8]">
-                    Add <strong className="text-[#F3E5AB]">{currencySymbol}{(remainingForFreeShipping * currencyRate).toFixed(0)}</strong> for complimentary courier delivery
+                    Add{" "}
+                    <strong className="text-[#F3E5AB]">
+                      {currencySymbol}
+                      {(remainingForFreeShipping * currencyRate).toFixed(0)}
+                    </strong>{" "}
+                    for complimentary courier delivery
                   </span>
                 ) : (
                   <span className="text-[#D4AF37] flex items-center gap-1 font-medium">
-                    <Sparkles className="w-3.5 h-3.5" /> Complimentary White-Glove Delivery Unlocked!
+                    <Sparkles className="w-3.5 h-3.5" /> Complimentary
+                    White-Glove Delivery Unlocked!
                   </span>
                 )}
               </div>
@@ -91,7 +111,10 @@ export const CartDrawer: React.FC = () => {
             </div>
 
             {/* Cart Items List */}
-            <div className="flex-1 overflow-y-auto p-6 space-y-4" data-lenis-prevent>
+            <div
+              className="flex-1 overflow-y-auto p-6 space-y-4"
+              data-lenis-prevent
+            >
               {cart.length === 0 ? (
                 <div className="h-full flex flex-col items-center justify-center text-center p-8">
                   <ShoppingBag className="w-12 h-12 text-[#D4AF37]/40 mb-4 stroke-1" />
@@ -99,7 +122,8 @@ export const CartDrawer: React.FC = () => {
                     Your bag is currently empty
                   </h3>
                   <p className="text-xs text-[#8EAAB0] max-w-xs mb-6">
-                    Explore the GHRÉ collection of luxury hair care, sun elixirs, and bespoke perfumes.
+                    Explore the GHRÉ collection of luxury hair care, sun
+                    elixirs, and bespoke perfumes.
                   </p>
                   <button
                     onClick={() => setIsCartOpen(false)}
@@ -145,7 +169,9 @@ export const CartDrawer: React.FC = () => {
                         {/* Quantity */}
                         <div className="flex items-center border border-[#D4AF37]/30 bg-[#041e25]">
                           <button
-                            onClick={() => updateQuantity(item.product.id, item.quantity - 1)}
+                            onClick={() =>
+                              updateQuantity(item.product.id, item.quantity - 1)
+                            }
                             className="px-2 py-0.5 text-xs text-[#D4AF37] hover:text-white"
                           >
                             -
@@ -154,7 +180,9 @@ export const CartDrawer: React.FC = () => {
                             {item.quantity}
                           </span>
                           <button
-                            onClick={() => updateQuantity(item.product.id, item.quantity + 1)}
+                            onClick={() =>
+                              updateQuantity(item.product.id, item.quantity + 1)
+                            }
                             className="px-2 py-0.5 text-xs text-[#D4AF37] hover:text-white"
                           >
                             +
@@ -163,7 +191,11 @@ export const CartDrawer: React.FC = () => {
 
                         <span className="font-cinzel text-sm font-semibold text-[#F3E5AB]">
                           {currencySymbol}
-                          {(item.product.price * currencyRate * item.quantity).toFixed(0)}
+                          {(
+                            item.product.price *
+                            currencyRate *
+                            item.quantity
+                          ).toFixed(0)}
                         </span>
                       </div>
                     </div>
@@ -178,7 +210,9 @@ export const CartDrawer: React.FC = () => {
                 <div className="space-y-1.5 text-xs">
                   <div className="flex justify-between text-[#8EAAB0]">
                     <span>Subtotal</span>
-                    <span className="font-cinzel text-[#F7F4EB]">{formattedTotal}</span>
+                    <span className="font-cinzel text-[#F7F4EB]">
+                      {formattedTotal}
+                    </span>
                   </div>
                   <div className="flex justify-between text-[#8EAAB0]">
                     <span>Luxury Gift Packaging</span>
@@ -187,7 +221,9 @@ export const CartDrawer: React.FC = () => {
                   <div className="flex justify-between text-[#8EAAB0]">
                     <span>Standard Shipping</span>
                     <span className="text-[#D4AF37]">
-                      {remainingForFreeShipping === 0 ? 'Complimentary' : `${currencySymbol}${(15 * currencyRate).toFixed(0)}`}
+                      {remainingForFreeShipping === 0
+                        ? "Complimentary"
+                        : `${currencySymbol}${(15 * currencyRate).toFixed(0)}`}
                     </span>
                   </div>
                   <div className="flex justify-between text-base font-cinzel text-[#F3E5AB] pt-2 border-t border-[#D4AF37]/20">
@@ -197,7 +233,10 @@ export const CartDrawer: React.FC = () => {
                 </div>
 
                 <button
-                  onClick={() => alert('Proceeding to luxury encrypted checkout... Ready for payment gateway connection.')}
+                  onClick={() => {
+                    setIsCartOpen(false);
+                    router.push("/checkout");
+                  }}
                   className="w-full py-3.5 px-4 bg-gradient-to-r from-[#D4AF37] via-[#E5C365] to-[#B89028] text-[#0E4C5A] hover:brightness-110 font-cinzel text-xs font-bold tracking-[0.2em] uppercase flex items-center justify-center gap-2 shadow-xl transition-all"
                 >
                   <span>Proceed to Checkout</span>
@@ -245,9 +284,9 @@ export const WishlistDrawer: React.FC = () => {
 
         <div className="fixed inset-y-0 right-0 max-w-full flex pl-10">
           <motion.div
-            initial={{ x: '100%' }}
+            initial={{ x: "100%" }}
             animate={{ x: 0 }}
-            exit={{ x: '100%' }}
+            exit={{ x: "100%" }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
             className="w-screen max-w-md bg-[#052932] border-l border-[#D4AF37]/30 shadow-2xl flex flex-col justify-between"
           >
@@ -260,7 +299,8 @@ export const WishlistDrawer: React.FC = () => {
                     Curated Wishlist
                   </h2>
                   <span className="text-[11px] text-[#D4AF37] tracking-widest font-cinzel">
-                    {wishlist.length} {wishlist.length === 1 ? 'FAVORITE' : 'FAVORITES'}
+                    {wishlist.length}{" "}
+                    {wishlist.length === 1 ? "FAVORITE" : "FAVORITES"}
                   </span>
                 </div>
               </div>
@@ -275,7 +315,10 @@ export const WishlistDrawer: React.FC = () => {
             </div>
 
             {/* List */}
-            <div className="flex-1 overflow-y-auto p-6 space-y-4" data-lenis-prevent>
+            <div
+              className="flex-1 overflow-y-auto p-6 space-y-4"
+              data-lenis-prevent
+            >
               {wishlistProducts.length === 0 ? (
                 <div className="h-full flex flex-col items-center justify-center text-center p-8">
                   <GoldEmblem size={40} className="mb-4 opacity-50" />
@@ -283,7 +326,8 @@ export const WishlistDrawer: React.FC = () => {
                     Your wishlist is empty
                   </h3>
                   <p className="text-xs text-[#8EAAB0] max-w-xs mb-6">
-                    Save your desired beauty formulas and bespoke perfumes to revisit anytime.
+                    Save your desired beauty formulas and bespoke perfumes to
+                    revisit anytime.
                   </p>
                   <button
                     onClick={() => setIsWishlistOpen(false)}
@@ -324,7 +368,8 @@ export const WishlistDrawer: React.FC = () => {
                           {product.size}
                         </span>
                         <span className="font-cinzel text-sm font-semibold text-[#F3E5AB] mt-1 block">
-                          {currencySymbol}{(product.price * currencyRate).toFixed(0)}
+                          {currencySymbol}
+                          {(product.price * currencyRate).toFixed(0)}
                         </span>
                       </div>
 

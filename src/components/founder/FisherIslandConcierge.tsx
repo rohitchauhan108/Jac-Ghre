@@ -78,12 +78,12 @@ export const FisherIslandConcierge: React.FC = () => {
                 Official Web Portal
               </span>
               <a
-                href="https://jacghre.com"
+                href="https:/GHRÉ.COM"
                 target="_blank"
                 rel="noreferrer"
                 className="font-cinzel text-base font-bold text-[#D4AF37] hover:text-[#FFF3C4] transition-colors inline-block mt-0.5"
               >
-                JACGHRE.COM
+                GHRÉ.COM
               </a>
             </div>
           </div>

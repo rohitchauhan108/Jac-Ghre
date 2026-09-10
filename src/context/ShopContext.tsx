@@ -92,18 +92,8 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const router = useRouter();
   const pathname = usePathname();
 
-  const [cart, setCart] = useState<CartItem[]>(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('ghre_cart');
-      if (saved) {
-        try { return JSON.parse(saved); } catch {}
-      }
-    }
-    return [
-      { product: findProduct('repair-shampoo'), quantity: 1, selectedSize: findProduct('repair-shampoo').size },
-      { product: findProduct('oil-hair-body'), quantity: 1, selectedSize: findProduct('oil-hair-body').size },
-    ];
-  });
+  const [cart, setCart] = useState<CartItem[]>([]);
+  const [cartHydrated, setCartHydrated] = useState(false);
 
   const [wishlist, setWishlist] = useState<string[]>(() => {
     if (typeof window !== 'undefined') {
@@ -129,10 +119,29 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
   }, [pathname]);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    const saved = localStorage.getItem('ghre_cart');
+
+    if (saved) {
+      try {
+        setCart(JSON.parse(saved));
+      } catch {
+        setCart([]);
+      }
+    } else {
+      setCart([
+        { product: findProduct('repair-shampoo'), quantity: 1, selectedSize: findProduct('repair-shampoo').size },
+        { product: findProduct('oil-hair-body'), quantity: 1, selectedSize: findProduct('oil-hair-body').size },
+      ]);
+    }
+
+    setCartHydrated(true);
+  }, []);
+
+  useEffect(() => {
+    if (cartHydrated) {
       localStorage.setItem('ghre_cart', JSON.stringify(cart));
     }
-  }, [cart]);
+  }, [cart, cartHydrated]);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
