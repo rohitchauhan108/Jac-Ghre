@@ -146,7 +146,7 @@ export const ContactPage: React.FC = () => {
           {/* Contact Message Form */}
           <div className="lg:col-span-7 bg-[#097B8A] border-2 border-[#D4AF37]/50 p-6 sm:p-10 shadow-2xl">
             <h3 className="font-cinzel text-2xl font-bold text-[#F7F4EB] uppercase mb-2">
-              Send a Concierge Message
+              Send a Message
             </h3>
             <p className="font-poppins text-sm text-[#8EAAB0] mb-8">
               Whether you need personalized hair care recommendations, order assistance, or wholesale inquiries, our team is here for you.

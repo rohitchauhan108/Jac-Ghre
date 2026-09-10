@@ -26,7 +26,7 @@ const GALLERY_IMAGES: { category: Exclude<Category, 'all'>; src: string; alt: st
   // { category: 'founder', src: '/gallery/founder/founder.webp', alt: 'Founder Portrait' },
   { category: 'product', src: '/gallery/product/product1.webp', alt: 'Product 1' },
   { category: 'product', src: '/gallery/product/product2.webp', alt: 'Product 2' },
-  { category: 'founder', src: '/gallery/founder/founder1.webp', alt: 'Founder 1' },
+  { category: 'founder', src: '/gallery/founder/new-founder1.webp', alt: 'Founder 1' },
   { category: 'founder', src: '/gallery/founder/founder2.webp', alt: 'Founder 2' },
   { category: 'founder', src: '/gallery/founder/founder3.webp', alt: 'Founder 3' },
   { category: 'product', src: '/gallery/product/product3.webp', alt: 'Product 3' },

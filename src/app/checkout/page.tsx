@@ -154,7 +154,7 @@ export default function CheckoutPage() {
                 
                 <form id="checkout-form" onSubmit={handleSubmit} className="space-y-5">
                   <div>
-                    <label className="block font-outfit text-[11px] uppercase tracking-widest text-[#C4D8DC] mb-2 font-medium">Full Legal Name</label>
+                    <label className="block font-outfit text-[11px] uppercase tracking-widest text-[#C4D8DC] mb-2 font-medium">Full Name</label>
                     <input
                       type="text"
                       name="name"
@@ -168,7 +168,7 @@ export default function CheckoutPage() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block font-outfit text-[11px] uppercase tracking-widest text-[#C4D8DC] mb-2 font-medium">Secure Phone</label>
+                      <label className="block font-outfit text-[11px] uppercase tracking-widest text-[#C4D8DC] mb-2 font-medium">Phone</label>
                       <input
                         type="tel"
                         name="phone"
@@ -180,7 +180,7 @@ export default function CheckoutPage() {
                       />
                     </div>
                     <div>
-                      <label className="block font-outfit text-[11px] uppercase tracking-widest text-[#C4D8DC] mb-2 font-medium">Correspondence Email</label>
+                      <label className="block font-outfit text-[11px] uppercase tracking-widest text-[#C4D8DC] mb-2 font-medium">Email</label>
                       <input
                         type="email"
                         name="email"
@@ -194,7 +194,7 @@ export default function CheckoutPage() {
                   </div>
 
                   <div>
-                    <label className="block font-outfit text-[11px] uppercase tracking-widest text-[#C4D8DC] mb-2 font-medium">Atelier Delivery Address</label>
+                    <label className="block font-outfit text-[11px] uppercase tracking-widest text-[#C4D8DC] mb-2 font-medium">Delivery Address</label>
                     <textarea
                       name="address"
                       value={formData.address}
