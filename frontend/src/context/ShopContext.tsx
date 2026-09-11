@@ -138,7 +138,7 @@ const findProduct = (id: string) => PRODUCTS.find((p) => p.id === id) || PRODUCT
 export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const router = useRouter();
   const pathname = usePathname();
-  const cartSyncTimeoutRef = useRef<NodeJS.Timeout>();
+  const cartSyncTimeoutRef = useRef<NodeJS.Timeout | undefined>(undefined);
 
   // Cart state
   const [cart, setCart] = useState<CartItem[]>([]);
