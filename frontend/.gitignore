@@ -1,0 +1,19 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Next.js
+.next/
+out/
+tsconfig.tsbuildinfo
+next-env.d.ts
+
+# Production builds
+.npm/
+yarn-error.log
+pnpm-debug.log*

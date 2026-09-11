@@ -1,0 +1,6 @@
+{
+  "name": "GHRÉ Paris — Luxury Beauty & Hair Care",
+  "description": "Premium luxury beauty, hair care, and fragrance e-commerce homepage for GHRÉ and Jac GHRÉ.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
