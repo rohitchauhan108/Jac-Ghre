@@ -174,7 +174,8 @@ export const ShopPage: React.FC = () => {
                       <div className="absolute inset-0 bg-[#097B8A]/70 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center gap-2">
                         <span className="px-3.5 py-1.5 bg-[#D4AF37] text-[#0E4C5A] font-cinzel text-xs font-bold uppercase tracking-wider flex items-center gap-1.5">
                           <Eye className="w-3.5 h-3.5" />
-                          Quick Dossier
+                          Quick detailed
+                          {/* Dossier */}
                         </span>
                       </div>
                     </div>
@@ -229,7 +230,8 @@ export const ShopPage: React.FC = () => {
                         className="px-4 py-2.5 bg-[#D4AF37] text-[#0E4C5A] font-cinzel text-xs font-bold uppercase tracking-wider hover:brightness-110 shadow-lg flex items-center gap-1.5 transition-all"
                       >
                         <ShoppingBag className="w-3.5 h-3.5" />
-                        <span>Acquire</span>
+                        <span>Cart</span>
+                        {/* <span>Acquire</span> */}
                       </button>
                     </div>
                   </div>

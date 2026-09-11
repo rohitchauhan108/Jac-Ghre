@@ -31,7 +31,7 @@ export default function AppShell({ children }: { children?: React.ReactNode }) {
           <CartDrawer />
           <WishlistDrawer />
           <SearchModal />
-          <WelcomeModal />
+          {/* <WelcomeModal /> */}
           <FloatingConcierge />
         </div>
       </SmoothScroll>

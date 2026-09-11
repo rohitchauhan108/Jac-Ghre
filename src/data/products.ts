@@ -42,7 +42,7 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     secondaryCtaLink: "hair-care",
     accentTheme: "teal-gold",
     image: "/home/banner1.jpg",
-    mobileImage: "/home/mobile-banner1.jpg",
+    mobileImage: "/home/mobile-banner1.webp",
   },
   {
     id: "ghre-sun-art",

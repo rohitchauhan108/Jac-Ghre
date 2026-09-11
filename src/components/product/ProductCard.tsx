@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "motion/react";
-import { Heart, Eye, ShoppingBag, Sparkles } from "lucide-react";
+import { Heart, Eye, ShoppingBag, Sparkles, Loader } from "lucide-react";
 import { Product } from "../../types";
 import { useShop } from "../../context/ShopContext";
 
@@ -21,8 +21,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({
     currencySymbol,
     currencyRate,
     theme,
+    isLoading: contextLoading,
   } = useShop();
 
+  const [isAdding, setIsAdding] = useState(false);
   const isDark = theme === "dark";
 
   const formattedPrice = `${currencySymbol}${(
@@ -30,6 +32,20 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   ).toFixed(0)}`;
 
   const isFavorited = isInWishlist(product.id);
+
+  const handleAddToCart = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    try {
+      setIsAdding(true);
+      await addToCart(product, 1);
+    } catch (error) {
+      console.error("Failed to add to cart:", error);
+    } finally {
+      setIsAdding(false);
+    }
+  };
 
   return (
     <motion.div
@@ -217,7 +233,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           </button>
 
           <button
-            onClick={() => addToCart(product)}
+            onClick={handleAddToCart}
+            disabled={isAdding || contextLoading}
             className="
               py-2.5
               px-3.5
@@ -226,6 +243,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({
               to-[#B89028]
               text-[#007288]
               hover:brightness-110
+              disabled:opacity-70
+              disabled:cursor-not-allowed
               font-cinzel
               text-[11px]
               font-semibold
@@ -239,7 +258,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             "
             title="Add to Bag"
           >
-            <ShoppingBag className="w-3.5 h-3.5" />
+            {isAdding || contextLoading ? (
+              <Loader className="w-3.5 h-3.5 animate-spin" />
+            ) : (
+              <ShoppingBag className="w-3.5 h-3.5" />
+            )}
           </button>
         </div>
       </div>
@@ -334,7 +357,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           </div>
 
           <button
-            onClick={() => addToCart(product)}
+            onClick={handleAddToCart}
+            disabled={isAdding || contextLoading}
             className={`
               inline-flex
               items-center
@@ -345,6 +369,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({
               font-cinzel
               group/btn
               transition-colors
+              disabled:opacity-70
+              disabled:cursor-not-allowed
 
               ${
                 isDark
@@ -359,11 +385,16 @@ export const ProductCard: React.FC<ProductCardProps> = ({
               }
             `}
           >
-            <span>Discover</span>
-
-            <span className="transition-transform duration-300 group-hover/btn:translate-x-1">
-              →
-            </span>
+            {isAdding || contextLoading ? (
+              <Loader className="w-3.5 h-3.5 animate-spin" />
+            ) : (
+              <>
+                <span>Discover</span>
+                <span className="transition-transform duration-300 group-hover/btn:translate-x-1">
+                  →
+                </span>
+              </>
+            )}
           </button>
         </div>
       </div>
