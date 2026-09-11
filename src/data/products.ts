@@ -30,6 +30,20 @@ export const BRAND_INFO = {
 
 export const CAMPAIGN_SLIDES: CampaignSlide[] = [
   {
+    id: "ghre-leave-in-conditioner-launch",
+    eyebrow: "NEW • LUXURY HAIR CARE",
+    title: "LEAVE-IN CONDITIONER",
+    subtitle: "Orange Blossom, Bamboo & Lemon",
+    tagline:"Bring Your Beauty Vision to Life with our luxurious leave-in conditioner",
+    ctaText: "DISCOVER SUN & BODY",
+    ctaLink: "shop",
+    secondaryCtaText: "EXPLORE HAIR CARE",
+    secondaryCtaLink: "hair-care",
+    accentTheme: "teal-gold",
+    image: "/home/banner.webp",
+    mobileImage: "/home/welcome.webp",
+  },
+  {
     id: "ghre-collection-lineup",
     eyebrow: "PURE • EXCELLENCE",
     title: "GHRÉ COLLECTION",
@@ -155,8 +169,7 @@ export const PRODUCTS: Product[] = [
   {
     id: "oil-hair-body",
     name: "GHRÉ Oil Hair and Body",
-    frenchName:
-      "Huile Précieuse Cheveux & Corps — Nourish • Glow • Protect",
+    frenchName: "Huile Précieuse Cheveux & Corps — Nourish • Glow • Protect",
     category: "elixir",
     categoryLabel: "Precious Elixirs",
     tagline: "Nourish • Glow • Protect",
@@ -419,8 +432,7 @@ export const PRODUCTS: Product[] = [
   {
     id: "blossom-positano-edp",
     name: "Thermal Protection Spray",
-    frenchName:
-      "Spray de Protection Thermique — Thermal Protection Spray",
+    frenchName: "Spray de Protection Thermique — Thermal Protection Spray",
     category: "haircare",
     categoryLabel: "Luxury Hair Care",
     tagline: "Protect • Smooth • Shine",
@@ -502,135 +514,134 @@ export const PRODUCTS: Product[] = [
     rating: 4.91,
     reviewsCount: 127,
   },
-{
-  id: "blossom-positano",
-  name: "Blossom Positano",
-  frenchName: "Eau de Parfum — Blossom Positano",
-  category: "fragrance",
-  categoryLabel: "Haute Parfumerie",
-  tagline: "Citrus • Blossom • Elegance",
-  shortDescription:
-    "A radiant citrus fragrance inspired by the beauty of Positano, blending sparkling citrus freshness with delicate floral notes.",
-  fullDescription:
-    "A radiant and elegant Eau de Parfum inspired by the sun-kissed beauty of Positano. Bright citrus accords meet delicate blossoms to create a fresh, refined and effortlessly luxurious scent.",
+  {
+    id: "blossom-positano",
+    name: "Blossom Positano",
+    frenchName: "Eau de Parfum — Blossom Positano",
+    category: "fragrance",
+    categoryLabel: "Haute Parfumerie",
+    tagline: "Citrus • Blossom • Elegance",
+    shortDescription:
+      "A radiant citrus fragrance inspired by the beauty of Positano, blending sparkling citrus freshness with delicate floral notes.",
+    fullDescription:
+      "A radiant and elegant Eau de Parfum inspired by the sun-kissed beauty of Positano. Bright citrus accords meet delicate blossoms to create a fresh, refined and effortlessly luxurious scent.",
 
-  price: 62,
-  size: "100 ml | 3.4 fl.oz",
-  badge: "Blossom Positano Eau de Parfum",
+    price: 62,
+    size: "100 ml | 3.4 fl.oz",
+    badge: "Blossom Positano Eau de Parfum",
 
-  ritualDetails:
-    "A luminous fragrance ritual that awakens the senses with sparkling citrus freshness and soft floral elegance. Designed to leave a refined, fresh and memorable signature throughout the day.",
+    ritualDetails:
+      "A luminous fragrance ritual that awakens the senses with sparkling citrus freshness and soft floral elegance. Designed to leave a refined, fresh and memorable signature throughout the day.",
 
-  composition: [
-    "Citrus Zest",
-    "Lemon Blossom",
-    "Orange Blossom",
-    "Jasmine",
-    "Bergamot",
-    "Soft Floral Accord",
-  ],
+    composition: [
+      "Citrus Zest",
+      "Lemon Blossom",
+      "Orange Blossom",
+      "Jasmine",
+      "Bergamot",
+      "Soft Floral Accord",
+    ],
 
-  scentNotes: {
-    displaySummary: "Citrus Zest, Lemon Blossom, Orange Blossom, Jasmine",
+    scentNotes: {
+      displaySummary: "Citrus Zest, Lemon Blossom, Orange Blossom, Jasmine",
+    },
+
+    benefits: [
+      "Bright and refreshing citrus fragrance",
+      "Elegant blend of citrus and delicate blossom notes",
+      "Leaves a fresh, sophisticated and memorable impression",
+    ],
+
+    image: "/product/10.webp",
+    accentColor: "#D9A441",
+    rating: 4.91,
+    reviewsCount: 127,
   },
+  {
+    id: "monoi-silk-shampoo",
+    name: "Monoi Silk Shampoo &Conditioner",
+    frenchName: "Shampoo — Monoi Silk",
+    category: "haircare",
+    categoryLabel: "Hair Care",
+    tagline: "Cleanse • Nourish • Shine",
+    shortDescription:
+      "A luxurious Monoi-infused shampoo that gently cleanses the hair while leaving it soft, smooth and beautifully refreshed.",
+    fullDescription:
+      "A luxurious Monoi Silk Shampoo designed to gently cleanse and care for the hair. Its silky formula helps leave hair feeling soft, smooth, nourished and naturally radiant.",
 
-  benefits: [
-    "Bright and refreshing citrus fragrance",
-    "Elegant blend of citrus and delicate blossom notes",
-    "Leaves a fresh, sophisticated and memorable impression",
-  ],
+    price: 42,
+    size: "500 ml | 16.9 fl.oz",
+    badge: "Monoi Silk Shampoo",
 
-  image: "/product/10.webp",
-  accentColor: "#D9A441",
-  rating: 4.91,
-  reviewsCount: 127,
-},
-{
-  id: "monoi-silk-shampoo",
-  name: "Monoi Silk Shampoo &Conditioner",
-  frenchName: "Shampoo — Monoi Silk",
-  category: "haircare",
-  categoryLabel: "Hair Care",
-  tagline: "Cleanse • Nourish • Shine",
-  shortDescription:
-    "A luxurious Monoi-infused shampoo that gently cleanses the hair while leaving it soft, smooth and beautifully refreshed.",
-  fullDescription:
-    "A luxurious Monoi Silk Shampoo designed to gently cleanse and care for the hair. Its silky formula helps leave hair feeling soft, smooth, nourished and naturally radiant.",
+    ritualDetails:
+      "A gentle cleansing ritual that refreshes the hair while enveloping it in a silky Monoi-inspired care experience. Leaves hair feeling clean, soft, smooth and beautifully conditioned.",
 
-  price: 42,
-  size: "500 ml | 16.9 fl.oz",
-  badge: "Monoi Silk Shampoo",
+    composition: [
+      "Monoi",
+      "Silk Protein",
+      "Nourishing Hair Care Complex",
+      "Moisturizing Agents",
+      "Smoothing Agents",
+    ],
 
-  ritualDetails:
-    "A gentle cleansing ritual that refreshes the hair while enveloping it in a silky Monoi-inspired care experience. Leaves hair feeling clean, soft, smooth and beautifully conditioned.",
+    scentNotes: {
+      displaySummary: "Monoi, Soft Floral, Silky Clean",
+    },
 
-  composition: [
-    "Monoi",
-    "Silk Protein",
-    "Nourishing Hair Care Complex",
-    "Moisturizing Agents",
-    "Smoothing Agents",
-  ],
+    benefits: [
+      "Gently cleanses the hair",
+      "Helps leave hair soft, smooth and nourished",
+      "Provides a silky, refreshed feel",
+      "Leaves hair looking healthy and radiant",
+    ],
 
-  scentNotes: {
-    displaySummary: "Monoi, Soft Floral, Silky Clean",
+    image: "/product/11.webp",
+    accentColor: "#C7A15A",
+    rating: 4.91,
+    reviewsCount: 127,
   },
+  {
+    id: "monoi-body-mist",
+    name: "Monoï Body Mist",
+    frenchName: "Brume Corps — Monoï",
+    category: "bodycare",
+    categoryLabel: "Body Care",
+    tagline: "A Tropical Escape In Every Spray",
+    shortDescription:
+      "A tropical Monoi-infused body mist that instantly transports your senses to paradise while leaving skin lightly scented and refreshed.",
+    fullDescription:
+      "A luxurious Monoï Body Mist designed to envelop the skin in a tropical, sun-kissed fragrance. Its refreshing formula provides an exotic escape in every spray, leaving the skin delicately scented and radiant.",
 
-  benefits: [
-    "Gently cleanses the hair",
-    "Helps leave hair soft, smooth and nourished",
-    "Provides a silky, refreshed feel",
-    "Leaves hair looking healthy and radiant",
-  ],
+    price: 38,
+    size: "250 ml | 8.4 fl.oz",
+    badge: "Monoï Body Mist",
 
-  image: "/product/11.webp",
-  accentColor: "#C7A15A",
-  rating: 4.91,
-  reviewsCount: 127,
-},
-{
-  id: "monoi-body-mist",
-  name: "Monoï Body Mist",
-  frenchName: "Brume Corps — Monoï",
-  category: "bodycare",
-  categoryLabel: "Body Care",
-  tagline: "A Tropical Escape In Every Spray",
-  shortDescription:
-    "A tropical Monoi-infused body mist that instantly transports your senses to paradise while leaving skin lightly scented and refreshed.",
-  fullDescription:
-    "A luxurious Monoï Body Mist designed to envelop the skin in a tropical, sun-kissed fragrance. Its refreshing formula provides an exotic escape in every spray, leaving the skin delicately scented and radiant.",
+    ritualDetails:
+      "A sensory misting ritual that refreshes the skin while capturing the essence of a tropical getaway. Leaves the body feeling revitalized, cool, and beautifully fragrant.",
 
-  price: 38,
-  size: "250 ml | 8.4 fl.oz",
-  badge: "Monoï Body Mist",
+    composition: [
+      "Monoï de Tahiti",
+      "Tropical Floral Extracts",
+      "Hydrating Essence",
+      "Refreshing Agents",
+    ],
 
-  ritualDetails:
-    "A sensory misting ritual that refreshes the skin while capturing the essence of a tropical getaway. Leaves the body feeling revitalized, cool, and beautifully fragrant.",
+    scentNotes: {
+      displaySummary: "Monoï, Tiare Flower, Coconut, Warm Sand",
+    },
 
-  composition: [
-    "Monoï de Tahiti",
-    "Tropical Floral Extracts",
-    "Hydrating Essence",
-    "Refreshing Agents"
-  ],
+    benefits: [
+      "Delicately scents the skin with a tropical fragrance",
+      "Provides an instant burst of freshness",
+      "Leaves skin feeling revitalized and refreshed",
+      "Evokes the essence of a sun-kissed getaway",
+    ],
 
-  scentNotes: {
-    displaySummary: "Monoï, Tiare Flower, Coconut, Warm Sand",
+    image: "/product/12.webp",
+    accentColor: "#E3B448",
+    rating: 4.95,
+    reviewsCount: 98,
   },
-
-  benefits: [
-    "Delicately scents the skin with a tropical fragrance",
-    "Provides an instant burst of freshness",
-    "Leaves skin feeling revitalized and refreshed",
-    "Evokes the essence of a sun-kissed getaway",
-  ],
-
-  image: "/product/12.webp",
-  accentColor: "#E3B448",
-  rating: 4.95,
-  reviewsCount: 98,
-},
-
 ];
 
 export const BOTANICAL_INGREDIENTS: BotanicalIngredient[] = [
