@@ -73,21 +73,26 @@ export const Header: React.FC = () => {
   useEffect(() => {
     setMounted(true);
   }, []);
+
   return (
     <>
       <header
-        className={`sticky top-0 z-40 w-full transition-all duration-400 ease-out transform ${isVisible ? "translate-y-0" : "-translate-y-full pointer-events-none"
-          } ${isScrolled
-            ? "bg-[#005F73] md:bg-[#005F73]/98 backdrop-blur-lg border-b border-[#D4AF37]/35 py-3 shadow-md md:shadow-[0_12px_35px_rgba(0,95,115,0.6)]"
-            : "bg-[#005F73] md:bg-gradient-to-r md:from-[#005F73]/95 md:via-[#007288]/80 md:to-[#005F73]/90 py-4 sm:py-5 border-b border-[#D4AF37]/20"
-          }`}
+        className={`sticky top-0 z-40 w-full transition-all duration-400 ease-out transform ${
+          isVisible
+            ? "translate-y-0"
+            : "-translate-y-full pointer-events-none"
+        } ${
+          isScrolled
+            ? "lg:bg-[#005F73] bg-white/98 backdrop-blur-lg border-b border-[#0B4F71]/15 py-3 shadow-md md:shadow-[0_12px_35px_rgba(11,79,113,0.14)]"
+            : "lg:bg-[#005F73] bg-white py-4 sm:py-5 border-b border-[#0B4F71]/10"
+        }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Mobile Hamburger (Left on mobile) */}
           <div className="flex items-center gap-2 lg:hidden">
             <button
               onClick={() => setMobileMenuOpen(true)}
-              className="p-2 transition-colors focus:outline-none text-[#D4AF37] hover:text-[#006073]"
+              className="p-2 transition-colors focus:outline-none text-[#0B4F71] hover:text-[#176B87]"
               aria-label="Open menu"
             >
               <Menu className="w-6 h-6" />
@@ -101,41 +106,33 @@ export const Header: React.FC = () => {
               className="group flex items-center text-left focus:outline-none cursor-pointer"
               aria-label="GHRÉ Home"
             >
-              <img
-                src={logoLight}
-                alt="GHRÉ Logo"
-                className="h-20 sm:h-28 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-              />
-            </button>
-          </div>
-          {/* <div className="lg:hidden flex items-center p-0">
-            <button
-              onClick={() => navigateToPage("home")}
-              className="group flex items-center text-left focus:outline-none cursor-pointer"
-              aria-label="GHRÉ Home"
-            >
+              <img src="/home/mobile-logo.png" alt=""
+              className="hidden lg:block h-20 sm:h-28 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
               <img
                 src="/home/logo.webp"
                 alt="GHRÉ Logo"
-                className="h-20 sm:h-28 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                className="lg:hidden block h-20 sm:h-28 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </button>
-          </div> */}
+          </div>
 
           {/* Desktop Navigation (Center) */}
           <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             {navLinks.map((link) => {
               const isActive =
                 currentPage === link.page ||
-                (link.page === "about-founder" && currentPage === "jac-ghre");
+                (link.page === "about-founder" &&
+                  currentPage === "jac-ghre");
+
               return (
                 <button
                   key={link.name}
                   onClick={() => navigateToPage(link.page)}
-                  className={`font-cinzel text-xs xl:text-[13px] tracking-[0.2em] py-2 transition-all duration-200 cursor-pointer ${isActive
-                    ? "text-[#D4AF37] font-bold border-b-2 border-[#D4AF37]"
-                    : "text-[#E8DCC4] hover:text-[#D4AF37]"
-                    }`}
+                  className={`font-cinzel text-xs xl:text-[13px] tracking-[0.2em] py-2 transition-all duration-200 cursor-pointer ${
+                    isActive
+                      ? "lg:text-[#D4AF37] text-[#0B4F71] font-bold border-b-2 lg:border-[#D4AF37] border-[#0B4F71]"
+                      : "lg:text-[#E8DCC4] lg:hover:text-[#D4AF37] text-[#0B4F71] hover:text-[#176B87]"
+                  }`}
                 >
                   <span>{link.name}</span>
                 </button>
@@ -148,7 +145,7 @@ export const Header: React.FC = () => {
             {/* Account / Concierge */}
             <button
               onClick={() => navigateToPage("contact")}
-              className="p-2 transition-colors cursor-pointer text-[#D4AF37] hover:text-[#006073]"
+              className="p-2 transition-colors cursor-pointer lg:text-[#E8DCC4] lg:hover:text-[#D4AF37] text-[#0B4F71] hover:text-[#176B87]"
               aria-label="Concierge"
               title="GHRÉ Client Concierge"
             >
@@ -158,10 +155,10 @@ export const Header: React.FC = () => {
             {/* Shopping Bag */}
             <button
               onClick={() => setIsCartOpen(true)}
-              className="relative p-2 transition-colors cursor-pointer text-[#006073] hover:text-white"
+              className="relative p-2 transition-colors cursor-pointer lg:text-[#E8DCC4] lg:hover:text-[#D4AF37] text-[#0B4F71] hover:text-[#176B87]"
               aria-label="Shopping Bag"
             >
-              <ShoppingBag className="w-4 h-4 sm:w-5 sm:h-5 text-[#D4AF37]" />
+              <ShoppingBag className="w-4 h-4 sm:w-5 sm:h-5 lg:text-[#E8DCC4] text-[#0B4F71]" />
               {cartCount > 0 && (
                 <span className="absolute top-1 right-1 w-4 h-4 bg-gradient-to-r from-[#F9E8B2] to-[#D4AF37] text-[#0E4C5A] font-cinzel text-[9px] font-bold rounded-full flex items-center justify-center shadow-lg animate-pulse">
                   {cartCount}
@@ -202,6 +199,7 @@ export const Header: React.FC = () => {
                       className="h-24 w-auto object-contain"
                     />
                   </div>
+
                   <button
                     onClick={() => setMobileMenuOpen(false)}
                     className="p-1.5 text-[#D4AF37] hover:text-[#FFF3C4] border border-[#D4AF37]/30"
@@ -216,6 +214,7 @@ export const Header: React.FC = () => {
                     <Clock className="w-3.5 h-3.5" />
                     <span>LAUNCHING SOON</span>
                   </div>
+
                   <span className="text-[10px] font-cinzel text-[#8EAAB0]">
                     GHRÉ
                   </span>
@@ -230,12 +229,13 @@ export const Header: React.FC = () => {
                         setMobileMenuOpen(false);
                         navigateToPage(link.page);
                       }}
-                      className={`block w-full text-left font-cinzel text-sm tracking-[0.22em] py-2.5 border-b border-[#D4AF37]/10 transition-colors ${currentPage === link.page ||
+                      className={`block w-full text-left font-cinzel text-sm tracking-[0.22em] py-2.5 border-b border-[#D4AF37]/10 transition-colors ${
+                        currentPage === link.page ||
                         (link.page === "about-founder" &&
                           currentPage === "jac-ghre")
-                        ? "text-[#D4AF37] font-bold"
-                        : "text-[#E8DCC4] hover:text-[#D4AF37]"
-                        }`}
+                          ? "text-[#D4AF37] font-bold"
+                          : "text-[#E8DCC4] hover:text-[#D4AF37]"
+                      }`}
                     >
                       {link.name}
                     </button>
@@ -257,6 +257,7 @@ export const Header: React.FC = () => {
                   <span className="text-[11px] font-cinzel tracking-[0.3em] text-[#D4AF37] uppercase block font-bold">
                     Luxury Salons & Ateliers
                   </span>
+
                   <p className="text-xs text-[#8EAAB0] font-poppins">
                     Global Private Client Atelier
                   </p>
@@ -267,6 +268,7 @@ export const Header: React.FC = () => {
                 <p className="text-xs font-editorial italic text-[#D4AF37] text-center mb-1">
                   “Making women beautiful is my passion.”
                 </p>
+
                 <span className="block text-[10px] text-center font-cinzel text-[#8EAAB0]">
                   — Jac Ghré
                 </span>
