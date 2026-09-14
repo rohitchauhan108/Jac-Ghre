@@ -189,7 +189,7 @@ export const HeroCarousel: React.FC = () => {
       <div className="hidden md:block w-full bg-[#006073] border-t border-[#D4AF37]/30 py-3 lg:py-4 px-4 lg:px-8">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-3 lg:gap-4">
           {/* BANNERS TAB SELECTOR */}
-          <div className="grid grid-cols-2 sm:grid-cols-5 gap-2 w-full lg:w-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-6 gap-5 w-full lg:w-auto">
             {slides.map((slide, idx) => {
               const isActive = currentIndex === idx;
               return (
