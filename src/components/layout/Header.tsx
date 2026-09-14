@@ -106,11 +106,11 @@ export const Header: React.FC = () => {
               className="group flex items-center text-left focus:outline-none cursor-pointer"
               aria-label="GHRÉ Home"
             >
-              <img src="/home/mobile-logo.png" alt=""
+              <img src="/home/mobile-logo.png" alt="GHRÉ Logo Desktop"
               className="hidden lg:block h-20 sm:h-28 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
               <img
-                src="/home/logo.webp"
-                alt="GHRÉ Logo"
+                src="/home/logo.jpg"
+                alt="GHRÉ Logo Mobile"
                 className="lg:hidden block h-20 sm:h-28 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </button>
