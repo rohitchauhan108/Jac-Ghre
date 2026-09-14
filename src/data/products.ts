@@ -41,7 +41,7 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     secondaryCtaLink: "hair-care",
     accentTheme: "teal-gold",
     image: "/home/banner.webp",
-    mobileImage: "/home/welcome.webp",
+    mobileImage: "/home/new-welcome.webp",
   },
   {
     id: "ghre-collection-lineup",
