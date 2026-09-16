@@ -71,7 +71,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         ${
           isDark
             ? `
-                bg-[#007288]
+                bg-[#a1f6f3]
                 border-[#D4AF37]/30
                 hover:border-[#D4AF37]/80
                 hover:shadow-[0_15px_45px_rgba(0,96,115,0.35)]
@@ -284,7 +284,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           ${
             isDark
               ? `
-                bg-[#007288]
+                bg-[#a1f6f3]
                 border-[#D4AF37]/25
               `
               : `
@@ -310,8 +310,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({
               ${
                 isDark
                   ? `
-                    text-[#F7F4EB]
-                    group-hover:text-[#F3E5AB]
+                    text-[#006073]
+                    group-hover:text-[#062B35]
                   `
                   : `
                     text-[#0E4C5A]
@@ -349,7 +349,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
                 font-semibold
                 tracking-wider
 
-                ${isDark ? "text-[#F7F4EB]" : "text-[#0E4C5A]"}
+                ${isDark ? "text-[#006073]" : "text-[#0E4C5A]"}
               `}
             >
               {formattedPrice}
@@ -375,7 +375,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({
               ${
                 isDark
                   ? `
-                    text-[#D4AF37]
+                  bg-[#D4AF37]
+                  px-2 py-1
+                  rounded-sm
+                    text-white
                     hover:text-[#FFF3C4]
                   `
                   : `
@@ -389,10 +392,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({
               <Loader className="w-3.5 h-3.5 animate-spin" />
             ) : (
               <>
-                <span>Discover</span>
-                <span className="transition-transform duration-300 group-hover/btn:translate-x-1">
+                <span className="font-semibold">Cart</span>
+                {/* <span className="transition-transform duration-300 group-hover/btn:translate-x-1">
                   →
-                </span>
+                </span> */}
               </>
             )}
           </button>

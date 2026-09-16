@@ -218,7 +218,7 @@ export const IntroSection: React.FC = () => {
               className={`group relative p-6 sm:p-7 border transition-all duration-300 cursor-pointer flex flex-col justify-between ${
                 isDark
                   ? `
-                    bg-[#a1f6f3]
+                    bg-[#007288]
                     border-[#D4AF37]/30
                     hover:bg-[#006073]
                     hover:border-[#D4AF37]
@@ -281,7 +281,9 @@ export const IntroSection: React.FC = () => {
                 {/* Title */}
                 <h3
                   className={`font-cinzel text-sm sm:text-base font-bold tracking-wider mb-2.5 ${
-                    isDark ? "text-[#007288]" : "text-[#062B35]"
+                    isDark
+                      ? "text-white group-hover:text-[#FBF9F3]"
+                      : "text-white group-hover:text-[#062B35]"
                   }`}
                 >
                   {item.title}
@@ -290,7 +292,9 @@ export const IntroSection: React.FC = () => {
                 {/* Description */}
                 <p
                   className={`text-xs sm:text-[13px] font-outfit font-light leading-relaxed mb-4 ${
-                    isDark ? "text-[#007288]" : "text-[#4D6972]"
+                    isDark
+                      ? "text-white group-hover:text-[#FBF9F3]"
+                      : "text-white group-hover:text-[#4D6972]"
                   }`}
                 >
                   {item.description}
