@@ -1,5 +1,14 @@
 import type { Metadata } from 'next';
-import { Plus_Jakarta_Sans, Outfit, Playfair_Display, Cinzel, Cinzel_Decorative, Cormorant_Garamond, Pinyon_Script, Alex_Brush } from 'next/font/google';
+import {
+  Plus_Jakarta_Sans,
+  Outfit,
+  Playfair_Display,
+  Cinzel,
+  Cinzel_Decorative,
+  Cormorant_Garamond,
+  Pinyon_Script,
+  Alex_Brush,
+} from 'next/font/google';
 import AppShell from './app-shell';
 import '@/index.css';
 import type { ReactNode } from 'react';
@@ -78,7 +87,11 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: ReactNode;
+}) {
   return (
     <html
       lang="en"

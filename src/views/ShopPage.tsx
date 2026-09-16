@@ -140,7 +140,7 @@ export const ShopPage: React.FC = () => {
               return (
                 <div
                   key={product.id}
-                  className="bg-[#097B8A] border border-[#D4AF37]/35 hover:border-[#D4AF37] transition-all duration-300 flex flex-col justify-between shadow-2xl p-6 relative group"
+                  className="bg-[#a1f6f3] border border-[#D4AF37]/35 hover:border-[#D4AF37] transition-all duration-300 flex flex-col justify-between shadow-2xl p-6 relative group"
                 >
                   <div>
                     {/* Top Row: Badge & Wishlist */}
@@ -194,7 +194,7 @@ export const ShopPage: React.FC = () => {
 
                       <h3
                         onClick={() => setQuickViewProduct(product)}
-                        className="font-cinzel text-lg font-bold text-[#F7F4EB] hover:text-[#D4AF37] cursor-pointer transition-colors leading-snug "
+                        className="font-cinzel text-lg font-bold text-[#007288] hover:text-[#D4AF37] cursor-pointer transition-colors leading-snug "
                       >
                         {product.name}
                       </h3>
@@ -212,7 +212,7 @@ export const ShopPage: React.FC = () => {
                   {/* Price & Action Button */}
                   <div className="mt-6 pt-4 border-t border-[#D4AF37]/20 flex items-center justify-between">
                     <div>
-                      <span className="text-xl font-cinzel font-bold text-[#F7F4EB]">
+                      <span className="text-xl font-cinzel font-bold text-[#007288]">
                         {formattedPrice}
                       </span>
                     </div>
