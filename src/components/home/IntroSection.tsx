@@ -155,19 +155,19 @@ export const IntroSection: React.FC = () => {
 
           {/* Heading */}
           <h2
-            className={`font-playfair text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-balance leading-tight ${
+            className={`text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-balance leading-tight ${
               isDark ? "text-[#FBF9F3]" : "text-[#062B35]"
             }`}
           >
             An Expression of{" "}
-            <span className="italic font-playfair text-[#D4AF37]">
+            <span className="italic text-[#D4AF37]">
               Timeless Beauty
             </span>
           </h2>
 
           {/* Quote */}
           <div className="relative mt-7 px-4 sm:px-12">
-            <span className="absolute -top-6 left-0 sm:left-4 text-5xl sm:text-6xl font-playfair text-[#D4AF37]/25 select-none">
+            <span className="absolute -top-6 left-0 sm:left-4 text-5xl sm:text-6xl text-[#D4AF37]/25 select-none">
               “
             </span>
 
@@ -180,7 +180,7 @@ export const IntroSection: React.FC = () => {
               beautifully.
             </p>
 
-            <span className="absolute -bottom-10 right-0 sm:right-4 text-5xl sm:text-6xl font-playfair text-[#D4AF37]/25 select-none">
+            <span className="absolute -bottom-10 right-0 sm:right-4 text-5xl sm:text-6xl text-[#D4AF37]/25 select-none">
               ”
             </span>
           </div>

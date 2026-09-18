@@ -180,12 +180,12 @@ export const Footer: React.FC = () => {
                 aria-label="GHRÉ Home"
               >
                 <img
-                  src={logoLight}
+                  src="/logo.png"
                   alt="GHRÉ Logo"
                   className="
                     h-16
                     sm:h-20
-                    lg:h-32
+                    lg:h-20
                     w-auto
                     object-contain
                     transition-transform

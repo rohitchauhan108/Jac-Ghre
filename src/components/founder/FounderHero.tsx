@@ -28,7 +28,7 @@ export const FounderHero: React.FC = () => {
             THE MAN. THE NAME.
           </p>
 
-          <p className="mt-5 font-playfair text-xl sm:text-2xl lg:text-3xl italic text-[#F3E5AB]">
+          <p className="font-playfair mt-5 text-xl sm:text-2xl lg:text-3xl italic text-[#F3E5AB]">
             “Making women beautiful is my passion.”
           </p>
           <span className="text-xs font-cinzel tracking-[0.3em] text-[#8EAAB0] uppercase block mt-1">

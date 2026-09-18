@@ -106,7 +106,7 @@ export const ThierryMuglerLegacy: React.FC = () => {
                 THE ATELIER PHILOSOPHY
               </span>
 
-              <blockquote className="font-playfair text-xl sm:text-2xl italic text-[#F3E5AB] leading-relaxed mb-6">
+              <blockquote className="text-xl sm:text-2xl italic text-[#F3E5AB] leading-relaxed mb-6">
                 “Runway models put their hair through extreme heat, styling,
                 and travel daily. I needed a formula that could instantly
                 restore cellular keratin, reflect sunlight like diamonds, and

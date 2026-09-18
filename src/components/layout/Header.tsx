@@ -265,7 +265,7 @@ export const Header: React.FC = () => {
               </div>
 
               <div className="pt-6 border-t border-[#D4AF37]/20">
-                <p className="text-xs font-editorial italic text-[#D4AF37] text-center mb-1">
+                <p className="text-xs font-playfair italic text-[#D4AF37] text-center mb-1">
                   “Making women beautiful is my passion.”
                 </p>
 

@@ -33,7 +33,7 @@ export const VisionSection: React.FC = () => {
               “
             </span>
 
-            <blockquote className="font-editorial text-3xl sm:text-5xl md:text-6xl text-[#F7F4EB] italic leading-tight tracking-wide">
+            <blockquote className="font-playfair text-3xl sm:text-5xl md:text-6xl text-[#F7F4EB] italic leading-tight tracking-wide">
               Making women beautiful is my passion.
             </blockquote>
 
