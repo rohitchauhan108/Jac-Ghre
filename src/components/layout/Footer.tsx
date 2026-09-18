@@ -115,7 +115,7 @@ export const Footer: React.FC = () => {
 
             <div>
               <div className="flex items-center gap-2">
-                <span className="font-cinzel text-xs uppercase tracking-widest text-[#D4AF37] font-bold">
+                <span className=" text-xs uppercase tracking-widest text-[#D4AF37] font-bold">
                   OFFICIAL BOUTIQUE LAUNCH COMING SOON
                 </span>
               </div>
@@ -134,7 +134,7 @@ export const Footer: React.FC = () => {
               py-2.5
               bg-[#D4AF37]
               text-[#062B35]
-              font-cinzel
+              
               text-xs
               font-bold
               uppercase
@@ -198,14 +198,14 @@ export const Footer: React.FC = () => {
 
     
 
-            <p className="text-xs sm:text-sm font-normal leading-relaxed max-w-sm text-[#A5BFC4]">
+            <p className="text-xs sm:text-xl font-normal leading-relaxed max-w-sm text-[#A5BFC4]">
               Haute hair care and solar fragrance rituals formulated with pure
               cold-pressed Moroccan prickly pear oil and botanical extracts by
               master artist Jac Ghré.
             </p>
 
             {/* Founder */}
-            <div className="pt-1 flex items-center gap-4 text-xs font-cinzel text-[#D4AF37]">
+            <div className="pt-1 flex items-center gap-4 text-xs  text-[#D4AF37]">
               <span className="font-script text-2xl text-[#D4AF37]">
                 Jac Ghré
               </span>
@@ -216,7 +216,7 @@ export const Footer: React.FC = () => {
             </div>
 
               {/* <div className="space-y-1.5 text-[11px] sm:text-xs text-[#C5D5D8] leading-relaxed">
-                <p className="font-cinzel text-[#D4AF37] uppercase tracking-[0.18em] text-[10px]">
+                <p className=" text-[#D4AF37] uppercase tracking-[0.18em] text-[10px]">
                   {BRAND_INFO.contact.title}
                 </p>
                 <p className="font-semibold text-[#F7F4EB] uppercase">{BRAND_INFO.contact.name}</p>
@@ -332,11 +332,11 @@ export const Footer: React.FC = () => {
           ===================================================== */}
 
           <div className="space-y-3">
-            <span className="text-[11px] font-cinzel tracking-[0.25em] text-[#D4AF37] uppercase block font-semibold">
+            <span className="text-[11px]  tracking-[0.25em] text-[#D4AF37] uppercase block font-semibold">
               The Maison
             </span>
 
-            <ul className="space-y-2.5 text-xs sm:text-sm">
+            <ul className="space-y-2.5 text-xs sm:text-xl">
               <li>
                 <button
                   onClick={() => navigateToPage('home')}
@@ -398,11 +398,11 @@ export const Footer: React.FC = () => {
           ===================================================== */}
 
           <div className="space-y-3">
-            <span className="text-[11px] font-cinzel tracking-[0.25em] text-[#D4AF37] uppercase block font-semibold">
+            <span className="text-[11px]  tracking-[0.25em] text-[#D4AF37] uppercase block font-semibold">
               Signature Products
             </span>
 
-            <ul className="space-y-2.5 text-xs sm:text-sm">
+            <ul className="space-y-2.5 text-xs sm:text-xl">
 
               <li>
                 <button
@@ -448,14 +448,14 @@ export const Footer: React.FC = () => {
           ===================================================== */}
 
           {/* <div className="space-y-3">
-            <span className="text-[11px] font-cinzel tracking-[0.25em] text-[#D4AF37] uppercase block font-semibold">
+            <span className="text-[11px]  tracking-[0.25em] text-[#D4AF37] uppercase block font-semibold">
               Maison Ateliers
             </span>
 
-            <div className="space-y-3 text-xs sm:text-sm text-[#A5BFC4]">
+            <div className="space-y-3 text-xs sm:text-xl text-[#A5BFC4]">
 
               <div>
-                <strong className="font-cinzel block text-[11px] text-[#F7F4EB]">
+                <strong className=" block text-[11px] text-[#F7F4EB]">
                   PRIVATE CLIENT ATELIER
                 </strong>
                 <span className="text-xs">
@@ -464,7 +464,7 @@ export const Footer: React.FC = () => {
               </div>
 
               <div>
-                <strong className="font-cinzel block text-[11px] text-[#F7F4EB]">
+                <strong className=" block text-[11px] text-[#F7F4EB]">
                   HAUTE COUTURE ATELIER
                 </strong>
                 <span className="text-xs">
@@ -473,7 +473,7 @@ export const Footer: React.FC = () => {
               </div>
 
               <div>
-                <strong className="font-cinzel block text-[11px] text-[#F7F4EB]">
+                <strong className=" block text-[11px] text-[#F7F4EB]">
                   COASTAL SALON
                 </strong>
                 <span className="text-xs">
@@ -484,7 +484,7 @@ export const Footer: React.FC = () => {
             </div>
           </div> */}
           <div className="space-y-1.5 text-[11px] sm:text-xs text-[#C5D5D8] leading-relaxed">
-              <p className="font-cinzel text-[#D4AF37] uppercase tracking-[0.18em] text-[10px]">
+              <p className=" text-[#D4AF37] uppercase tracking-[0.18em] text-[10px]">
                 {BRAND_INFO.contact.title}
               </p>
               <p className="font-semibold text-[#F7F4EB] uppercase">{BRAND_INFO.contact.name}</p>
@@ -511,7 +511,7 @@ export const Footer: React.FC = () => {
             ALL RIGHTS RESERVED.
           </p>
 
-          <div className="flex items-center gap-6 text-[11px] font-cinzel tracking-wider uppercase">
+          <div className="flex items-center gap-6 text-[11px]  tracking-wider uppercase">
 
             <button
               onClick={() => navigateToPage('about-founder')}

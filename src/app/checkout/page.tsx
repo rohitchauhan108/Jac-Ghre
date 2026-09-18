@@ -77,7 +77,7 @@ export default function CheckoutPage() {
           <div className="w-full flex justify-start mb-6">
             <button 
               onClick={() => router.push('/')}
-              className="group inline-flex items-center gap-2 text-xs font-cinzel text-[#D4AF37] hover:text-[#F3E5AB] transition-all tracking-widest uppercase bg-[#097B8A]/40 px-4 py-2 rounded-full border border-[#D4AF37]/20 backdrop-blur-md"
+              className="group inline-flex items-center gap-2 text-xs text-[#D4AF37] hover:text-[#F3E5AB] transition-all tracking-widest uppercase bg-[#097B8A]/40 px-4 py-2 rounded-full border border-[#D4AF37]/20 backdrop-blur-md"
             >
               <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" /> Return to Atelier
             </button>
@@ -85,12 +85,12 @@ export default function CheckoutPage() {
 
           <div className="inline-flex items-center gap-2 px-5 py-2 bg-gradient-to-r from-[#097B8A]/60 via-[#0C8A9B] to-[#097B8A]/60 border border-[#D4AF37]/40 rounded-full shadow-2xl mb-4 backdrop-blur-md">
             <Sparkles className="w-3.5 h-3.5 text-[#D4AF37] animate-pulse" />
-            <span className="text-[10px] font-cinzel font-bold tracking-[0.4em] text-[#D4AF37] uppercase">
+            <span className="text-[10px] font-bold tracking-[0.4em] text-[#D4AF37] uppercase">
               Bespoke Encrypted Checkout
             </span>
           </div>
 
-          <h1 className="font-cinzel text-3xl sm:text-5xl font-light tracking-[0.15em] text-[#FBF9F3] uppercase text-center">
+          <h1 className="text-3xl sm:text-5xl font-light tracking-[0.15em] text-[#FBF9F3] uppercase text-center">
             Finalize Your <span className="text-[#D4AF37] font-normal">Ritual</span>
           </h1>
           <div className="h-[1px] w-32 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mt-5" />
@@ -103,15 +103,15 @@ export default function CheckoutPage() {
               <CheckCircle className="w-10 h-10 text-[#D4AF37]" />
             </div>
             <div>
-              <span className="text-[10px] font-cinzel tracking-[0.3em] text-[#D4AF37] uppercase block mb-1">Acquisition Confirmed</span>
-              <h3 className="font-cinzel text-3xl font-light text-[#FBF9F3]">Atelier Dispatch</h3>
+              <span className="text-[10px] tracking-[0.3em] text-[#D4AF37] uppercase block mb-1">Acquisition Confirmed</span>
+              <h3 className="text-3xl font-light text-[#FBF9F3]">Atelier Dispatch</h3>
             </div>
-            <p className="font-outfit text-sm text-[#C4D8DC] leading-relaxed">
+            <p className="font-outfit text-xl text-[#C4D8DC] leading-relaxed">
               Esteemed <span className="text-[#D4AF37] font-medium">{formData.name}</span>, your private order has been securely registered. Confirmation correspondence and curation updates have been transmitted to <span className="text-[#D4AF37]">{formData.email}</span>.
             </p>
             <button
               onClick={() => router.push('/')}
-              className="w-full py-4 bg-[#D4AF37] text-[#06242B] font-cinzel text-xs font-bold tracking-[0.25em] uppercase hover:bg-[#E2C358] transition-all shadow-xl rounded-lg"
+              className="w-full py-4 bg-[#D4AF37] text-[#06242B] text-xs font-bold tracking-[0.25em] uppercase hover:bg-[#E2C358] transition-all shadow-xl rounded-lg"
             >
               Return to Gallery
             </button>
@@ -122,11 +122,11 @@ export default function CheckoutPage() {
             <div className="w-16 h-16 bg-[#06242B]/50 border border-[#D4AF37]/20 rounded-full flex items-center justify-center mx-auto">
               <ShoppingBag className="w-7 h-7 text-[#D4AF37]/60" />
             </div>
-            <h3 className="font-cinzel text-2xl font-light text-[#FBF9F3]">Your Bag is Empty</h3>
+            <h3 className="text-2xl font-light text-[#FBF9F3]">Your Bag is Empty</h3>
             <p className="font-outfit text-xs text-[#C4D8DC] leading-relaxed">No creations have been selected for your ritual bag. Explore the atelier to curate your collection.</p>
             <button
               onClick={() => router.push('/')}
-              className="w-full py-3.5 border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#06242B] font-cinzel text-xs tracking-[0.2em] uppercase transition-all rounded-lg"
+              className="w-full py-3.5 border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#06242B] text-xs tracking-[0.2em] uppercase transition-all rounded-lg"
             >
               Explore Collection
             </button>
@@ -145,7 +145,7 @@ export default function CheckoutPage() {
                     <MapPin className="w-5 h-5 text-[#D4AF37]" />
                   </div>
                   <div>
-                    <h3 className="font-cinzel text-lg font-medium text-[#FBF9F3] tracking-wide uppercase">
+                    <h3 className="text-lg font-medium text-[#FBF9F3] tracking-wide uppercase">
                       Destination Details
                     </h3>
                     <p className="font-outfit text-xs text-[#8EAAB0]">Where shall we dispatch your curated items?</p>
@@ -162,7 +162,7 @@ export default function CheckoutPage() {
                       onChange={handleChange}
                       placeholder="e.g. Victoria Windsor"
                       required
-                      className="w-full px-4 py-3.5 bg-[#06242B]/70 border border-[#D4AF37]/30 rounded-xl text-[#FBF9F3] placeholder-[#8EAAB0]/50 focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] font-outfit text-sm transition-all"
+                      className="w-full px-4 py-3.5 bg-[#06242B]/70 border border-[#D4AF37]/30 rounded-xl text-[#FBF9F3] placeholder-[#8EAAB0]/50 focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] font-outfit text-xl transition-all"
                     />
                   </div>
 
@@ -176,7 +176,7 @@ export default function CheckoutPage() {
                         onChange={handleChange}
                         placeholder="+1 (555) 019-2834"
                         required
-                        className="w-full px-4 py-3.5 bg-[#06242B]/70 border border-[#D4AF37]/30 rounded-xl text-[#FBF9F3] placeholder-[#8EAAB0]/50 focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] font-outfit text-sm transition-all"
+                        className="w-full px-4 py-3.5 bg-[#06242B]/70 border border-[#D4AF37]/30 rounded-xl text-[#FBF9F3] placeholder-[#8EAAB0]/50 focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] font-outfit text-xl transition-all"
                       />
                     </div>
                     <div>
@@ -188,7 +188,7 @@ export default function CheckoutPage() {
                         onChange={handleChange}
                         placeholder="victoria@luxury.com"
                         required
-                        className="w-full px-4 py-3.5 bg-[#06242B]/70 border border-[#D4AF37]/30 rounded-xl text-[#FBF9F3] placeholder-[#8EAAB0]/50 focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] font-outfit text-sm transition-all"
+                        className="w-full px-4 py-3.5 bg-[#06242B]/70 border border-[#D4AF37]/30 rounded-xl text-[#FBF9F3] placeholder-[#8EAAB0]/50 focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] font-outfit text-xl transition-all"
                       />
                     </div>
                   </div>
@@ -202,7 +202,7 @@ export default function CheckoutPage() {
                       placeholder="Street address, apartment, suite, city, postal code"
                       rows={3}
                       required
-                      className="w-full px-4 py-3.5 bg-[#06242B]/70 border border-[#D4AF37]/30 rounded-xl text-[#FBF9F3] placeholder-[#8EAAB0]/50 focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] font-outfit text-sm transition-all resize-none"
+                      className="w-full px-4 py-3.5 bg-[#06242B]/70 border border-[#D4AF37]/30 rounded-xl text-[#FBF9F3] placeholder-[#8EAAB0]/50 focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] font-outfit text-xl transition-all resize-none"
                     ></textarea>
                   </div>
                 </form>
@@ -237,7 +237,7 @@ export default function CheckoutPage() {
                 <div className="flex items-center justify-between border-b border-[#D4AF37]/20 pb-4">
                   <div className="flex items-center gap-2">
                     <ShoppingBag className="w-5 h-5 text-[#D4AF37]" />
-                    <h3 className="font-cinzel text-base font-bold text-[#FBF9F3] tracking-wide uppercase">
+                    <h3 className="text-base font-bold text-[#FBF9F3] tracking-wide uppercase">
                       Curated Bag
                     </h3>
                   </div>
@@ -257,11 +257,11 @@ export default function CheckoutPage() {
                             <img src={item.product.image} alt={item.product.name} className="max-h-full object-contain filter drop-shadow" />
                           </div>
                           <div>
-                            <p className="font-cinzel text-sm font-medium text-[#FBF9F3] line-clamp-1">{item.product.name}</p>
+                            <p className="text-xl font-medium text-[#FBF9F3] line-clamp-1">{item.product.name}</p>
                             <p className="font-outfit text-xs text-[#8EAAB0]">Qty: {item.quantity} {item.product.size ? `• ${item.product.size}` : ''}</p>
                           </div>
                         </div>
-                        <span className="font-cinzel font-semibold text-[#D4AF37] shrink-0 text-sm">
+                        <span className="font-semibold text-[#D4AF37] shrink-0 text-xl">
                           {currencySymbol}{itemTotal.toFixed(0)}
                         </span>
                       </div>
@@ -270,10 +270,10 @@ export default function CheckoutPage() {
                 </div>
 
                 {/* Financial Summary */}
-                <div className="space-y-3 font-outfit text-sm text-[#C4D8DC] border-t border-b border-[#D4AF37]/20 py-4">
+                <div className="space-y-3 font-outfit text-xl text-[#C4D8DC] border-t border-b border-[#D4AF37]/20 py-4">
                   <div className="flex justify-between">
                     <span className="text-xs tracking-wider uppercase">Subtotal</span>
-                    <span className="font-cinzel text-[#FBF9F3]">{subtotalFormatted}</span>
+                    <span className="text-[#FBF9F3]">{subtotalFormatted}</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <div>
@@ -282,14 +282,14 @@ export default function CheckoutPage() {
                         <span className="text-[10px] text-[#8EAAB0]">Complimentary over ${freeShippingThreshold}</span>
                       )}
                     </div>
-                    <span className="font-cinzel text-[#D4AF37]">{shippingFormatted}</span>
+                    <span className="text-[#D4AF37]">{shippingFormatted}</span>
                   </div>
                 </div>
 
                 {/* Total Balance */}
                 <div className="flex justify-between items-center py-1">
-                  <span className="font-cinzel text-sm font-bold text-[#FBF9F3] uppercase tracking-wider">Total Investment</span>
-                  <span className="font-cinzel text-2xl font-bold text-[#D4AF37]">{totalFormatted}</span>
+                  <span className="text-xl font-bold text-[#FBF9F3] uppercase tracking-wider">Total Investment</span>
+                  <span className="text-2xl font-bold text-[#D4AF37]">{totalFormatted}</span>
                 </div>
 
                 {/* Security Tag */}
@@ -302,7 +302,7 @@ export default function CheckoutPage() {
                 <button
                   type="submit"
                   form="checkout-form"
-                  className="w-full py-4 bg-gradient-to-r from-[#D4AF37] via-[#E6C65C] to-[#D4AF37] text-[#06242B] font-cinzel text-xs font-bold tracking-[0.25em] uppercase hover:brightness-110 transition-all shadow-2xl rounded-xl cursor-pointer flex items-center justify-center gap-2 group"
+                  className="w-full py-4 bg-gradient-to-r from-[#D4AF37] via-[#E6C65C] to-[#D4AF37] text-[#06242B] text-xs font-bold tracking-[0.25em] uppercase hover:brightness-110 transition-all shadow-2xl rounded-xl cursor-pointer flex items-center justify-center gap-2 group"
                 >
                   <ShieldCheck className="w-4 h-4 transition-transform group-hover:scale-110" />
                   <span>Authorize & Pay ({totalFormatted})</span>

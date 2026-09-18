@@ -48,12 +48,12 @@ export const JournalPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <div className="inline-flex items-center gap-2.5 px-4 py-1.5 bg-[#097B8A] border border-[#D4AF37]/50 mb-4 shadow-md">
             <BookOpen className="w-4 h-4 text-[#D4AF37]" />
-            <span className="text-xs font-cinzel font-semibold tracking-[0.3em] text-[#F3E5AB] uppercase">
+            <span className="text-xs  font-semibold tracking-[0.3em] text-[#F3E5AB] uppercase">
               LE JOURNAL BOTANIQUE & SCIENCE
             </span>
           </div>
 
-          <h1 className="font-cinzel text-3xl sm:text-5xl lg:text-6xl font-bold tracking-[0.12em] text-[#F7F4EB] uppercase">
+          <h1 className=" text-3xl sm:text-5xl lg:text-6xl font-bold tracking-[0.12em] text-[#F7F4EB] uppercase">
             The Botanical Journal
           </h1>
 
@@ -61,7 +61,7 @@ export const JournalPage: React.FC = () => {
             “Where clinical trichology meets rare Mediterranean phyto-botany.”
           </p>
 
-          <p className="mt-3 max-w-2xl mx-auto font-poppins text-sm sm:text-base text-[#B5CAD0] font-normal leading-relaxed">
+          <p className="mt-3 max-w-2xl mx-auto font-poppins text-xl sm:text-base text-[#B5CAD0] font-normal leading-relaxed">
             Discover the scientific research, extraction secrets, and formulation philosophies behind every GHRÉ master creation.
           </p>
         </div>
@@ -82,7 +82,7 @@ export const JournalPage: React.FC = () => {
                   alt={article.title}
                   className="w-full h-full object-cover filter contrast-105 hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute top-3 left-3 px-2.5 py-1 bg-[#097B8A]/90 text-[10px] font-cinzel text-[#D4AF37] uppercase tracking-wider">
+                <div className="absolute top-3 left-3 px-2.5 py-1 bg-[#097B8A]/90 text-[10px]  text-[#D4AF37] uppercase tracking-wider">
                   {article.category}
                 </div>
               </div>
@@ -94,11 +94,11 @@ export const JournalPage: React.FC = () => {
                   <span>{article.readTime}</span>
                 </div>
 
-                <h3 className="font-cinzel text-xl sm:text-2xl font-bold text-[#F7F4EB] hover:text-[#D4AF37] cursor-pointer transition-colors leading-snug">
+                <h3 className=" text-xl sm:text-2xl font-bold text-[#F7F4EB] hover:text-[#D4AF37] cursor-pointer transition-colors leading-snug">
                   {article.title}
                 </h3>
 
-                <p className="font-poppins text-sm sm:text-base text-[#B5CAD0] leading-relaxed">
+                <p className="font-poppins text-xl sm:text-base text-[#B5CAD0] leading-relaxed">
                   {article.excerpt}
                 </p>
 
@@ -109,7 +109,7 @@ export const JournalPage: React.FC = () => {
                 <div className="pt-2">
                   <button
                     onClick={() => navigateToPage('hair-care')}
-                    className="inline-flex items-center gap-2 font-cinzel text-xs font-bold text-[#D4AF37] hover:text-[#FFF3C4] uppercase tracking-wider"
+                    className="inline-flex items-center gap-2  text-xs font-bold text-[#D4AF37] hover:text-[#FFF3C4] uppercase tracking-wider"
                   >
                     <span>Explore Formulations Using This Phyto-Complex</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -124,7 +124,7 @@ export const JournalPage: React.FC = () => {
         <div className="mb-20">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <GoldEmblem size={24} withGlow className="mb-2" />
-            <h2 className="font-cinzel text-3xl sm:text-4xl font-bold uppercase text-[#F7F4EB]">
+            <h2 className=" text-3xl sm:text-4xl font-bold uppercase text-[#F7F4EB]">
               The Phyto-Botanical Compendium
             </h2>
             <p className="font-editorial text-xl italic text-[#D4AF37] mt-1">
@@ -142,19 +142,19 @@ export const JournalPage: React.FC = () => {
                   <div className="w-10 h-10 bg-[#021318] border border-[#D4AF37]/40 flex items-center justify-center mb-4">
                     <Leaf className="w-5 h-5 text-[#D4AF37]" />
                   </div>
-                  <h4 className="font-cinzel text-base font-bold text-[#F7F4EB] uppercase">
+                  <h4 className=" text-base font-bold text-[#F7F4EB] uppercase">
                     {ing.name}
                   </h4>
                   <span className="text-xs font-editorial italic text-[#D4AF37] block mt-0.5">
                     {ing.origin}
                   </span>
-                  <p className="font-poppins text-xs sm:text-sm text-[#8EAAB0] mt-3 leading-relaxed">
+                  <p className="font-poppins text-xs sm:text-xl text-[#8EAAB0] mt-3 leading-relaxed">
                     {ing.description}
                   </p>
                 </div>
 
                 <div className="mt-4 pt-3 border-t border-[#D4AF37]/20">
-                  <span className="text-[10px] font-cinzel text-[#D4AF37] uppercase tracking-wider block font-semibold">
+                  <span className="text-[10px]  text-[#D4AF37] uppercase tracking-wider block font-semibold">
                     Primary Key Benefit:
                   </span>
                   <p className="text-xs text-[#F7F4EB] font-poppins mt-0.5">

@@ -39,12 +39,12 @@ export const ContactPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <div className="inline-flex items-center gap-2.5 px-4 py-1.5 bg-[#097B8A] border border-[#D4AF37]/50 mb-4 shadow-md">
             <Mail className="w-4 h-4 text-[#D4AF37]" />
-            <span className="text-xs font-cinzel font-semibold tracking-[0.3em] text-[#F3E5AB] uppercase">
+            <span className="text-xs  font-semibold tracking-[0.3em] text-[#F3E5AB] uppercase">
               CLIENT SERVICES & ATELIER CONCIERGE
             </span>
           </div>
 
-          <h1 className="font-cinzel text-3xl sm:text-5xl lg:text-6xl font-bold tracking-[0.12em] text-[#F7F4EB] uppercase">
+          <h1 className=" text-3xl sm:text-5xl lg:text-6xl font-bold tracking-[0.12em] text-[#F7F4EB] uppercase">
             Contact & Client Care
           </h1>
 
@@ -60,29 +60,29 @@ export const ContactPage: React.FC = () => {
           {/* Contact Information & Flagships */}
           <div className="lg:col-span-5 space-y-8">
             <div className="bg-[#097B8A] border border-[#D4AF37]/35 p-6 sm:p-8 shadow-xl">
-              <h3 className="font-cinzel text-xl font-bold text-[#F7F4EB] uppercase mb-6 flex items-center gap-2">
+              <h3 className=" text-xl font-bold text-[#F7F4EB] uppercase mb-6 flex items-center gap-2">
                 <GoldEmblem size={20} withGlow />
                 <span>MIÀMI SPA & BEAUTY SALON</span>
               </h3>
 
               <div className="space-y-4 mb-6 border-b border-[#D4AF37]/20 pb-6">
                 <div className="text-[#F7F4EB] space-y-2">
-                  <div className="font-cinzel text-xs uppercase tracking-[0.25em] text-[#D4AF37]">
+                  <div className=" text-xs uppercase tracking-[0.25em] text-[#D4AF37]">
                     JAC GHRÉ
                   </div>
-                  <div className="font-cinzel text-base font-bold text-[#F3E5AB] uppercase">
+                  <div className=" text-base font-bold text-[#F3E5AB] uppercase">
                     AMBASSADOR FOR EXCELLENCE
                   </div>
-                  <div className="font-cinzel text-base font-bold text-[#F3E5AB] uppercase">
+                  <div className=" text-base font-bold text-[#F3E5AB] uppercase">
                     BEAUTY EXPERT & CONSULTANT
                   </div>
-                  <p className="font-poppins text-xs sm:text-sm text-[#C5D5D8]">
+                  <p className="font-poppins text-xs sm:text-xl text-[#C5D5D8]">
                     International Hair Designer
                   </p>
-                  <p className="font-poppins text-xs sm:text-sm text-[#C5D5D8]">
+                  <p className="font-poppins text-xs sm:text-xl text-[#C5D5D8]">
                     Luxury Hair Care
                   </p>
-                  <p className="font-poppins text-xs sm:text-sm text-[#C5D5D8]">
+                  <p className="font-poppins text-xs sm:text-xl text-[#C5D5D8]">
                     American Beauty Company. LLC
                   </p>
                 </div>
@@ -92,10 +92,10 @@ export const ContactPage: React.FC = () => {
                 {/* <div className="flex items-start gap-4">
                   <MapPin className="w-5 h-5 text-[#D4AF37] shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-cinzel text-sm font-bold text-[#F3E5AB] uppercase">
+                    <h4 className=" text-xl font-bold text-[#F3E5AB] uppercase">
                       Flagship Atelier
                     </h4>
-                    <p className="font-poppins text-xs sm:text-sm text-[#8EAAB0] mt-0.5">
+                    <p className="font-poppins text-xs sm:text-xl text-[#8EAAB0] mt-0.5">
                       Global Service
                     </p>
                   </div>
@@ -104,10 +104,10 @@ export const ContactPage: React.FC = () => {
                 <div className="flex items-start gap-4">
                   <MapPin className="w-5 h-5 text-[#D4AF37] shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-cinzel text-sm font-bold text-[#F3E5AB] uppercase">
+                    <h4 className=" text-xl font-bold text-[#F3E5AB] uppercase">
                       PRIVATE SPA & BEAUTY SALON
                     </h4>
-                    <p className="font-poppins text-xs sm:text-sm text-[#8EAAB0] mt-0.5">
+                    <p className="font-poppins text-xs sm:text-xl text-[#8EAAB0] mt-0.5">
                       GLOBAL PRIVATE CLIENT SERVICE
                     </p>
                   </div>
@@ -116,10 +116,10 @@ export const ContactPage: React.FC = () => {
                 {/* <div className="flex items-start gap-4">
                   <MapPin className="w-5 h-5 text-[#D4AF37] shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-cinzel text-sm font-bold text-[#F3E5AB] uppercase">
+                    <h4 className=" text-xl font-bold text-[#F3E5AB] uppercase">
                       Private Studio
                     </h4>
-                    <p className="font-poppins text-xs sm:text-sm text-[#8EAAB0] mt-0.5">
+                    <p className="font-poppins text-xs sm:text-xl text-[#8EAAB0] mt-0.5">
                       Route des Plages, 83350 Ramatuelle, France
                     </p>
                   </div>
@@ -127,15 +127,15 @@ export const ContactPage: React.FC = () => {
               </div>
 
               <div className="mt-8 pt-6 border-t border-[#D4AF37]/20 space-y-3">
-                <div className="flex items-center gap-3 text-xs sm:text-sm text-[#B5CAD0] font-poppins">
+                <div className="flex items-center gap-3 text-xs sm:text-xl text-[#B5CAD0] font-poppins">
                   <Mail className="w-4 h-4 text-[#D4AF37]" />
                   <span>Ghrebeauty@gmail.com</span>
                 </div>
-                <div className="flex items-center gap-3 text-xs sm:text-sm text-[#B5CAD0] font-poppins">
+                <div className="flex items-center gap-3 text-xs sm:text-xl text-[#B5CAD0] font-poppins">
                   <Phone className="w-4 h-4 text-[#D4AF37]" />
                   <span>Cell USA: (1) 786 238 3631</span>
                 </div>
-                <div className="flex items-center gap-3 text-xs sm:text-sm text-[#B5CAD0] font-poppins">
+                <div className="flex items-center gap-3 text-xs sm:text-xl text-[#B5CAD0] font-poppins">
                   <Clock className="w-4 h-4 text-[#D4AF37]" />
                   <span>Concierge desk available 24/7 for VIP clients</span>
                 </div>
@@ -145,20 +145,20 @@ export const ContactPage: React.FC = () => {
 
           {/* Contact Message Form */}
           <div className="lg:col-span-7 bg-[#097B8A] border-2 border-[#D4AF37]/50 p-6 sm:p-10 shadow-2xl">
-            <h3 className="font-cinzel text-2xl font-bold text-[#F7F4EB] uppercase mb-2">
+            <h3 className=" text-2xl font-bold text-[#F7F4EB] uppercase mb-2">
               Send a Message
             </h3>
-            <p className="font-poppins text-sm text-[#8EAAB0] mb-8">
+            <p className="font-poppins text-xl text-[#8EAAB0] mb-8">
               Whether you need personalized hair care recommendations, order assistance, or wholesale inquiries, our team is here for you.
             </p>
 
             {formSubmitted ? (
               <div className="p-8 bg-[#097B8A] border border-[#D4AF37] text-center">
                 <CheckCircle2 className="w-12 h-12 text-[#D4AF37] mx-auto mb-3" />
-                <h4 className="font-cinzel text-xl font-bold text-[#F7F4EB] uppercase">
+                <h4 className=" text-xl font-bold text-[#F7F4EB] uppercase">
                   Message Sent Successfully
                 </h4>
-                <p className="font-poppins text-sm text-[#B5CAD0] mt-2">
+                <p className="font-poppins text-xl text-[#B5CAD0] mt-2">
                   Thank you for contacting GHRÉ. A dedicated beauty advisor will reply to your inquiry within 4 business hours.
                 </p>
               </div>
@@ -166,34 +166,34 @@ export const ContactPage: React.FC = () => {
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block font-cinzel text-xs text-[#D4AF37] uppercase tracking-wider mb-2">
+                    <label className="block  text-xs text-[#D4AF37] uppercase tracking-wider mb-2">
                       Full Name
                     </label>
                     <input
                       type="text"
                       required
                       placeholder="Jane Doe"
-                      className="w-full px-4 py-3 bg-[#097B8A] border border-[#D4AF37]/40 text-sm text-[#F7F4EB] placeholder-[#8EAAB0] font-poppins outline-none focus:border-[#D4AF37]"
+                      className="w-full px-4 py-3 bg-[#097B8A] border border-[#D4AF37]/40 text-xl text-[#F7F4EB] placeholder-[#8EAAB0] font-poppins outline-none focus:border-[#D4AF37]"
                     />
                   </div>
                   <div>
-                    <label className="block font-cinzel text-xs text-[#D4AF37] uppercase tracking-wider mb-2">
+                    <label className="block  text-xs text-[#D4AF37] uppercase tracking-wider mb-2">
                       Email Address
                     </label>
                     <input
                       type="email"
                       required
                       placeholder="client@luxury.com"
-                      className="w-full px-4 py-3 bg-[#097B8A] border border-[#D4AF37]/40 text-sm text-[#F7F4EB] placeholder-[#8EAAB0] font-poppins outline-none focus:border-[#D4AF37]"
+                      className="w-full px-4 py-3 bg-[#097B8A] border border-[#D4AF37]/40 text-xl text-[#F7F4EB] placeholder-[#8EAAB0] font-poppins outline-none focus:border-[#D4AF37]"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block font-cinzel text-xs text-[#D4AF37] uppercase tracking-wider mb-2">
+                  <label className="block  text-xs text-[#D4AF37] uppercase tracking-wider mb-2">
                     Inquiry Topic
                   </label>
-                  <select className="w-full px-4 py-3 bg-[#097B8A] border border-[#D4AF37]/40 text-sm text-[#F7F4EB] font-poppins outline-none focus:border-[#D4AF37] cursor-pointer">
+                  <select className="w-full px-4 py-3 bg-[#097B8A] border border-[#D4AF37]/40 text-xl text-[#F7F4EB] font-poppins outline-none focus:border-[#D4AF37] cursor-pointer">
                     <option>Product & Hair Care Consultation</option>
                     <option>Order Tracking & Shipping</option>
                     <option>Wholesale & Luxury Salon Inquiries</option>
@@ -202,20 +202,20 @@ export const ContactPage: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block font-cinzel text-xs text-[#D4AF37] uppercase tracking-wider mb-2">
+                  <label className="block  text-xs text-[#D4AF37] uppercase tracking-wider mb-2">
                     Your Message
                   </label>
                   <textarea
                     rows={4}
                     required
                     placeholder="How may our concierges assist you today?"
-                    className="w-full px-4 py-3 bg-[#097B8A] border border-[#D4AF37]/40 text-sm text-[#F7F4EB] placeholder-[#8EAAB0] font-poppins outline-none focus:border-[#D4AF37]"
+                    className="w-full px-4 py-3 bg-[#097B8A] border border-[#D4AF37]/40 text-xl text-[#F7F4EB] placeholder-[#8EAAB0] font-poppins outline-none focus:border-[#D4AF37]"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full py-4 bg-gradient-to-r from-[#D4AF37] via-[#E5C365] to-[#B89028] text-[#0E4C5A] font-cinzel text-xs sm:text-sm font-bold tracking-[0.2em] uppercase hover:brightness-110 shadow-xl transition-all flex items-center justify-center gap-2"
+                  className="w-full py-4 bg-gradient-to-r from-[#D4AF37] via-[#E5C365] to-[#B89028] text-[#0E4C5A]  text-xs sm:text-xl font-bold tracking-[0.2em] uppercase hover:brightness-110 shadow-xl transition-all flex items-center justify-center gap-2"
                 >
                   <Send className="w-4 h-4" />
                   <span>Transmit Message</span>
@@ -229,7 +229,7 @@ export const ContactPage: React.FC = () => {
         <div className="p-8 sm:p-12 bg-[#097B8A] border border-[#D4AF37]/35 shadow-2xl">
           <div className="text-center max-w-2xl mx-auto mb-10">
             <HelpCircle className="w-8 h-8 text-[#D4AF37] mx-auto mb-2" />
-            <h3 className="font-cinzel text-2xl font-bold text-[#F7F4EB] uppercase">
+            <h3 className=" text-2xl font-bold text-[#F7F4EB] uppercase">
               Frequently Asked Questions
             </h3>
           </div>
@@ -242,7 +242,7 @@ export const ContactPage: React.FC = () => {
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                  className="w-full p-5 text-left flex items-center justify-between font-cinzel text-sm sm:text-base font-bold text-[#F7F4EB] hover:text-[#D4AF37]"
+                  className="w-full p-5 text-left flex items-center justify-between  text-xl sm:text-base font-bold text-[#F7F4EB] hover:text-[#D4AF37]"
                 >
                   <span>{faq.q}</span>
                   <ChevronDown
@@ -252,7 +252,7 @@ export const ContactPage: React.FC = () => {
                   />
                 </button>
                 {openFaq === index && (
-                  <div className="px-5 pb-5 font-poppins text-sm text-[#B5CAD0] leading-relaxed border-t border-[#D4AF37]/15 pt-3">
+                  <div className="px-5 pb-5 font-poppins text-xl text-[#B5CAD0] leading-relaxed border-t border-[#D4AF37]/15 pt-3">
                     {faq.a}
                   </div>
                 )}

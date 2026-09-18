@@ -100,12 +100,12 @@ export const ShopPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <div className="inline-flex items-center gap-2.5 px-4 py-1.5 bg-[#097B8A] border border-[#D4AF37]/50 mb-4 shadow-md">
             <Sparkles className="w-4 h-4 text-[#D4AF37]" />
-            <span className="text-xs font-cinzel font-semibold tracking-[0.3em] text-[#F3E5AB] uppercase">
+            <span className="text-xs  font-semibold tracking-[0.3em] text-[#F3E5AB] uppercase">
               HAUTE FORMULATIONS
             </span>
           </div>
 
-          <h1 className="font-cinzel text-3xl sm:text-5xl lg:text-6xl font-bold tracking-[0.12em] text-[#F7F4EB] uppercase">
+          <h1 className=" text-3xl sm:text-5xl lg:text-6xl font-bold tracking-[0.12em] text-[#F7F4EB] uppercase">
             The Complete GHRÉ Catalog
           </h1>
 
@@ -113,7 +113,7 @@ export const ShopPage: React.FC = () => {
             “Artisanal Moroccan Prickly Pear, Polynesian Monoï & Grasse Essences.”
           </p>
 
-          <p className="mt-3 max-w-2xl mx-auto font-poppins text-sm sm:text-base text-[#B5CAD0] font-normal leading-relaxed">
+          <p className="mt-3 max-w-2xl mx-auto font-poppins text-xl sm:text-base text-[#B5CAD0] font-normal leading-relaxed">
             Explore all 9 signature creations formulated by Master Hair Artist Jac Ghré.
           </p>
         </div>
@@ -124,10 +124,10 @@ export const ShopPage: React.FC = () => {
         {filteredProducts.length === 0 ? (
           <div className="text-center py-20 bg-[#097B8A] border border-[#D4AF37]/30 p-8">
             <GoldEmblem size={28} withGlow className="mb-3" />
-            <h3 className="font-cinzel text-xl font-bold text-[#F7F4EB] uppercase">
+            <h3 className=" text-xl font-bold text-[#F7F4EB] uppercase">
               No Creations Found
             </h3>
-            <p className="font-poppins text-sm text-[#B5CAD0] mt-2">
+            <p className="font-poppins text-xl text-[#B5CAD0] mt-2">
               No products match your current view.
             </p>
           </div>
@@ -145,7 +145,7 @@ export const ShopPage: React.FC = () => {
                   <div>
                     {/* Top Row: Badge & Wishlist */}
                     {/* <div className="flex items-center justify-between mb-3">
-                      <span className="text-[10px] font-cinzel font-semibold tracking-widest text-[#D4AF37] uppercase bg-[#097B8A] px-2 py-0.5 border border-[#D4AF37]/30">
+                      <span className="text-[10px]  font-semibold tracking-widest text-[#D4AF37] uppercase bg-[#097B8A] px-2 py-0.5 border border-[#D4AF37]/30">
                         {product.badge || product.categoryLabel}
                       </span>
                       <button
@@ -172,7 +172,7 @@ export const ShopPage: React.FC = () => {
                         className="max-h-full object-contain filter drop-shadow-[0_12px_24px_rgba(0,0,0,0.85)] group-hover/img:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-[#097B8A]/70 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center gap-2">
-                        <span className="px-3.5 py-1.5 bg-[#D4AF37] text-[#0E4C5A] font-cinzel text-xs font-bold uppercase tracking-wider flex items-center gap-1.5">
+                        <span className="px-3.5 py-1.5 bg-[#D4AF37] text-[#0E4C5A]  text-xs font-bold uppercase tracking-wider flex items-center gap-1.5">
                           <Eye className="w-3.5 h-3.5" />
                           Quick detailed
                           {/* Dossier */}
@@ -194,7 +194,7 @@ export const ShopPage: React.FC = () => {
 
                       <h3
                         onClick={() => setQuickViewProduct(product)}
-                        className="font-cinzel text-lg font-bold text-[#007288] hover:text-[#D4AF37] cursor-pointer transition-colors leading-snug "
+                        className=" text-lg font-bold text-[#007288] hover:text-[#D4AF37] cursor-pointer transition-colors leading-snug "
                       >
                         {product.name}
                       </h3>
@@ -203,7 +203,7 @@ export const ShopPage: React.FC = () => {
                         {product.tagline}
                       </p> */}
 
-                      {/* <p className="text-xs sm:text-sm text-[#8EAAB0] font-poppins line-clamp-2 pt-1 leading-relaxed">
+                      {/* <p className="text-xs sm:text-xl text-[#8EAAB0] font-poppins line-clamp-2 pt-1 leading-relaxed">
                         {product.shortDescription}
                       </p> */}
                     </div>
@@ -212,7 +212,7 @@ export const ShopPage: React.FC = () => {
                   {/* Price & Action Button */}
                   <div className="mt-6 pt-4 border-t border-[#D4AF37]/20 flex items-center justify-between">
                     <div>
-                      <span className="text-xl font-cinzel font-bold text-[#007288]">
+                      <span className="text-xl  font-bold text-[#007288]">
                         {formattedPrice}
                       </span>
                     </div>
@@ -227,7 +227,7 @@ export const ShopPage: React.FC = () => {
                       </button>
                       <button
                         onClick={() => addToCart(product)}
-                        className="px-4 py-2.5 bg-[#D4AF37] text-[#0E4C5A] font-cinzel text-xs font-bold uppercase tracking-wider hover:brightness-110 shadow-lg flex items-center gap-1.5 transition-all"
+                        className="px-4 py-2.5 bg-[#D4AF37] text-[#0E4C5A]  text-xs font-bold uppercase tracking-wider hover:brightness-110 shadow-lg flex items-center gap-1.5 transition-all"
                       >
                         <ShoppingBag className="w-3.5 h-3.5" />
                         <span>Cart</span>

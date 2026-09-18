@@ -27,16 +27,16 @@ export const SupermodelsPortfolio: React.FC = () => {
         {/* <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#006073] border border-[#D4AF37]/40 mb-3 shadow-md">
             <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
-            <span className="text-[11px] font-cinzel font-bold tracking-[0.3em] text-[#D4AF37] uppercase">
+            <span className="text-[11px]  font-bold tracking-[0.3em] text-[#D4AF37] uppercase">
               THE RUNWAY ROSTER
             </span>
           </div>
 
-          <h2 className="font-cinzel text-3xl sm:text-5xl font-bold tracking-wide uppercase text-[#FBF9F3]">
+          <h2 className=" text-3xl sm:text-5xl font-bold tracking-wide uppercase text-[#FBF9F3]">
             Supermodels & Global Celebrities
           </h2>
 
-          <p className="mt-4 font-outfit text-sm sm:text-base text-[#B3CBD1] font-light max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-4 font-outfit text-xl sm:text-base text-[#B3CBD1] font-light max-w-2xl mx-auto leading-relaxed">
             Throughout his celebrated career, Jac Ghré has created signature runway looks and editorial hair artistry for the world's most iconic supermodels, film legends, and haute couture houses.
           </p>
         </div> */}
@@ -45,7 +45,7 @@ export const SupermodelsPortfolio: React.FC = () => {
         {/* <div className="mb-16">
           <div className="flex items-center gap-3 mb-6">
             <Crown className="w-4 h-4 text-[#D4AF37]" />
-            <h3 className="font-cinzel text-xs sm:text-sm font-bold tracking-[0.3em] text-[#D4AF37] uppercase">
+            <h3 className=" text-xs sm:text-xl font-bold tracking-[0.3em] text-[#D4AF37] uppercase">
               World-Renowned Supermodels Worked With
             </h3>
             <div className="flex-1 h-px bg-gradient-to-r from-[#D4AF37]/40 to-transparent" />
@@ -62,12 +62,12 @@ export const SupermodelsPortfolio: React.FC = () => {
                 className="p-5 bg-gradient-to-br from-[#007288] to-[#006073] border border-[#D4AF37]/35 hover:border-[#D4AF37] transition-all group relative shadow-lg"
               >
                 <div className="flex items-start justify-between gap-3 mb-2">
-                  <div className="w-8 h-8 rounded-full bg-[#006073] border border-[#D4AF37]/50 flex items-center justify-center text-[#D4AF37] text-xs font-cinzel font-bold">
+                  <div className="w-8 h-8 rounded-full bg-[#006073] border border-[#D4AF37]/50 flex items-center justify-center text-[#D4AF37] text-xs  font-bold">
                     0{idx + 1}
                   </div>
                   <Star className="w-3.5 h-3.5 text-[#D4AF37] opacity-60 group-hover:opacity-100 transition-opacity" />
                 </div>
-                <h4 className="font-cinzel text-base font-bold text-[#FBF9F3] group-hover:text-[#F3E5AB] transition-colors">
+                <h4 className=" text-base font-bold text-[#FBF9F3] group-hover:text-[#F3E5AB] transition-colors">
                   {model.name}
                 </h4>
                 <p className="text-xs font-outfit text-[#8EAAB0] mt-1 font-light">
@@ -82,7 +82,7 @@ export const SupermodelsPortfolio: React.FC = () => {
         {/* <div className="mb-16">
           <div className="flex items-center gap-3 mb-6">
             <Star className="w-4 h-4 text-[#D4AF37]" />
-            <h3 className="font-cinzel text-xs sm:text-sm font-bold tracking-[0.3em] text-[#D4AF37] uppercase">
+            <h3 className=" text-xs sm:text-xl font-bold tracking-[0.3em] text-[#D4AF37] uppercase">
               High-Profile Celebrity Portfolio
             </h3>
             <div className="flex-1 h-px bg-gradient-to-r from-[#D4AF37]/40 to-transparent" />
@@ -95,9 +95,9 @@ export const SupermodelsPortfolio: React.FC = () => {
                 className="p-6 bg-[#006073] border-2 border-[#D4AF37]/40 text-center relative shadow-xl"
               >
                 <GoldEmblem size={20} className="mx-auto mb-2" />
-                <h4 className="font-cinzel text-lg font-bold text-[#FBF9F3]">{celeb.name}</h4>
+                <h4 className=" text-lg font-bold text-[#FBF9F3]">{celeb.name}</h4>
                 <p className="text-xs font-outfit text-[#C4D8DC] mt-1 font-light">{celeb.title}</p>
-                <span className="inline-block mt-3 px-3 py-1 bg-[#006073] border border-[#D4AF37]/30 text-[10px] font-cinzel text-[#D4AF37] uppercase tracking-wider">
+                <span className="inline-block mt-3 px-3 py-1 bg-[#006073] border border-[#D4AF37]/30 text-[10px]  text-[#D4AF37] uppercase tracking-wider">
                   Private VIP Styling
                 </span>
               </div>
@@ -107,15 +107,15 @@ export const SupermodelsPortfolio: React.FC = () => {
 
         <div className="p-8 bg-[#006073] border border-[#D4AF37]/50">
           <div className="text-center mb-6">
-            <span className="text-[11px] font-cinzel font-bold tracking-[0.3em] text-[#D4AF37] uppercase block">
+            <span className="text-[11px]  font-bold tracking-[0.3em] text-[#D4AF37] uppercase block">
               INTERNATIONAL RUNWAY ARTISTRY
             </span>
-            <h4 className="font-cinzel text-lg sm:text-xl font-bold text-[#FBF9F3] uppercase mt-1">
+            <h4 className=" text-lg sm:text-xl font-bold text-[#FBF9F3] uppercase mt-1">
               Where Jac Ghré Directed Haute Couture Hair Artistry
             </h4>
           </div>
 
-          <p className="max-w-2xl mx-auto text-center text-sm font-outfit text-[#8EAAB0] leading-relaxed">
+          <p className="max-w-2xl mx-auto text-center text-xl font-outfit text-[#8EAAB0] leading-relaxed">
             Signature hair artistry shaped by haute couture, editorial campaigns, and unforgettable runway moments.
           </p>
         </div>

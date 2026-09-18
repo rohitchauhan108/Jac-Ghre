@@ -128,7 +128,7 @@ export const Header: React.FC = () => {
                 <button
                   key={link.name}
                   onClick={() => navigateToPage(link.page)}
-                  className={`font-cinzel text-xs xl:text-[13px] tracking-[0.2em] py-2 transition-all duration-200 cursor-pointer ${
+                  className={` text-xs xl:text-[13px] tracking-[0.2em] py-2 transition-all duration-200 cursor-pointer ${
                     isActive
                       ? "lg:text-[#D4AF37] text-[#0B4F71] font-bold border-b-2 lg:border-[#D4AF37] border-[#0B4F71]"
                       : "lg:text-[#E8DCC4] lg:hover:text-[#D4AF37] text-[#0B4F71] hover:text-[#176B87]"
@@ -160,7 +160,7 @@ export const Header: React.FC = () => {
             >
               <ShoppingBag className="w-4 h-4 sm:w-5 sm:h-5 lg:text-[#E8DCC4] text-[#0B4F71]" />
               {cartCount > 0 && (
-                <span className="absolute top-1 right-1 w-4 h-4 bg-gradient-to-r from-[#F9E8B2] to-[#D4AF37] text-[#0E4C5A] font-cinzel text-[9px] font-bold rounded-full flex items-center justify-center shadow-lg animate-pulse">
+                <span className="absolute top-1 right-1 w-4 h-4 bg-gradient-to-r from-[#F9E8B2] to-[#D4AF37] text-[#0E4C5A]  text-[9px] font-bold rounded-full flex items-center justify-center shadow-lg animate-pulse">
                   {cartCount}
                 </span>
               )}
@@ -210,12 +210,12 @@ export const Header: React.FC = () => {
 
                 {/* Coming Soon Notice inside Mobile Drawer */}
                 <div className="flex items-center justify-between gap-2 p-3 bg-[#006073]/60 border border-[#D4AF37]/30 mb-5">
-                  <div className="flex items-center gap-1.5 text-[11px] font-cinzel text-[#D4AF37] font-bold">
+                  <div className="flex items-center gap-1.5 text-[11px]  text-[#D4AF37] font-bold">
                     <Clock className="w-3.5 h-3.5" />
                     <span>LAUNCHING SOON</span>
                   </div>
 
-                  <span className="text-[10px] font-cinzel text-[#8EAAB0]">
+                  <span className="text-[10px]  text-[#8EAAB0]">
                     GHRÉ
                   </span>
                 </div>
@@ -229,7 +229,7 @@ export const Header: React.FC = () => {
                         setMobileMenuOpen(false);
                         navigateToPage(link.page);
                       }}
-                      className={`block w-full text-left font-cinzel text-sm tracking-[0.22em] py-2.5 border-b border-[#D4AF37]/10 transition-colors ${
+                      className={`block w-full text-left  text-xl tracking-[0.22em] py-2.5 border-b border-[#D4AF37]/10 transition-colors ${
                         currentPage === link.page ||
                         (link.page === "about-founder" &&
                           currentPage === "jac-ghre")
@@ -248,13 +248,13 @@ export const Header: React.FC = () => {
                       setMobileMenuOpen(false);
                       setIsWelcomePopupOpen(true);
                     }}
-                    className="w-full py-2.5 bg-[#006073] border border-[#D4AF37] text-[#F3E5AB] font-cinzel text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 mb-3"
+                    className="w-full py-2.5 bg-[#006073] border border-[#D4AF37] text-[#F3E5AB]  text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 mb-3"
                   >
                     <Gift className="w-3.5 h-3.5 text-[#D4AF37]" />
                     <span>Launch Notice</span>
                   </button>
 
-                  <span className="text-[11px] font-cinzel tracking-[0.3em] text-[#D4AF37] uppercase block font-bold">
+                  <span className="text-[11px]  tracking-[0.3em] text-[#D4AF37] uppercase block font-bold">
                     Luxury Salons & Ateliers
                   </span>
 
@@ -269,7 +269,7 @@ export const Header: React.FC = () => {
                   “Making women beautiful is my passion.”
                 </p>
 
-                <span className="block text-[10px] text-center font-cinzel text-[#8EAAB0]">
+                <span className="block text-[10px] text-center  text-[#8EAAB0]">
                   — Jac Ghré
                 </span>
               </div>

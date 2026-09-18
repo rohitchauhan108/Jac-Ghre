@@ -24,25 +24,25 @@ export const ThierryMuglerLegacy: React.FC = () => {
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#006073] border border-[#D4AF37]/50">
               <Scissors className="w-3.5 h-3.5 text-[#D4AF37]" />
 
-              <span className="text-[11px] font-cinzel font-bold tracking-[0.3em] text-[#D4AF37] uppercase">
+              <span className="text-[11px]  font-bold tracking-[0.3em] text-[#D4AF37] uppercase">
                 HAUTE COUTURE DIRECTION
               </span>
             </div>
 
-            <h2 className="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-bold text-[#FBF9F3] uppercase leading-tight">
+            <h2 className=" text-3xl sm:text-4xl lg:text-5xl font-bold text-[#FBF9F3] uppercase leading-tight">
               Hair Director for{' '}
               <span className="text-[#D4AF37]">Thierry Mugler</span>{' '}
               & Elite Model World
             </h2>
 
-            <p className="font-outfit text-sm sm:text-base text-[#C2D6DC] font-light leading-relaxed">
+            <p className="font-outfit text-xl sm:text-base text-[#C2D6DC] font-light leading-relaxed">
               Serving as Hair Director for legendary French couturier{' '}
               <strong>Thierry Mugler</strong>, Jac Ghré commanded backstage
               teams for defining fashion moments across the world's leading
               fashion stages.
             </p>
 
-            <p className="font-outfit text-sm sm:text-base text-[#C2D6DC] font-light leading-relaxed">
+            <p className="font-outfit text-xl sm:text-base text-[#C2D6DC] font-light leading-relaxed">
               These high-intensity collaborations encompassed haute couture
               runway presentations, global editorial covers, luxury fragrance
               campaigns, and exclusive red-carpet showcases — setting the
@@ -57,7 +57,7 @@ export const ThierryMuglerLegacy: React.FC = () => {
                 <CheckCircle2 className="w-5 h-5 text-[#D4AF37] shrink-0 mt-0.5" />
 
                 <div>
-                  <h4 className="font-cinzel text-xs font-bold text-[#F3E5AB] uppercase tracking-wider">
+                  <h4 className=" text-xs font-bold text-[#F3E5AB] uppercase tracking-wider">
                     Prestigious Artistic Directorship
                   </h4>
 
@@ -73,7 +73,7 @@ export const ThierryMuglerLegacy: React.FC = () => {
                 <CheckCircle2 className="w-5 h-5 text-[#D4AF37] shrink-0 mt-0.5" />
 
                 <div>
-                  <h4 className="font-cinzel text-xs font-bold text-[#F3E5AB] uppercase tracking-wider">
+                  <h4 className=" text-xs font-bold text-[#F3E5AB] uppercase tracking-wider">
                     Elite Model World Global Partnerships
                   </h4>
 
@@ -102,7 +102,7 @@ export const ThierryMuglerLegacy: React.FC = () => {
                 <GoldEmblem size={24} withGlow />
               </div>
 
-              <span className="text-[10px] font-cinzel tracking-[0.3em] text-[#D4AF37] uppercase font-bold block mb-4">
+              <span className="text-[10px]  tracking-[0.3em] text-[#D4AF37] uppercase font-bold block mb-4">
                 THE ATELIER PHILOSOPHY
               </span>
 
@@ -114,11 +114,11 @@ export const ThierryMuglerLegacy: React.FC = () => {
               </blockquote>
 
               <div className="pt-4 border-t border-[#D4AF37]/30">
-                <span className="font-cinzel text-sm font-bold text-[#FBF9F3] block">
+                <span className=" text-xl font-bold text-[#FBF9F3] block">
                   JAC GHRÉ
                 </span>
 
-                <span className="text-xs font-cinzel text-[#D4AF37] tracking-wider block">
+                <span className="text-xs  text-[#D4AF37] tracking-wider block">
                   Founder & Master Formulator
                 </span>
               </div>

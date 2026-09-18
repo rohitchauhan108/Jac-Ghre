@@ -35,14 +35,14 @@ export const EditorialFeature: React.FC = () => {
               {/* Gold Crest in Bottom Corner */}
               {/* <div className="absolute bottom-6 right-6 p-4 bg-[#006073]/90 border border-[#D4AF37]/60 backdrop-blur-md">
                 <GoldEmblem size={32} withGlow />
-                <span className="block text-[9px] font-cinzel tracking-[0.25em] text-[#F3E5AB] uppercase mt-1 text-center font-bold">
+                <span className="block text-[9px]  tracking-[0.25em] text-[#F3E5AB] uppercase mt-1 text-center font-bold">
                   GHRÉ
                 </span>
               </div> */}
 
               {/* Floating Badge */}
               {/* <div className="absolute top-6 left-6 px-3.5 py-1.5 bg-[#006073]/90 border border-[#D4AF37]/40 backdrop-blur-md">
-                <span className="text-[10px] font-cinzel font-semibold tracking-[0.25em] text-[#D4AF37] uppercase flex items-center gap-1.5">
+                <span className="text-[10px]  font-semibold tracking-[0.25em] text-[#D4AF37] uppercase flex items-center gap-1.5">
                   <Sparkles className="w-3 h-3 text-[#D4AF37]" />
                   Haute Trichology
                 </span>
@@ -59,10 +59,10 @@ export const EditorialFeature: React.FC = () => {
             className="lg:col-span-6 flex flex-col justify-center space-y-6"
           >
             <div>
-              <span className="text-xs font-cinzel font-semibold tracking-[0.35em] text-[#D4AF37] uppercase block mb-3">
+              <span className="text-xs  font-semibold tracking-[0.35em] text-[#D4AF37] uppercase block mb-3">
                 Atelier Hair Architecture
               </span>
-              <h2 className="font-cinzel text-3xl sm:text-4xl md:text-5xl font-bold tracking-[0.12em] text-[#F7F4EB] leading-tight uppercase">
+              <h2 className=" text-3xl sm:text-4xl md:text-5xl font-bold tracking-[0.12em] text-[#F7F4EB] leading-tight uppercase">
                 The Art of Luxury Hair Care
               </h2>
               <div className="h-0.5 w-24 bg-gradient-to-r from-[#D4AF37] to-transparent my-5" />
@@ -72,7 +72,7 @@ export const EditorialFeature: React.FC = () => {
               “Discover formulas inspired by nature and crafted for extraordinary beauty.”
             </p>
 
-            <p className="text-sm text-[#B7CBD0] font-sans font-light leading-relaxed">
+            <p className="text-xl text-[#B7CBD0] font-sans font-light leading-relaxed">
               Every GHRÉ creation is conceived at the nexus of clinical trichology and sensorial indulgence. By marrying cold-pressed Mediterranean botanical extracts with hydrolyzed silk micro-proteins and bamboo marrow, we restore inner cellular tensile strength while wrapping each fiber in weightless, mirror-like reflectivity.
             </p>
 
@@ -81,7 +81,7 @@ export const EditorialFeature: React.FC = () => {
               <div className="flex items-start gap-3 p-3.5 bg-[#006073]/80 border border-[#D4AF37]/20">
                 <Droplets className="w-4 h-4 text-[#D4AF37] shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="font-cinzel text-xs font-semibold text-[#F7F4EB] uppercase tracking-wider">
+                  <h4 className=" text-xs font-semibold text-[#F7F4EB] uppercase tracking-wider">
                     Cold-Pressed Botanical Potency
                   </h4>
                   <p className="text-[11px] text-[#8EAAB0] mt-0.5 font-light">
@@ -93,7 +93,7 @@ export const EditorialFeature: React.FC = () => {
               <div className="flex items-start gap-3 p-3.5 bg-[#006073]/80 border border-[#D4AF37]/20">
                 <Shield className="w-4 h-4 text-[#D4AF37] shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="font-cinzel text-xs font-semibold text-[#F7F4EB] uppercase tracking-wider">
+                  <h4 className=" text-xs font-semibold text-[#F7F4EB] uppercase tracking-wider">
                     Anti-Humidity & Coastal UV Shield
                   </h4>
                   <p className="text-[11px] text-[#8EAAB0] mt-0.5 font-light">
@@ -107,7 +107,7 @@ export const EditorialFeature: React.FC = () => {
             <div className="pt-4 flex items-center gap-4">
               <a
                 href="/shop"
-                className="px-8 py-3.5 bg-gradient-to-r from-[#D4AF37] via-[#E5C365] to-[#B89028] text-[#0E4C5A] font-cinzel text-xs font-bold tracking-[0.25em] uppercase hover:brightness-110 shadow-lg flex items-center gap-2 group transition-all"
+                className="px-8 py-3.5 bg-gradient-to-r from-[#D4AF37] via-[#E5C365] to-[#B89028] text-[#0E4C5A]  text-xs font-bold tracking-[0.25em] uppercase hover:brightness-110 shadow-lg flex items-center gap-2 group transition-all"
               >
                 <span>Explore Hair Care</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />

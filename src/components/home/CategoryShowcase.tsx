@@ -50,10 +50,10 @@ export const CategoryShowcase: React.FC = () => {
           <div className="flex items-center justify-center gap-2 mb-3">
             <GoldEmblem size={22} />
           </div>
-          <span className="text-xs font-cinzel font-semibold tracking-[0.35em] text-[#D4AF37] uppercase block mb-2">
+          <span className="text-xs  font-semibold tracking-[0.35em] text-[#D4AF37] uppercase block mb-2">
             Curated Universes
           </span>
-          <h2 className="font-cinzel text-3xl sm:text-5xl font-bold tracking-[0.14em] text-[#F7F4EB] uppercase">
+          <h2 className=" text-3xl sm:text-5xl font-bold tracking-[0.14em] text-[#F7F4EB] uppercase">
             Shop By Category
           </h2>
           <p className="mt-3 text-base sm:text-xl font-editorial italic text-[#F3E5AB]">
@@ -86,20 +86,20 @@ export const CategoryShowcase: React.FC = () => {
 
               {/* Top Tag */}
               <div className="absolute top-4 left-4 z-10">
-                <span className="px-3 py-1 bg-[#006073]/90 border border-[#D4AF37]/40 text-[9px] font-cinzel tracking-[0.2em] text-[#F3E5AB] uppercase backdrop-blur-sm">
+                <span className="px-3 py-1 bg-[#006073]/90 border border-[#D4AF37]/40 text-[9px]  tracking-[0.2em] text-[#F3E5AB] uppercase backdrop-blur-sm">
                   {cat.tag}
                 </span>
               </div>
 
               {/* Content Box */}
               <div className="relative z-10 transform group-hover:-translate-y-1 transition-transform duration-300">
-                <span className="text-[10px] font-cinzel tracking-[0.25em] text-[#D4AF37] uppercase block mb-1">
+                <span className="text-[10px]  tracking-[0.25em] text-[#D4AF37] uppercase block mb-1">
                   {cat.subtitle}
                 </span>
-                <h3 className="font-cinzel text-xl font-bold text-[#F7F4EB] tracking-wide group-hover:text-[#F3E5AB] transition-colors mb-3">
+                <h3 className=" text-xl font-bold text-[#F7F4EB] tracking-wide group-hover:text-[#F3E5AB] transition-colors mb-3">
                   {cat.title}
                 </h3>
-                <div className="inline-flex items-center gap-2 text-xs font-cinzel font-semibold tracking-[0.2em] text-[#D4AF37] uppercase border-b border-[#D4AF37]/40 pb-1 group-hover:text-white group-hover:border-white transition-all">
+                <div className="inline-flex items-center gap-2 text-xs  font-semibold tracking-[0.2em] text-[#D4AF37] uppercase border-b border-[#D4AF37]/40 pb-1 group-hover:text-white group-hover:border-white transition-all">
                   <span>Explore Universe</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                 </div>

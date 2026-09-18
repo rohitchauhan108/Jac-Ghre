@@ -216,7 +216,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
               border
               border-[#D4AF37]/70
               text-[#F3E5AB]
-              font-cinzel
+              
               text-[11px]
               tracking-[0.2em]
               uppercase
@@ -245,7 +245,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
               hover:brightness-110
               disabled:opacity-70
               disabled:cursor-not-allowed
-              font-cinzel
+              
               text-[11px]
               font-semibold
               tracking-[0.15em]
@@ -299,7 +299,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           <h3
             onClick={() => setQuickViewProduct(product)}
             className={`
-              font-cinzel
+              
               text-base
               md:text-lg
               font-normal
@@ -345,7 +345,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
               className={`
                 text-base
                 md:text-lg
-                font-cinzel
+                
                 font-semibold
                 tracking-wider
 
@@ -366,7 +366,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
               text-[11px]
               uppercase
               tracking-[0.2em]
-              font-cinzel
+              
               group/btn
               transition-colors
               disabled:opacity-70

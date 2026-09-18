@@ -14,7 +14,7 @@ const FOUNDER_CREATIVES = [
     caption: 'Haute Couture Week',
   },
   {
-    src: '/gallery/founder/founder2.webp',
+    src: '/home/founder.jpeg',
     alt: 'Jac Ghré Creative 2',
     label: 'Runway Hair Direction',
     caption: 'Fashion Week — Thierry Mugler',
@@ -81,14 +81,14 @@ export const FounderCreativesGallery: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2.5 px-4 py-1.5 bg-[#006073] border border-[#D4AF37]/50 mb-4 shadow-md">
             <Camera className="w-4 h-4 text-[#D4AF37]" />
-            <span className="text-[11px] font-cinzel font-bold tracking-[0.3em] text-[#F3E5AB] uppercase">
+            <span className="text-[11px]  font-bold tracking-[0.3em] text-[#F3E5AB] uppercase">
               The Founder Archives
             </span>
           </div>
 
           <div className="flex items-center justify-center gap-3 mb-3">
             <GoldEmblem size={22} withGlow />
-            <h2 className="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-bold tracking-[0.12em] text-[#FBF9F3] uppercase">
+            <h2 className=" text-3xl sm:text-4xl lg:text-5xl font-bold tracking-[0.12em] text-[#FBF9F3] uppercase">
               Founder Creatives
             </h2>
             <Sparkles className="w-5 h-5 text-[#D4AF37]" />
@@ -98,7 +98,7 @@ export const FounderCreativesGallery: React.FC = () => {
             &ldquo;Rare glimpses behind the artistry of Jac Ghré.&rdquo;
           </p>
 
-          <p className="mt-3 font-poppins text-sm sm:text-base text-[#B5CAD0] leading-relaxed max-w-2xl mx-auto">
+          <p className="mt-3 font-poppins text-xl sm:text-base text-[#B5CAD0] leading-relaxed max-w-2xl mx-auto">
             A curated selection of moments captured backstage at international fashion weeks, private atelier sessions, and masterclass appointments. Click any image to view in full detail.
           </p>
         </div>

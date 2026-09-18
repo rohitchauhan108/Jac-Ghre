@@ -145,7 +145,7 @@ export const CustomCursor: React.FC = () => {
         }}
       >
         {hoverText && (
-          <span className="text-[8px] font-cinzel font-bold text-[#F3E5AB] tracking-widest uppercase text-center px-1">
+          <span className="text-[8px]  font-bold text-[#F3E5AB] tracking-widest uppercase text-center px-1">
             {hoverText}
           </span>
         )}

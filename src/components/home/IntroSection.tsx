@@ -149,7 +149,7 @@ export const IntroSection: React.FC = () => {
           </div>
 
           {/* Eyebrow */}
-          <div className="flex flex-col gap-3 text-[11px] sm:text-xs font-cinzel font-bold tracking-[0.4em] uppercase text-[#D4AF37] mb-3">
+          <div className="flex flex-col gap-3 text-[11px] sm:text-xs  font-bold tracking-[0.4em] uppercase text-[#D4AF37] mb-3">
             <span>L'ART DE VIVRE</span>
           </div>
 
@@ -187,7 +187,7 @@ export const IntroSection: React.FC = () => {
 
           {/* Description */}
           <p
-            className={`mt-8 text-sm sm:text-base font-outfit font-light max-w-2xl mx-auto leading-relaxed ${
+            className={`mt-8 text-xl sm:text-base font-outfit font-light max-w-2xl mx-auto leading-relaxed ${
               isDark ? "text-[#D0E1E5]" : "text-[#415C65]"
             }`}
           >
@@ -261,7 +261,7 @@ export const IntroSection: React.FC = () => {
                   </div>
 
                   <span
-                    className={`px-2.5 py-1 border border-[#D4AF37]/30 text-[9px] font-cinzel font-bold tracking-[0.2em] text-[#D4AF37] uppercase ${
+                    className={`px-2.5 py-1 border border-[#D4AF37]/30 text-[9px]  font-bold tracking-[0.2em] text-[#D4AF37] uppercase ${
                       isDark ? "bg-[#007288]" : "bg-[#FAF7F2]"
                     }`}
                   >
@@ -271,7 +271,7 @@ export const IntroSection: React.FC = () => {
 
                 {/* Subtitle */}
                 <span
-                  className={`text-[10px] font-cinzel font-bold tracking-[0.25em] block uppercase mb-1.5 ${
+                  className={`text-[10px]  font-bold tracking-[0.25em] block uppercase mb-1.5 ${
                     isDark ? "text-[#D4AF37]" : "text-[#B8860B]"
                   }`}
                 >
@@ -280,7 +280,7 @@ export const IntroSection: React.FC = () => {
 
                 {/* Title */}
                 <h3
-                  className={`font-cinzel text-sm sm:text-base font-bold tracking-wider mb-2.5 ${
+                  className={` text-xl sm:text-base font-bold tracking-wider mb-2.5 ${
                     isDark
                       ? "text-white group-hover:text-[#FBF9F3]"
                       : "text-white group-hover:text-[#062B35]"
@@ -302,7 +302,7 @@ export const IntroSection: React.FC = () => {
               </div>
 
               {/* Action */}
-              <div className="relative z-10 pt-3 border-t border-[#D4AF37]/20 flex items-center justify-between text-[11px] font-cinzel font-bold tracking-wider text-[#D4AF37] group-hover:text-[#FFF3C4]">
+              <div className="relative z-10 pt-3 border-t border-[#D4AF37]/20 flex items-center justify-between text-[11px]  font-bold tracking-wider text-[#D4AF37] group-hover:text-[#FFF3C4]">
                 <span>{item.actionLabel}</span>
 
                 <ArrowUpRight className="w-3.5 h-3.5 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

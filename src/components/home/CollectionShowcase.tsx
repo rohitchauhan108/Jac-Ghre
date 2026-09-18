@@ -104,12 +104,12 @@ export const CollectionShowcase: React.FC = () => {
           </div>
 
           {/* Eyebrow */}
-          <span className="text-[11px] sm:text-xs font-cinzel font-semibold tracking-[0.35em] uppercase block mb-3 text-[#D4AF37]">
+          <span className="text-[11px] sm:text-xs  font-semibold tracking-[0.35em] uppercase block mb-3 text-[#D4AF37]">
             Pure, Excellence
           </span>
 
           {/* Heading */}
-          <h2 className="font-cinzel text-3xl sm:text-5xl lg:text-6xl font-bold tracking-[0.14em] uppercase text-[#F7F4EB]">
+          <h2 className=" text-3xl sm:text-5xl lg:text-6xl font-bold tracking-[0.14em] uppercase text-[#F7F4EB]">
             GHRÉ Collection
           </h2>
 
@@ -143,7 +143,7 @@ export const CollectionShowcase: React.FC = () => {
                   relative
                   py-2.5 px-4 sm:px-6
                   text-[10px] sm:text-xs
-                  font-cinzel
+                  
                   tracking-[0.18em]
                   uppercase
                   border
@@ -288,15 +288,15 @@ export const CollectionShowcase: React.FC = () => {
               />
 
               <div>
-                <span className="text-[9px] font-cinzel tracking-[0.3em] text-[#D4AF37] uppercase">
+                <span className="text-[9px]  tracking-[0.3em] text-[#D4AF37] uppercase">
                   PRIVATE BEAUTY CONCIERGE
                 </span>
 
-                <h3 className="font-cinzel text-lg sm:text-xl tracking-wide text-[#F7F4EB] mt-1">
+                <h3 className=" text-lg sm:text-xl tracking-wide text-[#F7F4EB] mt-1">
                   Need a Personalized Hair & Fragrance Consultation?
                 </h3>
 
-                <p className="text-xs sm:text-sm font-poppins font-light mt-2 text-[#C5D9DD] max-w-2xl">
+                <p className="text-xs sm:text-xl font-poppins font-light mt-2 text-[#C5D9DD] max-w-2xl">
                   Speak directly with a GHRÉ beauty concierge for tailor-made
                   hair rituals and scent profiling.
                 </p>
@@ -312,7 +312,7 @@ export const CollectionShowcase: React.FC = () => {
                 text-[#D4AF37]
                 hover:bg-[#D4AF37]
                 hover:text-[#062B35]
-                font-cinzel
+                
                 text-xs
                 font-semibold
                 tracking-[0.2em]

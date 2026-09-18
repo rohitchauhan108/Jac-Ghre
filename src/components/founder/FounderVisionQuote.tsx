@@ -25,7 +25,7 @@ export const FounderVisionQuote: React.FC = () => {
 
           <GoldEmblem size={36} withGlow className="mx-auto mb-4" />
 
-          <span className="text-[11px] font-cinzel font-bold tracking-[0.35em] text-[#D4AF37] uppercase block mb-3">
+          <span className="text-[11px]  font-bold tracking-[0.35em] text-[#D4AF37] uppercase block mb-3">
             THE VISION
           </span>
 
@@ -38,10 +38,10 @@ export const FounderVisionQuote: React.FC = () => {
             <span className="font-script text-4xl sm:text-5xl text-[#D4AF37] select-none">
               Jac Ghré
             </span>
-            <span className="text-xs font-cinzel font-bold tracking-[0.3em] text-[#F3E5AB] uppercase mt-1">
+            <span className="text-xs  font-bold tracking-[0.3em] text-[#F3E5AB] uppercase mt-1">
               JAC GHRÉ — BEAUTY EXPERT
             </span>
-            <span className="text-[10px] font-cinzel tracking-[0.25em] text-[#8EAAB0] uppercase mt-0.5">
+            <span className="text-[10px]  tracking-[0.25em] text-[#8EAAB0] uppercase mt-0.5">
               GLOBAL BEAUTY • BOTANICAL RITUALS • TIMELESS CRAFT
             </span>
           </div>

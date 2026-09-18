@@ -57,7 +57,7 @@ export const SearchModal: React.FC = () => {
 
             <div className="flex items-center gap-3 mb-6">
               <GoldEmblem size={24} />
-              <span className="text-xs font-cinzel tracking-[0.3em] text-[#D4AF37] uppercase">
+              <span className="text-xs  tracking-[0.3em] text-[#D4AF37] uppercase">
                 GHRÉ Concierge Search
               </span>
             </div>
@@ -76,7 +76,7 @@ export const SearchModal: React.FC = () => {
               {searchTerm && (
                 <button
                   onClick={() => setSearchTerm('')}
-                  className="text-xs text-[#D4AF37] hover:text-white uppercase font-cinzel"
+                  className="text-xs text-[#D4AF37] hover:text-white uppercase "
                 >
                   Clear
                 </button>
@@ -85,7 +85,7 @@ export const SearchModal: React.FC = () => {
 
             {/* Quick suggested searches */}
             <div className="mt-4 flex items-center gap-2 flex-wrap text-xs">
-              <span className="text-[#8EAAB0] font-cinzel text-[11px] tracking-wider uppercase">
+              <span className="text-[#8EAAB0]  text-[11px] tracking-wider uppercase">
                 Popular:
               </span>
               {suggestedQueries.map((query) => (
@@ -101,7 +101,7 @@ export const SearchModal: React.FC = () => {
 
             {/* Results Grid */}
             <div className="mt-8">
-              <h4 className="text-xs font-cinzel tracking-[0.25em] text-[#D4AF37] uppercase mb-4 flex items-center justify-between">
+              <h4 className="text-xs  tracking-[0.25em] text-[#D4AF37] uppercase mb-4 flex items-center justify-between">
                 <span>{searchTerm.trim() ? `Search Results (${filteredProducts.length})` : 'Signature Curations'}</span>
                 {searchTerm.trim() && (
                   <span className="text-[10px] text-[#8EAAB0] font-sans lowercase">
@@ -112,7 +112,7 @@ export const SearchModal: React.FC = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[380px] overflow-y-auto pr-1">
                 {filteredProducts.length === 0 ? (
-                  <div className="col-span-2 py-8 text-center text-sm text-[#8EAAB0]">
+                  <div className="col-span-2 py-8 text-center text-xl text-[#8EAAB0]">
                     No creations found matching "{searchTerm}". Try searching for 'shampoo', 'oil', or 'positano'.
                   </div>
                 ) : (
@@ -133,14 +133,14 @@ export const SearchModal: React.FC = () => {
                         />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <span className="text-[9px] font-cinzel uppercase text-[#D4AF37] block tracking-widest truncate">
+                        <span className="text-[9px]  uppercase text-[#D4AF37] block tracking-widest truncate">
                           {product.categoryLabel}
                         </span>
-                        <h5 className="font-cinzel text-xs text-[#F7F4EB] group-hover:text-[#F3E5AB] transition-colors truncate">
+                        <h5 className=" text-xs text-[#F7F4EB] group-hover:text-[#F3E5AB] transition-colors truncate">
                           {product.name}
                         </h5>
                         <div className="flex items-center justify-between mt-1">
-                          <span className="font-cinzel text-xs font-medium text-[#F3E5AB]">
+                          <span className=" text-xs font-medium text-[#F3E5AB]">
                             {currencySymbol}{(product.price * currencyRate).toFixed(0)}
                           </span>
                           <span className="text-[10px] text-[#D4AF37] flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">

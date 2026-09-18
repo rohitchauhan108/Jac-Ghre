@@ -110,12 +110,12 @@ export const GalleryPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <div className="inline-flex items-center gap-2.5 px-4 py-1.5 bg-[#097B8A] border border-[#D4AF37]/50 mb-4 shadow-md">
             <Images className="w-4 h-4 text-[#D4AF37]" />
-            <span className="text-xs font-cinzel font-semibold tracking-[0.3em] text-[#F3E5AB] uppercase">
+            <span className="text-xs  font-semibold tracking-[0.3em] text-[#F3E5AB] uppercase">
               Visual Archive
             </span>
           </div>
 
-          <h1 className="font-cinzel text-3xl sm:text-5xl lg:text-6xl font-bold tracking-[0.12em] text-[#F7F4EB] uppercase">
+          <h1 className=" text-3xl sm:text-5xl lg:text-6xl font-bold tracking-[0.12em] text-[#F7F4EB] uppercase">
             The Gallery
           </h1>
 
@@ -123,7 +123,7 @@ export const GalleryPage: React.FC = () => {
             &ldquo;Moments captured in the world of GHR&Eacute;.&rdquo;
           </p>
 
-          <p className="mt-3 max-w-2xl mx-auto font-poppins text-sm sm:text-base text-[#B5CAD0] font-normal leading-relaxed">
+          <p className="mt-3 max-w-2xl mx-auto font-poppins text-xl sm:text-base text-[#B5CAD0] font-normal leading-relaxed">
             Browse curated visuals from our campaigns, catalogues, founder journey, and signature product collections.
           </p>
         </div>
@@ -139,7 +139,7 @@ export const GalleryPage: React.FC = () => {
                 key={tab.key}
                 type="button"
                 onClick={() => setActiveTab(tab.key)}
-                className={`group relative px-5 py-2.5 font-cinzel text-xs sm:text-sm font-semibold uppercase tracking-widest border transition-colors duration-200 ${
+                className={`group relative px-5 py-2.5  text-xs sm:text-xl font-semibold uppercase tracking-widest border transition-colors duration-200 ${
                   isActive
                     ? 'bg-[#D4AF37] text-[#021318] border-[#D4AF37] shadow-lg'
                     : 'bg-transparent text-[#F3E5AB] border-[#D4AF37]/40 hover:border-[#D4AF37] hover:text-[#D4AF37]'
@@ -269,14 +269,14 @@ export const GalleryPage: React.FC = () => {
               <div className="absolute bottom-0 left-0 right-0 gradient-to-t from-[#021318] via-[#021318]/70 to-transparent p-5 sm:p-6">
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <div>
-                    <span className="inline-block px-2.5 py-1 bg-[#097B8A] text-[10px] font-cinzel text-[#D4AF37] uppercase tracking-widest border border-[#D4AF37]/40">
+                    <span className="inline-block px-2.5 py-1 bg-[#097B8A] text-[10px]  text-[#D4AF37] uppercase tracking-widest border border-[#D4AF37]/40">
                       {filteredImagesRef.current[lightboxIndex].category}
                     </span>
-                    <p className="mt-2 font-poppins text-sm sm:text-base text-[#F7F4EB]">
+                    <p className="mt-2 font-poppins text-xl sm:text-base text-[#F7F4EB]">
                       {filteredImagesRef.current[lightboxIndex].alt}
                     </p>
                   </div>
-                  <span className="font-cinzel text-xs text-[#D4AF37] tracking-widest">
+                  <span className=" text-xs text-[#D4AF37] tracking-widest">
                     {lightboxIndex + 1} / {filteredImagesRef.current.length}
                   </span>
                 </div>

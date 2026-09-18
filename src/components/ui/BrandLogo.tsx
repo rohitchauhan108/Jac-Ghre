@@ -64,8 +64,8 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
           <div className="absolute inset-0 rounded-full bg-[#D4AF37]/25 blur-md pointer-events-none" />
         )}
         <div className="relative z-10 flex flex-col items-center justify-center p-2 rounded-full border border-[#D4AF37]/40 bg-[#006073]/80 backdrop-blur-sm shadow-[0_4px_20px_rgba(0,96,115,0.4)]">
-          <span className="font-cinzel text-[8px] tracking-[0.3em] text-[#D4AF37] font-semibold">JAC</span>
-          <span className="font-cinzel text-sm font-bold tracking-widest text-[#F3E5AB] leading-none my-0.5">GHRÉ</span>
+          <span className=" text-[8px] tracking-[0.3em] text-[#D4AF37] font-semibold">JAC</span>
+          <span className=" text-xl font-bold tracking-widest text-[#F3E5AB] leading-none my-0.5">GHRÉ</span>
         </div>
       </div>
     );
@@ -81,14 +81,14 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
 
         {/* JAC */}
         <span
-          className={`font-cinzel font-semibold uppercase ${scaleStyles.jac} ${goldGradientClass} block leading-tight`}
+          className={` font-semibold uppercase ${scaleStyles.jac} ${goldGradientClass} block leading-tight`}
         >
           JAC
         </span>
 
         {/* GHRÉ */}
         <span
-          className={`font-cinzel font-bold uppercase ${scaleStyles.ghre} ${goldGradientClass} block leading-none my-1`}
+          className={` font-bold uppercase ${scaleStyles.ghre} ${goldGradientClass} block leading-none my-1`}
           style={{ textShadow: '0 4px 12px rgba(0,0,0,0.45)' }}
         >
           GHRÉ
@@ -112,8 +112,8 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
     <div className={`flex items-center gap-3 select-none text-left ${className}`}>
       {/* Mini Seal Monogram */}
       <div className="relative shrink-0 flex flex-col items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-[#D4AF37]/50 bg-gradient-to-br from-[#007288] to-[#006073] shadow-[0_3px_12px_rgba(0,96,115,0.35)]">
-        <span className="font-cinzel text-[7px] tracking-[0.2em] text-[#D4AF37] font-semibold block leading-none">JAC</span>
-        <span className="font-cinzel text-[11px] font-bold text-[#F3E5AB] leading-none my-0.5">G</span>
+        <span className=" text-[7px] tracking-[0.2em] text-[#D4AF37] font-semibold block leading-none">JAC</span>
+        <span className=" text-[11px] font-bold text-[#F3E5AB] leading-none my-0.5">G</span>
         <div className="w-3 h-px bg-[#D4AF37]/60" />
       </div>
 
@@ -121,7 +121,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
       <div className="flex flex-col">
         <div className="flex items-baseline gap-1.5">
           <span
-            className={`font-cinzel font-bold ${scaleStyles.horizontalMain} ${goldGradientClass} leading-tight`}
+            className={` font-bold ${scaleStyles.horizontalMain} ${goldGradientClass} leading-tight`}
           >
             JAC GHRÉ
           </span>
@@ -129,7 +129,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
 
         {withScriptTagline && (
           <span
-            className={`font-script text-sm sm:text-base italic ${scriptGoldClass} -mt-1 leading-none`}
+            className={`font-script text-xl sm:text-base italic ${scriptGoldClass} -mt-1 leading-none`}
           >
             Beautifully Yours
           </span>

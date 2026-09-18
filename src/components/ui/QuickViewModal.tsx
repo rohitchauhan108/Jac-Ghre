@@ -66,7 +66,7 @@ export const QuickViewModal: React.FC = () => {
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.18)_0%,transparent_70%)] pointer-events-none" />
 
               {/* {product.badge && (
-                <span className="absolute top-4 left-4 z-10 inline-flex items-center gap-1.5 px-3 py-1 text-[10px] uppercase font-cinzel tracking-[0.2em] bg-[#006073]/90 text-[#F3E5AB] border border-[#D4AF37]/40">
+                <span className="absolute top-4 left-4 z-10 inline-flex items-center gap-1.5 px-3 py-1 text-[10px] uppercase  tracking-[0.2em] bg-[#006073]/90 text-[#F3E5AB] border border-[#D4AF37]/40">
                   <Sparkles className="w-2.5 h-2.5 text-[#D4AF37]" />
                   {product.badge}
                 </span>
@@ -78,7 +78,7 @@ export const QuickViewModal: React.FC = () => {
                 className="max-h-[340px] w-full object-contain relative z-10 filter drop-shadow-[0_20px_30px_rgba(0,0,0,0.7)]"
               />
 
-              <div className="mt-6 flex items-center gap-2 text-xs text-[#D4AF37]/90 font-cinzel tracking-widest uppercase">
+              <div className="mt-6 flex items-center gap-2 text-xs text-[#D4AF37]/90  tracking-widest uppercase">
                 <GoldEmblem size={18} />
                 <span>Global Private Client Atelier</span>
               </div>
@@ -88,7 +88,7 @@ export const QuickViewModal: React.FC = () => {
             <div className="md:col-span-7 p-6 md:p-8 flex flex-col justify-between bg-gradient-to-b from-[#007288] to-[#006073]">
               <div>
                 {/* <div className="flex items-center justify-between mb-1.5">
-                  <span className="text-[11px] font-cinzel tracking-[0.3em] text-[#D4AF37] uppercase">
+                  <span className="text-[11px]  tracking-[0.3em] text-[#D4AF37] uppercase">
                     {product.categoryLabel}
                   </span>
                   {product.rating && (
@@ -100,18 +100,18 @@ export const QuickViewModal: React.FC = () => {
                   )}
                 </div> */}
 
-                <h2 className="font-cinzel text-2xl md:text-3xl text-[#F7F4EB] tracking-wide">
+                <h2 className=" text-2xl md:text-3xl text-[#F7F4EB] tracking-wide">
                   {product.name}
                 </h2>
 {/* 
                 {product.frenchName && (
-                  <p className="text-sm font-editorial italic text-[#D4AF37]/90 mt-0.5 mb-2">
+                  <p className="text-xl font-editorial italic text-[#D4AF37]/90 mt-0.5 mb-2">
                     {product.frenchName}
                   </p>
                 )} */}
 
                 <div className="flex items-baseline gap-3 my-3">
-                  <span className="text-2xl font-cinzel font-semibold text-[#F3E5AB]">
+                  <span className="text-2xl  font-semibold text-[#F3E5AB]">
                     {formattedPrice}
                   </span>
                   <span className="text-xs text-[#8EAAB0] font-sans">
@@ -120,7 +120,7 @@ export const QuickViewModal: React.FC = () => {
                 </div>
 
                 {/* Tab selectors */}
-                <div className="flex border-b border-[#D4AF37]/20 my-4 text-xs font-cinzel tracking-[0.15em] uppercase">
+                <div className="flex border-b border-[#D4AF37]/20 my-4 text-xs  tracking-[0.15em] uppercase">
                   <button
                     onClick={() => setActiveTab('details')}
                     className={`pb-2 px-3 border-b-2 transition-all ${
@@ -196,25 +196,25 @@ export const QuickViewModal: React.FC = () => {
                   {activeTab === 'scent' && (
                     <div className="space-y-3">
                       <div className="p-3 bg-[#006073] border border-[#D4AF37]/20">
-                        <span className="text-[10px] uppercase font-cinzel text-[#D4AF37] block mb-1 tracking-widest">
+                        <span className="text-[10px] uppercase  text-[#D4AF37] block mb-1 tracking-widest">
                           Olfactory Profile
                         </span>
-                        <p className="text-sm font-editorial italic text-[#F7F4EB]">
+                        <p className="text-xl font-editorial italic text-[#F7F4EB]">
                           {product.scentNotes?.displaySummary}
                         </p>
                       </div>
                       {product.scentNotes?.top && (
                         <div className="grid grid-cols-3 gap-2 text-[10px] text-center">
                           <div className="p-1.5 bg-[#007288]/50 border border-[#D4AF37]/10">
-                            <span className="text-[#D4AF37] block font-cinzel">Top</span>
+                            <span className="text-[#D4AF37] block ">Top</span>
                             <span>{product.scentNotes.top.join(', ')}</span>
                           </div>
                           <div className="p-1.5 bg-[#007288]/50 border border-[#D4AF37]/10">
-                            <span className="text-[#D4AF37] block font-cinzel">Heart</span>
+                            <span className="text-[#D4AF37] block ">Heart</span>
                             <span>{product.scentNotes.heart?.join(', ') || 'Blossoms'}</span>
                           </div>
                           <div className="p-1.5 bg-[#007288]/50 border border-[#D4AF37]/10">
-                            <span className="text-[#D4AF37] block font-cinzel">Base</span>
+                            <span className="text-[#D4AF37] block ">Base</span>
                             <span>{product.scentNotes.base?.join(', ') || 'Amber Woods'}</span>
                           </div>
                         </div>
@@ -236,7 +236,7 @@ export const QuickViewModal: React.FC = () => {
                     >
                       -
                     </button>
-                    <span className="w-8 text-center text-xs font-cinzel font-medium text-[#F7F4EB]">
+                    <span className="w-8 text-center text-xs  font-medium text-[#F7F4EB]">
                       {quantity}
                     </span>
                     <button
@@ -251,7 +251,7 @@ export const QuickViewModal: React.FC = () => {
                   {/* Add to Bag Button */}
                   <button
                     onClick={handleAddToCart}
-                    className="flex-1 py-3 px-6 bg-gradient-to-r from-[#D4AF37] via-[#E5C365] to-[#B89028] text-[#0E4C5A] hover:brightness-110 font-cinzel text-xs font-bold tracking-[0.2em] uppercase flex items-center justify-center gap-2 shadow-lg transition-all"
+                    className="flex-1 py-3 px-6 bg-gradient-to-r from-[#D4AF37] via-[#E5C365] to-[#B89028] text-[#0E4C5A] hover:brightness-110  text-xs font-bold tracking-[0.2em] uppercase flex items-center justify-center gap-2 shadow-lg transition-all"
                   >
                     {isAdded ? (
                       <>

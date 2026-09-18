@@ -21,13 +21,13 @@ export const FisherIslandConcierge: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-14">
           <GoldEmblem size={28} withGlow className="mx-auto mb-3" />
-          <span className="text-[11px] font-cinzel font-bold tracking-[0.3em] text-[#D4AF37] uppercase block mb-1">
+          <span className="text-[11px]  font-bold tracking-[0.3em] text-[#D4AF37] uppercase block mb-1">
             PRIVATE VIP APPOINTMENTS
           </span>
-          <h2 className="font-cinzel text-3xl sm:text-5xl font-bold uppercase text-[#FBF9F3]">
+          <h2 className=" text-3xl sm:text-5xl font-bold uppercase text-[#FBF9F3]">
             Private Client Concierge
           </h2>
-          <p className="font-outfit text-sm sm:text-base text-[#B3CBD1] font-light mt-3 max-w-2xl mx-auto">
+          <p className="font-outfit text-xl sm:text-base text-[#B3CBD1] font-light mt-3 max-w-2xl mx-auto">
             JAC Ghré brings global fashion expertise to private clients and elite events through an exclusive concierge experience.
           </p>
         </div>
@@ -35,7 +35,7 @@ export const FisherIslandConcierge: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Left: Private Services */}
           <div className="lg:col-span-5 space-y-4">
-            <h3 className="font-cinzel text-xs font-bold tracking-[0.25em] text-[#D4AF37] uppercase mb-2">
+            <h3 className=" text-xs font-bold tracking-[0.25em] text-[#D4AF37] uppercase mb-2">
               Select Private Service
             </h3>
 
@@ -61,10 +61,10 @@ export const FisherIslandConcierge: React.FC = () => {
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center justify-between gap-2">
-                    <h4 className="font-cinzel text-sm font-bold text-[#FBF9F3]">
+                    <h4 className=" text-xl font-bold text-[#FBF9F3]">
                       {item}
                     </h4>
-                    <span className="text-[9px] font-cinzel font-bold tracking-wider px-2 py-0.5 bg-[#006073] border border-[#D4AF37]/40 text-[#D4AF37]">
+                    <span className="text-[9px]  font-bold tracking-wider px-2 py-0.5 bg-[#006073] border border-[#D4AF37]/40 text-[#D4AF37]">
                       PRIVATE SESSION
                     </span>
                   </div>
@@ -74,14 +74,14 @@ export const FisherIslandConcierge: React.FC = () => {
 
             {/* Official Web Badge */}
             <div className="p-4 bg-[#006073] border border-[#D4AF37]/30 text-center">
-              <span className="text-xs font-cinzel text-[#8EAAB0] tracking-widest uppercase block">
+              <span className="text-xs  text-[#8EAAB0] tracking-widest uppercase block">
                 Official Web Portal
               </span>
               <a
                 href="https:/GHRÉ.COM"
                 target="_blank"
                 rel="noreferrer"
-                className="font-cinzel text-base font-bold text-[#D4AF37] hover:text-[#FFF3C4] transition-colors inline-block mt-0.5"
+                className=" text-base font-bold text-[#D4AF37] hover:text-[#FFF3C4] transition-colors inline-block mt-0.5"
               >
                 GHRÉ.COM
               </a>
@@ -93,15 +93,15 @@ export const FisherIslandConcierge: React.FC = () => {
             {submitted ? (
               <div className="py-12 text-center space-y-4">
                 <CheckCircle2 className="w-14 h-14 text-[#D4AF37] mx-auto animate-bounce" />
-                <h3 className="font-cinzel text-2xl font-bold text-[#FBF9F3] uppercase">
+                <h3 className=" text-2xl font-bold text-[#FBF9F3] uppercase">
                   Appointment Request Confirmed
                 </h3>
-                <p className="font-outfit text-sm text-[#C4D8DC] max-w-md mx-auto">
+                <p className="font-outfit text-xl text-[#C4D8DC] max-w-md mx-auto">
                   Thank you, <strong>{name}</strong>. Our Private Client Director will contact you via {email} within 12 hours to finalize your private session.
                 </p>
                 <button
                   onClick={() => setSubmitted(false)}
-                  className="mt-4 px-6 py-2 bg-[#D4AF37] text-[#062B35] font-cinzel text-xs font-bold tracking-widest uppercase cursor-pointer"
+                  className="mt-4 px-6 py-2 bg-[#D4AF37] text-[#062B35]  text-xs font-bold tracking-widest uppercase cursor-pointer"
                 >
                   Book Another Request
                 </button>
@@ -109,17 +109,17 @@ export const FisherIslandConcierge: React.FC = () => {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="flex items-center justify-between border-b border-[#D4AF37]/30 pb-3 mb-2">
-                  <span className="font-cinzel text-xs font-bold text-[#D4AF37] tracking-[0.2em] uppercase">
+                  <span className=" text-xs font-bold text-[#D4AF37] tracking-[0.2em] uppercase">
                     CONFIDENTIAL VIP CONSULTATION
                   </span>
-                  <span className="text-[10px] font-cinzel text-[#8EAAB0]">
+                  <span className="text-[10px]  text-[#8EAAB0]">
                     PRIVATE CLIENT
                   </span>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-[10px] font-cinzel tracking-wider text-[#D4AF37] uppercase mb-1.5 font-bold">
+                    <label className="block text-[10px]  tracking-wider text-[#D4AF37] uppercase mb-1.5 font-bold">
                       Full Name
                     </label>
                     <input
@@ -133,7 +133,7 @@ export const FisherIslandConcierge: React.FC = () => {
                   </div>
 
                   <div>
-                    <label className="block text-[10px] font-cinzel tracking-wider text-[#D4AF37] uppercase mb-1.5 font-bold">
+                    <label className="block text-[10px]  tracking-wider text-[#D4AF37] uppercase mb-1.5 font-bold">
                       Email Address
                     </label>
                     <input
@@ -149,7 +149,7 @@ export const FisherIslandConcierge: React.FC = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-[10px] font-cinzel tracking-wider text-[#D4AF37] uppercase mb-1.5 font-bold">
+                    <label className="block text-[10px]  tracking-wider text-[#D4AF37] uppercase mb-1.5 font-bold">
                       Phone Number (WhatsApp / Mobile)
                     </label>
                     <input
@@ -162,7 +162,7 @@ export const FisherIslandConcierge: React.FC = () => {
                   </div>
 
                   <div>
-                    <label className="block text-[10px] font-cinzel tracking-wider text-[#D4AF37] uppercase mb-1.5 font-bold">
+                    <label className="block text-[10px]  tracking-wider text-[#D4AF37] uppercase mb-1.5 font-bold">
                       Curated Service
                     </label>
                     <select
@@ -188,7 +188,7 @@ export const FisherIslandConcierge: React.FC = () => {
 
                 <button
                   type="submit"
-                  className="w-full py-4 bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#B89028] text-[#062B35] font-cinzel text-xs font-bold tracking-[0.25em] uppercase hover:brightness-110 shadow-xl transition-all flex items-center justify-center gap-2 cursor-pointer mt-4"
+                  className="w-full py-4 bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#B89028] text-[#062B35]  text-xs font-bold tracking-[0.25em] uppercase hover:brightness-110 shadow-xl transition-all flex items-center justify-center gap-2 cursor-pointer mt-4"
                 >
                   <Sparkles className="w-4 h-4" />
                   <span>Request Private Atelier</span>

@@ -21,15 +21,15 @@ export const Newsletter: React.FC = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <GoldEmblem size={32} className="mb-3" />
 
-        <span className="text-[11px] font-cinzel font-semibold tracking-[0.35em] text-[#D4AF37] uppercase block mb-2">
+        <span className="text-[11px]  font-semibold tracking-[0.35em] text-[#D4AF37] uppercase block mb-2">
           Le Cercle Privé GHRÉ
         </span>
 
-        <h2 className="font-cinzel text-2xl sm:text-4xl font-bold tracking-[0.14em] text-[#F7F4EB] uppercase">
+        <h2 className=" text-2xl sm:text-4xl font-bold tracking-[0.14em] text-[#F7F4EB] uppercase">
           Stay Beautifully Informed
         </h2>
 
-        <p className="mt-3 text-xs sm:text-sm text-[#B5C7CA] font-sans font-light max-w-xl mx-auto leading-relaxed">
+        <p className="mt-3 text-xs sm:text-xl text-[#B5C7CA] font-sans font-light max-w-xl mx-auto leading-relaxed">
           Receive private invitations to seasonal formulation launches, Jac Ghré’s backstage hair masterclasses, and complimentary luxury gifts with your orders.
         </p>
 
@@ -37,7 +37,7 @@ export const Newsletter: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="mt-8 p-4 bg-[#06333e] border border-[#D4AF37] max-w-md mx-auto flex items-center justify-center gap-2 text-xs font-cinzel tracking-wider text-[#F3E5AB]"
+            className="mt-8 p-4 bg-[#06333e] border border-[#D4AF37] max-w-md mx-auto flex items-center justify-center gap-2 text-xs  tracking-wider text-[#F3E5AB]"
           >
             <Check className="w-4 h-4 text-[#D4AF37]" />
             <span>Bienvenue au Cercle Privé. An invitation confirmation has been dispatched.</span>
@@ -60,7 +60,7 @@ export const Newsletter: React.FC = () => {
             </div>
             <button
               type="submit"
-              className="px-6 py-3 bg-gradient-to-r from-[#D4AF37] to-[#B89028] text-[#062B35] font-cinzel text-xs font-bold tracking-[0.2em] uppercase hover:brightness-110 shadow-lg shrink-0 transition-all flex items-center justify-center gap-1.5"
+              className="px-6 py-3 bg-gradient-to-r from-[#D4AF37] to-[#B89028] text-[#062B35]  text-xs font-bold tracking-[0.2em] uppercase hover:brightness-110 shadow-lg shrink-0 transition-all flex items-center justify-center gap-1.5"
             >
               <span>Join Circle</span>
               <ArrowRight className="w-3.5 h-3.5" />

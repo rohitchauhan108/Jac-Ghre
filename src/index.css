@@ -236,18 +236,18 @@ html.light-theme body {
 }
 
 /* =========================================
-   Cinzel
+   
    ========================================= */
 
-.font-cinzel {
+. {
   font-family: var(--font-alta);
 }
 
 /* =========================================
-   Cinzel Decorative
+    Decorative
    ========================================= */
 
-.font-cinzel-decorative {
+. {
   font-family: var(--font-alta);
 }
 

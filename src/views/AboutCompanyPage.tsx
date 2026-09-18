@@ -66,12 +66,12 @@ export const AboutCompanyPage: React.FC = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#097B8A] border border-[#D4AF37]/50 mb-6 shadow-xl">
             <GoldEmblem size={18} />
-            <span className="text-[11px] font-cinzel font-bold tracking-[0.35em] text-[#D4AF37] uppercase">
+            <span className="text-[11px]  font-bold tracking-[0.35em] text-[#D4AF37] uppercase">
               THE HOUSE OF GHRÉ
             </span>
           </div>
 
-          <h1 className="font-cinzel text-4xl sm:text-6xl lg:text-7xl font-bold tracking-[0.1em] text-[#FBF9F3] uppercase leading-tight">
+          <h1 className=" text-4xl sm:text-6xl lg:text-7xl font-bold tracking-[0.1em] text-[#FBF9F3] uppercase leading-tight">
             About The Company
           </h1>
 
@@ -81,7 +81,7 @@ export const AboutCompanyPage: React.FC = () => {
 
           <div className="h-0.5 w-32 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto my-8" />
 
-          <p className="font-outfit text-sm sm:text-base text-[#C4D8DC] font-light max-w-2xl mx-auto leading-relaxed">
+          <p className="font-outfit text-xl sm:text-base text-[#C4D8DC] font-light max-w-2xl mx-auto leading-relaxed">
             Founded on the world's most influential runways, GHRÉ is a luxury haircare
             and beauty house dedicated to elevating daily care into an exquisite
             ritual of renewal.
@@ -114,7 +114,7 @@ export const AboutCompanyPage: React.FC = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#097B8A]/80 via-transparent to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 p-4 bg-[#097B8A]/90 border border-[#D4AF37]/40 backdrop-blur-md">
-                  <span className="text-[10px] font-cinzel tracking-[0.25em] text-[#D4AF37] uppercase font-bold block">
+                  <span className="text-[10px]  tracking-[0.25em] text-[#D4AF37] uppercase font-bold block">
                     THE EMBLEM OF LUXURY — THE SOUL OF GHRÉ
                   </span>
                   <p className="text-xs font-outfit text-[#FBF9F3] mt-0.5">
@@ -137,12 +137,12 @@ export const AboutCompanyPage: React.FC = () => {
                 <span className="text-xs font-bold tracking-[0.3em] text-[#D4AF37] uppercase block">
                   OUR ESSENCE & PHILOSOPHY
                 </span>
-                <h2 className="font-cinzel text-2xl sm:text-4xl font-bold uppercase text-[#FBF9F3]">
+                <h2 className=" text-2xl sm:text-4xl font-bold uppercase text-[#FBF9F3]">
                   An Uncompromising Standard of Purity
                 </h2>
               </div>
 
-              <p className="font-outfit text-sm sm:text-base text-[#C4D8DC] font-light leading-relaxed">
+              <p className="font-outfit text-xl sm:text-base text-[#C4D8DC] font-light leading-relaxed">
                 For over two decades, GHRÉ has operated at the intersection of
                 haute couture fashion and trichological science. What began as
                 custom backstage elixir formulations for top supermodels during
@@ -150,7 +150,7 @@ export const AboutCompanyPage: React.FC = () => {
                 maison.
               </p>
 
-              <p className="font-outfit text-sm sm:text-base text-[#C4D8DC] font-light leading-relaxed">
+              <p className="font-outfit text-xl sm:text-base text-[#C4D8DC] font-light leading-relaxed">
                 Every formulation is crafted in France and the United States
                 under strict clean-luxury guidelines. We select only the most
                 potent cold-pressed botanicals, pairing Moroccan Prickly Pear
@@ -160,7 +160,7 @@ export const AboutCompanyPage: React.FC = () => {
 
               <div className="grid grid-cols-2 gap-4 pt-2">
                 <div className="p-4 bg-[#097B8A] border border-[#D4AF37]/30">
-                  <span className="font-cinzel text-2xl font-bold text-[#D4AF37] block">
+                  <span className=" text-2xl font-bold text-[#D4AF37] block">
                     100%
                   </span>
                   <span className="text-xs font-outfit text-[#8EAAB0]">
@@ -168,7 +168,7 @@ export const AboutCompanyPage: React.FC = () => {
                   </span>
                 </div>
                 <div className="p-4 bg-[#097B8A] border border-[#D4AF37]/30">
-                  <span className="font-cinzel text-2xl font-bold text-[#D4AF37] block">
+                  <span className=" text-2xl font-bold text-[#D4AF37] block">
                     3x
                   </span>
                   <span className="text-xs font-outfit text-[#8EAAB0]">
@@ -186,13 +186,13 @@ export const AboutCompanyPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <GoldEmblem size={28} withGlow className="mx-auto mb-3" />
-            <span className="text-[11px] font-cinzel font-bold tracking-[0.3em] text-[#D4AF37] uppercase block mb-1">
+            <span className="text-[11px]  font-bold tracking-[0.3em] text-[#D4AF37] uppercase block mb-1">
               THE FOUR CORNERSTONES
             </span>
-            <h2 className="font-cinzel text-3xl sm:text-5xl font-bold uppercase text-[#FBF9F3]">
+            <h2 className=" text-3xl sm:text-5xl font-bold uppercase text-[#FBF9F3]">
               The GHRÉ Pillars of Craft
             </h2>
-            <p className="font-outfit text-sm text-[#8EAAB0] mt-3">
+            <p className="font-outfit text-xl text-[#8EAAB0] mt-3">
               Meticulous standards governing our research, sustainable sourcing,
               and artisanal creation.
             </p>
@@ -212,10 +212,10 @@ export const AboutCompanyPage: React.FC = () => {
                   <div className="w-12 h-12 bg-[#097B8A] border border-[#D4AF37]/40 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                     {p.icon}
                   </div>
-                  <span className="text-[10px] font-cinzel tracking-[0.25em] text-[#D4AF37] uppercase font-bold block mb-1">
+                  <span className="text-[10px]  tracking-[0.25em] text-[#D4AF37] uppercase font-bold block mb-1">
                     {p.tagline}
                   </span>
-                  <h3 className="font-cinzel text-base font-bold text-[#FBF9F3] mb-3">
+                  <h3 className=" text-base font-bold text-[#FBF9F3] mb-3">
                     {p.title}
                   </h3>
                   <p className="font-outfit text-xs text-[#B3CBD1] font-light leading-relaxed">
@@ -240,13 +240,13 @@ export const AboutCompanyPage: React.FC = () => {
       <section className="py-24 bg-[#0C8A9B] border-t border-b border-[#D4AF37]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-[11px] font-cinzel font-bold tracking-[0.3em] text-[#D4AF37] uppercase block mb-1">
+            <span className="text-[11px]  font-bold tracking-[0.3em] text-[#D4AF37] uppercase block mb-1">
               WORLDWIDE PRESENCE
             </span>
-            <h2 className="font-cinzel text-3xl sm:text-5xl font-bold uppercase text-[#FBF9F3]">
+            <h2 className=" text-3xl sm:text-5xl font-bold uppercase text-[#FBF9F3]">
               Our International Ateliers
             </h2>
-            <p className="font-outfit text-sm text-[#8EAAB0] mt-3">
+            <p className="font-outfit text-xl text-[#8EAAB0] mt-3">
               Serving our private patrons across the world’s most prestigious
               luxury destinations.
             </p>
@@ -259,10 +259,10 @@ export const AboutCompanyPage: React.FC = () => {
                 className="bg-[#097B8A] border-2 border-[#D4AF37]/40 p-8 text-center space-y-4 hover:border-[#D4AF37] transition-all shadow-xl"
               >
                 <MapPin className="w-8 h-8 text-[#D4AF37] mx-auto" />
-                <span className="text-[10px] font-cinzel tracking-[0.25em] text-[#D4AF37] uppercase font-bold px-3 py-1 bg-[#097B8A] border border-[#D4AF37]/30 inline-block">
+                <span className="text-[10px]  tracking-[0.25em] text-[#D4AF37] uppercase font-bold px-3 py-1 bg-[#097B8A] border border-[#D4AF37]/30 inline-block">
                   {a.status}
                 </span>
-                <h3 className="font-cinzel text-xl font-bold text-[#FBF9F3] uppercase">
+                <h3 className=" text-xl font-bold text-[#FBF9F3] uppercase">
                   {a.city}
                 </h3>
                 <p className="font-outfit text-xs text-[#8EAAB0] font-light leading-relaxed">
@@ -274,30 +274,30 @@ export const AboutCompanyPage: React.FC = () => {
 
           {/* Links and CTA Bar */}
           <div className="mt-16 p-8 bg-[#097B8A] border border-[#D4AF37] text-center max-w-4xl mx-auto space-y-4 shadow-2xl">
-            <h3 className="font-cinzel text-2xl font-bold text-[#FBF9F3] uppercase">
+            <h3 className=" text-2xl font-bold text-[#FBF9F3] uppercase">
               Experience the GHRÉ Haute Ritual
             </h3>
-            <p className="font-outfit text-xs sm:text-sm text-[#B3CBD1] max-w-xl mx-auto">
+            <p className="font-outfit text-xs sm:text-xl text-[#B3CBD1] max-w-xl mx-auto">
               Discover our signature hair care creations or request a private
               consultation at our Flagship Atelier.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
               <button
                 onClick={() => navigateToPage("shop")}
-                className="px-6 py-3 bg-[#D4AF37] text-[#0E4C5A] font-cinzel text-xs font-bold tracking-widest uppercase hover:brightness-110 transition-all flex items-center gap-2 cursor-pointer"
+                className="px-6 py-3 bg-[#D4AF37] text-[#0E4C5A]  text-xs font-bold tracking-widest uppercase hover:brightness-110 transition-all flex items-center gap-2 cursor-pointer"
               >
                 <span>Explore The Shop</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
               <button
                 onClick={() => navigateToPage("about-founder")}
-                className="px-6 py-3 bg-[#097B8A] border border-[#D4AF37] text-[#F3E5AB] font-cinzel text-xs font-bold tracking-widest uppercase hover:bg-[#0C8A9B] transition-all cursor-pointer"
+                className="px-6 py-3 bg-[#097B8A] border border-[#D4AF37] text-[#F3E5AB]  text-xs font-bold tracking-widest uppercase hover:bg-[#0C8A9B] transition-all cursor-pointer"
               >
                 About The Founder
               </button>
               <button
                 onClick={() => navigateToPage("contact")}
-                className="px-6 py-3 bg-transparent border border-[#8EAAB0]/40 text-[#8EAAB0] hover:text-[#FBF9F3] font-cinzel text-xs font-bold tracking-widest uppercase hover:border-[#D4AF37] transition-all cursor-pointer"
+                className="px-6 py-3 bg-transparent border border-[#8EAAB0]/40 text-[#8EAAB0] hover:text-[#FBF9F3]  text-xs font-bold tracking-widest uppercase hover:border-[#D4AF37] transition-all cursor-pointer"
               >
                 Contact Us
               </button>

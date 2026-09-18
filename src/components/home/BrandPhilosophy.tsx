@@ -136,7 +136,7 @@ export const BrandPhilosophy: React.FC = () => {
 
                 <span className="h-px w-12 sm:w-20 bg-gradient-to-r from-transparent to-[#D4AF37]" />
 
-                <span className="text-[10px] sm:text-[11px] font-cinzel font-bold tracking-[0.4em] text-[#D4AF37] uppercase whitespace-nowrap">
+                <span className="text-[10px] sm:text-[11px]  font-bold tracking-[0.4em] text-[#D4AF37] uppercase whitespace-nowrap">
                   THE GHRÉ PHILOSOPHY
                 </span>
 
@@ -193,7 +193,7 @@ export const BrandPhilosophy: React.FC = () => {
                 self-care.
               </p>
 
-              <p className="max-w-2xl mx-auto mt-5 text-sm sm:text-base text-[#BFD5DA] font-sans font-light leading-[1.85]">
+              <p className="max-w-2xl mx-auto mt-5 text-xl sm:text-base text-[#BFD5DA] font-sans font-light leading-[1.85]">
                 Every formula, every fragrance, and every detail is designed
                 to bring a touch of atelier luxury into your daily hair
                 ritual.
@@ -215,7 +215,7 @@ export const BrandPhilosophy: React.FC = () => {
                   <div className="w-10 h-px bg-[#D4AF37]/60 my-3" />
 
                   {/* Locations */}
-                  <span className="text-[9px] sm:text-[10px] font-cinzel tracking-[0.35em] text-[#A8C1C7] uppercase font-bold">
+                  <span className="text-[9px] sm:text-[10px]  tracking-[0.35em] text-[#A8C1C7] uppercase font-bold">
                     GLOBAL
                     <span className="mx-2 text-[#D4AF37]">•</span>
                     BOTANICAL
@@ -243,7 +243,7 @@ export const BrandPhilosophy: React.FC = () => {
         >
           <span className="w-1 h-1 rounded-full bg-[#D4AF37]" />
 
-          <span className="text-[9px] sm:text-[10px] font-cinzel tracking-[0.3em] text-[#9DBBC2] uppercase">
+          <span className="text-[9px] sm:text-[10px]  tracking-[0.3em] text-[#9DBBC2] uppercase">
             TIMELESS BEAUTY • COASTAL BOTANICALS • TIMELESS RITUALS
           </span>
 

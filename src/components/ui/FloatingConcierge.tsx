@@ -53,12 +53,12 @@ export const FloatingConcierge: React.FC = () => {
               }`}
             >
               <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-full border border-[#D4AF37]/60 flex items-center justify-center bg-[#021820] text-[#D4AF37] font-cinzel font-bold text-xs">
+                <div className="w-8 h-8 rounded-full border border-[#D4AF37]/60 flex items-center justify-center bg-[#021820] text-[#D4AF37]  font-bold text-xs">
                   JG
                 </div>
                 <div>
                   <h4
-                    className={`font-cinzel text-xs sm:text-sm font-bold tracking-wider uppercase ${
+                    className={` text-xs sm:text-xl font-bold tracking-wider uppercase ${
                       isDark ? 'text-[#F3E5AB]' : 'text-[#062B35]'
                     }`}
                   >
@@ -84,7 +84,7 @@ export const FloatingConcierge: React.FC = () => {
             </div>
 
             {/* Tab Selector */}
-            <div className="grid grid-cols-2 border-b border-[#D4AF37]/20 text-xs font-cinzel">
+            <div className="grid grid-cols-2 border-b border-[#D4AF37]/20 text-xs ">
               <button
                 onClick={() => setActiveTab('whatsapp')}
                 className={`py-2.5 flex items-center justify-center gap-1.5 transition-all ${
@@ -127,7 +127,7 @@ export const FloatingConcierge: React.FC = () => {
                         : 'bg-[#FAF7F2] border-[#D4AF37]/30 text-[#4A6B74]'
                     }`}
                   >
-                    <p className="font-editorial text-sm italic text-[#D4AF37] mb-1">
+                    <p className="font-editorial text-xl italic text-[#D4AF37] mb-1">
                       “Direct VIP connection to Jac Ghré master stylists and client advisors.”
                     </p>
                     <p>Response time: Immediate / Under 2 minutes.</p>
@@ -135,7 +135,7 @@ export const FloatingConcierge: React.FC = () => {
 
                   {/* Quick Topics */}
                   <div className="space-y-1.5">
-                    <span className="text-[10px] font-cinzel text-[#D4AF37] uppercase tracking-wider block font-semibold">
+                    <span className="text-[10px]  text-[#D4AF37] uppercase tracking-wider block font-semibold">
                       Instant Quick Inquiries:
                     </span>
                     {quickQuestions.map((q, idx) => (
@@ -175,7 +175,7 @@ export const FloatingConcierge: React.FC = () => {
                       />
                       <button
                         onClick={() => handleOpenDirectWhatsapp(inquiryText || undefined)}
-                        className="px-3.5 py-2 bg-[#25D366] text-white font-cinzel text-xs font-bold uppercase hover:brightness-110 flex items-center gap-1 shadow-[0_4px_12px_rgba(37,211,102,0.4)] shrink-0 cursor-pointer"
+                        className="px-3.5 py-2 bg-[#25D366] text-white  text-xs font-bold uppercase hover:brightness-110 flex items-center gap-1 shadow-[0_4px_12px_rgba(37,211,102,0.4)] shrink-0 cursor-pointer"
                       >
                         <Send className="w-3.5 h-3.5" />
                         <span>Send</span>
@@ -192,7 +192,7 @@ export const FloatingConcierge: React.FC = () => {
                         : 'bg-[#FAF7F2] border-[#D4AF37]/30 text-[#4A6B74]'
                     }`}
                   >
-                    <p className="font-editorial text-sm italic text-[#D4AF37] mb-1">
+                    <p className="font-editorial text-xl italic text-[#D4AF37] mb-1">
                       “Private telephone consultations with our maison specialists.”
                     </p>
                   </div>
@@ -208,7 +208,7 @@ export const FloatingConcierge: React.FC = () => {
                     >
                       <div className="flex items-center justify-between">
                         <div>
-                          <strong className="text-[11px] font-cinzel text-[#D4AF37] block">
+                          <strong className="text-[11px]  text-[#D4AF37] block">
                             CELL USA
                           </strong>
                           <span className="text-xs font-mono font-bold">(1) 786 238 3631</span>
@@ -228,7 +228,7 @@ export const FloatingConcierge: React.FC = () => {
                     >
                       <div className="flex items-center justify-between">
                         <div>
-                          <strong className="text-[11px] font-cinzel text-[#D4AF37] block">
+                          <strong className="text-[11px]  text-[#D4AF37] block">
                             PRIVATE CLIENT FLAGSHIP
                           </strong>
                           <span className="text-xs font-mono font-bold">+33 (0) 1 42 68 55 00</span>
@@ -242,7 +242,7 @@ export const FloatingConcierge: React.FC = () => {
                   <div className="pt-2">
                     <a
                       href="tel:+17862383631"
-                      className="w-full py-2.5 bg-[#D4AF37] text-[#062B35] font-cinzel text-xs font-bold uppercase tracking-wider hover:brightness-110 flex items-center justify-center gap-2 shadow"
+                      className="w-full py-2.5 bg-[#D4AF37] text-[#062B35]  text-xs font-bold uppercase tracking-wider hover:brightness-110 flex items-center justify-center gap-2 shadow"
                     >
                       <Phone className="w-3.5 h-3.5" />
                       <span>One-Touch Direct Call</span>
@@ -260,7 +260,7 @@ export const FloatingConcierge: React.FC = () => {
         {/* Realistic 3D Atelier Phone Hotline Button */}
         <div className="relative group flex items-center justify-center">
           {/* Tooltip Label */}
-          <div className="absolute right-full mr-3.5 px-3 py-1.5 bg-[#006073]/95 text-[#F3E5AB] border border-[#D4AF37]/70 text-[11px] font-cinzel tracking-wider whitespace-nowrap opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 shadow-[0_8px_20px_rgba(0,96,115,0.6)] pointer-events-none z-50 flex items-center gap-1.5">
+          <div className="absolute right-full mr-3.5 px-3 py-1.5 bg-[#006073]/95 text-[#F3E5AB] border border-[#D4AF37]/70 text-[11px]  tracking-wider whitespace-nowrap opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 shadow-[0_8px_20px_rgba(0,96,115,0.6)] pointer-events-none z-50 flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" />
             <span>Call JAC GHRÉ (+1 786 238 3631)</span>
           </div>
@@ -292,7 +292,7 @@ export const FloatingConcierge: React.FC = () => {
         {/* Realistic 3D Authentic WhatsApp Button */}
         <div className="relative group flex items-center justify-center">
           {/* Tooltip Label */}
-          <div className="absolute right-full mr-3.5 px-3 py-1.5 bg-[#006073]/95 text-[#25D366] border border-[#25D366]/70 text-[11px] font-cinzel tracking-wider whitespace-nowrap opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 shadow-[0_8px_20px_rgba(0,96,115,0.6)] pointer-events-none z-50 flex items-center gap-1.5">
+          <div className="absolute right-full mr-3.5 px-3 py-1.5 bg-[#006073]/95 text-[#25D366] border border-[#25D366]/70 text-[11px]  tracking-wider whitespace-nowrap opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 shadow-[0_8px_20px_rgba(0,96,115,0.6)] pointer-events-none z-50 flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-[#25D366] animate-ping" />
             <span>Chat on WhatsApp (Live)</span>
           </div>

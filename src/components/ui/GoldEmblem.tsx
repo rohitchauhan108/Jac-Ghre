@@ -105,7 +105,7 @@ export const LuxuryDivider: React.FC<{
   return (
     <div className={`flex flex-col items-center justify-center my-6 ${className}`}>
       {subtitle && (
-        <span className="text-[11px] tracking-[0.35em] text-[#D4AF37] uppercase font-cinzel mb-2 font-medium">
+        <span className="text-[11px] tracking-[0.35em] text-[#D4AF37] uppercase  mb-2 font-medium">
           {subtitle}
         </span>
       )}
@@ -115,7 +115,7 @@ export const LuxuryDivider: React.FC<{
         <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent via-[#D4AF37]/60 to-[#D4AF37]" />
       </div>
       {title && (
-        <h3 className="mt-3 font-cinzel text-xl text-[#F7F4EB] tracking-wider text-center">
+        <h3 className="mt-3  text-xl text-[#F7F4EB] tracking-wider text-center">
           {title}
         </h3>
       )}

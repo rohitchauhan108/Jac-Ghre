@@ -24,7 +24,7 @@ export const VisionSection: React.FC = () => {
         >
           <GoldEmblem size={48} withGlow className="mb-6" />
 
-          <span className="text-xs sm:text-sm font-cinzel font-semibold tracking-[0.4em] text-[#D4AF37] uppercase mb-4">
+          <span className="text-xs sm:text-xl  font-semibold tracking-[0.4em] text-[#D4AF37] uppercase mb-4">
             The Philosophy of Jac Ghré
           </span>
 
@@ -47,7 +47,7 @@ export const VisionSection: React.FC = () => {
             <span className="font-script text-4xl sm:text-6xl text-[#D4AF37] tracking-wider mb-2">
               Jac Ghré
             </span>
-            <span className="text-xs font-cinzel tracking-[0.3em] text-[#E8DCC4] uppercase">
+            <span className="text-xs  tracking-[0.3em] text-[#E8DCC4] uppercase">
               FOUNDER & MASTER BEAUTY ARTIST
             </span>
             <span className="text-[11px] text-[#8EAAB0] font-sans mt-1">

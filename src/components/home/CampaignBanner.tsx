@@ -50,7 +50,7 @@ export const CampaignBanner: React.FC = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-[#006073]/60 via-transparent to-transparent pointer-events-none" />
 
             <div className="lg:absolute p-5 bottom-4 left-4 sm:bottom-6 sm:left-6 z-20 flex flex-wrap items-center gap-3">
-              <span className="px-3.5 py-1.5 bg-[#006073]/90 border border-[#D4AF37]/50 text-[#F3E5AB] font-cinzel text-xs tracking-[0.2em] uppercase backdrop-blur-md lg:w-auto w-full flex justify-center" >
+              <span className="px-3.5 py-1.5 bg-[#006073]/90 border border-[#D4AF37]/50 text-[#F3E5AB]  text-xs tracking-[0.2em] uppercase backdrop-blur-md lg:w-auto w-full flex justify-center" >
                 SUNLIT BEAUTY • BOTANICAL RITUALS
               </span>
               <button
@@ -58,7 +58,7 @@ export const CampaignBanner: React.FC = () => {
                   e.stopPropagation();
                   navigateToPage('shop');
                 }}
-                className="px-5 py-1.5 bg-[#D4AF37] text-[#062B35] font-cinzel text-xs font-bold tracking-[0.2em] uppercase hover:brightness-110 shadow-lg flex items-center gap-1.5 transition-all lg:w-auto w-full justify-center"
+                className="px-5 py-1.5 bg-[#D4AF37] text-[#062B35]  text-xs font-bold tracking-[0.2em] uppercase hover:brightness-110 shadow-lg flex items-center gap-1.5 transition-all lg:w-auto w-full justify-center"
               >
                 <span>EXPLORE PRODUCTS</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -71,18 +71,18 @@ export const CampaignBanner: React.FC = () => {
             <div className="text-center lg:text-left space-y-1">
               <div className="flex items-center justify-center lg:justify-start gap-2">
                 <GoldEmblem size={20} />
-                <span className="text-xs font-cinzel tracking-[0.3em] text-[#D4AF37] uppercase font-bold">
+                <span className="text-xs  tracking-[0.3em] text-[#D4AF37] uppercase font-bold">
                   HAUTE BOTANICAL LAUNCH
                 </span>
               </div>
-              <p className="text-sm font-editorial italic text-[#F3E5AB]">
+              <p className="text-xl font-editorial italic text-[#F3E5AB]">
                 “Monoï Vanilla Silk & Bamboo Marrow Formulations”
               </p>
             </div>
 
             {/* VIP Reservation Form */}
             {isReserved ? (
-              <div className="p-3.5 bg-[#007288] border border-[#D4AF37] flex items-center gap-3 text-xs font-cinzel tracking-wider text-[#F3E5AB]">
+              <div className="p-3.5 bg-[#007288] border border-[#D4AF37] flex items-center gap-3 text-xs  tracking-wider text-[#F3E5AB]">
                 <Check className="w-4 h-4 text-[#D4AF37]" />
                 <span>You are on the VIP Launch Priority Access List.</span>
               </div>
@@ -98,7 +98,7 @@ export const CampaignBanner: React.FC = () => {
                 />
                 <button
                   type="submit"
-                  className="px-6 py-2.5 bg-gradient-to-r from-[#D4AF37] to-[#B89028] text-[#062B35] font-cinzel text-xs font-bold tracking-[0.2em] uppercase hover:brightness-110 shadow-lg shrink-0 transition-all flex items-center justify-center gap-1.5"
+                  className="px-6 py-2.5 bg-gradient-to-r from-[#D4AF37] to-[#B89028] text-[#062B35]  text-xs font-bold tracking-[0.2em] uppercase hover:brightness-110 shadow-lg shrink-0 transition-all flex items-center justify-center gap-1.5"
                 >
                   <Bell className="w-3.5 h-3.5" />
                   <span>Notify Me</span>

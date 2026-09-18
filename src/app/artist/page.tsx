@@ -169,7 +169,7 @@ export default function ArchiveGallery() {
                 </span>
               </div>
               <div className="h-1 w-1 rounded-full bg-[#D4AF37]/60" />
-              <span className="text-[11px] sm:text-xs font-cinzel tracking-[0.3em] text-[#C5D9DE] uppercase font-semibold">
+              <span className="text-[11px] sm:text-xs tracking-[0.3em] text-[#C5D9DE] uppercase font-semibold">
                 Beauty · Runway · Campaign
               </span>
             </div>
@@ -253,7 +253,7 @@ export default function ArchiveGallery() {
               <p className="text-[10px] tracking-[0.35em] text-[#D4AF37] uppercase font-bold">
                 Private Atelier &amp; Booking
               </p>
-              <h3 className="font-cinzel text-xl sm:text-2xl lg:text-3xl font-bold uppercase text-[#FBF9F3] tracking-wide leading-tight">
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold uppercase text-[#FBF9F3] tracking-wide leading-tight">
                 Request a private consultation with Jac Ghré
               </h3>
             </div>
@@ -342,10 +342,10 @@ export default function ArchiveGallery() {
                 />
               </div>
               <div className="mt-4 text-center">
-                <p className="font-cinzel text-xs tracking-[0.3em] text-[#D4AF37] uppercase font-bold">
+                <p className="text-xs tracking-[0.3em] text-[#D4AF37] uppercase font-bold">
                   {itemsRef.current[selectedIndex].title}
                 </p>
-                <p className="text-[10px] font-cinzel tracking-[0.2em] text-[#8EAAB0] mt-1">
+                <p className="text-[10px] tracking-[0.2em] text-[#8EAAB0] mt-1">
                   N°{String(selectedIndex + 1).padStart(2, "0")} / {String(itemsRef.current.length).padStart(2, "0")}
                 </p>
               </div>
