@@ -253,7 +253,7 @@ export default function ArchiveGallery() {
               <p className="text-[10px] tracking-[0.35em] text-[#D4AF37] uppercase font-bold">
                 Private Atelier &amp; Booking
               </p>
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold uppercase text-[#FBF9F3] tracking-wide leading-tight">
+              <h3 className="font-cinzel text-xl sm:text-2xl lg:text-3xl font-bold uppercase text-[#FBF9F3] tracking-wide leading-tight">
                 Request a private consultation with Jac Ghré
               </h3>
             </div>

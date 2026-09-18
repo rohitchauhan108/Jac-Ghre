@@ -1,6 +1,59 @@
 @import "tailwindcss";
 
 /* =========================================
+   Alta Luxury Display Font
+   Loaded from /public/fonts/ Alta OTF files
+   ========================================= */
+
+@font-face {
+  font-family: "Alta";
+  src: url("/fonts/Alta-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Alta";
+  src: url("/fonts/Alta-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Alta";
+  src: url("/fonts/Alta-Regular.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Alta";
+  src: url("/fonts/Alta-Regular.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Alta";
+  src: url("/fonts/Alta-Regular.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Alta Caption";
+  src: url("/fonts/Alta-Caption.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* =========================================
    Base / Font Variables
    ========================================= */
 
@@ -9,6 +62,8 @@
     /* =====================================
        Main Font Families
        ===================================== */
+
+    --font-alta: "Alta";
 
     --font-serif:
       var(--font-playfair),
@@ -58,7 +113,7 @@
   h4,
   h5,
   h6 {
-    font-family: "Alita", sans-serif;
+    font-family: var(--font-alta);
 
     letter-spacing: 0.06em;
 
@@ -185,7 +240,7 @@ html.light-theme body {
    ========================================= */
 
 .font-cinzel {
-  font-family: "Alita", sans-serif;
+  font-family: var(--font-alta);
 }
 
 /* =========================================
@@ -193,7 +248,7 @@ html.light-theme body {
    ========================================= */
 
 .font-cinzel-decorative {
-  font-family: "Alita", sans-serif;
+  font-family: var(--font-alta);
 }
 
 /* =========================================
@@ -219,11 +274,11 @@ html.light-theme body {
 }
 
 /* =========================================
-  Alita — Main Luxury Font
+  Alta — Main Luxury Font
   ========================================= */
 
 .font-alta {
-  font-family: "Alita", sans-serif;
+  font-family: var(--font-alta);
 
   letter-spacing: 0.06em;
 
@@ -231,11 +286,11 @@ html.light-theme body {
 }
 
 /* =========================================
-  Alita Heading
+  Alta Heading
   ========================================= */
 
 .font-alta-heading {
-  font-family: "Alita", sans-serif;
+  font-family: var(--font-alta);
 
   letter-spacing: 0.06em;
 
