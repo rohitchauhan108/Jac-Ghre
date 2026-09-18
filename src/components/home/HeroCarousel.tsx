@@ -43,18 +43,8 @@ export const HeroCarousel: React.FC = () => {
   /* =========================================================
      SLIDE NAVIGATION
   ========================================================= */
-  const handleSlideClick = (slide: typeof currentSlide) => {
-    if (
-      slide.ctaLink === "hair-care" ||
-      slide.id.includes("hair") ||
-      slide.id.includes("orange")
-    ) {
-      navigateToPage("hair-care");
-    } else if (slide.ctaLink === "sun-body" || slide.id.includes("sun")) {
-      navigateToPage("sun-body");
-    } else {
-      navigateToPage("shop", "all");
-    }
+  const handleSlideClick = () => {
+    navigateToPage("shop", "all");
   };
 
   return (
@@ -78,7 +68,7 @@ export const HeroCarousel: React.FC = () => {
             animate={{ opacity: 1, scale: 1 }} 
             exit={{ opacity: 0, scale: 0.98 }} 
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }} 
-            onClick={() => handleSlideClick(currentSlide)} 
+            onClick={handleSlideClick} 
             className="absolute inset-0 w-full h-full cursor-pointer group"
           >
             {/* =================================================
@@ -137,7 +127,7 @@ export const HeroCarousel: React.FC = () => {
             DESKTOP CTA
         ========================================================= */}
         <div className="absolute bottom-5 sm:bottom-6 lg:bottom-8 right-5 sm:right-6 lg:right-10 z-30 hidden md:block">
-          <button type="button" onClick={(e) => { e.stopPropagation(); handleSlideClick(currentSlide); }} className="px-4 lg:px-6 py-2.5 bg-[#006073]/90 hover:bg-[#D4AF37] text-[#F3E5AB] hover:text-[#0E4C5A] border border-[#D4AF37]/70 backdrop-blur-md font-cinzel text-[10px] lg:text-xs font-bold tracking-[0.2em] uppercase shadow-[0_8px_25px_rgba(0,96,115,0.6)] transition-all duration-300 flex items-center gap-2 group cursor-pointer">
+          <button type="button" onClick={(e) => { e.stopPropagation(); handleSlideClick(); }} className="px-4 lg:px-6 py-2.5 bg-[#006073]/90 hover:bg-[#D4AF37] text-[#F3E5AB] hover:text-[#0E4C5A] border border-[#D4AF37]/70 backdrop-blur-md font-cinzel text-[10px] lg:text-xs font-bold tracking-[0.2em] uppercase shadow-[0_8px_25px_rgba(0,96,115,0.6)] transition-all duration-300 flex items-center gap-2 group cursor-pointer">
             <span>{currentSlide.ctaText || "EXPLORE COLLECTION"}</span>
             <ArrowRight className="w-3.5 h-3.5 text-[#D4AF37] group-hover:text-[#0E4C5A] transition-transform group-hover:translate-x-1" />
           </button>
@@ -147,7 +137,7 @@ export const HeroCarousel: React.FC = () => {
             MOBILE CTA
         ========================================================= */}
         <div className="absolute bottom-2 sm:bottom-3 left-1/2 -translate-x-1/2 z-30 md:hidden">
-          <button type="button" onClick={(e) => { e.stopPropagation(); handleSlideClick(currentSlide); }} className="px-3 sm:px-4 py-1.5 sm:py-2 bg-[#006073]/90 text-[#F3E5AB] border border-[#D4AF37]/70 backdrop-blur-md font-cinzel text-[8px] sm:text-[9px] font-bold tracking-[0.14em] sm:tracking-[0.16em] uppercase shadow-lg flex items-center gap-1.5 sm:gap-2 whitespace-nowrap active:scale-95 transition-transform">
+          <button type="button" onClick={(e) => { e.stopPropagation(); handleSlideClick(); }} className="px-3 sm:px-4 py-1.5 sm:py-2 bg-[#006073]/90 text-[#F3E5AB] border border-[#D4AF37]/70 backdrop-blur-md font-cinzel text-[8px] sm:text-[9px] font-bold tracking-[0.14em] sm:tracking-[0.16em] uppercase shadow-lg flex items-center gap-1.5 sm:gap-2 whitespace-nowrap active:scale-95 transition-transform">
             <span>{currentSlide.ctaText || "EXPLORE COLLECTION"}</span>
             <ArrowRight className="w-3 h-3 text-[#D4AF37]" />
           </button>

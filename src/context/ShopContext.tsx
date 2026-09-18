@@ -112,7 +112,7 @@ const pageTypeToPath = (page: PageType): string => {
     case 'hair-care':
       return '/hair-care';
     case 'sun-body':
-      return '/sun-body';
+      return '/shop';
     case 'fragrance':
       return '/fragrance';
     case 'jac-ghre':

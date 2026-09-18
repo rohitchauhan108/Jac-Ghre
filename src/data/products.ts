@@ -55,7 +55,7 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     secondaryCtaText: "VIEW RITUALS",
     secondaryCtaLink: "hair-care",
     accentTheme: "teal-gold",
-    image: "/home/banner1.jpg",
+    image: "/home/banner1.webp",
     mobileImage: "/home/mobile-banner1.webp",
   },
   {

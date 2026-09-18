@@ -3,8 +3,6 @@ import {
   Plus_Jakarta_Sans,
   Outfit,
   Playfair_Display,
-  Cinzel,
-  Cinzel_Decorative,
   Cormorant_Garamond,
   Pinyon_Script,
   Alex_Brush,
@@ -28,19 +26,6 @@ const outfit = Outfit({
 const playfairDisplay = Playfair_Display({
   subsets: ['latin'],
   variable: '--font-playfair',
-  display: 'swap',
-});
-
-const cinzel = Cinzel({
-  subsets: ['latin'],
-  variable: '--font-cinzel',
-  display: 'swap',
-});
-
-const cinzelDecorative = Cinzel_Decorative({
-  subsets: ['latin'],
-  weight: ['400', '700', '900'],
-  variable: '--font-cinzel-decorative',
   display: 'swap',
 });
 
@@ -95,7 +80,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${plusJakartaSans.variable} ${outfit.variable} ${playfairDisplay.variable} ${cinzel.variable} ${cinzelDecorative.variable} ${cormorantGaramond.variable} ${pinyonScript.variable} ${alexBrush.variable}`}
+      className={`${plusJakartaSans.variable} ${outfit.variable} ${playfairDisplay.variable} ${cormorantGaramond.variable} ${pinyonScript.variable} ${alexBrush.variable}`}
     >
       <body>
         <AppShell>{children}</AppShell>

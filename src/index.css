@@ -1,13 +1,5 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: "Alta";
-  src: local("Alta"), url("/fonts/Alta.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-}
-
 /* =========================================
    Base / Font Variables
    ========================================= */
@@ -34,26 +26,6 @@
       var(--font-outfit),
       sans-serif;
 
-    /* =====================================
-       Alta Luxury Heading Font
-       ===================================== */
-
-    --font-alta-heading:
-      "Alta",
-      "Didot",
-      "Bodoni MT",
-      "Bodoni 72",
-      serif;
-
-    /* =====================================
-       Didot Fallback
-       ===================================== */
-
-    --font-didot:
-      "Didot",
-      "Bodoni MT",
-      "Bodoni 72",
-      serif;
   }
 
   /* =======================================
@@ -86,7 +58,7 @@
   h4,
   h5,
   h6 {
-    font-family: var(--font-alta-heading);
+    font-family: "Alita", sans-serif;
 
     letter-spacing: 0.06em;
 
@@ -213,7 +185,7 @@ html.light-theme body {
    ========================================= */
 
 .font-cinzel {
-  font-family: var(--font-alta-heading);
+  font-family: "Alita", sans-serif;
 }
 
 /* =========================================
@@ -221,7 +193,7 @@ html.light-theme body {
    ========================================= */
 
 .font-cinzel-decorative {
-  font-family: var(--font-alta-heading);
+  font-family: "Alita", sans-serif;
 }
 
 /* =========================================
@@ -247,11 +219,11 @@ html.light-theme body {
 }
 
 /* =========================================
-   Alta — Main Luxury Font
-   ========================================= */
+  Alita — Main Luxury Font
+  ========================================= */
 
 .font-alta {
-  font-family: var(--font-alta-heading);
+  font-family: "Alita", sans-serif;
 
   letter-spacing: 0.06em;
 
@@ -259,25 +231,15 @@ html.light-theme body {
 }
 
 /* =========================================
-   Alta Heading
-   ========================================= */
+  Alita Heading
+  ========================================= */
 
 .font-alta-heading {
-  font-family: var(--font-alta-heading);
+  font-family: "Alita", sans-serif;
 
   letter-spacing: 0.06em;
 
   font-weight: 400;
-}
-
-/* =========================================
-   Didot Utility
-   ========================================= */
-
-.font-didot {
-  font-family: var(--font-didot);
-
-  letter-spacing: 0.06em;
 }
 
 /* =========================================
