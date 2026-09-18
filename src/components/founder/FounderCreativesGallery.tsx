@@ -7,12 +7,12 @@ import { GoldEmblem } from '../ui/GoldEmblem';
 import Lenis from 'lenis';
 
 const FOUNDER_CREATIVES = [
-  {
-    src: '/home/founder.jpeg',
-    alt: 'Jac Ghré Creative 1',
-    label: 'Backstage Fashion Week',
-    caption: 'Haute Couture Week',
-  },
+  // {
+  //   src: '/home/founder.jpeg',
+  //   alt: 'Jac Ghré Creative 1',
+  //   label: 'Backstage Fashion Week',
+  //   caption: 'Haute Couture Week',
+  // },
   {
     src: '/gallery/founder/founder2.webp',
     alt: 'Jac Ghré Creative 2',
@@ -104,7 +104,7 @@ export const FounderCreativesGallery: React.FC = () => {
         </div>
 
         {/* Creatives Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
           {FOUNDER_CREATIVES.map((creative, index) => (
             <motion.figure
               key={creative.src}

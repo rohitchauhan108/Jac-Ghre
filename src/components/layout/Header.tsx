@@ -229,7 +229,7 @@ export const Header: React.FC = () => {
                         setMobileMenuOpen(false);
                         navigateToPage(link.page);
                       }}
-                      className={`block w-full text-left  text-xl tracking-[0.22em] py-2.5 border-b border-[#D4AF37]/10 transition-colors ${
+                      className={`block w-full text-left  text-sm tracking-[0.22em] py-2.5 border-b border-[#D4AF37]/10 transition-colors ${
                         currentPage === link.page ||
                         (link.page === "about-founder" &&
                           currentPage === "jac-ghre")
