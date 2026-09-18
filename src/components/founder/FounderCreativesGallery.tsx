@@ -14,7 +14,7 @@ const FOUNDER_CREATIVES = [
   //   caption: 'Haute Couture Week',
   // },
   {
-    src: '/gallery/founder/founder2.webp',
+    src: '/gallery/founder/founder0.webp',
     alt: 'Jac Ghré Creative 2',
     label: 'Runway Hair Direction',
     caption: 'Fashion Week — Thierry Mugler',
