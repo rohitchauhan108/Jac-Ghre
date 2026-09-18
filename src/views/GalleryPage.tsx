@@ -139,7 +139,7 @@ export const GalleryPage: React.FC = () => {
                 key={tab.key}
                 type="button"
                 onClick={() => setActiveTab(tab.key)}
-                className={`group relative px-5 py-2.5  text-xs sm:text-xl font-semibold uppercase tracking-widest border transition-colors duration-200 ${
+                className={`group relative px-5 py-2.5  text-xs sm:text-xs font-semibold uppercase tracking-widest border transition-colors duration-200 ${
                   isActive
                     ? 'bg-[#D4AF37] text-[#021318] border-[#D4AF37] shadow-lg'
                     : 'bg-transparent text-[#F3E5AB] border-[#D4AF37]/40 hover:border-[#D4AF37] hover:text-[#D4AF37]'
