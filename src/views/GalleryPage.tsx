@@ -27,7 +27,7 @@ const GALLERY_IMAGES: { category: Exclude<Category, 'all'>; src: string; alt: st
   { category: 'product', src: '/gallery/product/product1.webp', alt: 'Product 1' },
   { category: 'product', src: '/gallery/product/product2.webp', alt: 'Product 2' },
   { category: 'founder', src: '/gallery/founder/new-founder1.webp', alt: 'Founder 1' },
-  { category: 'founder', src: '/gallery/founder/founder2.webp', alt: 'Founder 2' },
+  { category: 'founder', src: '/home/founder.jpeg', alt: 'Founder 2' },
   { category: 'founder', src: '/gallery/founder/founder3.webp', alt: 'Founder 3' },
   { category: 'product', src: '/gallery/product/product3.webp', alt: 'Product 3' },
   { category: 'product', src: '/gallery/product/product4.webp', alt: 'Product 4' },
