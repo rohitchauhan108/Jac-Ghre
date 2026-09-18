@@ -8,7 +8,7 @@ import Lenis from 'lenis';
 
 const FOUNDER_CREATIVES = [
   {
-    src: '/gallery/founder/founder1.jpeg',
+    src: '/home/founder.jpeg',
     alt: 'Jac Ghré Creative 1',
     label: 'Backstage Fashion Week',
     caption: 'Haute Couture Week',
