@@ -71,7 +71,7 @@ export const AboutCompanyPage: React.FC = () => {
             </span>
           </div>
 
-          <h1 className="font-cinzel text-4xl sm:text-6xl lg:text-7xl font-bold tracking-[0.1em] text-[#FBF9F3] uppercase leading-tight">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-[0.1em] text-[#FBF9F3] uppercase leading-tight">
             About The Company
           </h1>
 
@@ -134,10 +134,10 @@ export const AboutCompanyPage: React.FC = () => {
               className="lg:col-span-6 space-y-6"
             >
               <div className="space-y-2 border-l-2 border-[#D4AF37] pl-4">
-                <span className="text-xs font-cinzel font-bold tracking-[0.3em] text-[#D4AF37] uppercase block">
+                <span className="text-xs font-bold tracking-[0.3em] text-[#D4AF37] uppercase block">
                   OUR ESSENCE & PHILOSOPHY
                 </span>
-                <h2 className="font-cinzel text-2xl sm:text-4xl font-bold uppercase text-[#FBF9F3]">
+                <h2 className="text-2xl sm:text-4xl font-bold uppercase text-[#FBF9F3]">
                   An Uncompromising Standard of Purity
                 </h2>
               </div>

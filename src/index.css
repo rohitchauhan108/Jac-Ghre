@@ -1,43 +1,96 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Alta";
+  src: local("Alta"), url("/fonts/Alta.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+/* =========================================
+   Base / Font Variables
+   ========================================= */
+
 @layer base {
   :root {
-    --font-serif: var(--font-playfair), var(--font-garamond), Georgia, serif;
+    /* =====================================
+       Main Font Families
+       ===================================== */
 
-    --font-script: var(--font-pinyon), var(--font-alex), cursive;
+    --font-serif:
+      var(--font-playfair),
+      var(--font-garamond),
+      Georgia,
+      serif;
 
-    --font-sans: var(--font-plus-jakarta), var(--font-outfit), sans-serif;
+    --font-script:
+      var(--font-pinyon),
+      var(--font-alex),
+      cursive;
 
-    /*
-     * Didot-style luxury editorial font.
-     *
-     * Didot is used if it is installed on the user's system.
-     * Bodoni MT is the next fallback because it has a very
-     * similar high-contrast fashion/editorial appearance.
-     */
-    --font-didot: "Didot", "Bodoni MT", "Bodoni 72", serif;
+    --font-sans:
+      var(--font-plus-jakarta),
+      var(--font-outfit),
+      sans-serif;
+
+    /* =====================================
+       Alta Luxury Heading Font
+       ===================================== */
+
+    --font-alta-heading:
+      "Alta",
+      "Didot",
+      "Bodoni MT",
+      "Bodoni 72",
+      serif;
+
+    /* =====================================
+       Didot Fallback
+       ===================================== */
+
+    --font-didot:
+      "Didot",
+      "Bodoni MT",
+      "Bodoni 72",
+      serif;
   }
+
+  /* =======================================
+     Body
+     ======================================= */
 
   body {
     font-family: var(--font-sans);
+
     font-size: 15px;
+
     line-height: 1.65;
+
     letter-spacing: 0.01em;
+
     overflow-x: hidden;
-    transition: background-color 0.3s ease, color 0.3s ease;
+
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
   }
 
-  /*
-   * Luxury editorial headings
-   */
+  /* =======================================
+     Luxury Editorial Headings
+     ======================================= */
+
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    font-family: var(--font-didot);
+    font-family: var(--font-alta-heading);
+
     letter-spacing: 0.06em;
+
+    font-weight: 400;
   }
 }
 
@@ -73,6 +126,7 @@ html.lenis body {
 html.dark-theme body,
 body {
   background-color: #0c8a9b;
+
   color: #f7f4eb;
 }
 
@@ -99,6 +153,7 @@ body {
 
 html.light-theme body {
   background-color: #faf7f2;
+
   color: #0e4c5a;
 }
 
@@ -106,50 +161,122 @@ html.light-theme body {
    Font Utility Classes
    ========================================= */
 
+/* Outfit */
+
 .font-outfit {
-  font-family: var(--font-outfit), "Plus Jakarta Sans", sans-serif;
+  font-family:
+    var(--font-outfit),
+    "Plus Jakarta Sans",
+    sans-serif;
 }
+
+/* Existing Poppins utility
+   Kept for compatibility */
 
 .font-poppins {
-  font-family: var(--font-plus-jakarta), var(--font-outfit), sans-serif;
+  font-family:
+    var(--font-plus-jakarta),
+    var(--font-outfit),
+    sans-serif;
 }
+
+/* Playfair */
 
 .font-playfair {
-  font-family: var(--font-playfair), Georgia, serif;
+  font-family:
+    var(--font-playfair),
+    Georgia,
+    serif;
 }
+
+/* Editorial */
 
 .font-editorial {
-  font-family: var(--font-playfair), var(--font-garamond), Georgia, serif;
+  font-family:
+    var(--font-playfair),
+    var(--font-garamond),
+    Georgia,
+    serif;
 }
+
+/* Garamond */
 
 .font-garamond {
-  font-family: var(--font-garamond), Georgia, serif;
+  font-family:
+    var(--font-garamond),
+    Georgia,
+    serif;
 }
+
+/* =========================================
+   Cinzel
+   ========================================= */
 
 .font-cinzel {
-  font-family: var(--font-cinzel), serif;
+  font-family: var(--font-alta-heading);
 }
+
+/* =========================================
+   Cinzel Decorative
+   ========================================= */
 
 .font-cinzel-decorative {
-  font-family: var(--font-cinzel-decorative), var(--font-cinzel), serif;
+  font-family: var(--font-alta-heading);
 }
+
+/* =========================================
+   Script Fonts
+   ========================================= */
 
 .font-script {
-  font-family: var(--font-pinyon), var(--font-alex), cursive;
+  font-family:
+    var(--font-pinyon),
+    var(--font-alex),
+    cursive;
 }
+
+/* =========================================
+   Clean Sans
+   ========================================= */
 
 .font-sans-clean {
-  font-family: var(--font-plus-jakarta), var(--font-outfit), sans-serif;
+  font-family:
+    var(--font-plus-jakarta),
+    var(--font-outfit),
+    sans-serif;
 }
 
-/*
- * Didot utility class
- *
- * Use className="font-didot" anywhere you specifically
- * want the Didot-style editorial font.
- */
+/* =========================================
+   Alta — Main Luxury Font
+   ========================================= */
+
+.font-alta {
+  font-family: var(--font-alta-heading);
+
+  letter-spacing: 0.06em;
+
+  font-weight: 400;
+}
+
+/* =========================================
+   Alta Heading
+   ========================================= */
+
+.font-alta-heading {
+  font-family: var(--font-alta-heading);
+
+  letter-spacing: 0.06em;
+
+  font-weight: 400;
+}
+
+/* =========================================
+   Didot Utility
+   ========================================= */
+
 .font-didot {
   font-family: var(--font-didot);
+
   letter-spacing: 0.06em;
 }
 
@@ -165,7 +292,10 @@ html.light-theme body {
     #b89028 70%,
     #f5e08b 100%
   );
+
   -webkit-background-clip: text;
+  background-clip: text;
+
   -webkit-text-fill-color: transparent;
 }
 
@@ -176,14 +306,20 @@ html.light-theme body {
     #fff3c4 50%,
     #d4af37 100%
   );
+
   background-size: 200% auto;
+
   -webkit-background-clip: text;
+  background-clip: text;
+
   -webkit-text-fill-color: transparent;
+
   animation: shimmer 4s linear infinite;
 }
 
 .gold-border-gradient {
-  border-image: linear-gradient(
+  border-image:
+    linear-gradient(
       to bottom right,
       #f3e5ab,
       #d4af37,
@@ -193,11 +329,13 @@ html.light-theme body {
 }
 
 .gold-box-glow {
-  box-shadow: 0 0 25px rgba(212, 175, 55, 0.15);
+  box-shadow:
+    0 0 25px rgba(212, 175, 55, 0.15);
 }
 
 .gold-box-glow-strong {
-  box-shadow: 0 0 40px rgba(212, 175, 55, 0.28);
+  box-shadow:
+    0 0 40px rgba(212, 175, 55, 0.28);
 }
 
 /* =========================================
@@ -253,12 +391,17 @@ html.light-theme body {
 
 ::-webkit-scrollbar-thumb {
   background: #0c8a9b;
+
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: #d4af37;
 }
+
+/* =========================================
+   Light Theme Scrollbar
+   ========================================= */
 
 html.light-theme ::-webkit-scrollbar-track {
   background: #f3ede2;

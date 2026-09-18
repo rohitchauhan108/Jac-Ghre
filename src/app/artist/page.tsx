@@ -153,10 +153,10 @@ export default function ArchiveGallery() {
           </div>
 
           <div className="text-center max-w-5xl mx-auto">
-            <p className="text-[10px] sm:text-xs font-cinzel tracking-[0.55em] text-[#D4AF37] uppercase font-bold mb-4">
+            <p className="text-[10px] sm:text-xs tracking-[0.55em] text-[#D4AF37] uppercase font-bold mb-4">
               Visual Archive
             </p>
-            <h1 className="font-cinzel font-bold text-[#FBF9F3] uppercase tracking-[0.08em] leading-[0.92] text-5xl sm:text-7xl lg:text-[100px]">
+            <h1 className="font-bold font-alta text-[#FBF9F3] uppercase tracking-[0.08em] leading-[0.92] text-5xl sm:text-7xl lg:text-[100px]">
               Visual
               <br className="hidden sm:block" />
               <span className="inline-block mt-2">Work</span>
@@ -164,7 +164,7 @@ export default function ArchiveGallery() {
             <div className="mt-8 flex items-center justify-center gap-6 flex-wrap">
               <div className="flex items-center gap-3">
                 <Camera className="w-4 h-4 text-[#D4AF37]" />
-                <span className="text-[11px] sm:text-xs font-cinzel tracking-[0.3em] text-[#C5D9DE] uppercase font-semibold">
+                <span className="text-[11px] sm:text-xs tracking-[0.3em] text-[#C5D9DE] uppercase font-semibold">
                   {WORKS.length} Editorials
                 </span>
               </div>
@@ -250,24 +250,24 @@ export default function ArchiveGallery() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-12 gap-5 items-center border-2 border-[#D4AF37]/50 bg-gradient-to-r from-[#007288] via-[#006073] to-[#007288] p-6 sm:p-8 shadow-2xl">
             <div className="sm:col-span-7 space-y-2">
-              <p className="text-[10px] font-cinzel tracking-[0.35em] text-[#D4AF37] uppercase font-bold">
+              <p className="text-[10px] tracking-[0.35em] text-[#D4AF37] uppercase font-bold">
                 Private Atelier &amp; Booking
               </p>
-              <h3 className="font-cinzel text-xl sm:text-2xl lg:text-3xl font-bold uppercase text-[#FBF9F3] tracking-wide leading-tight">
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold uppercase text-[#FBF9F3] tracking-wide leading-tight">
                 Request a private consultation with Jac Ghré
               </h3>
             </div>
             <div className="sm:col-span-5 flex flex-col sm:flex-row sm:justify-end gap-3">
               <a
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-[#D4AF37] text-[#062B35] font-cinzel text-xs font-bold tracking-[0.25em] uppercase hover:bg-[#E5C365] transition-colors shadow-xl"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-[#D4AF37] text-[#062B35] text-xs font-bold tracking-[0.25em] uppercase hover:bg-[#E5C365] transition-colors shadow-xl"
               >
                 Book Now
                 <ChevronRight className="w-3.5 h-3.5" />
               </a>
               <a
                 href="/gallery"
-                className="inline-flex items-center justify-center gap-2 px-5 py-3 border border-[#D4AF37]/70 text-[#F3E5AB] font-cinzel text-xs font-bold tracking-[0.25em] uppercase hover:bg-[#D4AF37]/10 transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3 border border-[#D4AF37]/70 text-[#F3E5AB] text-xs font-bold tracking-[0.25em] uppercase hover:bg-[#D4AF37]/10 transition-colors"
               >
                 Full Archive
               </a>
