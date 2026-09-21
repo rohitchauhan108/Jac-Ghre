@@ -504,14 +504,14 @@ export const Footer: React.FC = () => {
             BOTTOM BAR
         ========================================================= */}
 
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs gap-4 text-[#8FAAB0]">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-sm gap-4 text-[#8FAAB0]">
 
           <p>
             © {new Date().getFullYear()} GHRÉ & JAC GHRÉ BEAUTY.
             ALL RIGHTS RESERVED.
           </p>
 
-          <div className="flex items-center gap-6 text-[11px]  tracking-wider uppercase">
+          <div className="flex items-center gap-6 text-sm tracking-wider uppercase">
 
             <button
               onClick={() => navigateToPage('about-founder')}

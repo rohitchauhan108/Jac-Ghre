@@ -1,9 +1,16 @@
-import React from 'react';
-import { motion } from 'motion/react';
-import { Sparkles, Scissors, MapPin, Award, Globe, ShieldCheck } from 'lucide-react';
-import { CAMPAIGN_IMAGES } from '../../data/products';
-import { GoldEmblem } from '../ui/GoldEmblem';
-import { BrandLogo } from '../ui/BrandLogo';
+import React from "react";
+import { motion } from "motion/react";
+import {
+  Sparkles,
+  Scissors,
+  MapPin,
+  Award,
+  Globe,
+  ShieldCheck,
+} from "lucide-react";
+import { CAMPAIGN_IMAGES } from "../../data/products";
+import { GoldEmblem } from "../ui/GoldEmblem";
+import { BrandLogo } from "../ui/BrandLogo";
 
 export const FounderHero: React.FC = () => {
   return (
@@ -13,7 +20,7 @@ export const FounderHero: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Top Eyebrow & Brand Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        <div className="text-center max-w-3xl mx-auto mb-12 flex flex-col items-center">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#006073] border border-[#D4AF37]/50 mb-4 shadow-lg">
             <Award className="w-3.5 h-3.5 text-[#D4AF37]" />
             <span className="text-[11px]  font-bold tracking-[0.3em] text-[#F3E5AB] uppercase">
@@ -24,6 +31,11 @@ export const FounderHero: React.FC = () => {
           <h1 className=" text-4xl sm:text-6xl lg:text-7xl font-bold tracking-[0.1em] text-[#FBF9F3] uppercase">
             JAC GHRÉ
           </h1>
+          {/* <img
+            src="/gallery/founder/founder_name.png"
+            alt="Jac GHRÉ"
+            className="lg:h-40 h-20"
+          /> */}
           <p className=" text-xl sm:text-lg tracking-[0.35em] text-[#D4AF37] uppercase font-semibold mt-1">
             THE MAN. THE NAME.
           </p>
@@ -94,11 +106,16 @@ export const FounderHero: React.FC = () => {
             </div>
 
             <p className="font-outfit text-xl sm:text-base text-[#C5D9DE] font-light leading-relaxed">
-              <strong>JAC Ghré</strong> is an international hair, beauty, and fashion expert, widely recognized for his visionary work in the global runway and fashion industry.
+              <strong>JAC Ghré</strong> is an international hair, beauty, and
+              fashion expert, widely recognized for his visionary work in the
+              global runway and fashion industry.
             </p>
 
             <p className="font-outfit text-xl sm:text-base text-[#C5D9DE] font-light leading-relaxed">
-              He notably collaborated with legendary designer <strong className="text-[#F3E5AB]">Thierry Mugler</strong>, serving as <strong>Hair Director</strong> for major international fashion shows and top fashion capitals.
+              He notably collaborated with legendary designer{" "}
+              <strong className="text-[#F3E5AB]">Thierry Mugler</strong>,
+              serving as <strong>Hair Director</strong> for major international
+              fashion shows and top fashion capitals.
             </p>
 
             {/* Quick Stats Grid */}
@@ -133,11 +150,15 @@ export const FounderHero: React.FC = () => {
             <div className="pt-4 border-t border-[#D4AF37]/25 flex flex-wrap items-center justify-between gap-4 text-xs  text-[#8EAAB0]">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-[#D4AF37]" />
-                <span className="tracking-wider text-[#F3E5AB]">PRIVATE CLIENT ATELIER</span>
+                <span className="tracking-wider text-[#F3E5AB]">
+                  PRIVATE CLIENT ATELIER
+                </span>
               </div>
               <div className="flex items-center gap-2">
                 <Globe className="w-4 h-4 text-[#D4AF37]" />
-                <span className="tracking-wider text-[#D4AF37] font-bold">GHRÉ.COM</span>
+                <span className="tracking-wider text-[#D4AF37] font-bold">
+                  GHRÉ.COM
+                </span>
               </div>
             </div>
           </motion.div>
