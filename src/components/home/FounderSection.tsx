@@ -109,12 +109,12 @@ export const FounderSection: React.FC = () => {
                   {supermodels.map((m) => (
                     <span
                       key={m}
-                      className="px-2 py-0.5 bg-[#006073] border border-[#D4AF37]/30 text-[10px] font-outfit text-[#D4AF37]"
+                      className="px-2 py-0.5 bg-[#006073] border border-[#D4AF37]/30 text-[15px] font-outfit text-[#D4AF37]"
                     >
                       {m}
                     </span>
                   ))}
-                  <span className="px-2 py-0.5 bg-[#006073] border border-[#D4AF37]/30 text-[10px] font-outfit text-[#8EAAB0]">
+                  <span className="px-2 py-0.5 bg-[#006073] border border-[#D4AF37]/30 text-[15px] font-outfit text-[#8EAAB0]">
                     + Celebrities & Elite Models
                   </span>
                 </div>
