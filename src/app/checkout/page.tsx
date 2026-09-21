@@ -125,7 +125,7 @@ export default function CheckoutPage() {
             <h3 className="text-2xl font-light text-[#FBF9F3]">Your Bag is Empty</h3>
             <p className="font-outfit text-xs text-[#C4D8DC] leading-relaxed">No creations have been selected for your ritual bag. Explore the atelier to curate your collection.</p>
             <button
-              onClick={() => router.push('/')}
+              onClick={() => router.push('/shop')}
               className="w-full py-3.5 border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#06242B] text-xs tracking-[0.2em] uppercase transition-all rounded-lg"
             >
               Explore Collection
