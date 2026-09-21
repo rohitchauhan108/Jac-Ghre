@@ -10,8 +10,8 @@ type Category = 'all' | 'banner' | 'catalogues' | 'founder' | 'product';
 
 const GALLERY_IMAGES: { category: Exclude<Category, 'all'>; src: string; alt: string }[] = [
   { category: 'banner', src: '/gallery/banner/1.webp', alt: 'Brand Banner 1' },
-  { category: 'banner', src: '/gallery/banner/products.webp', alt: 'Brand Banner 2' },
-  { category: 'catalogues', src: '/gallery/catalogues/0.webp', alt: 'Catalogue 0' },
+  { category: 'banner', src: '/gallery/banner/0.webp', alt: 'Brand Banner 2' },
+  { category: 'catalogues', src: '/gallery/catalogues/00.webp', alt: 'Catalogue 0' },
   { category: 'catalogues', src: '/gallery/catalogues/1.webp', alt: 'Catalogue 1' },
   { category: 'catalogues', src: '/gallery/catalogues/2.webp', alt: 'Catalogue 2' },
   { category: 'catalogues', src: '/gallery/catalogues/3.webp', alt: 'Catalogue 3' },
@@ -20,17 +20,15 @@ const GALLERY_IMAGES: { category: Exclude<Category, 'all'>; src: string; alt: st
   { category: 'catalogues', src: '/gallery/catalogues/7.webp', alt: 'Catalogue 7' },
   { category: 'catalogues', src: '/gallery/catalogues/8.webp', alt: 'Catalogue 8' },
   { category: 'catalogues', src: '/gallery/catalogues/9.webp', alt: 'Catalogue 9' },
-  { category: 'catalogues', src: '/gallery/catalogues/10.webp', alt: 'Catalogue 10' },
+  { category: 'catalogues', src: '/gallery/catalogues/11.webp', alt: 'Catalogue 10' },
   { category: 'catalogues', src: '/gallery/catalogues/newabout.webp', alt: 'About Catalogue' },
-  // { category: 'catalogues', src: '/gallery/catalogues/about1.webp', alt: 'About Catalogue 1' },
-  // { category: 'founder', src: '/gallery/founder/founder.webp', alt: 'Founder Portrait' },
-  { category: 'product', src: '/gallery/product/product1.webp', alt: 'Product 1' },
-  { category: 'product', src: '/gallery/product/product2.webp', alt: 'Product 2' },
+  { category: 'product', src: '/gallery/product/p1.webp', alt: 'Product 1' },
+  { category: 'product', src: '/gallery/product/p2.webp', alt: 'Product 2' },
   { category: 'founder', src: '/home/founder.jpeg', alt: 'Founder 1' },
-  { category: 'founder', src: '/gallery/founder/founder2.webp', alt: 'Founder 2' },
-  { category: 'founder', src: '/gallery/founder/founder3.webp', alt: 'Founder 3' },
-  { category: 'product', src: '/gallery/product/product3.webp', alt: 'Product 3' },
-  { category: 'product', src: '/gallery/product/product4.webp', alt: 'Product 4' },
+  { category: 'founder', src: '/gallery/founder/founder-details-2.webp', alt: 'Founder 2' },
+  { category: 'founder', src: '/gallery/founder/founder-details.webp', alt: 'Founder 3' },
+  { category: 'product', src: '/gallery/product/p3.webp', alt: 'Product 3' },
+  { category: 'product', src: '/gallery/product/p4.webp', alt: 'Product 4' },
 ];
 
 const TABS: { key: Category; label: string }[] = [
