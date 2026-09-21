@@ -124,7 +124,7 @@ export const FounderHero: React.FC = () => {
                 <span className=" text-2xl sm:text-3xl font-bold text-[#D4AF37] block">
                   GLOBAL
                 </span>
-                <span className="text-[10px] tracking-wider text-[#8EAAB0] mt-1 block">
+                <span className="text-[12px] tracking-wider font-semibold text-[#8EAAB0] mt-1 block">
                   THIERRY MUGLER HAIR DIRECTOR
                 </span>
               </div>
@@ -132,7 +132,7 @@ export const FounderHero: React.FC = () => {
                 <span className="text-2xl sm:text-3xl font-bold text-[#D4AF37] block">
                   ELITE
                 </span>
-                <span className="text-[10px] tracking-wider text-[#8EAAB0] mt-1 block">
+                <span className="text-[12px] font-semibold tracking-wider text-[#8EAAB0] mt-1 block">
                   MODEL WORLD ARTISTIC DIRECTOR
                 </span>
               </div>
@@ -140,7 +140,7 @@ export const FounderHero: React.FC = () => {
                 <span className="text-2xl sm:text-3xl font-bold text-[#D4AF37] block">
                   ELITE
                 </span>
-                <span className="text-[10px] tracking-wider text-[#8EAAB0] mt-1 block">
+                <span className="text-[12px] font-semibold tracking-wider text-[#8EAAB0] mt-1 block">
                   PRIVATE ATELIER
                 </span>
               </div>

@@ -198,7 +198,7 @@ export const Footer: React.FC = () => {
 
     
 
-            <p className="text-xs sm:text-lg font-normal leading-relaxed max-w-sm text-[#A5BFC4]">
+            <p className="text-xs sm:text-sm font-normal leading-relaxed max-w-sm text-[#A5BFC4]">
               Haute hair care and solar fragrance rituals formulated with pure
               cold-pressed Moroccan prickly pear oil and botanical extracts by
               master artist Jac Ghré.
@@ -336,7 +336,7 @@ export const Footer: React.FC = () => {
               The Maison
             </span>
 
-            <ul className="space-y-2.5 text-xs sm:text-lg">
+            <ul className="space-y-2.5 text-xs sm:text-sm">
               <li>
                 <button
                   onClick={() => navigateToPage('home')}
@@ -402,7 +402,7 @@ export const Footer: React.FC = () => {
               Signature Products
             </span>
 
-            <ul className="space-y-2.5 text-xs sm:text-lg">
+            <ul className="space-y-2.5 text-xs sm:text-sm">
 
               <li>
                 <button
@@ -483,7 +483,7 @@ export const Footer: React.FC = () => {
 
             </div>
           </div> */}
-          <div className="space-y-1.5 text-[11px] sm:text-xs text-[#C5D5D8] leading-relaxed">
+          <div className="space-y-1.5 text-[11px] sm:text-sm text-[#C5D5D8] leading-relaxed">
               <p className=" text-[#D4AF37] uppercase tracking-[0.18em] text-[10px]">
                 {BRAND_INFO.contact.title}
               </p>

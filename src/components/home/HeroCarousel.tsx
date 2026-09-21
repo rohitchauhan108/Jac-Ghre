@@ -191,7 +191,7 @@ export const HeroCarousel: React.FC = () => {
                     <span className={`block  text-[10px] sm:text-[11px] tracking-wider truncate font-semibold ${isActive ? "text-[#FFF3C4]" : "text-[#A5BEC3]"}`}>
                       {slide.title.replace("GHRÉ ", "").replace(" — MONOÏ VANILLA", "")}
                     </span>
-                    <span className="hidden xl:block text-[9px] font-poppins text-[#8EAAB0] truncate">
+                    <span className="hidden xl:block text-[10px] font-semibold font-poppins text-[#8EAAB0] truncate">
                       {slide.locationBadge || slide.eyebrow}
                     </span>
                   </div>

@@ -20,7 +20,7 @@ const FOUNDER_CREATIVES = [
     caption: 'Fashion Week — Thierry Mugler',
   },
   {
-    src: '/gallery/founder/founder31.jpeg',
+    src: '/gallery/founder/founder-details.webp',
     alt: 'Jac Ghré Creative 3',
     label: 'Brand Creative Shoot',
     caption: 'Coastal Salon',
