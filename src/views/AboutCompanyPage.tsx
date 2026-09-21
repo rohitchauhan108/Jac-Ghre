@@ -259,10 +259,10 @@ export const AboutCompanyPage: React.FC = () => {
                 className="bg-[#097B8A] border-2 border-[#D4AF37]/40 p-8 text-center space-y-4 hover:border-[#D4AF37] transition-all shadow-xl"
               >
                 <MapPin className="w-8 h-8 text-[#D4AF37] mx-auto" />
-                <span className="text-[10px]  tracking-[0.25em] text-[#D4AF37] uppercase font-bold px-3 py-1 bg-[#097B8A] border border-[#D4AF37]/30 inline-block">
+                {/* <span className="text-[10px]  tracking-[0.25em] text-[#D4AF37] uppercase font-bold px-3 py-1 bg-[#097B8A] border border-[#D4AF37]/30 inline-block">
                   {a.status}
-                </span>
-                <h3 className=" text-xl font-bold text-[#FBF9F3] uppercase">
+                </span> */}
+                <h3 className=" text-[30px] font-bold text-[#FBF9F3] uppercase">
                   {a.city}
                 </h3>
                 <p className="font-outfit text-sm text-[#8EAAB0] font-medium leading-relaxed">
