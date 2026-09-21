@@ -102,7 +102,7 @@ export const AboutCompanyPage: React.FC = () => {
               className="lg:col-span-6 relative"
             >
               <img
-                  src="/gallery/founder/founder2.webp"
+                  src="/gallery/founder/founder0.webp"
                   alt="GHRÉ Emblem — Barbary Fig Flower & Lotus"
                   className=""
                 />
