@@ -3,7 +3,7 @@ import { Product, CampaignSlide, BotanicalIngredient } from "../types";
 export const CAMPAIGN_IMAGES = {
   heroModel: "/images/modelcompaign.jpeg",
   summerDream: "/images/summerhair1.jpeg",
-  jacGhre: "/home/founder.jpeg",
+  jacGhre: "/home/founder.webp",
 };
 
 export const BRAND_INFO = {
