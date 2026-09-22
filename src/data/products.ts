@@ -30,7 +30,7 @@ export const BRAND_INFO = {
 
 export const CAMPAIGN_SLIDES: CampaignSlide[] = [
   {
-    id: "ghre-leave-in-conditioner-launch",
+    id: "jac-ghre-founder",
     eyebrow: "THE FOUNDER • BEAUTY VISIONARY",
     title: "JAC GHRÉ",
     subtitle: "Beauty Expert & Master Hair Artist",
