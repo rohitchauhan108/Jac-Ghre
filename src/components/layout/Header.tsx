@@ -7,6 +7,7 @@ import {
   X,
   Clock,
   Gift,
+  Search,
 } from "lucide-react";
 import { useShop, PageType } from "../../context/ShopContext";
 const logoLight = "/images/logo-light.png";
@@ -17,6 +18,7 @@ export const Header: React.FC = () => {
     setIsCartOpen,
     setIsWelcomePopupOpen,
     setQuickViewProduct,
+    setIsSearchOpen,
     currentPage,
     navigateToPage,
   } = useShop();
@@ -77,94 +79,121 @@ export const Header: React.FC = () => {
   return (
     <>
       <header
-        className={`sticky top-0 z-40 w-full transition-all duration-400 ease-out transform ${
+        className={`lg:sticky fixed top-0 z-40 w-full transition-all duration-400 ease-out transform ${
           isVisible
             ? "translate-y-0"
             : "-translate-y-full pointer-events-none"
         } ${
           isScrolled
             ? "lg:bg-[#005F73] bg-white/98 backdrop-blur-lg border-b border-[#0B4F71]/15 py-3 shadow-md md:shadow-[0_12px_35px_rgba(11,79,113,0.14)]"
-            : "lg:bg-[#005F73] bg-white py-4 sm:py-5 border-b border-[#0B4F71]/10"
+            : "lg:bg-[#005F73] bg-transparent py-4 sm:py-5 lg:border-b lg:border-[#0B4F71]/10"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          {/* Mobile Hamburger (Left on mobile) */}
-          <div className="flex items-center gap-2 lg:hidden">
-            <button
-              onClick={() => setMobileMenuOpen(true)}
-              className="p-2 transition-colors focus:outline-none text-[#0B4F71] hover:text-[#176B87]"
-              aria-label="Open menu"
-            >
-              <Menu className="w-6 h-6" />
-            </button>
-          </div>
-
-          {/* Brand Logo */}
-          <div className="flex items-center">
+          {/* Mobile header layout to match reference */}
+          <div className="flex w-full items-center justify-between lg:hidden">
             <button
               onClick={() => navigateToPage("home")}
               className="group flex items-center text-left focus:outline-none cursor-pointer"
               aria-label="GHRÉ Home"
             >
-              <img src="/logo.png" alt="GHRÉ Logo Desktop"
-              className="hidden lg:block h-20 sm:h-20 w-auto object-cover transition-transform duration-300 group-hover:scale-105" />
               <img
-                src="/mobile-logo.jpg"
+                src="/logo.png"
                 alt="GHRÉ Logo Mobile"
-                className="lg:hidden block h-20 sm:h-52 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                className="h-14 sm:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </button>
+
+            <div className="flex items-center gap-2 sm:gap-3">
+              <button
+                onClick={() => setIsSearchOpen(true)}
+                className="p-2 text-[#D4AF37] hover:text-[#D4AF37] transition-colors"
+                aria-label="Search products"
+              >
+                <Search className="w-5 h-5 sm:w-6 sm:h-6" />
+              </button>
+
+              <button
+                onClick={() => navigateToPage("contact")}
+                className="p-2 text-[#D4AF37] hover:text-[#D4AF37] transition-colors"
+                aria-label="Concierge"
+                title="GHRÉ Client Concierge"
+              >
+                <User className="w-5 h-5 sm:w-6 sm:h-6" />
+              </button>
+
+              <button
+                onClick={() => setMobileMenuOpen(true)}
+                className="p-2 text-[#D4AF37] hover:text-[#D4AF37] transition-colors"
+                aria-label="Open menu"
+              >
+                <Menu className="w-5 h-5 sm:w-6 sm:h-6" />
+              </button>
+            </div>
           </div>
 
-          {/* Desktop Navigation (Center) */}
-          <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
-            {navLinks.map((link) => {
-              const isActive =
-                currentPage === link.page ||
-                (link.page === "about-founder" &&
-                  currentPage === "jac-ghre");
+          {/* Desktop header */}
+          <div className="hidden lg:flex w-full items-center justify-between">
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => navigateToPage("home")}
+                className="group flex items-center text-left focus:outline-none cursor-pointer"
+                aria-label="GHRÉ Home"
+              >
+                <img
+                  src="/logo.png"
+                  alt="GHRÉ Logo Desktop"
+                  className="h-20 sm:h-20 w-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </button>
+            </div>
 
-              return (
-                <button
-                  key={link.name}
-                  onClick={() => navigateToPage(link.page)}
-                  className={` text-xs xl:text-[13px] tracking-[0.2em] py-2 transition-all duration-200 cursor-pointer ${
-                    isActive
-                      ? "lg:text-[#D4AF37] text-[#0B4F71] font-bold border-b-2 lg:border-[#D4AF37] border-[#0B4F71]"
-                      : "lg:text-[#E8DCC4] lg:hover:text-[#D4AF37] text-[#0B4F71] hover:text-[#176B87]"
-                  }`}
-                >
-                  <span>{link.name}</span>
-                </button>
-              );
-            })}
-          </nav>
+            <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+              {navLinks.map((link) => {
+                const isActive =
+                  currentPage === link.page ||
+                  (link.page === "about-founder" &&
+                    currentPage === "jac-ghre");
 
-          {/* Right Action Icons (Account, Cart) */}
-          <div className="flex items-center space-x-2.5 sm:space-x-4">
-            {/* Account / Concierge */}
-            <button
-              onClick={() => navigateToPage("contact")}
-              className="p-2 transition-colors cursor-pointer lg:text-[#E8DCC4] lg:hover:text-[#D4AF37] text-[#0B4F71] hover:text-[#176B87]"
-              aria-label="Concierge"
-              title="GHRÉ Client Concierge"
-            >
-              <User className="w-4 h-4 sm:w-5 sm:h-5" />
-            </button>
+                return (
+                  <button
+                    key={link.name}
+                    onClick={() => navigateToPage(link.page)}
+                    className={` text-xs xl:text-[13px] tracking-[0.2em] py-2 transition-all duration-200 cursor-pointer ${
+                      isActive
+                        ? "lg:text-[#D4AF37] text-[#0B4F71] font-bold border-b-2 lg:border-[#D4AF37] border-[#0B4F71]"
+                        : "lg:text-[#E8DCC4] lg:hover:text-[#D4AF37] text-[#0B4F71] hover:text-[#176B87]"
+                    }`}
+                  >
+                    <span>{link.name}</span>
+                  </button>
+                );
+              })}
+            </nav>
 
-            {/* Shopping Bag */}
-            <button
-              onClick={() => setIsCartOpen(true)}
-              className="relative p-2 transition-colors cursor-pointer lg:text-[#E8DCC4] lg:hover:text-[#D4AF37] text-[#0B4F71] hover:text-[#176B87]"
-              aria-label="Shopping Bag"
-            >
-              <ShoppingBag className="w-4 h-4 sm:w-5 sm:h-5 lg:text-[#E8DCC4] text-[#0B4F71]" />
-              {cartCount > 0 && (
-                <span className="absolute top-1 right-1 w-4 h-4 bg-gradient-to-r from-[#F9E8B2] to-[#D4AF37] text-[#0E4C5A]  text-[9px] font-bold rounded-full flex items-center justify-center shadow-lg animate-pulse">
-                  {cartCount}
-                </span>
-              )}
-            </button>
+            <div className="flex items-center space-x-2.5 sm:space-x-4">
+              <button
+                onClick={() => navigateToPage("contact")}
+                className="p-2 transition-colors cursor-pointer lg:text-[#E8DCC4] lg:hover:text-[#D4AF37] text-[#0B4F71] hover:text-[#176B87]"
+                aria-label="Concierge"
+                title="GHRÉ Client Concierge"
+              >
+                <User className="w-4 h-4 sm:w-5 sm:h-5" />
+              </button>
+
+              <button
+                onClick={() => setIsCartOpen(true)}
+                className="relative p-2 transition-colors cursor-pointer lg:text-[#E8DCC4] lg:hover:text-[#D4AF37] text-[#0B4F71] hover:text-[#176B87]"
+                aria-label="Shopping Bag"
+              >
+                <ShoppingBag className="w-4 h-4 sm:w-5 sm:h-5 lg:text-[#E8DCC4] text-[#0B4F71]" />
+                {cartCount > 0 && (
+                  <span className="absolute top-1 right-1 w-4 h-4 bg-gradient-to-r from-[#F9E8B2] to-[#D4AF37] text-[#0E4C5A]  text-[9px] font-bold rounded-full flex items-center justify-center shadow-lg animate-pulse">
+                    {cartCount}
+                  </span>
+                )}
+              </button>
+            </div>
           </div>
         </div>
       </header>
