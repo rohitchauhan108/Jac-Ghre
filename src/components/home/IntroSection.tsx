@@ -53,7 +53,7 @@ export const IntroSection: React.FC = () => {
       description:
         "Strictly sulfate-free, paraben-free, cruelty-free, and safe for all Keratin and color-treated hair.",
       linkAction: () => navigateToPage("shop", "all"),
-      actionLabel: "Shop All 9 Creations",
+      actionLabel: "Shop All 12 Creations",
     },
   ];
 
