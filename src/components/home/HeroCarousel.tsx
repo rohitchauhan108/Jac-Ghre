@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { ChevronLeft, ChevronRight, ArrowRight, Play, Pause } from "lucide-react";
 import { CAMPAIGN_SLIDES } from "../../data/products";
-import { useShop } from "../../context/ShopContext";
+import { useShop, type PageType } from "../../context/ShopContext";
 
 export const HeroCarousel: React.FC = () => {
   const { navigateToPage } = useShop();
@@ -44,7 +44,8 @@ export const HeroCarousel: React.FC = () => {
      SLIDE NAVIGATION
   ========================================================= */
   const handleSlideClick = () => {
-    navigateToPage("shop", "all");
+    const destination = currentSlide.ctaLink as PageType;
+    navigateToPage(destination, destination === "shop" ? "all" : undefined);
   };
 
   return (

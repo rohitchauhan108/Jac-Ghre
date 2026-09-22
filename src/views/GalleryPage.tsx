@@ -10,6 +10,7 @@ type Category = 'all' | 'banner' | 'catalogues' | 'founder' | 'product';
 
 const GALLERY_IMAGES: { category: Exclude<Category, 'all'>; src: string; alt: string }[] = [
   { category: 'banner', src: '/gallery/banner/1.webp', alt: 'Brand Banner 1' },
+  { category: 'banner', src: '/gallery/banner/3.webp', alt: 'Banner 3' },
   { category: 'banner', src: '/gallery/banner/0.webp', alt: 'Brand Banner 2' },
   { category: 'catalogues', src: '/gallery/catalogues/00.webp', alt: 'Catalogue 0' },
   { category: 'catalogues', src: '/gallery/catalogues/1.webp', alt: 'Catalogue 1' },
@@ -26,12 +27,11 @@ const GALLERY_IMAGES: { category: Exclude<Category, 'all'>; src: string; alt: st
   { category: 'product', src: '/gallery/product/p2.webp', alt: 'Product 2' },
   // { category: 'founder', src: '/home/founder.webp', alt: 'Founder 1' },
   // { category: 'founder', src: '/gallery/founder/founder-details-2.webp', alt: 'Founder 2' },
-  { category: 'founder', src: '/gallery/founder/founder-details.webp', alt: 'Founder 3' },
+  // { category: 'founder', src: '/gallery/founder/founder-details.webp', alt: 'Founder 3' },
   { category: 'product', src: '/gallery/product/p3.webp', alt: 'Product 3' },
   { category: 'product', src: '/gallery/product/p4.webp', alt: 'Product 4' },
   { category: 'product', src: '/product/11.webp', alt: 'Product 5' },
   { category: 'product', src: '/home/mobile-banner5.jpeg', alt: 'Product 6' },
-  { category: 'banner', src: '/gallery/banner/3.webp', alt: 'Banner 3' },
 ];
 
 const TABS: { key: Category; label: string }[] = [
