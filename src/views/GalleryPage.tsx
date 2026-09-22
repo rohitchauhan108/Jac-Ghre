@@ -24,11 +24,14 @@ const GALLERY_IMAGES: { category: Exclude<Category, 'all'>; src: string; alt: st
   { category: 'catalogues', src: '/gallery/catalogues/newabout.webp', alt: 'About Catalogue' },
   { category: 'product', src: '/gallery/product/p1.webp', alt: 'Product 1' },
   { category: 'product', src: '/gallery/product/p2.webp', alt: 'Product 2' },
-  { category: 'founder', src: '/home/founder.webp', alt: 'Founder 1' },
-  { category: 'founder', src: '/gallery/founder/founder-details-2.webp', alt: 'Founder 2' },
+  // { category: 'founder', src: '/home/founder.webp', alt: 'Founder 1' },
+  // { category: 'founder', src: '/gallery/founder/founder-details-2.webp', alt: 'Founder 2' },
   { category: 'founder', src: '/gallery/founder/founder-details.webp', alt: 'Founder 3' },
   { category: 'product', src: '/gallery/product/p3.webp', alt: 'Product 3' },
   { category: 'product', src: '/gallery/product/p4.webp', alt: 'Product 4' },
+  { category: 'product', src: '/product/11.webp', alt: 'Product 5' },
+  { category: 'product', src: '/home/mobile-banner5.jpeg', alt: 'Product 6' },
+  { category: 'banner', src: '/gallery/banner/3.webp', alt: 'Banner 3' },
 ];
 
 const TABS: { key: Category; label: string }[] = [

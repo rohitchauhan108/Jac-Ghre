@@ -194,9 +194,9 @@ export const Header: React.FC = () => {
                 <div className="flex items-center justify-between border-b border-[#D4AF37]/20 pb-4 mb-5">
                   <div className="flex items-center gap-2">
                     <img
-                      src={logoLight}
+                      src="/logo.png"
                       alt="GHRÉ Logo"
-                      className="h-24 w-auto object-contain"
+                      className="h-20 w-auto object-contain"
                     />
                   </div>
 
