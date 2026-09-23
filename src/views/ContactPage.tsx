@@ -1,16 +1,78 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { Mail, Phone, MapPin, Clock, MessageSquare, Send, CheckCircle2, HelpCircle, ChevronDown } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, MessageSquare, Send, CheckCircle2, HelpCircle, ChevronDown, AlertCircle, Loader2 } from 'lucide-react';
 import { GoldEmblem } from '../components/ui/GoldEmblem';
 import { BRAND_INFO } from '../data/products';
 
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api';
+
+type ContactFormData = {
+  name: string;
+  email: string;
+  phone: string;
+  inquiryType: string;
+  message: string;
+};
+
+const initialForm: ContactFormData = {
+  name: '',
+  email: '',
+  phone: '',
+  inquiryType: 'Product & Hair Care Consultation',
+  message: '',
+};
+
 export const ContactPage: React.FC = () => {
+  const [formData, setFormData] = useState<ContactFormData>(initialForm);
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    if (error) setError('');
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setFormSubmitted(true);
+
+    if (!formData.name || !formData.phone || !formData.message) {
+      setError('Please fill in your name, phone number, and a brief message.');
+      return;
+    }
+    if (formData.phone.replace(/\D/g, '').length < 10) {
+      setError('Please enter a valid phone number (minimum 10 digits).');
+      return;
+    }
+
+    try {
+      setIsSubmitting(true);
+      setError('');
+      const res = await fetch(`${API_BASE_URL}/contact`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email || '',
+          phone: formData.phone,
+          inquiryType: formData.inquiryType,
+          message: formData.message,
+        }),
+      });
+
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        throw new Error(data.message || `Failed to send message (${res.status}). Please try again.`);
+      }
+      setFormData(initialForm);
+      setFormSubmitted(true);
+    } catch (err: any) {
+      setError(err.message || 'Something went wrong while sending your message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const faqs = [
@@ -164,13 +226,23 @@ export const ContactPage: React.FC = () => {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
+                {error && (
+                  <div className="flex items-start gap-3 p-4 bg-red-900/30 border border-red-500/40 rounded-xl">
+                    <AlertCircle className="w-5 h-5 text-red-400 shrink-0 mt-0.5" />
+                    <p className="font-poppins text-sm text-red-200">{error}</p>
+                  </div>
+                )}
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block  text-xs text-[#D4AF37] uppercase tracking-wider mb-2">
-                      Full Name
+                      Full Name <span className="text-red-400">*</span>
                     </label>
                     <input
                       type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
                       required
                       placeholder="Jane Doe"
                       className="w-full px-4 py-3 bg-[#097B8A] border border-[#D4AF37]/40 text-xl text-[#F7F4EB] placeholder-[#8EAAB0] font-poppins outline-none focus:border-[#D4AF37]"
@@ -182,30 +254,56 @@ export const ContactPage: React.FC = () => {
                     </label>
                     <input
                       type="email"
-                      required
-                      placeholder="client@luxury.com"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="you@example.com"
                       className="w-full px-4 py-3 bg-[#097B8A] border border-[#D4AF37]/40 text-xl text-[#F7F4EB] placeholder-[#8EAAB0] font-poppins outline-none focus:border-[#D4AF37]"
                     />
                   </div>
                 </div>
 
-                <div>
-                  <label className="block  text-xs text-[#D4AF37] uppercase tracking-wider mb-2">
-                    Inquiry Topic
-                  </label>
-                  <select className="w-full px-4 py-3 bg-[#097B8A] border border-[#D4AF37]/40 text-xl text-[#F7F4EB] font-poppins outline-none focus:border-[#D4AF37] cursor-pointer">
-                    <option>Product & Hair Care Consultation</option>
-                    <option>Order Tracking & Shipping</option>
-                    <option>Wholesale & Luxury Salon Inquiries</option>
-                    <option>Press & Editorial Inquiries</option>
-                  </select>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="sm:col-span-1">
+                    <label className="block  text-xs text-[#D4AF37] uppercase tracking-wider mb-2">
+                      Phone Number <span className="text-red-400">*</span>
+                    </label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      required
+                      placeholder="+91 98765 43210"
+                      className="w-full px-4 py-3 bg-[#097B8A] border border-[#D4AF37]/40 text-xl text-[#F7F4EB] placeholder-[#8EAAB0] font-poppins outline-none focus:border-[#D4AF37]"
+                    />
+                  </div>
+                  <div className="sm:col-span-1">
+                    <label className="block  text-xs text-[#D4AF37] uppercase tracking-wider mb-2">
+                      Inquiry Topic
+                    </label>
+                    <select
+                      name="inquiryType"
+                      value={formData.inquiryType}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-[#097B8A] border border-[#D4AF37]/40 text-xl text-[#F7F4EB] font-poppins outline-none focus:border-[#D4AF37] cursor-pointer"
+                    >
+                      <option>Product & Hair Care Consultation</option>
+                      <option>Order Tracking & Shipping</option>
+                      <option>Wholesale & Luxury Salon Inquiries</option>
+                      <option>Press & Editorial Inquiries</option>
+                    </select>
+                  </div>
                 </div>
 
                 <div>
                   <label className="block  text-xs text-[#D4AF37] uppercase tracking-wider mb-2">
-                    Your Message
+                    Your Message <span className="text-red-400">*</span>
                   </label>
                   <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     rows={4}
                     required
                     placeholder="How may our concierges assist you today?"
@@ -215,10 +313,20 @@ export const ContactPage: React.FC = () => {
 
                 <button
                   type="submit"
-                  className="w-full py-4 bg-gradient-to-r from-[#D4AF37] via-[#E5C365] to-[#B89028] text-[#0E4C5A]  text-xs sm:text-xl font-bold tracking-[0.2em] uppercase hover:brightness-110 shadow-xl transition-all flex items-center justify-center gap-2"
+                  disabled={isSubmitting}
+                  className="w-full py-4 bg-gradient-to-r from-[#D4AF37] via-[#E5C365] to-[#B89028] text-[#0E4C5A]  text-xs sm:text-xl font-bold tracking-[0.2em] uppercase hover:brightness-110 shadow-xl transition-all flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  <Send className="w-4 h-4" />
-                  <span>Transmit Message</span>
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      <span>Sending...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-4 h-4" />
+                      <span>Transmit Message</span>
+                    </>
+                  )}
                 </button>
               </form>
             )}

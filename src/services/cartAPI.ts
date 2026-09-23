@@ -3,12 +3,30 @@
  * Handles all backend API calls for cart operations
  */
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api';
+
+const TOKEN_KEY = 'ghre_auth_token';
+
+const getAuthToken = (): string => {
+  if (typeof window === 'undefined') return '';
+  return localStorage.getItem(TOKEN_KEY) || '';
+};
+
+const getCommonHeaders = (): Record<string, string> => {
+  const headers: Record<string, string> = {
+    'Content-Type': 'application/json',
+  };
+  const token = getAuthToken();
+  if (token) {
+    headers['Authorization'] = `Bearer ${token}`;
+  }
+  return headers;
+};
 
 // Global userId variable to ensure consistency
 let globalUserId: string = '';
 
-// Get or create a unique userId for this user
+// Get or create a unique userId for this user (used as guest cart id)
 export const getUserId = (): string => {
   if (typeof window === 'undefined') return '';
 
@@ -54,11 +72,12 @@ export const addToCartAPI = async (productData: {
     const response = await fetch(`${API_BASE_URL}/cart`, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
+        ...getCommonHeaders(),
         'X-User-ID': userId,
+        'x-cart-id': userId,
       },
       body: JSON.stringify({
-        userId,  // Important: include userId in body
+        userId,
         ...productData,
       }),
     });
@@ -84,8 +103,9 @@ export const getCartAPI = async () => {
     const response = await fetch(`${API_BASE_URL}/cart`, {
       method: 'GET',
       headers: {
-        'Content-Type': 'application/json',
+        ...getCommonHeaders(),
         'X-User-ID': userId,
+        'x-cart-id': userId,
       },
     });
 
@@ -109,8 +129,9 @@ export const getCartSummaryAPI = async () => {
     const response = await fetch(`${API_BASE_URL}/cart/summary`, {
       method: 'GET',
       headers: {
-        'Content-Type': 'application/json',
+        ...getCommonHeaders(),
         'X-User-ID': userId,
+        'x-cart-id': userId,
       },
     });
 
@@ -134,8 +155,9 @@ export const updateQuantityAPI = async (cartItemId: string, quantity: number) =>
     const response = await fetch(`${API_BASE_URL}/cart/${cartItemId}`, {
       method: 'PUT',
       headers: {
-        'Content-Type': 'application/json',
+        ...getCommonHeaders(),
         'X-User-ID': userId,
+        'x-cart-id': userId,
       },
       body: JSON.stringify({ quantity }),
     });
@@ -160,8 +182,9 @@ export const removeFromCartAPI = async (cartItemId: string) => {
     const response = await fetch(`${API_BASE_URL}/cart/${cartItemId}`, {
       method: 'DELETE',
       headers: {
-        'Content-Type': 'application/json',
+        ...getCommonHeaders(),
         'X-User-ID': userId,
+        'x-cart-id': userId,
       },
     });
 
@@ -185,8 +208,9 @@ export const clearCartAPI = async () => {
     const response = await fetch(`${API_BASE_URL}/cart`, {
       method: 'DELETE',
       headers: {
-        'Content-Type': 'application/json',
+        ...getCommonHeaders(),
         'X-User-ID': userId,
+        'x-cart-id': userId,
       },
     });
 

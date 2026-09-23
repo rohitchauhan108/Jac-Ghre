@@ -8,11 +8,18 @@ import {
   Clock,
   Gift,
   Search,
+  LogOut,
+  UserCircle2,
+  Loader2,
 } from "lucide-react";
 import { useShop, PageType } from "../../context/ShopContext";
+import { useAuth } from "../../context/AuthContext";
+import { useRouter } from "next/navigation";
 const logoLight = "/images/logo-light.png";
 
 export const Header: React.FC = () => {
+  const router = useRouter();
+  const { user, isAuthenticated, isLoading: authLoading, logout } = useAuth();
   const {
     cartCount,
     setIsCartOpen,
@@ -22,6 +29,34 @@ export const Header: React.FC = () => {
     currentPage,
     navigateToPage,
   } = useShop();
+
+  const [profileMenuOpen, setProfileMenuOpen] = useState(false);
+  const profileMenuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (profileMenuRef.current && !profileMenuRef.current.contains(e.target as Node)) {
+        setProfileMenuOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const handleConciergeClick = () => {
+    if (authLoading) return;
+    if (isAuthenticated) {
+      setProfileMenuOpen((prev) => !prev);
+    } else {
+      router.push("/login");
+    }
+  };
+
+  const handleLogout = () => {
+    setProfileMenuOpen(false);
+    logout();
+    router.push("/");
+  };
 
   const [isVisible, setIsVisible] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -114,12 +149,21 @@ export const Header: React.FC = () => {
               </button>
 
               <button
-                onClick={() => navigateToPage("contact")}
-                className="p-2 text-[#D4AF37] hover:text-[#D4AF37] transition-colors"
-                aria-label="Concierge"
-                title="GHRÉ Client Concierge"
+                onClick={handleConciergeClick}
+                className="p-2 text-[#D4AF37] hover:text-[#D4AF37] transition-colors relative"
+                aria-label={isAuthenticated ? "My Account" : "Sign In"}
+                title={isAuthenticated ? "My Account" : "Sign In"}
               >
-                <User className="w-5 h-5 sm:w-6 sm:h-6" />
+                {authLoading ? (
+                  <Loader2 className="w-5 h-5 sm:w-6 sm:h-6 animate-spin" />
+                ) : isAuthenticated ? (
+                  <UserCircle2 className="w-5 h-5 sm:w-6 sm:h-6" />
+                ) : (
+                  <User className="w-5 h-5 sm:w-6 sm:h-6" />
+                )}
+                {isAuthenticated && profileMenuOpen && (
+                  <span className="absolute top-full right-0 mt-1 w-1.5 h-1.5 rounded-full bg-[#D4AF37]" />
+                )}
               </button>
 
               <button
@@ -172,14 +216,76 @@ export const Header: React.FC = () => {
             </nav>
 
             <div className="flex items-center space-x-2.5 sm:space-x-4">
-              <button
-                onClick={() => navigateToPage("contact")}
-                className="p-2 transition-colors cursor-pointer lg:text-[#E8DCC4] lg:hover:text-[#D4AF37] text-[#0B4F71] hover:text-[#176B87]"
-                aria-label="Concierge"
-                title="GHRÉ Client Concierge"
-              >
-                <User className="w-4 h-4 sm:w-5 sm:h-5" />
-              </button>
+              <div ref={profileMenuRef} className="relative">
+                <button
+                  onClick={handleConciergeClick}
+                  className="p-2 transition-colors cursor-pointer lg:text-[#E8DCC4] lg:hover:text-[#D4AF37] text-[#0B4F71] hover:text-[#176B87]"
+                  aria-label={isAuthenticated ? "My Account" : "Sign In"}
+                  title={isAuthenticated ? user?.name || "My Account" : "Sign In / GHRÉ Client Concierge"}
+                >
+                  {authLoading ? (
+                    <Loader2 className="w-4 h-4 sm:w-5 sm:h-5 animate-spin" />
+                  ) : isAuthenticated ? (
+                    <UserCircle2 className="w-4 h-4 sm:w-5 sm:h-5" />
+                  ) : (
+                    <User className="w-4 h-4 sm:w-5 sm:h-5" />
+                  )}
+                </button>
+
+                <AnimatePresence>
+                  {profileMenuOpen && isAuthenticated && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -8 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute right-0 top-full mt-3 w-64 origin-top-right z-50"
+                    >
+                      <div className="bg-gradient-to-b from-[#097B8A] to-[#06242B] border-2 border-[#D4AF37]/40 rounded-2xl shadow-2xl overflow-hidden backdrop-blur-xl">
+                        {/* User info header */}
+                        <div className="p-5 border-b border-[#D4AF37]/20 bg-[#006e83]/30">
+                          <div className="flex items-center gap-3">
+                            <div className="w-12 h-12 bg-gradient-to-br from-[#D4AF37] to-[#8B6914] rounded-full flex items-center justify-center shrink-0 shadow-lg">
+                              <span className="font-cinzel text-xl font-bold text-[#06242B]">
+                                {(user?.name || "G").charAt(0).toUpperCase()}
+                              </span>
+                            </div>
+                            <div className="min-w-0">
+                              <p className="font-cinzel text-sm text-[#FBF9F3] font-bold tracking-wide truncate">
+                                {user?.name || "GHRÉ Patron"}
+                              </p>
+                              <p className="font-outfit text-xs text-[#8EAAB0] truncate">
+                                {user?.email || ""}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="py-2">
+                          <button
+                            onClick={() => {
+                              setProfileMenuOpen(false);
+                              router.push("/account");
+                            }}
+                            className="w-full flex items-center gap-3 px-5 py-3 font-outfit text-xs text-[#E8DCC4] hover:bg-[#D4AF37]/10 hover:text-[#D4AF37] transition-all tracking-wide"
+                          >
+                            <UserCircle2 className="w-4 h-4 text-[#D4AF37]" />
+                            <span className="uppercase tracking-[0.2em] font-medium">My Account</span>
+                          </button>
+
+                          <button
+                            onClick={handleLogout}
+                            className="w-full flex items-center gap-3 px-5 py-3 font-outfit text-xs text-red-300 hover:bg-red-900/20 hover:text-red-200 transition-all tracking-wide border-t border-[#D4AF37]/10 mt-1"
+                          >
+                            <LogOut className="w-4 h-4" />
+                            <span className="uppercase tracking-[0.2em] font-medium">Sign Out</span>
+                          </button>
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
 
               <button
                 onClick={() => setIsCartOpen(true)}

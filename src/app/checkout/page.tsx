@@ -1,8 +1,11 @@
 'use client'
-import React, { useState } from 'react';
-import { ShieldCheck, Lock, ShoppingBag, CheckCircle, ArrowLeft, Sparkles, CreditCard, Truck, MapPin } from 'lucide-react';
-import { useShop } from '../../context/ShopContext';
+import React, { useState, useEffect } from 'react';
+import { ShieldCheck, Lock, ShoppingBag, CheckCircle, ArrowLeft, Sparkles, CreditCard, Truck, MapPin, Loader2, AlertCircle, Banknote, QrCode, LogIn } from 'lucide-react';
+import { useShop, CartItem } from '../../context/ShopContext';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import { useAuth } from '@/context/AuthContext';
+import { createOrder, PaymentMethod } from '@/services/orderAPI';
 
 export default function CheckoutPage() {
   const router = useRouter();
@@ -12,24 +15,54 @@ export default function CheckoutPage() {
     currencySymbol,
     currencyRate,
   } = useShop();
+  const { isAuthenticated, isLoading: authLoading, user } = useAuth();
 
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
     email: '',
     address: '',
+    city: '',
+    state: '',
+    pincode: '',
   });
 
+  const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>('cod');
   const [orderPlaced, setOrderPlaced] = useState(false);
+  const [placedOrderId, setPlacedOrderId] = useState<string>('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
+
+  useEffect(() => {
+    if (!authLoading && !isAuthenticated) {
+      router.replace('/login?redirect=/checkout');
+    }
+  }, [isAuthenticated, authLoading, router]);
+
+  useEffect(() => {
+    if (user) {
+      setFormData((prev) => ({
+        ...prev,
+        name: user.name || prev.name,
+        phone: user.phone || prev.phone,
+        email: user.email || prev.email,
+        address: user.address || prev.address,
+        city: user.city || prev.city,
+        state: user.state || prev.state,
+        pincode: user.pincode || prev.pincode,
+      }));
+    }
+  }, [user]);
 
   const subtotalUSD = cartTotal;
-  const freeShippingThreshold = 150;
-  const shippingFeeUSD = subtotalUSD >= freeShippingThreshold || subtotalUSD === 0 ? 0 : 15.00;
-  const totalUSD = subtotalUSD + shippingFeeUSD;
+  const freeShippingThresholdINR = 499;
+  const subtotalINR = subtotalUSD * currencyRate;
+  const shippingFeeINR = subtotalINR >= freeShippingThresholdINR || subtotalINR === 0 ? 0 : 49;
+  const totalINR = subtotalINR + shippingFeeINR;
 
-  const subtotalFormatted = `${currencySymbol}${(subtotalUSD * currencyRate).toFixed(2)}`;
-  const shippingFormatted = shippingFeeUSD === 0 ? 'Complimentary' : `${currencySymbol}${(shippingFeeUSD * currencyRate).toFixed(2)}`;
-  const totalFormatted = `${currencySymbol}${(totalUSD * currencyRate).toFixed(2)}`;
+  const subtotalFormatted = `${currencySymbol}${subtotalINR.toFixed(0)}`;
+  const shippingFormatted = shippingFeeINR === 0 ? 'Complimentary' : `${currencySymbol}${shippingFeeINR.toFixed(0)}`;
+  const totalFormatted = `${currencySymbol}${totalINR.toFixed(0)}`;
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -37,31 +70,90 @@ export default function CheckoutPage() {
       ...prev,
       [name]: value,
     }));
+    if (error) setError('');
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const mapCartToOrderItems = (items: CartItem[]) => {
+    return items.map((item) => {
+      const productId = item.ProductId || item.product.id;
+      const weight = item.selectedSize || item.product.size || 'standard';
+      return {
+        productId,
+        weight,
+        quantity: item.quantity,
+      };
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
+    if (!isAuthenticated) {
+      router.replace('/login?redirect=/checkout');
+      return;
+    }
+
     if (cart.length === 0) {
-      alert('Your cart is empty.');
+      setError('Your cart is empty.');
       return;
     }
 
-    if (!formData.name || !formData.phone || !formData.email || !formData.address) {
-      alert('Please fill in all the details for your delivery.');
+    const { name, phone, email, address, city, state, pincode } = formData;
+    if (!name || !phone || !email || !address || !city || !state || !pincode) {
+      setError('Please fill in all delivery details, including city, state and pincode.');
+      return;
+    }
+    if (phone.replace(/\D/g, '').length < 10) {
+      setError('Please enter a valid phone number (minimum 10 digits).');
+      return;
+    }
+    if (!/^\d{6}$/.test(pincode.replace(/\D/g, ''))) {
+      setError('Please enter a valid 6-digit pincode.');
       return;
     }
 
-    const orderData = {
-      customer: formData,
-      items: cart,
-      currency: currencySymbol,
-      total: totalUSD * currencyRate,
-    };
+    try {
+      setIsSubmitting(true);
+      setError('');
+      const items = mapCartToOrderItems(cart);
+      const response = await createOrder({
+        items,
+        customer: {
+          customerName: name.trim(),
+          email: email.trim(),
+          phone: phone.replace(/\D/g, ''),
+          address: address.trim(),
+          city: city.trim(),
+          state: state.trim(),
+          pincode: pincode.replace(/\D/g, ''),
+        },
+        paymentMethod,
+      });
 
-    console.log('Order Submitted:', orderData);
-    setOrderPlaced(true);
+      setPlacedOrderId(response.order?.orderId || '');
+      setOrderPlaced(true);
+
+      if (response.payment && response.payment.redirectUrl) {
+        window.location.href = response.payment.redirectUrl;
+      }
+    } catch (err: any) {
+      setError(err.message || 'Failed to place order. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
+  if (authLoading) {
+    return (
+      <div className="bg-[#006e83] min-h-screen flex items-center justify-center">
+        <Loader2 className="w-8 h-8 text-[#D4AF37] animate-spin" />
+      </div>
+    );
+  }
+
+  if (!isAuthenticated) {
+    return null;
+  }
 
   return (
     <div className="bg-[#006e83] min-h-screen text-[#FBF9F3] py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -106,15 +198,30 @@ export default function CheckoutPage() {
               <span className="text-[10px] tracking-[0.3em] text-[#D4AF37] uppercase block mb-1">Acquisition Confirmed</span>
               <h3 className="text-3xl font-light text-[#FBF9F3]">Atelier Dispatch</h3>
             </div>
+            {placedOrderId && (
+              <div className="py-3 px-4 bg-[#06242B]/60 border border-[#D4AF37]/30 rounded-xl">
+                <span className="block font-outfit text-[10px] uppercase tracking-[0.25em] text-[#8EAAB0] mb-1">Private Order Reference</span>
+                <span className="font-cinzel text-xl text-[#D4AF37] tracking-wider">#{placedOrderId}</span>
+              </div>
+            )}
             <p className="font-outfit text-xl text-[#C4D8DC] leading-relaxed">
               Esteemed <span className="text-[#D4AF37] font-medium">{formData.name}</span>, your private order has been securely registered. Confirmation correspondence and curation updates have been transmitted to <span className="text-[#D4AF37]">{formData.email}</span>.
             </p>
-            <button
-              onClick={() => router.push('/')}
-              className="w-full py-4 bg-[#D4AF37] text-[#06242B] text-xs font-bold tracking-[0.25em] uppercase hover:bg-[#E2C358] transition-all shadow-xl rounded-lg"
-            >
-              Return to Gallery
-            </button>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <button
+                onClick={() => router.push('/account')}
+                className="flex-1 py-4 border border-[#D4AF37] text-[#D4AF37] text-xs font-bold tracking-[0.25em] uppercase hover:bg-[#D4AF37]/10 transition-all shadow-xl rounded-xl flex items-center justify-center gap-2"
+              >
+                <ShoppingBag className="w-4 h-4" />
+                Track Orders
+              </button>
+              <button
+                onClick={() => router.push('/')}
+                className="flex-1 py-4 bg-[#D4AF37] text-[#06242B] text-xs font-bold tracking-[0.25em] uppercase hover:bg-[#E2C358] transition-all shadow-xl rounded-xl"
+              >
+                Return to Gallery
+              </button>
+            </div>
           </div>
         ) : cart.length === 0 ? (
           /* EMPTY CART STATE */
@@ -138,6 +245,14 @@ export default function CheckoutPage() {
             {/* LEFT COLUMN: Form & Cart items */}
             <div className="lg:col-span-7 space-y-6">
               
+              {/* Error Banner */}
+              {error && (
+                <div className="flex items-start gap-3 p-4 bg-red-900/30 border border-red-500/40 rounded-xl">
+                  <AlertCircle className="w-5 h-5 text-red-400 shrink-0 mt-0.5" />
+                  <p className="font-outfit text-xs text-red-200">{error}</p>
+                </div>
+              )}
+
               {/* Delivery Details Form */}
               <div className="bg-[#097B8A]/40 border border-[#D4AF37]/25 rounded-2xl p-6 sm:p-8 shadow-2xl backdrop-blur-xl">
                 <div className="flex items-center gap-3 mb-6 border-b border-[#D4AF37]/15 pb-4">
@@ -151,7 +266,7 @@ export default function CheckoutPage() {
                     <p className="font-outfit text-xs text-[#8EAAB0]">Where shall we dispatch your curated items?</p>
                   </div>
                 </div>
-                
+
                 <form id="checkout-form" onSubmit={handleSubmit} className="space-y-5">
                   <div>
                     <label className="block font-outfit text-[11px] uppercase tracking-widest text-[#C4D8DC] mb-2 font-medium">Full Name</label>
@@ -174,7 +289,7 @@ export default function CheckoutPage() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        placeholder="+1 (555) 019-2834"
+                        placeholder="+91 98765 43210"
                         required
                         className="w-full px-4 py-3.5 bg-[#06242B]/70 border border-[#D4AF37]/30 rounded-xl text-[#FBF9F3] placeholder-[#8EAAB0]/50 focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] font-outfit text-xl transition-all"
                       />
@@ -186,7 +301,7 @@ export default function CheckoutPage() {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        placeholder="victoria@luxury.com"
+                        placeholder="you@jac-ghre.com"
                         required
                         className="w-full px-4 py-3.5 bg-[#06242B]/70 border border-[#D4AF37]/30 rounded-xl text-[#FBF9F3] placeholder-[#8EAAB0]/50 focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] font-outfit text-xl transition-all"
                       />
@@ -199,11 +314,93 @@ export default function CheckoutPage() {
                       name="address"
                       value={formData.address}
                       onChange={handleChange}
-                      placeholder="Street address, apartment, suite, city, postal code"
+                      placeholder="Street address, apartment, suite, building"
                       rows={3}
                       required
                       className="w-full px-4 py-3.5 bg-[#06242B]/70 border border-[#D4AF37]/30 rounded-xl text-[#FBF9F3] placeholder-[#8EAAB0]/50 focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] font-outfit text-xl transition-all resize-none"
                     ></textarea>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+                    <div>
+                      <label className="block font-outfit text-[11px] uppercase tracking-widest text-[#C4D8DC] mb-2 font-medium">City</label>
+                      <input
+                        type="text"
+                        name="city"
+                        value={formData.city}
+                        onChange={handleChange}
+                        placeholder="Mumbai"
+                        required
+                        className="w-full px-4 py-3.5 bg-[#06242B]/70 border border-[#D4AF37]/30 rounded-xl text-[#FBF9F3] placeholder-[#8EAAB0]/50 focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] font-outfit text-xl transition-all"
+                      />
+                    </div>
+                    <div>
+                      <label className="block font-outfit text-[11px] uppercase tracking-widest text-[#C4D8DC] mb-2 font-medium">State</label>
+                      <input
+                        type="text"
+                        name="state"
+                        value={formData.state}
+                        onChange={handleChange}
+                        placeholder="Maharashtra"
+                        required
+                        className="w-full px-4 py-3.5 bg-[#06242B]/70 border border-[#D4AF37]/30 rounded-xl text-[#FBF9F3] placeholder-[#8EAAB0]/50 focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] font-outfit text-xl transition-all"
+                      />
+                    </div>
+                    <div>
+                      <label className="block font-outfit text-[11px] uppercase tracking-widest text-[#C4D8DC] mb-2 font-medium">Pincode</label>
+                      <input
+                        type="text"
+                        name="pincode"
+                        value={formData.pincode}
+                        onChange={handleChange}
+                        placeholder="400001"
+                        required
+                        className="w-full px-4 py-3.5 bg-[#06242B]/70 border border-[#D4AF37]/30 rounded-xl text-[#FBF9F3] placeholder-[#8EAAB0]/50 focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] font-outfit text-xl transition-all"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Payment Method Selector */}
+                  <div className="pt-2">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="p-2 bg-[#006e83] border border-[#D4AF37]/30 rounded-lg">
+                        <CreditCard className="w-5 h-5 text-[#D4AF37]" />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-medium text-[#FBF9F3] tracking-wide uppercase">
+                          Payment Method
+                        </h3>
+                        <p className="font-outfit text-xs text-[#8EAAB0]">Choose your preferred settlement</p>
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                      {([
+                        { id: 'cod', label: 'Cash on Delivery', icon: Banknote },
+                        { id: 'upi', label: 'UPI', icon: QrCode },
+                        { id: 'card', label: 'Card', icon: CreditCard },
+                        { id: 'netbanking', label: 'Net Banking', icon: ShieldCheck },
+                      ] as const).map((opt) => {
+                        const Icon = opt.icon;
+                        const isSelected = paymentMethod === opt.id;
+                        return (
+                          <button
+                            key={opt.id}
+                            type="button"
+                            onClick={() => setPaymentMethod(opt.id as PaymentMethod)}
+                            className={`p-4 rounded-xl border-2 transition-all flex flex-col items-center gap-2 ${
+                              isSelected
+                                ? 'bg-[#D4AF37]/10 border-[#D4AF37] shadow-lg shadow-[#D4AF37]/10'
+                                : 'bg-[#06242B]/50 border-[#D4AF37]/20 hover:border-[#D4AF37]/50'
+                            }`}
+                          >
+                            <Icon className={`w-5 h-5 ${isSelected ? 'text-[#D4AF37]' : 'text-[#8EAAB0]'}`} />
+                            <span className={`font-outfit text-[10px] tracking-widest uppercase ${isSelected ? 'text-[#FBF9F3] font-bold' : 'text-[#8EAAB0]'}`}>
+                              {opt.label}
+                            </span>
+                          </button>
+                        );
+                      })}
+                    </div>
                   </div>
                 </form>
               </div>
@@ -278,8 +475,8 @@ export default function CheckoutPage() {
                   <div className="flex justify-between items-center">
                     <div>
                       <span className="text-xs tracking-wider uppercase block">Courier Transit</span>
-                      {shippingFeeUSD > 0 && (
-                        <span className="text-[10px] text-[#8EAAB0]">Complimentary over ${freeShippingThreshold}</span>
+                      {shippingFeeINR > 0 && (
+                        <span className="text-[10px] text-[#8EAAB0]">Complimentary over {currencySymbol}{freeShippingThresholdINR}</span>
                       )}
                     </div>
                     <span className="text-[#D4AF37]">{shippingFormatted}</span>
@@ -302,10 +499,20 @@ export default function CheckoutPage() {
                 <button
                   type="submit"
                   form="checkout-form"
-                  className="w-full py-4 bg-gradient-to-r from-[#D4AF37] via-[#E6C65C] to-[#D4AF37] text-[#06242B] text-xs font-bold tracking-[0.25em] uppercase hover:brightness-110 transition-all shadow-2xl rounded-xl cursor-pointer flex items-center justify-center gap-2 group"
+                  disabled={isSubmitting || cart.length === 0}
+                  className="w-full py-4 bg-gradient-to-r from-[#D4AF37] via-[#E6C65C] to-[#D4AF37] text-[#06242B] text-xs font-bold tracking-[0.25em] uppercase hover:brightness-110 transition-all shadow-2xl rounded-xl cursor-pointer flex items-center justify-center gap-2 group disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  <ShieldCheck className="w-4 h-4 transition-transform group-hover:scale-110" />
-                  <span>Authorize & Pay ({totalFormatted})</span>
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      <span>Processing...</span>
+                    </>
+                  ) : (
+                    <>
+                      <ShieldCheck className="w-4 h-4 transition-transform group-hover:scale-110" />
+                      <span>Authorize & Pay ({totalFormatted})</span>
+                    </>
+                  )}
                 </button>
 
               </div>
