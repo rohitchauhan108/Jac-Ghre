@@ -79,7 +79,7 @@ export const HeroCarousel: React.FC = () => {
               {currentSlide.mobileImage ? (
                 <source media="(max-width: 767px)" srcSet={currentSlide.mobileImage} />
               ) : null}
-              <img src={currentSlide.image} alt={currentSlide.title} loading={currentIndex === 0 ? "eager" : "lazy"} draggable={false} className="block w-full h-full object-cover object-center transition-transform duration-1000 ease-out group-hover:scale-[1.012]" />
+              <img src={currentSlide.image} alt={currentSlide.title} loading={currentIndex === 0 ? "eager" : "lazy"} draggable={false} className="block w-full h-full object-cover object-center transition-transform duration-1000 ease-out group-hover:scale-[1.012] opacity-90" />
             </picture>
 
             {/* =================================================
