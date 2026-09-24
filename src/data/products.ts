@@ -41,7 +41,7 @@ export const CAMPAIGN_SLIDES: CampaignSlide[] = [
     secondaryCtaLink: "about-founder",
     accentTheme: "founder-luxury",
     image: "/home/founder0.webp",
-    mobileImage: "/home/mobile-founder0.webp",
+    mobileImage: "/home/mobile-founder0.jpeg",
   },
   {
     id: "ghre-leave-in-conditioner-launch",

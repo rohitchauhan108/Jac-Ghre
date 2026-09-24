@@ -284,7 +284,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           ${
             isDark
               ? `
-                bg-[#a1f6f3]
+                bg-white
                 border-[#D4AF37]/25
               `
               : `
@@ -304,6 +304,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
               md:text-lg
               font-normal
               tracking-wide
+              font-poppins
               transition-colors
               cursor-pointer
 

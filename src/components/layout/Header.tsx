@@ -123,14 +123,14 @@ export const Header: React.FC = () => {
   return (
     <>
       <header
-        className={`lg:sticky fixed top-0 z-40 w-full transition-all duration-400 ease-out transform ${
+        className={`sticky top-0 z-40 w-full transition-all duration-400 ease-out transform ${
           isVisible
             ? "translate-y-0"
             : "-translate-y-full pointer-events-none"
         } ${
           isScrolled
-            ? "lg:bg-[#005F73] bg-white/98 backdrop-blur-lg border-b border-[#0B4F71]/15 py-3 shadow-md md:shadow-[0_12px_35px_rgba(11,79,113,0.14)]"
-            : "lg:bg-[#005F73] bg-transparent py-4 sm:py-5 lg:border-b lg:border-[#0B4F71]/10"
+            ? "bg-[#006d83] bg-[#006d83] backdrop-blur-lg border-b border-[#0B4F71]/15 py-3 shadow-md md:shadow-[0_12px_35px_rgba(11,79,113,0.14)]"
+            : "bg-[#006d83] py-4 sm:py-5 lg:border-b lg:border-[#0B4F71]/10"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -253,6 +253,13 @@ export const Header: React.FC = () => {
             </nav>
 
             <div className="flex items-center space-x-2.5 sm:space-x-4">
+              <button
+                onClick={() => setIsSearchOpen(true)}
+                className="p-2 text-[#D4AF37] hover:text-[#D4AF37] transition-colors"
+                aria-label="Search products"
+              >
+                <Search className="w-5 h-5 sm:w-6 sm:h-6" />
+              </button>
               <div ref={profileMenuRef} className="relative">
                 <button
                   onClick={handleConciergeClick}

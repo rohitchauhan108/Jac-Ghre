@@ -192,7 +192,7 @@ export const HairCarePage: React.FC = () => {
               return (
                 <div
                   key={p.id}
-                  className="bg-[#097B8A] border border-[#D4AF37]/35 hover:border-[#D4AF37] transition-all p-6 flex flex-col justify-between shadow-xl group"
+                  className="bg-[#097B8A]/10 border border-[#D4AF37]/35 hover:border-[#D4AF37] transition-all p-6 flex flex-col justify-between shadow-xl group"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-3">

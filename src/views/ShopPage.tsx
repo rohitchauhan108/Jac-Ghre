@@ -109,7 +109,7 @@ export const ShopPage: React.FC = () => {
             The Complete GHRÉ Catalog
           </h1>
 
-          <p className="mt-4 max-w-2xl mx-auto font-editorial text-2xl sm:text-3xl italic text-[#D4AF37]">
+          <p className="mt-4 max-w-2xl mx-auto font-editorial text-2xl sm:text-3xl italic text-white">
             “Artisanal Moroccan Prickly Pear, Polynesian Monoï & Grasse Essences.”
           </p>
 
@@ -140,7 +140,7 @@ export const ShopPage: React.FC = () => {
               return (
                 <div
                   key={product.id}
-                  className="bg-[#a1f6f3] border border-[#D4AF37]/35 hover:border-[#D4AF37] transition-all duration-300 flex flex-col justify-between shadow-2xl p-6 relative group"
+                  className="bg-white border border-[#D4AF37]/35 hover:border-[#D4AF37] transition-all duration-300 flex flex-col justify-between shadow-2xl p-6 relative group"
                 >
                   <div>
                     {/* Top Row: Badge & Wishlist */}
@@ -194,7 +194,7 @@ export const ShopPage: React.FC = () => {
 
                       <h3
                         onClick={() => setQuickViewProduct(product)}
-                        className=" text-lg font-bold text-[#007288] hover:text-[#D4AF37] cursor-pointer transition-colors leading-snug "
+                        className=" text-lg font-semibold font-poppins text-[#007288] hover:text-[#D4AF37] cursor-pointer transition-colors leading-snug"
                       >
                         {product.name}
                       </h3>
@@ -212,7 +212,7 @@ export const ShopPage: React.FC = () => {
                   {/* Price & Action Button */}
                   <div className="mt-6 pt-4 border-t border-[#D4AF37]/20 flex items-center justify-between">
                     <div>
-                      <span className="text-xl  font-bold text-[#007288]">
+                      <span className="text-xl font-bold text-[#007288]">
                         {formattedPrice}
                       </span>
                     </div>
