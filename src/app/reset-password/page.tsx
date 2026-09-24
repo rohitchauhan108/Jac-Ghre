@@ -52,7 +52,12 @@ export default function ResetPasswordPage() {
       setResendCooldown(60);
       setSuccessMsg('If an account exists, a reset code has been sent to your email.');
     } catch (err: any) {
-      setError(err.message || 'Failed to request password reset.');
+      const msg = err?.message || 'Failed to request password reset.';
+      setError(msg);
+      if (err?.status === 429) {
+        const retryAfter = Number(err?.retryAfter);
+        setResendCooldown(Number.isFinite(retryAfter) && retryAfter > 0 ? retryAfter : 60);
+      }
     } finally {
       setIsSubmitting(false);
     }
@@ -66,7 +71,12 @@ export default function ResetPasswordPage() {
       setResendCooldown(60);
       setSuccessMsg('A new reset code has been sent.');
     } catch (err: any) {
-      setError(err.message || 'Failed to resend code.');
+      const msg = err?.message || 'Failed to resend code.';
+      setError(msg);
+      if (err?.status === 429) {
+        const retryAfter = Number(err?.retryAfter);
+        setResendCooldown(Number.isFinite(retryAfter) && retryAfter > 0 ? retryAfter : 60);
+      }
     }
   };
 
@@ -90,7 +100,12 @@ export default function ResetPasswordPage() {
       await resetPassword(email, otp, newPassword);
       setStep('done');
     } catch (err: any) {
-      setError(err.message || 'Invalid or expired reset code.');
+      const msg = err?.message || 'Invalid or expired reset code.';
+      setError(msg);
+      if (err?.status === 429) {
+        const retryAfter = Number(err?.retryAfter);
+        setResendCooldown(Number.isFinite(retryAfter) && retryAfter > 0 ? retryAfter : 60);
+      }
     } finally {
       setIsSubmitting(false);
     }

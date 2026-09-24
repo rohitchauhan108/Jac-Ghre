@@ -32,6 +32,15 @@ export const Header: React.FC = () => {
 
   const [profileMenuOpen, setProfileMenuOpen] = useState(false);
   const profileMenuRef = useRef<HTMLDivElement>(null);
+  const prevCartCount = useRef(cartCount);
+  const [cartBadgeKey, setCartBadgeKey] = useState(0);
+
+  useEffect(() => {
+    if (cartCount !== prevCartCount.current && cartCount > 0) {
+      setCartBadgeKey((k) => k + 1);
+    }
+    prevCartCount.current = cartCount;
+  }, [cartCount]);
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -167,6 +176,34 @@ export const Header: React.FC = () => {
               </button>
 
               <button
+                onClick={() => setIsCartOpen(true)}
+                className="p-2 text-[#D4AF37] hover:text-[#D4AF37] transition-colors relative"
+                aria-label="Shopping Bag"
+                title={`Cart · ${cartCount} item${cartCount === 1 ? "" : "s"}`}
+              >
+                <ShoppingBag className="w-5 h-5 sm:w-6 sm:h-6" />
+                {cartCount > 0 && (
+                  <motion.span
+                    key={cartBadgeKey}
+                    initial={{ scale: 0, opacity: 0 }}
+                    animate={{
+                      scale: [0, 1.35, 1],
+                      opacity: [0, 1, 1],
+                      y: [0, -2, 0],
+                    }}
+                    transition={{
+                      duration: 0.55,
+                      times: [0, 0.45, 1],
+                      ease: [0.34, 1.56, 0.64, 1],
+                    }}
+                    className="absolute -top-1.5 -right-1.5 min-w-[22px] h-[22px] px-1.5 bg-gradient-to-br from-[#FF4B5C] via-[#E23648] to-[#A81A2A] text-white text-[11px] font-extrabold rounded-full flex items-center justify-center border-[2px] border-[#FBF9F3] shadow-[0_0_0_2px_rgba(212,175,55,0.45),0_6px_14px_rgba(168,26,42,0.45)] ring-1 ring-black/10 z-[1] select-none"
+                  >
+                    {cartCount}
+                  </motion.span>
+                )}
+              </button>
+
+              <button
                 onClick={() => setMobileMenuOpen(true)}
                 className="p-2 text-[#D4AF37] hover:text-[#D4AF37] transition-colors"
                 aria-label="Open menu"
@@ -291,12 +328,27 @@ export const Header: React.FC = () => {
                 onClick={() => setIsCartOpen(true)}
                 className="relative p-2 transition-colors cursor-pointer lg:text-[#E8DCC4] lg:hover:text-[#D4AF37] text-[#0B4F71] hover:text-[#176B87]"
                 aria-label="Shopping Bag"
+                title={`Cart · ${cartCount} item${cartCount === 1 ? "" : "s"}`}
               >
                 <ShoppingBag className="w-4 h-4 sm:w-5 sm:h-5 lg:text-[#E8DCC4] text-[#0B4F71]" />
                 {cartCount > 0 && (
-                  <span className="absolute top-1 right-1 w-4 h-4 bg-gradient-to-r from-[#F9E8B2] to-[#D4AF37] text-[#0E4C5A]  text-[9px] font-bold rounded-full flex items-center justify-center shadow-lg animate-pulse">
+                  <motion.span
+                    key={cartBadgeKey}
+                    initial={{ scale: 0, opacity: 0 }}
+                    animate={{
+                      scale: [0, 1.4, 1],
+                      opacity: [0, 1, 1],
+                      y: [0, -3, 0],
+                    }}
+                    transition={{
+                      duration: 0.6,
+                      times: [0, 0.45, 1],
+                      ease: [0.34, 1.56, 0.64, 1],
+                    }}
+                    className="absolute -top-2 -right-2 min-w-[24px] h-[24px] px-1.5 bg-gradient-to-br from-[#FF4B5C] via-[#E23648] to-[#A81A2A] text-white text-[12px] font-black tracking-tight rounded-full flex items-center justify-center border-[2.5px] border-[#FBF9F3] shadow-[0_0_0_2.5px_rgba(212,175,55,0.55),0_8px_18px_rgba(168,26,42,0.55)] ring-1 ring-black/10 z-[1] select-none"
+                  >
                     {cartCount}
-                  </span>
+                  </motion.span>
                 )}
               </button>
             </div>

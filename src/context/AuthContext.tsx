@@ -56,7 +56,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     try {
       setIsLoading(true);
       const res = await getMeAPI();
-      setUser(res.user);
+      setUser(res?.user ?? null);
     } catch (error) {
       clearToken();
       setUser(null);
@@ -69,58 +69,84 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     loadUser();
   }, [loadUser]);
 
-  const login = async (email: string, password: string) => {
+  const login = useCallback(async (email: string, password: string) => {
     const res = await loginAPI(email, password);
     setTokenStorage(res.token);
     setUser(res.user);
-  };
+  }, []);
 
-  const register = async (payload: RegisterPayload) => {
+  const register = useCallback(async (payload: RegisterPayload) => {
     const res = await registerAPI(payload);
     return { email: res.email };
-  };
+  }, []);
 
-  const verifyRegistration = async (email: string, otp: string) => {
+  const verifyRegistration = useCallback(async (email: string, otp: string) => {
     const res = await verifyRegistrationAPI(email, otp);
     setTokenStorage(res.token);
     setUser(res.user);
-  };
+  }, []);
 
-  const resendRegistrationCode = async (email: string) => {
+  const resendRegistrationCode = useCallback(async (email: string) => {
     await resendRegistrationCodeAPI(email);
-  };
+  }, []);
 
-  const requestPasswordReset = async (email: string) => {
+  const requestPasswordReset = useCallback(async (email: string) => {
     await requestPasswordResetAPI(email);
-  };
+  }, []);
 
-  const resetPassword = async (email: string, otp: string, password: string) => {
+  const resetPassword = useCallback(async (email: string, otp: string, password: string) => {
     await resetPasswordAPI(email, otp, password);
-  };
+  }, []);
 
   const logout = useCallback(() => {
     clearToken();
     resetUserId();
     setUser(null);
     setOrders([]);
+    setIsOrdersLoading(false);
   }, []);
 
-  const loadOrders = async () => {
+  const loadOrders = useCallback(async () => {
+    const token = getToken();
+    if (!token) {
+      setOrders([]);
+      setIsOrdersLoading(false);
+      return;
+    }
+    let settled = false;
+    const failsafe = setTimeout(() => {
+      if (!settled) {
+        console.warn('[AuthContext] loadOrders timed out — forcing loading=false');
+        settled = true;
+        setIsOrdersLoading(false);
+      }
+    }, 8000);
     try {
       setIsOrdersLoading(true);
       const res = await getMyOrdersAPI();
-      setOrders(res.orders || []);
-    } catch (error) {
+      const list = Array.isArray(res) ? res : res?.orders;
+      setOrders(Array.isArray(list) ? list : []);
+    } catch (error: any) {
+      console.warn('[AuthContext] Failed to load orders:', error?.message || error);
       setOrders([]);
+      if (error?.status === 401) {
+        clearToken();
+        resetUserId();
+        setUser(null);
+      }
     } finally {
-      setIsOrdersLoading(false);
+      if (!settled) {
+        settled = true;
+        clearTimeout(failsafe);
+        setIsOrdersLoading(false);
+      }
     }
-  };
+  }, []);
 
-  const updateUserProfile = async (payload: Partial<Omit<PublicUser, 'id' | 'email' | 'joinedDate'>>) => {
+  const updateUserProfile = useCallback(async (payload: Partial<Omit<PublicUser, 'id' | 'email' | 'joinedDate'>>) => {
     const res = await updateProfileAPI(payload);
-    setUser(res.user);
-  };
+    setUser(res?.user ?? null);
+  }, []);
 
   return (
     <AuthContext.Provider

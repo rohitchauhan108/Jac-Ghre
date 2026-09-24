@@ -22,6 +22,12 @@ export const clearToken = (): void => {
   localStorage.removeItem(TOKEN_KEY);
 };
 
+type RateLimitedError = Error & {
+  status: number;
+  data?: any;
+  retryAfter?: number;
+};
+
 const authFetch = async (endpoint: string, options: RequestInit = {}): Promise<any> => {
   const token = getToken();
   const headers: Record<string, string> = {
@@ -37,11 +43,26 @@ const authFetch = async (endpoint: string, options: RequestInit = {}): Promise<a
     headers,
   });
 
-  const data = await response.json().catch(() => ({}));
+  const rawText = await response.text().catch(() => '{}');
+  let data: any;
+  try {
+    data = rawText ? JSON.parse(rawText) : {};
+  } catch {
+    data = {};
+  }
+
   if (!response.ok) {
-    const error = new Error(data.message || `Request failed: ${response.status}`);
-    (error as any).status = response.status;
-    (error as any).data = data;
+    const status = response.status;
+    const retryAfterRaw = response.headers.get('Retry-After');
+    const retryAfter = retryAfterRaw ? Number(retryAfterRaw) : undefined;
+    let message = data?.message || `Request failed: ${status}`;
+    if (status === 429 && retryAfter && !/seconds/i.test(message)) {
+      message = `${message.replace(/\.$/, '')}. Please try again in ${retryAfter} seconds.`;
+    }
+    const error = new Error(message) as RateLimitedError;
+    error.status = status;
+    error.data = data;
+    if (retryAfter && Number.isFinite(retryAfter)) error.retryAfter = retryAfter;
     throw error;
   }
   return data;
@@ -170,9 +191,12 @@ export interface Order {
 }
 
 export const getMyOrders = async (): Promise<{ orders: Order[] }> => {
-  return authFetch('/orders/mine', {
+  const data = await authFetch('/orders/mine', {
     method: 'GET',
   });
+  if (Array.isArray(data)) return { orders: data };
+  if (data && Array.isArray(data.orders)) return { orders: data.orders };
+  return { orders: [] };
 };
 
 export const logout = (): void => {

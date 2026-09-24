@@ -87,7 +87,12 @@ export default function SignupPage() {
       setResendCooldown(60);
       setSuccessMsg('A verification code has been sent to your email.');
     } catch (err: any) {
-      setError(err.message || 'Something went wrong. Please try again.');
+      const msg = err?.message || 'Something went wrong. Please try again.';
+      setError(msg);
+      if (err?.status === 429) {
+        const retryAfter = Number(err?.retryAfter);
+        setResendCooldown(Number.isFinite(retryAfter) && retryAfter > 0 ? retryAfter : 60);
+      }
     } finally {
       setIsSubmitting(false);
     }
@@ -105,7 +110,12 @@ export default function SignupPage() {
       await verifyRegistration(pendingEmail, otp);
       router.push('/account');
     } catch (err: any) {
-      setError(err.message || 'Invalid or expired verification code.');
+      const msg = err?.message || 'Invalid or expired verification code.';
+      setError(msg);
+      if (err?.status === 429) {
+        const retryAfter = Number(err?.retryAfter);
+        setResendCooldown(Number.isFinite(retryAfter) && retryAfter > 0 ? retryAfter : 60);
+      }
     } finally {
       setIsSubmitting(false);
     }
@@ -119,7 +129,12 @@ export default function SignupPage() {
       setResendCooldown(60);
       setSuccessMsg('A new verification code has been sent.');
     } catch (err: any) {
-      setError(err.message || 'Failed to resend code.');
+      const msg = err?.message || 'Failed to resend code.';
+      setError(msg);
+      if (err?.status === 429) {
+        const retryAfter = Number(err?.retryAfter);
+        setResendCooldown(Number.isFinite(retryAfter) && retryAfter > 0 ? retryAfter : 60);
+      }
     }
   };
 

@@ -16,12 +16,19 @@ function LoginContent() {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [cooldown, setCooldown] = useState(0);
 
   useEffect(() => {
     if (isAuthenticated && !authLoading) {
       router.replace(redirectTo);
     }
   }, [isAuthenticated, authLoading, router, redirectTo]);
+
+  useEffect(() => {
+    if (cooldown <= 0) return;
+    const t = setTimeout(() => setCooldown((c) => Math.max(0, c - 1)), 1000);
+    return () => clearTimeout(t);
+  }, [cooldown]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -31,6 +38,7 @@ function LoginContent() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (cooldown > 0) return;
     if (!formData.email || !formData.password) {
       setError('Please enter your email and password.');
       return;
@@ -41,7 +49,13 @@ function LoginContent() {
       await login(formData.email, formData.password);
       router.replace(redirectTo);
     } catch (err: any) {
-      setError(err.message || 'Invalid email or password. Please try again.');
+      const msg = err?.message || 'Invalid email or password. Please try again.';
+      setError(msg);
+      if (err?.status === 429) {
+        const retryAfter = Number(err?.retryAfter);
+        const seconds = Number.isFinite(retryAfter) && retryAfter > 0 ? retryAfter : 60;
+        setCooldown(seconds);
+      }
     } finally {
       setIsSubmitting(false);
     }
@@ -167,13 +181,18 @@ function LoginContent() {
 
             <button
               type="submit"
-              disabled={isSubmitting}
+              disabled={isSubmitting || cooldown > 0}
               className="w-full py-4 bg-gradient-to-r from-[#D4AF37] via-[#E6C65C] to-[#D4AF37] text-[#06242B] font-cinzel text-xs font-bold tracking-[0.25em] uppercase hover:brightness-110 transition-all shadow-2xl rounded-xl cursor-pointer flex items-center justify-center gap-2 group disabled:opacity-60 disabled:cursor-not-allowed"
             >
               {isSubmitting ? (
                 <>
                   <Loader2 className="w-4 h-4 animate-spin" />
                   <span>Signing In...</span>
+                </>
+              ) : cooldown > 0 ? (
+                <>
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                  <span>Try again in {cooldown}s</span>
                 </>
               ) : (
                 <>
