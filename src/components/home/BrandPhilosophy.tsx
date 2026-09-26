@@ -79,10 +79,10 @@ export const BrandPhilosophy: React.FC = () => {
           {/* =====================================================
               OUTER GOLD FRAME
           ===================================================== */}
-          <div className="absolute -inset-[1px] bg-gradient-to-b from-[#D4AF37]/70 via-[#D4AF37]/20 to-[#D4AF37]/70 pointer-events-none" />
+          {/* <div className="absolute -inset-[1px] bg-gradient-to-b from-[#D4AF37]/70 via-[#D4AF37]/20 to-[#D4AF37]/70 pointer-events-none" /> */}
 
           {/* Main Philosophy Panel */}
-          <div className="relative bg-[#006073] border border-[#D4AF37]/40 shadow-[0_30px_80px_rgba(0,48,58,0.55)] overflow-hidden">
+          <div className="relative bg-[#006073] border border-white/50 overflow-hidden">
 
             {/* ===================================================
                 INNER BACKGROUND GLOW
@@ -109,20 +109,20 @@ export const BrandPhilosophy: React.FC = () => {
             =================================================== */}
 
             {/* Top Left */}
-            <div className="absolute top-3 left-3 w-8 h-8 border-t border-l border-[#D4AF37]/80" />
-            <div className="absolute top-5 left-5 w-4 h-4 border-t border-l border-[#D4AF37]/30" />
+            <div className="absolute top-3 left-3 w-8 h-8 border-t border-l border-white" />
+            <div className="absolute top-5 left-5 w-4 h-4 border-t border-l white/20" />
 
             {/* Top Right */}
-            <div className="absolute top-3 right-3 w-8 h-8 border-t border-r border-[#D4AF37]/80" />
-            <div className="absolute top-5 right-5 w-4 h-4 border-t border-r border-[#D4AF37]/30" />
+            <div className="absolute top-3 right-3 w-8 h-8 border-t border-r border-white" />
+            <div className="absolute top-5 right-5 w-4 h-4 border-t border-r white/20" />
 
             {/* Bottom Left */}
-            <div className="absolute bottom-3 left-3 w-8 h-8 border-b border-l border-[#D4AF37]/80" />
-            <div className="absolute bottom-5 left-5 w-4 h-4 border-b border-l border-[#D4AF37]/30" />
+            <div className="absolute bottom-3 left-3 w-8 h-8 border-b border-l border-white" />
+            <div className="absolute bottom-5 left-5 w-4 h-4 border-b border-l white/20" />
 
             {/* Bottom Right */}
-            <div className="absolute bottom-3 right-3 w-8 h-8 border-b border-r border-[#D4AF37]/80" />
-            <div className="absolute bottom-5 right-5 w-4 h-4 border-b border-r border-[#D4AF37]/30" />
+            <div className="absolute bottom-3 right-3 w-8 h-8 border-b border-r border-white" />
+            <div className="absolute bottom-5 right-5 w-4 h-4 border-b border-r white/20" />
 
             {/* ===================================================
                 CONTENT
@@ -150,7 +150,7 @@ export const BrandPhilosophy: React.FC = () => {
               <div className="relative flex justify-center py-4 mb-7">
 
                 {/* Logo Aura */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-32 bg-[radial-gradient(ellipse_at_center,rgba(212,175,55,0.12)_0%,transparent_70%)] pointer-events-none" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-32 pointer-events-none" />
 
                 {/* <div className="relative">
                   <BrandLogo
@@ -161,7 +161,7 @@ export const BrandPhilosophy: React.FC = () => {
                   />
                 </div> */}
                 <div>
-                  <img src="/logo.png" alt=""
+                  <img src="/new-logo.png" alt=""
                   width={300} />
                 </div>
 

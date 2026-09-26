@@ -271,10 +271,10 @@ export const CollectionShowcase: React.FC = () => {
           />
 
           {/* Corner Accents */}
-          <div className="absolute top-2 left-2 w-5 h-5 border-t border-l border-[#D4AF37]/70" />
-          <div className="absolute top-2 right-2 w-5 h-5 border-t border-r border-[#D4AF37]/70" />
-          <div className="absolute bottom-2 left-2 w-5 h-5 border-b border-l border-[#D4AF37]/70" />
-          <div className="absolute bottom-2 right-2 w-5 h-5 border-b border-r border-[#D4AF37]/70" />
+          <div className="absolute top-2 left-2 w-5 h-5 border-t border-l border-white" />
+          <div className="absolute top-2 right-2 w-5 h-5 border-t border-r border-white" />
+          <div className="absolute bottom-2 left-2 w-5 h-5 border-b border-l border-white" />
+          <div className="absolute bottom-2 right-2 w-5 h-5 border-b border-r border-white" />
 
           <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-7 text-center md:text-left">
 
@@ -308,10 +308,10 @@ export const CollectionShowcase: React.FC = () => {
               onClick={() => navigateToPage('contact')}
               className="
                 px-6 py-3.5
-                border border-[#D4AF37]
-                text-[#D4AF37]
-                hover:bg-[#D4AF37]
-                hover:text-[#062B35]
+                border border-white
+                text-white
+                hover:bg-white
+                hover:text-[#006073]
                 
                 text-xs
                 font-semibold
