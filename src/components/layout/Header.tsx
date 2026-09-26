@@ -352,7 +352,7 @@ export const Header: React.FC = () => {
                       times: [0, 0.45, 1],
                       ease: [0.34, 1.56, 0.64, 1],
                     }}
-                    className="absolute -top-2 -right-2 min-w-[24px] h-[24px] px-1.5 bg-gradient-to-br from-[#FF4B5C] via-[#E23648] to-[#A81A2A] text-white text-[12px] font-black tracking-tight rounded-full flex items-center justify-center border-[2.5px] border-[#FBF9F3] shadow-[0_0_0_2.5px_rgba(212,175,55,0.55),0_8px_18px_rgba(168,26,42,0.55)] ring-1 ring-black/10 z-[1] select-none"
+                    className="absolute -top-0.5 -right-0.5 min-w-[15px] h-[20px] px-1 bg-white text-[#006073] text-[12px] font-black tracking-tight rounded-full flex items-center justify-center border-[2.5px] border-[#FBF9F3] ring-1 z-[1] select-none"
                   >
                     {cartCount}
                   </motion.span>

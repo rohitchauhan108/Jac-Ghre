@@ -238,9 +238,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             className="
               py-2.5
               px-3.5
-              bg-gradient-to-r
-              from-[#D4AF37]
-              to-[#B89028]
+              bg-white
               text-[#007288]
               hover:brightness-110
               disabled:opacity-70
@@ -376,7 +374,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
               ${
                 isDark
                   ? `
-                  bg-[#D4AF37]
+                  bg-[#0E4C5A]
                   px-2 py-1
                   rounded-sm
                     text-white

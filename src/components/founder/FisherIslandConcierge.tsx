@@ -32,61 +32,8 @@ export const FisherIslandConcierge: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* Left: Private Services */}
-          <div className="lg:col-span-5 space-y-4">
-            <h3 className=" text-xs font-bold tracking-[0.25em] text-[#D4AF37] uppercase mb-2">
-              Select Private Service
-            </h3>
-
-            {['Private Hair Artistry', 'Haute Couture Consultation', 'Signature Botanical Ritual'].map((item) => (
-              <button
-                key={item}
-                type="button"
-                onClick={() => undefined}
-                className={`w-full p-5 text-left border transition-all cursor-pointer flex items-start gap-4 ${
-                  item === 'Private Hair Artistry'
-                    ? 'bg-[#007288] border-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,0.2)]'
-                    : 'bg-[#006073]/70 border-[#D4AF37]/25 hover:border-[#D4AF37]/60'
-                }`}
-              >
-                <div
-                  className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${
-                      item === 'Private Hair Artistry'
-                      ? 'bg-[#D4AF37] text-[#062B35]'
-                      : 'bg-[#006073] text-[#D4AF37] border border-[#D4AF37]/40'
-                  }`}
-                >
-                  <Sparkles className="w-4 h-4" />
-                </div>
-                <div className="flex-1">
-                  <div className="flex items-center justify-between gap-2">
-                    <h4 className=" text-xl font-bold text-[#FBF9F3]">
-                      {item}
-                    </h4>
-                    <span className="text-[9px]  font-bold tracking-wider px-2 py-0.5 bg-[#006073] border border-[#D4AF37]/40 text-[#D4AF37]">
-                      PRIVATE SESSION
-                    </span>
-                  </div>
-                </div>
-              </button>
-            ))}
-
-            {/* Official Web Badge */}
-            <div className="p-4 bg-[#006073] border border-[#D4AF37]/30 text-center">
-              <span className="text-xs  text-[#8EAAB0] tracking-widest uppercase block">
-                Official Web Portal
-              </span>
-              <a
-                href="https:/GHRÉ.COM"
-                target="_blank"
-                rel="noreferrer"
-                className=" text-base font-bold text-[#D4AF37] hover:text-[#FFF3C4] transition-colors inline-block mt-0.5"
-              >
-                GHRÉ.COM
-              </a>
-            </div>
-          </div>
+        <div className="flex justify-center items-center">
+         
 
           {/* Right: Booking Form */}
           <div className="lg:col-span-7 bg-gradient-to-br from-[#007288] to-[#006073] border-2 border-[#D4AF37]/70 p-6 sm:p-10 shadow-2xl">
@@ -109,7 +56,7 @@ export const FisherIslandConcierge: React.FC = () => {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="flex items-center justify-between border-b border-[#D4AF37]/30 pb-3 mb-2">
-                  <span className=" text-xs font-bold text-[#D4AF37] tracking-[0.2em] uppercase">
+                  <span className=" text-xs font-bold text-white tracking-[0.2em] uppercase">
                     CONFIDENTIAL VIP CONSULTATION
                   </span>
                   <span className="text-[10px]  text-[#8EAAB0]">
@@ -119,7 +66,7 @@ export const FisherIslandConcierge: React.FC = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-[10px]  tracking-wider text-[#D4AF37] uppercase mb-1.5 font-bold">
+                    <label className="block text-[10px]  tracking-wider text-white uppercase mb-1.5 font-bold">
                       Full Name
                     </label>
                     <input
@@ -128,12 +75,12 @@ export const FisherIslandConcierge: React.FC = () => {
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       placeholder="Madame / Monsieur..."
-                      className="w-full px-4 py-3 bg-[#006073] border border-[#D4AF37]/40 text-xs text-[#FBF9F3] placeholder-[#6C8A92] font-outfit outline-none focus:border-[#D4AF37]"
+                      className="w-full px-4 py-3 bg-[#006073] border border-white/40 text-xs text-[#FBF9F3] placeholder-[#6C8A92] font-outfit outline-none focus:border-white"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-[10px]  tracking-wider text-[#D4AF37] uppercase mb-1.5 font-bold">
+                    <label className="block text-[10px]  tracking-wider text-white uppercase mb-1.5 font-bold">
                       Email Address
                     </label>
                     <input
@@ -142,14 +89,14 @@ export const FisherIslandConcierge: React.FC = () => {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="client@luxury.com"
-                      className="w-full px-4 py-3 bg-[#006073] border border-[#D4AF37]/40 text-xs text-[#FBF9F3] placeholder-[#6C8A92] font-outfit outline-none focus:border-[#D4AF37]"
+                      className="w-full px-4 py-3 bg-[#006073] border border-white/40 text-xs text-[#FBF9F3] placeholder-[#6C8A92] font-outfit outline-none focus:border-white"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-[10px]  tracking-wider text-[#D4AF37] uppercase mb-1.5 font-bold">
+                    <label className="block text-[10px]  tracking-wider text-white uppercase mb-1.5 font-bold">
                       Phone Number (WhatsApp / Mobile)
                     </label>
                     <input
@@ -157,18 +104,18 @@ export const FisherIslandConcierge: React.FC = () => {
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       placeholder="+1 (305) 000-0000"
-                      className="w-full px-4 py-3 bg-[#006073] border border-[#D4AF37]/40 text-xs text-[#FBF9F3] placeholder-[#6C8A92] font-outfit outline-none focus:border-[#D4AF37]"
+                      className="w-full px-4 py-3 bg-[#006073] border border-[#D4AF37]/40 text-xs text-[#FBF9F3] placeholder-[#6C8A92] font-outfit outline-none focus:border-white"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-[10px]  tracking-wider text-[#D4AF37] uppercase mb-1.5 font-bold">
+                    <label className="block text-[10px]  tracking-wider text-white uppercase mb-1.5 font-bold">
                       Curated Service
                     </label>
                     <select
                       value={service}
                       onChange={(e) => setService(e.target.value)}
-                      className="w-full px-4 py-3 bg-[#006073] border border-[#D4AF37]/40 text-xs text-[#FBF9F3] font-outfit outline-none focus:border-[#D4AF37] cursor-pointer"
+                      className="w-full px-4 py-3 bg-[#006073] border border-[#D4AF37]/40 text-xs text-[#FBF9F3] font-outfit outline-none focus:border-white cursor-pointer"
                     >
                       <option value="Prickly Pear Cellular Trichology Ritual">
                         Prickly Pear Cellular Trichology Ritual
@@ -188,7 +135,7 @@ export const FisherIslandConcierge: React.FC = () => {
 
                 <button
                   type="submit"
-                  className="w-full py-4 bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#B89028] text-[#062B35]  text-xs font-bold tracking-[0.25em] uppercase hover:brightness-110 shadow-xl transition-all flex items-center justify-center gap-2 cursor-pointer mt-4"
+                  className="w-full py-4 bg-white text-[#006073]  text-xs font-bold tracking-[0.25em] uppercase hover:brightness-110 shadow-xl transition-all flex items-center justify-center gap-2 cursor-pointer mt-4"
                 >
                   <Sparkles className="w-4 h-4" />
                   <span>Request Private Atelier</span>

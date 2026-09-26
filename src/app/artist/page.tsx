@@ -260,7 +260,7 @@ export default function ArchiveGallery() {
             <div className="sm:col-span-5 flex flex-col sm:flex-row sm:justify-end gap-3">
               <a
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-[#D4AF37] text-[#062B35] text-xs font-bold tracking-[0.25em] uppercase hover:bg-[#E5C365] transition-colors shadow-xl"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-[#006073] text-xs font-bold tracking-[0.25em] uppercase hover:bg-[#E5C365] transition-colors shadow-xl"
               >
                 Book Now
                 <ChevronRight className="w-3.5 h-3.5" />

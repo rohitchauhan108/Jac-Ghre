@@ -143,7 +143,7 @@ export const FounderSection: React.FC = () => {
             <div className="pt-2 flex flex-wrap items-center gap-4">
               <button
                 onClick={() => navigateToPage('jac-ghre')}
-                className="px-6 py-3.5 bg-gradient-to-r from-[#D4AF37] via-[#E5C365] to-[#B89028] text-[#062B35]  text-xs font-bold tracking-[0.2em] uppercase hover:brightness-110 shadow-lg transition-all flex items-center gap-2 cursor-pointer"
+                className="px-6 py-3.5 bg-white text-[#062B35]  text-xs font-bold tracking-[0.2em] uppercase hover:brightness-110 shadow-lg transition-all flex items-center gap-2 cursor-pointer"
               >
                 <span>Explore Full Founder Page</span>
                 <ArrowRight className="w-4 h-4" />

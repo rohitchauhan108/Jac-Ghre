@@ -48,7 +48,7 @@ export const Newsletter: React.FC = () => {
             className="mt-8 max-w-md mx-auto flex flex-col sm:flex-row gap-2"
           >
             <div className="relative flex-1">
-              <Mail className="w-4 h-4 text-[#D4AF37] absolute left-3.5 top-1/2 -translate-y-1/2" />
+              <Mail className="w-4 h-4 text-white absolute left-3.5 top-1/2 -translate-y-1/2" />
               <input
                 type="email"
                 value={email}
@@ -60,7 +60,7 @@ export const Newsletter: React.FC = () => {
             </div>
             <button
               type="submit"
-              className="px-6 py-3 bg-gradient-to-r from-[#D4AF37] to-[#B89028] text-[#062B35]  text-xs font-bold tracking-[0.2em] uppercase hover:brightness-110 shadow-lg shrink-0 transition-all flex items-center justify-center gap-1.5"
+              className="px-6 py-3 bg-white text-[#006073]  text-xs font-bold tracking-[0.2em] uppercase hover:brightness-110 shadow-lg shrink-0 transition-all flex items-center justify-center gap-1.5"
             >
               <span>Join Circle</span>
               <ArrowRight className="w-3.5 h-3.5" />

@@ -120,24 +120,24 @@ export const FounderHero: React.FC = () => {
 
             {/* Quick Stats Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3.5 pt-4">
-              <div className="p-4 bg-[#006073] border border-[#D4AF37]/30 text-center">
-                <span className=" text-2xl sm:text-3xl font-bold text-[#D4AF37] block">
+              <div className="p-4 bg-[#006073] border border-white/50 text-center">
+                <span className=" text-2xl sm:text-3xl font-bold text-white block">
                   GLOBAL
                 </span>
                 <span className="text-[12px] tracking-wider font-semibold text-[#8EAAB0] mt-1 block">
                   THIERRY MUGLER HAIR DIRECTOR
                 </span>
               </div>
-              <div className="p-4 bg-[#006073] border border-[#D4AF37]/30 text-center">
-                <span className="text-2xl sm:text-3xl font-bold text-[#D4AF37] block">
+              <div className="p-4 bg-[#006073] border border-white/50 text-center">
+                <span className="text-2xl sm:text-3xl font-bold text-white block">
                   ELITE
                 </span>
                 <span className="text-[12px] font-semibold tracking-wider text-[#8EAAB0] mt-1 block">
                   MODEL WORLD ARTISTIC DIRECTOR
                 </span>
               </div>
-              <div className="p-4 bg-[#006073] border border-[#D4AF37]/30 text-center col-span-2 sm:col-span-1">
-                <span className="text-2xl sm:text-3xl font-bold text-[#D4AF37] block">
+              <div className="p-4 bg-[#006073] border border-white/50 text-center col-span-2 sm:col-span-1">
+                <span className="text-2xl sm:text-3xl font-bold text-white block">
                   ELITE
                 </span>
                 <span className="text-[12px] font-semibold tracking-wider text-[#8EAAB0] mt-1 block">

@@ -52,9 +52,21 @@ export const AboutCompanyPage: React.FC = () => {
   ];
 
   const ateliers = [
-    { city: "Miami", status: "Flagship", desc: "Private VIP styling & coastal beauty rituals in the heart of Florida's elite enclaves." },
-    { city: "Paris", status: "Coming Soon", desc: "The birthplace of haute couture and the original inspiration for the GHRÉ aesthetic." },
-    { city: "New York", status: "Coming Soon", desc: "Serving our high-fashion clientele and editorial runway partnerships." },
+    {
+      city: "Miami",
+      status: "Flagship",
+      desc: "Private VIP styling & coastal beauty rituals in the heart of Florida's elite enclaves.",
+    },
+    {
+      city: "Paris",
+      status: "Coming Soon",
+      desc: "The birthplace of haute couture and the original inspiration for the GHRÉ aesthetic.",
+    },
+    {
+      city: "New York",
+      status: "Coming Soon",
+      desc: "Serving our high-fashion clientele and editorial runway partnerships.",
+    },
   ];
 
   return (
@@ -82,9 +94,9 @@ export const AboutCompanyPage: React.FC = () => {
           <div className="h-0.5 w-32 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto my-8" />
 
           <p className="font-outfit text-xl sm:text-base text-[#C4D8DC] font-light max-w-2xl mx-auto leading-relaxed">
-            Founded on the world's most influential runways, GHRÉ is a luxury haircare
-            and beauty house dedicated to elevating daily care into an exquisite
-            ritual of renewal.
+            Founded on the world's most influential runways, GHRÉ is a luxury
+            haircare and beauty house dedicated to elevating daily care into an
+            exquisite ritual of renewal.
           </p>
         </div>
       </section>
@@ -102,10 +114,10 @@ export const AboutCompanyPage: React.FC = () => {
               className="lg:col-span-6 relative"
             >
               <img
-                  src="/gallery/founder/founder0.webp"
-                  alt="GHRÉ Emblem — Barbary Fig Flower & Lotus"
-                  className=""
-                />
+                src="/about-company/about-the-company-founder.webp"
+                alt="GHRÉ Emblem — Barbary Fig Flower & Lotus"
+                className=""
+              />
               {/* <div className="relative border-2 border-[#D4AF37] p-3 bg-[#097B8A] shadow-[0_20px_50px_rgba(0,96,115,0.8)]">
                 <img
                   src="/gallery/founder/founder2.jpeg"
@@ -160,7 +172,7 @@ export const AboutCompanyPage: React.FC = () => {
 
               <div className="grid grid-cols-2 gap-4 pt-2">
                 <div className="p-4 bg-[#097B8A] border border-[#D4AF37]/30">
-                  <span className=" text-2xl font-bold text-[#D4AF37] block">
+                  <span className=" text-3xl font-bold text-white block">
                     100%
                   </span>
                   <span className="text-sm font-outfit text-[#8EAAB0]">
@@ -168,7 +180,7 @@ export const AboutCompanyPage: React.FC = () => {
                   </span>
                 </div>
                 <div className="p-4 bg-[#097B8A] border border-[#D4AF37]/30">
-                  <span className=" text-2xl font-bold text-[#D4AF37] block">
+                  <span className=" text-3xl font-bold text-white block">
                     3x
                   </span>
                   <span className="text-sm font-outfit text-[#8EAAB0]">
@@ -228,14 +240,22 @@ export const AboutCompanyPage: React.FC = () => {
         </div>
       </section>
 
-      <section className="flex items-center justify-center w-full p-10">
-        <img
-          src="/gallery/catalogues/about.jpeg"
-          alt="GHRÉ Emblem — Barbary Fig Flower & Lotus"
-          className="lg:w-[50%] object-contain bg-[#006073] filter contrast-105 brightness-100 rounded-xl"
-        />
+      <section className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16 w-full max-w-7xl mx-auto p-6 lg:p-10">
+        <div>
+          <img
+            src="/about-company/about-the-company1.webp"
+            alt="GHRÉ Emblem — Barbary Fig Flower & Lotus"
+            className="w-full max-h-[700px] object-contain rounded-xl"
+          />
+        </div>
+        <div>
+          <img
+            src="/about-company/about-the-company2.webp"
+            alt="GHRÉ Emblem — Barbary Fig Flower & Lotus"
+            className="w-full max-h-[700px] object-contain rounded-xl filter contrast-105 brightness-100"
+          />
+        </div>
       </section>
-
       {/* 4. Global Flagship Ateliers */}
       <section className="py-24 bg-[#0C8A9B] border-t border-b border-[#D4AF37]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -284,20 +304,20 @@ export const AboutCompanyPage: React.FC = () => {
             <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
               <button
                 onClick={() => navigateToPage("shop")}
-                className="px-6 py-3 bg-[#D4AF37] text-[#0E4C5A]  text-xs font-bold tracking-widest uppercase hover:brightness-110 transition-all flex items-center gap-2 cursor-pointer"
+                className="px-6 py-3 bg-white text-[#006073]  text-xs font-bold tracking-widest uppercase hover:brightness-110 transition-all flex items-center gap-2 cursor-pointer"
               >
                 <span>Explore The Shop</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
               <button
                 onClick={() => navigateToPage("about-founder")}
-                className="px-6 py-3 bg-[#097B8A] border border-[#D4AF37] text-[#F3E5AB]  text-xs font-bold tracking-widest uppercase hover:bg-[#0C8A9B] transition-all cursor-pointer"
+                className="px-6 py-3 bg-[#097B8A] border border-white text-white  text-xs font-bold tracking-widest uppercase hover:bg-[#0C8A9B] transition-all cursor-pointer"
               >
                 About The Founder
               </button>
               <button
                 onClick={() => navigateToPage("contact")}
-                className="px-6 py-3 bg-transparent border border-[#8EAAB0]/40 text-[#8EAAB0] hover:text-[#FBF9F3]  text-xs font-bold tracking-widest uppercase hover:border-[#D4AF37] transition-all cursor-pointer"
+                className="px-6 py-3 bg-transparent border border-white/80 text-[#8EAAB0] hover:text-[#FBF9F3]  text-xs font-bold tracking-widest uppercase hover:border-[#D4AF37] transition-all cursor-pointer"
               >
                 Contact Us
               </button>

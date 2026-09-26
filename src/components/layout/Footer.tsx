@@ -109,7 +109,7 @@ export const Footer: React.FC = () => {
           "
         >
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-[#D4AF37] text-[#062B35] flex items-center justify-center font-bold">
+            <div className="w-10 h-10 bg-white text-[#006073] flex items-center justify-center font-bold">
               <Clock className="w-5 h-5" />
             </div>
 
@@ -132,8 +132,8 @@ export const Footer: React.FC = () => {
             className="
               px-5
               py-2.5
-              bg-[#D4AF37]
-              text-[#062B35]
+              bg-white
+              text-[#006073]
               
               text-xs
               font-bold
@@ -238,17 +238,15 @@ export const Footer: React.FC = () => {
                 rel="noreferrer"
                 className="
                   w-9 h-9
-                  border
                   flex
                   items-center
                   justify-center
                   transition-all
                   shadow-md
-                  border-[#D4AF37]/30
                   bg-[#0C8A9B]
-                  text-[#D4AF37]
-                  hover:bg-[#D4AF37]
-                  hover:text-[#062B35]
+                  text-white
+                  hover:bg-white
+                  hover:text-[#006073]
                 "
                 aria-label="Instagram"
               >
@@ -261,17 +259,15 @@ export const Footer: React.FC = () => {
                 rel="noreferrer"
                 className="
                   w-9 h-9
-                  border
                   flex
                   items-center
                   justify-center
                   transition-all
                   shadow-md
-                  border-[#D4AF37]/30
                   bg-[#0C8A9B]
-                  text-[#D4AF37]
-                  hover:bg-[#D4AF37]
-                  hover:text-[#062B35]
+                  text-white
+                  hover:bg-white
+                  hover:text-[#006073]
                 "
                 aria-label="Facebook"
               >
@@ -284,17 +280,15 @@ export const Footer: React.FC = () => {
                 rel="noreferrer"
                 className="
                   w-9 h-9
-                  border
                   flex
                   items-center
                   justify-center
                   transition-all
                   shadow-md
-                  border-[#D4AF37]/30
                   bg-[#0C8A9B]
-                  text-[#D4AF37]
-                  hover:bg-[#D4AF37]
-                  hover:text-[#062B35]
+                  text-white
+                  hover:bg-white
+                  hover:text-[#006073]
                 "
                 aria-label="TikTok"
               >

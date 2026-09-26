@@ -235,7 +235,7 @@ export const ContactPage: React.FC = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block  text-xs text-[#D4AF37] uppercase tracking-wider mb-2">
+                    <label className="block text-[13px] font-semibold text-white uppercase tracking-wider mb-2">
                       Full Name <span className="text-red-400">*</span>
                     </label>
                     <input
@@ -249,7 +249,7 @@ export const ContactPage: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <label className="block  text-xs text-[#D4AF37] uppercase tracking-wider mb-2">
+                    <label className="block text-[13px] font-semibold text-white uppercase tracking-wider mb-2">
                       Email Address
                     </label>
                     <input
@@ -265,7 +265,7 @@ export const ContactPage: React.FC = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="sm:col-span-1">
-                    <label className="block  text-xs text-[#D4AF37] uppercase tracking-wider mb-2">
+                    <label className="block text-[13px] font-semibold text-white uppercase tracking-wider mb-2">
                       Phone Number <span className="text-red-400">*</span>
                     </label>
                     <input
@@ -279,7 +279,7 @@ export const ContactPage: React.FC = () => {
                     />
                   </div>
                   <div className="sm:col-span-1">
-                    <label className="block  text-xs text-[#D4AF37] uppercase tracking-wider mb-2">
+                    <label className="block text-[13px] font-semibold text-white uppercase tracking-wider mb-2">
                       Inquiry Topic
                     </label>
                     <select
@@ -297,7 +297,7 @@ export const ContactPage: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block  text-xs text-[#D4AF37] uppercase tracking-wider mb-2">
+                  <label className="block text-[13px] font-semibold text-white uppercase tracking-wider mb-2">
                     Your Message <span className="text-red-400">*</span>
                   </label>
                   <textarea
@@ -314,7 +314,7 @@ export const ContactPage: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 bg-gradient-to-r from-[#D4AF37] via-[#E5C365] to-[#B89028] text-[#0E4C5A]  text-xs sm:text-xl font-bold tracking-[0.2em] uppercase hover:brightness-110 shadow-xl transition-all flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="w-full py-4 bg-white text-[#006073]  text-xs sm:text-xl font-semibold tracking-[0.2em] uppercase hover:brightness-110 shadow-xl transition-all flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
                     <>

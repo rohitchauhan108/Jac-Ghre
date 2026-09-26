@@ -154,18 +154,18 @@ export const CollectionShowcase: React.FC = () => {
                   ${
                     isActive
                       ? `
-                        bg-[#D4AF37]
-                        border-[#D4AF37]
+                        bg-white
+                        border-[#007288]
                         text-[#062B35]
                         font-bold
                         shadow-[0_8px_25px_rgba(212,175,55,0.25)]
                       `
                       : `
                         bg-[#007288]/70
-                        border-[#D4AF37]/35
+                        border-white
                         text-[#F3E5AB]
                         hover:bg-[#007288]
-                        hover:border-[#D4AF37]
+                        hover:border-white
                         hover:text-[#FFF3C4]
                       `
                   }

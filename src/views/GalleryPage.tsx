@@ -142,14 +142,14 @@ export const GalleryPage: React.FC = () => {
                 onClick={() => setActiveTab(tab.key)}
                 className={`group relative px-5 py-2.5  text-xs sm:text-xs font-semibold uppercase tracking-widest border transition-colors duration-200 ${
                   isActive
-                    ? 'bg-[#D4AF37] text-[#021318] border-[#D4AF37] shadow-lg'
-                    : 'bg-transparent text-[#F3E5AB] border-[#D4AF37]/40 hover:border-[#D4AF37] hover:text-[#D4AF37]'
+                    ? 'bg-white text-[#006073] border-[#D4AF37] shadow-lg'
+                    : 'bg-transparent text-white border-white/70 hover:border-[#D4AF37] hover:text-[#D4AF37]'
                 }`}
               >
                 <span>{tab.label}</span>
                 <span
                   className={`ml-2 inline-flex items-center justify-center min-w-[20px] h-5 px-1.5 rounded-full text-[10px] font-bold ${
-                    isActive ? 'bg-[#021318]/20 text-[#021318]' : 'bg-[#097B8A] text-[#D4AF37]'
+                    isActive ? 'bg-[#0a8090] text-white' : 'bg-white text-[#0a8090]'
                   }`}
                 >
                   {COUNTS[tab.key]}

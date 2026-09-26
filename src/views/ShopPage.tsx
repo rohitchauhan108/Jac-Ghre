@@ -172,7 +172,7 @@ export const ShopPage: React.FC = () => {
                         className="max-h-full object-contain filter drop-shadow-[0_12px_24px_rgba(0,0,0,0.85)] group-hover/img:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-[#097B8A]/70 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center gap-2">
-                        <span className="px-3.5 py-1.5 bg-[#D4AF37] text-[#0E4C5A]  text-xs font-bold uppercase tracking-wider flex items-center gap-1.5">
+                        <span className="px-3.5 py-1.5 bg-[#006073] text-white border border-white  text-xs font-bold uppercase tracking-wider flex items-center gap-1.5">
                           <Eye className="w-3.5 h-3.5" />
                           Quick detailed
                           {/* Dossier */}
@@ -220,14 +220,14 @@ export const ShopPage: React.FC = () => {
                     <div className="flex items-center gap-2">
                       <button
                         onClick={() => setQuickViewProduct(product)}
-                        className="p-2.5 bg-[#097B8A] text-[#E8DCC4] border border-[#D4AF37]/40 hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all"
+                        className="p-2.5 bg-[#006073] text-[#E8DCC4] border border-[#D4AF37]/40 hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all"
                         title="View Dossier"
                       >
                         <Eye className="w-4 h-4" />
                       </button>
                       <button
                         onClick={() => addToCart(product)}
-                        className="px-4 py-2.5 bg-[#D4AF37] text-[#0E4C5A]  text-xs font-bold uppercase tracking-wider hover:brightness-110 shadow-lg flex items-center gap-1.5 transition-all"
+                        className="px-4 py-2.5 bg-[#006073] text-white  text-xs font-bold uppercase tracking-wider hover:brightness-110 shadow-lg flex items-center gap-1.5 transition-all"
                       >
                         <ShoppingBag className="w-3.5 h-3.5" />
                         <span>Cart</span>

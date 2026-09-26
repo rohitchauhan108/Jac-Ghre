@@ -58,7 +58,7 @@ export const CampaignBanner: React.FC = () => {
                   e.stopPropagation();
                   navigateToPage('shop');
                 }}
-                className="px-5 py-1.5 bg-[#D4AF37] text-[#062B35]  text-xs font-bold tracking-[0.2em] uppercase hover:brightness-110 shadow-lg flex items-center gap-1.5 transition-all lg:w-auto w-full justify-center"
+                className="px-5 py-1.5 bg-white text-[#006073]  text-xs font-bold tracking-[0.2em] uppercase hover:brightness-110 shadow-lg flex items-center gap-1.5 transition-all lg:w-auto w-full justify-center"
               >
                 <span>EXPLORE PRODUCTS</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -94,11 +94,11 @@ export const CampaignBanner: React.FC = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                   placeholder="Enter VIP email for release..."
-                  className="px-4 py-2.5 bg-[#006073] border border-[#D4AF37]/40 text-xs text-[#F7F4EB] placeholder-[#8EAAB0]/70 font-sans outline-none focus:border-[#D4AF37] min-w-[240px]"
+                  className="px-4 py-2.5 bg-[#006073] border border-white text-xs text-[#F7F4EB] placeholder-white/70 font-sans outline-none focus:border-[#D4AF37] min-w-[240px]"
                 />
                 <button
                   type="submit"
-                  className="px-6 py-2.5 bg-gradient-to-r from-[#D4AF37] to-[#B89028] text-[#062B35]  text-xs font-bold tracking-[0.2em] uppercase hover:brightness-110 shadow-lg shrink-0 transition-all flex items-center justify-center gap-1.5"
+                  className="px-6 py-2.5 bg-white text-[#006073]  text-xs font-bold tracking-[0.2em] uppercase hover:brightness-110 shadow-lg shrink-0 transition-all flex items-center justify-center gap-1.5"
                 >
                   <Bell className="w-3.5 h-3.5" />
                   <span>Notify Me</span>

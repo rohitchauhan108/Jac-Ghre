@@ -271,9 +271,7 @@ export const FloatingConcierge: React.FC = () => {
             className="relative w-13 h-13 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 cursor-pointer select-none"
             style={{
               background:
-                'radial-gradient(circle at 35% 30%, #FFF5D0 0%, #E6C875 35%, #D4AF37 65%, #9E7919 90%, #5E4608 100%)',
-              boxShadow:
-                '0 12px 28px rgba(0,0,0,0.5), 0 4px 10px rgba(212,175,55,0.4), inset 0 2px 3px rgba(255,255,255,0.85), inset 0 -3px 5px rgba(0,0,0,0.4)',
+                '#006073',
               border: '2px solid rgba(255,248,220,0.8)',
             }}
           >
@@ -285,7 +283,7 @@ export const FloatingConcierge: React.FC = () => {
               }}
             />
 
-            <Phone className="w-5 h-5 text-[#041D24] filter drop-shadow-[0_1px_2px_rgba(255,255,255,0.4)]" />
+            <Phone className="w-5 h-5 text-white filter" />
           </a>
         </div>
 

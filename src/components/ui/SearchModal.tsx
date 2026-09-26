@@ -25,8 +25,8 @@ export const SearchModal: React.FC = () => {
     'Repair Shampoo',
     'Prickly Pear Oil',
     'Blossom Positano',
-    'Summer Glow Oil',
-    'Monoï Mist',
+    // 'Summer Glow Oil',
+    // 'Monoï Mist',
     'Sérum d’Or',
   ];
 

@@ -253,8 +253,8 @@ export const IntroSection: React.FC = () => {
                   <div
                     className={`w-11 h-11 flex items-center justify-center border transition-all duration-300 ${
                       isDark
-                        ? "bg-[#007288] border-[#D4AF37]/40 text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-[#062B35]"
-                        : "bg-[#FAF7F2] border-[#D4AF37]/50 text-[#B8860B] group-hover:bg-[#D4AF37] group-hover:text-[#062B35]"
+                        ? "bg-[#007288] border-[#D4AF37]/40 text-[#D4AF37] group-hover:bg-white group-hover:text-[#062B35]"
+                        : "bg-[#FAF7F2] border-[#D4AF37]/50 text-[#B8860B] group-hover:bg-white group-hover:text-[#062B35]"
                     }`}
                   >
                     <item.icon className="w-5 h-5" />
