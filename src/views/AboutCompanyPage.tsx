@@ -294,7 +294,7 @@ export const AboutCompanyPage: React.FC = () => {
 
           {/* Links and CTA Bar */}
           <div className="mt-16 p-8 bg-[#097B8A] border border-white/50 rounded-lg text-center max-w-4xl mx-auto space-y-4 shadow-2xl">
-            <h3 className=" text-2xl font-bold text-[#FBF9F3] uppercase">
+            <h3 className="text-2xl font-bold text-[#FBF9F3] uppercase">
               Experience the GHRÉ Haute Ritual
             </h3>
             <p className="font-outfit text-xs sm:text-xl text-[#B3CBD1] max-w-xl mx-auto">

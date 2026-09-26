@@ -37,14 +37,12 @@ export const Footer: React.FC = () => {
   return (
     <footer
       className="
-        border-t
         pt-16
         pb-12
         font-poppins
         relative
         overflow-hidden
         bg-[#006073]
-        border-[#D4AF37]/30
         text-[#E8DCC4]
       "
     >
@@ -53,7 +51,7 @@ export const Footer: React.FC = () => {
       ========================================================= */}
 
       {/* Top Gold Line */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-px bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-px bg-gradient-to-r from-transparent via-white to-transparent" />
 
       {/* Subtle Gold Glow */}
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.04)_0%,transparent_70%)] pointer-events-none" />

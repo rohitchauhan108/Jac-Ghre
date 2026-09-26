@@ -96,7 +96,7 @@ export const ThierryMuglerLegacy: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="lg:col-span-5"
           >
-            <div className="p-8 sm:p-10 bg-[#006073] border-2 border-[#D4AF37] shadow-2xl relative">
+            <div className="p-8 sm:p-10 bg-[#006073] border border-white rounded-lg shadow-2xl relative">
 
               <div className="absolute top-2 right-2 p-2">
                 <GoldEmblem size={24} withGlow />

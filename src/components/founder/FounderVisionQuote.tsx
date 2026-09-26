@@ -15,13 +15,13 @@ export const FounderVisionQuote: React.FC = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="border-2 border-[#D4AF37] bg-[#006073]/90 p-8 sm:p-14 shadow-[0_20px_50px_rgba(0,96,115,0.7)] relative"
+          className="border-2 border-white/50 bg-[#006073]/90 p-8 sm:p-14 shadow-[0_20px_50px_rgba(0,96,115,0.7)] relative"
         >
           {/* Top Gold Corner Accents */}
-          <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-[#D4AF37]" />
-          <div className="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-[#D4AF37]" />
-          <div className="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-[#D4AF37]" />
-          <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-[#D4AF37]" />
+          <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-white" />
+          <div className="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-white" />
+          <div className="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-white" />
+          <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-white" />
 
           <GoldEmblem size={36} withGlow className="mx-auto mb-4" />
 
