@@ -122,7 +122,7 @@ export const FounderSection: React.FC = () => {
             </div>
 
             {/* The Vision Quote matching Poster */}
-            <div className="p-5 bg-gradient-to-r from-[#007288] to-[#006073] border-l-4 border-[#D4AF37] space-y-1.5 shadow-xl">
+            <div className="p-5 bg-gradient-to-r from-[#007288] to-[#006073] border-l-4 border-white space-y-1.5 shadow-xl">
               <span className="text-[10px]  tracking-[0.3em] text-[#D4AF37] uppercase block font-semibold">
                 THE VISION
               </span>

@@ -145,7 +145,7 @@ export const AboutCompanyPage: React.FC = () => {
               transition={{ duration: 0.8 }}
               className="lg:col-span-6 space-y-6"
             >
-              <div className="space-y-2 border-l-2 border-[#D4AF37] pl-4">
+              <div className="space-y-2 border-l-2 border-white pl-4">
                 <span className="text-xs font-bold tracking-[0.3em] text-[#D4AF37] uppercase block">
                   OUR ESSENCE & PHILOSOPHY
                 </span>
@@ -218,7 +218,7 @@ export const AboutCompanyPage: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="bg-[#097B8A] border border-[#D4AF37]/30 p-6 flex flex-col justify-between hover:border-[#D4AF37] transition-all hover:shadow-[0_10px_30px_rgba(212,175,55,0.15)] group"
+                className="bg-[#097B8A] border border-[#D4AF37]/30 p-6 flex flex-col justify-between hover:border-white/80 transition-all hover:shadow-[0_10px_30px_rgba(212,175,55,0.15)] group"
               >
                 <div>
                   <div className="w-12 h-12 bg-[#097B8A] border border-[#D4AF37]/40 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
@@ -245,14 +245,14 @@ export const AboutCompanyPage: React.FC = () => {
           <img
             src="/about-company/about-the-company1.webp"
             alt="GHRÉ Emblem — Barbary Fig Flower & Lotus"
-            className="w-full max-h-[700px] object-contain rounded-xl"
+            className="w-full max-h-[700px] object-contain rounded-sm"
           />
         </div>
         <div>
           <img
             src="/about-company/about-the-company2.webp"
             alt="GHRÉ Emblem — Barbary Fig Flower & Lotus"
-            className="w-full max-h-[700px] object-contain rounded-xl filter contrast-105 brightness-100"
+            className="w-full max-h-[700px] object-contain rounded-sm"
           />
         </div>
       </section>
@@ -276,7 +276,7 @@ export const AboutCompanyPage: React.FC = () => {
             {ateliers.map((a) => (
               <div
                 key={a.city}
-                className="bg-[#097B8A] border-2 border-[#D4AF37]/40 p-8 text-center space-y-4 hover:border-[#D4AF37] transition-all shadow-xl"
+                className="bg-[#097B8A] border border-[#D4AF37]/40 p-8 text-center space-y-4 hover:border-white/80 transition-all shadow-xl"
               >
                 <MapPin className="w-8 h-8 text-[#D4AF37] mx-auto" />
                 {/* <span className="text-[10px]  tracking-[0.25em] text-[#D4AF37] uppercase font-bold px-3 py-1 bg-[#097B8A] border border-[#D4AF37]/30 inline-block">
@@ -293,7 +293,7 @@ export const AboutCompanyPage: React.FC = () => {
           </div>
 
           {/* Links and CTA Bar */}
-          <div className="mt-16 p-8 bg-[#097B8A] border border-[#D4AF37] text-center max-w-4xl mx-auto space-y-4 shadow-2xl">
+          <div className="mt-16 p-8 bg-[#097B8A] border border-white/50 rounded-lg text-center max-w-4xl mx-auto space-y-4 shadow-2xl">
             <h3 className=" text-2xl font-bold text-[#FBF9F3] uppercase">
               Experience the GHRÉ Haute Ritual
             </h3>
