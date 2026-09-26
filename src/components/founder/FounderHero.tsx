@@ -66,7 +66,7 @@ export const FounderHero: React.FC = () => {
 
               <div className="relative w-full h-full overflow-hidden bg-[#006073]">
                 <img
-                  src={CAMPAIGN_IMAGES.jacGhre}
+                  src='/gallery/founder/about-the-founder.webp'
                   alt="Jac GHRÉ — Beauty Expert"
                   className="w-full h-full object-cover object-top filter brightness-102 contrast-105"
                 />
@@ -74,7 +74,7 @@ export const FounderHero: React.FC = () => {
                 {/* Gradient and Badge on Image Bottom */}
                 <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-[#006073]/95 via-[#006073]/70 to-transparent flex items-end justify-between">
                   <div>
-                    <span className=" text-xl font-bold text-[#FBF9F3] block">
+                    <span className=" text-xl font-bold text-white block">
                       JAC GHRÉ
                     </span>
                     <span className="text-[10px]  tracking-[0.25em] text-[#D4AF37] uppercase">

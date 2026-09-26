@@ -33,7 +33,7 @@ export const FounderSection: React.FC = () => {
 
             <div className="relative z-10 overflow-hidden bg-[#006073] border-2 border-[#D4AF37]/60 shadow-[0_20px_50px_rgba(0,96,115,0.85)]">
               <img
-                src={CAMPAIGN_IMAGES.jacGhre}
+                src="/gallery/founder/about-the-founder.webp"
                 alt="Jac Ghré — Beauty Expert"
                 className="w-full aspect-[4/5] object-cover object-top filter contrast-105"
               />

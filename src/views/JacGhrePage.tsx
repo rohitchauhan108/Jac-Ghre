@@ -14,7 +14,7 @@ export const JacGhrePage: React.FC = () => {
       <FounderHero />
 
       {/* 2. Founder Creatives (Gallery Archive) */}
-      <FounderCreativesGallery />
+      {/* <FounderCreativesGallery /> */}
 
       {/* 3. The Vision Quote with Signature */}
       <FounderVisionQuote />
