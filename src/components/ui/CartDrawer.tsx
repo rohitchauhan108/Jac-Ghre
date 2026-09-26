@@ -237,7 +237,7 @@ export const CartDrawer: React.FC = () => {
                     setIsCartOpen(false);
                     router.push("/checkout");
                   }}
-                  className="w-full py-3.5 px-4 bg-gradient-to-r from-[#D4AF37] via-[#E5C365] to-[#B89028] text-[#0E4C5A] hover:brightness-110  text-xs font-bold tracking-[0.2em] uppercase flex items-center justify-center gap-2 shadow-xl transition-all"
+                  className="w-full py-3.5 px-4 bg-white text-[#006073] hover:brightness-110  text-xs font-bold tracking-[0.2em] uppercase flex items-center justify-center gap-2 shadow-xl transition-all"
                 >
                   <span>Proceed to Checkout</span>
                   <ArrowRight className="w-4 h-4" />

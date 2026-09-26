@@ -219,7 +219,7 @@ export default function AccountPage() {
                 onClick={() => setActiveTab(t.id)}
                 className={`relative inline-flex items-center gap-2 px-5 py-3 text-xs font-cinzel tracking-[0.25em] uppercase transition-all rounded-t-xl ${
                   isActive
-                    ? 'text-[#D4AF37] bg-gradient-to-t from-[#06242B]/40 to-transparent border-t border-l border-r border-[#D4AF37]/40'
+                    ? 'text-[#006073] bg-white border-t border-l border-r border-[#D4AF37]/40'
                     : 'text-[#8EAAB0] hover:text-[#C4D8DC]'
                 }`}
               >
@@ -290,7 +290,7 @@ export default function AccountPage() {
                     </p>
                     <Link
                       href="/shop"
-                      className="inline-flex items-center gap-2 mt-2 px-5 py-2.5 border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#06242B] font-cinzel text-xs tracking-[0.2em] uppercase transition-all rounded-lg"
+                      className="inline-flex items-center gap-2 mt-2 px-5 py-2.5 border border-white/50 text-white hover:bg-white hover:text-[#006073] font-cinzel text-xs tracking-[0.2em] uppercase transition-all rounded-lg"
                     >
                       Explore Collection
                     </Link>
@@ -327,8 +327,8 @@ export default function AccountPage() {
             <div className="space-y-6">
               <div className="bg-gradient-to-b from-[#097B8A] to-[#06242B] border-2 border-[#D4AF37]/40 rounded-2xl p-6 shadow-2xl">
                 <div className="text-center mb-5">
-                  <div className="w-20 h-20 bg-gradient-to-br from-[#D4AF37] via-[#E6C65C] to-[#8B6914] rounded-full flex items-center justify-center mx-auto mb-3 shadow-xl border-2 border-[#F3E5AB]/50">
-                    <span className="font-cinzel text-3xl font-bold text-[#06242B]">
+                  <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-3 shadow-xl border-2 border-[#F3E5AB]/50">
+                    <span className="font-cinzel text-3xl font-bold text-[#006073]">
                       {user.name.charAt(0).toUpperCase()}
                     </span>
                   </div>
@@ -369,7 +369,7 @@ export default function AccountPage() {
 
                 <button
                   onClick={() => setActiveTab('profile')}
-                  className="w-full mt-5 py-2.5 border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#06242B] font-cinzel text-xs tracking-[0.2em] uppercase transition-all rounded-lg flex items-center justify-center gap-2"
+                  className="w-full mt-5 py-2.5 border border-white text-white hover:bg-white hover:text-[#006073] font-cinzel text-xs tracking-[0.2em] uppercase transition-all rounded-lg flex items-center justify-center gap-2"
                 >
                   <Edit3 className="w-3.5 h-3.5" />
                   <span>Edit Profile</span>
@@ -384,12 +384,12 @@ export default function AccountPage() {
           <div className="bg-gradient-to-b from-[#097B8A]/50 to-[#06242B]/60 border border-[#D4AF37]/30 rounded-2xl p-6 sm:p-8 shadow-xl">
             <div className="flex items-center justify-between mb-6">
               <h3 className="font-cinzel text-2xl font-bold tracking-wider text-[#FBF9F3] uppercase flex items-center gap-3">
-                <Package className="w-6 h-6 text-[#D4AF37]" />
+                <Package className="w-6 h-6 text-white" />
                 Order History
               </h3>
               <Link
                 href="/shop"
-                className="hidden sm:inline-flex items-center gap-2 px-4 py-2 border border-[#D4AF37]/50 text-[#D4AF37] hover:bg-[#D4AF37]/10 font-cinzel text-[10px] tracking-[0.2em] uppercase rounded-lg transition-all"
+                className="hidden sm:inline-flex items-center gap-2 px-4 py-2 border border-white/50 text-white hover:bg-[#D4AF37]/10 font-cinzel text-[10px] tracking-[0.2em] uppercase rounded-lg transition-all"
               >
                 <ShoppingBag className="w-3.5 h-3.5" />
                 <span>Continue Shopping</span>
@@ -404,7 +404,7 @@ export default function AccountPage() {
             ) : orders.length === 0 ? (
               <div className="py-16 text-center space-y-4">
                 <div className="w-24 h-24 bg-[#06242B]/50 border border-[#D4AF37]/20 rounded-full flex items-center justify-center mx-auto">
-                  <ShoppingBag className="w-10 h-10 text-[#D4AF37]/60" />
+                  <ShoppingBag className="w-10 h-10 text-white" />
                 </div>
                 <div>
                   <h4 className="font-cinzel text-2xl font-light tracking-wide text-[#FBF9F3] uppercase mb-2">Your Order Archive</h4>
@@ -414,7 +414,7 @@ export default function AccountPage() {
                 </div>
                 <Link
                   href="/shop"
-                  className="inline-flex items-center gap-2 mt-2 px-6 py-3.5 bg-gradient-to-r from-[#D4AF37] via-[#E6C65C] to-[#D4AF37] text-[#06242B] font-cinzel text-xs font-bold tracking-[0.25em] uppercase hover:brightness-110 transition-all shadow-xl rounded-xl"
+                  className="inline-flex items-center gap-2 mt-2 px-6 py-3.5 bg-white text-[#006073] font-cinzel text-xs font-bold tracking-[0.25em] uppercase hover:brightness-110 transition-all shadow-xl rounded-xl"
                 >
                   <ShoppingBag className="w-4 h-4" />
                   <span>Discover the Collection</span>

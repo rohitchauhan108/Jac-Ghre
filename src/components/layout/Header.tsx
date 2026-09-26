@@ -44,7 +44,10 @@ export const Header: React.FC = () => {
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      if (profileMenuRef.current && !profileMenuRef.current.contains(e.target as Node)) {
+      if (
+        profileMenuRef.current &&
+        !profileMenuRef.current.contains(e.target as Node)
+      ) {
         setProfileMenuOpen(false);
       }
     };
@@ -124,9 +127,7 @@ export const Header: React.FC = () => {
     <>
       <header
         className={`sticky top-0 z-40 w-full transition-all duration-400 ease-out transform ${
-          isVisible
-            ? "translate-y-0"
-            : "-translate-y-full pointer-events-none"
+          isVisible ? "translate-y-0" : "-translate-y-full pointer-events-none"
         } ${
           isScrolled
             ? "bg-[#006d83] bg-[#006d83] backdrop-blur-lg border-b border-[#0B4F71]/15 py-3 shadow-md md:shadow-[0_12px_35px_rgba(11,79,113,0.14)]"
@@ -142,7 +143,7 @@ export const Header: React.FC = () => {
               aria-label="GHRÉ Home"
             >
               <img
-                src="/logo.png"
+                src="/new-logo.png"
                 alt="GHRÉ Logo Mobile"
                 className="h-14 sm:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
@@ -151,15 +152,15 @@ export const Header: React.FC = () => {
             <div className="flex items-center gap-2 sm:gap-3">
               <button
                 onClick={() => setIsSearchOpen(true)}
-                className="p-2 text-[#D4AF37] hover:text-[#D4AF37] transition-colors"
+                className="p-2 text-white hover:text-[#D4AF37] transition-colors"
                 aria-label="Search products"
               >
                 <Search className="w-5 h-5 sm:w-6 sm:h-6" />
               </button>
 
-              <button
+              {/* <button
                 onClick={handleConciergeClick}
-                className="p-2 text-[#D4AF37] hover:text-[#D4AF37] transition-colors relative"
+                className="p-2 text-white hover:text-[#D4AF37] transition-colors relative"
                 aria-label={isAuthenticated ? "My Account" : "Sign In"}
                 title={isAuthenticated ? "My Account" : "Sign In"}
               >
@@ -171,13 +172,92 @@ export const Header: React.FC = () => {
                   <User className="w-5 h-5 sm:w-6 sm:h-6" />
                 )}
                 {isAuthenticated && profileMenuOpen && (
-                  <span className="absolute top-full right-0 mt-1 w-1.5 h-1.5 rounded-full bg-[#D4AF37]" />
+                  <span className="absolute top-full right-0 mt-1 w-1.5 h-1.5 z-20 rounded-full bg-[#D4AF37]" />
                 )}
-              </button>
+              </button> */}
+              {/* new user */}
+              <div ref={profileMenuRef} className="relative">
+                <button
+                  onClick={handleConciergeClick}
+                  className="p-2 transition-colors cursor-pointer text-white hover:text-[#D4AF37] text-[#0B4F71] hover:text-[#176B87]"
+                  aria-label={isAuthenticated ? "My Account" : "Sign In"}
+                  title={
+                    isAuthenticated
+                      ? user?.name || "My Account"
+                      : "Sign In / GHRÉ Client Concierge"
+                  }
+                >
+                  {authLoading ? (
+                    <Loader2 className="w-4 h-4 sm:w-5 sm:h-5 animate-spin" />
+                  ) : isAuthenticated ? (
+                    <UserCircle2 className="w-4 h-4 sm:w-5 sm:h-5" />
+                  ) : (
+                    <User className="w-4 h-4 sm:w-5 sm:h-5" />
+                  )}
+                </button>
+
+                <AnimatePresence>
+                  {profileMenuOpen && isAuthenticated && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -8 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute right-0 top-full mt-3 w-64 origin-top-right z-50"
+                    >
+                      <div className="bg-gradient-to-b from-[#097B8A] to-[#06242B] border-2 border-[#D4AF37]/40 rounded-2xl shadow-2xl overflow-hidden backdrop-blur-xl">
+                        {/* User info header */}
+                        <div className="p-5 border-b border-[#D4AF37]/20 bg-[#006e83]/30">
+                          <div className="flex items-center gap-3">
+                            <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shrink-0 shadow-lg">
+                              <span className="font-cinzel text-xl font-bold text-[#06242B]">
+                                {(user?.name || "G").charAt(0).toUpperCase()}
+                              </span>
+                            </div>
+                            <div className="min-w-0">
+                              <p className="font-cinzel text-sm text-white font-bold tracking-wide truncate">
+                                {user?.name || "GHRÉ Patron"}
+                              </p>
+                              <p className="font-outfit text-xs text-white truncate">
+                                {user?.email || ""}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="py-2">
+                          <button
+                            onClick={() => {
+                              setProfileMenuOpen(false);
+                              router.push("/account");
+                            }}
+                            className="w-full flex items-center gap-3 px-5 py-3 font-outfit text-xs text-white hover:bg-[#D4AF37]/10 hover:text-[#D4AF37] transition-all tracking-wide"
+                          >
+                            <UserCircle2 className="w-4 h-4 text-[#D4AF37]" />
+                            <span className="uppercase tracking-[0.2em] font-medium">
+                              My Account
+                            </span>
+                          </button>
+
+                          <button
+                            onClick={handleLogout}
+                            className="w-full flex items-center gap-3 px-5 py-3 font-outfit text-xs text-white hover:bg-[#D4AF37]/10 hover:text-[#D4AF37] transition-all tracking-wide"
+                          >
+                            <LogOut className="w-4 h-4" />
+                            <span className="uppercase tracking-[0.2em] font-medium">
+                              Sign Out
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
 
               <button
                 onClick={() => setIsCartOpen(true)}
-                className="p-2 text-[#D4AF37] hover:text-[#D4AF37] transition-colors relative"
+                className="p-2 text-white hover:text-[#D4AF37] transition-colors relative"
                 aria-label="Shopping Bag"
                 title={`Cart · ${cartCount} item${cartCount === 1 ? "" : "s"}`}
               >
@@ -205,7 +285,7 @@ export const Header: React.FC = () => {
 
               <button
                 onClick={() => setMobileMenuOpen(true)}
-                className="p-2 text-[#D4AF37] hover:text-[#D4AF37] transition-colors"
+                className="p-2 text-white hover:text-[#D4AF37] transition-colors"
                 aria-label="Open menu"
               >
                 <Menu className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -222,7 +302,7 @@ export const Header: React.FC = () => {
                 aria-label="GHRÉ Home"
               >
                 <img
-                  src="/logo.png"
+                  src="/new-logo.png"
                   alt="GHRÉ Logo Desktop"
                   className="h-20 sm:h-20 w-auto object-cover transition-transform duration-300 group-hover:scale-105"
                 />
@@ -233,8 +313,7 @@ export const Header: React.FC = () => {
               {navLinks.map((link) => {
                 const isActive =
                   currentPage === link.page ||
-                  (link.page === "about-founder" &&
-                    currentPage === "jac-ghre");
+                  (link.page === "about-founder" && currentPage === "jac-ghre");
 
                 return (
                   <button
@@ -242,8 +321,8 @@ export const Header: React.FC = () => {
                     onClick={() => navigateToPage(link.page)}
                     className={` text-xs xl:text-[13px] tracking-[0.2em] py-2 transition-all duration-200 cursor-pointer ${
                       isActive
-                        ? "lg:text-[#D4AF37] text-[#0B4F71] font-bold border-b-2 lg:border-[#D4AF37] border-[#0B4F71]"
-                        : "lg:text-[#E8DCC4] lg:hover:text-[#D4AF37] text-[#0B4F71] hover:text-[#176B87]"
+                        ? "lg:text-white text-[#0B4F71] font-bold border-b-2 lg:border-[#D4AF37] border-[#0B4F71]"
+                        : "lg:text-white lg:hover:text-[#D4AF37] text-[#0B4F71] hover:text-[#176B87]"
                     }`}
                   >
                     <span>{link.name}</span>
@@ -255,7 +334,7 @@ export const Header: React.FC = () => {
             <div className="flex items-center space-x-2.5 sm:space-x-4">
               <button
                 onClick={() => setIsSearchOpen(true)}
-                className="p-2 text-[#D4AF37] hover:text-[#D4AF37] transition-colors"
+                className="p-2 text-white hover:text-[#D4AF37] transition-colors"
                 aria-label="Search products"
               >
                 <Search className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -263,9 +342,13 @@ export const Header: React.FC = () => {
               <div ref={profileMenuRef} className="relative">
                 <button
                   onClick={handleConciergeClick}
-                  className="p-2 transition-colors cursor-pointer lg:text-[#E8DCC4] lg:hover:text-[#D4AF37] text-[#0B4F71] hover:text-[#176B87]"
+                  className="p-2 transition-colors cursor-pointer lg:text-white lg:hover:text-[#D4AF37] text-[#0B4F71] hover:text-[#176B87]"
                   aria-label={isAuthenticated ? "My Account" : "Sign In"}
-                  title={isAuthenticated ? user?.name || "My Account" : "Sign In / GHRÉ Client Concierge"}
+                  title={
+                    isAuthenticated
+                      ? user?.name || "My Account"
+                      : "Sign In / GHRÉ Client Concierge"
+                  }
                 >
                   {authLoading ? (
                     <Loader2 className="w-4 h-4 sm:w-5 sm:h-5 animate-spin" />
@@ -289,16 +372,16 @@ export const Header: React.FC = () => {
                         {/* User info header */}
                         <div className="p-5 border-b border-[#D4AF37]/20 bg-[#006e83]/30">
                           <div className="flex items-center gap-3">
-                            <div className="w-12 h-12 bg-gradient-to-br from-[#D4AF37] to-[#8B6914] rounded-full flex items-center justify-center shrink-0 shadow-lg">
+                            <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shrink-0 shadow-lg">
                               <span className="font-cinzel text-xl font-bold text-[#06242B]">
                                 {(user?.name || "G").charAt(0).toUpperCase()}
                               </span>
                             </div>
                             <div className="min-w-0">
-                              <p className="font-cinzel text-sm text-[#FBF9F3] font-bold tracking-wide truncate">
+                              <p className="font-cinzel text-sm text-white font-bold tracking-wide truncate">
                                 {user?.name || "GHRÉ Patron"}
                               </p>
-                              <p className="font-outfit text-xs text-[#8EAAB0] truncate">
+                              <p className="font-outfit text-xs text-white truncate">
                                 {user?.email || ""}
                               </p>
                             </div>
@@ -311,18 +394,22 @@ export const Header: React.FC = () => {
                               setProfileMenuOpen(false);
                               router.push("/account");
                             }}
-                            className="w-full flex items-center gap-3 px-5 py-3 font-outfit text-xs text-[#E8DCC4] hover:bg-[#D4AF37]/10 hover:text-[#D4AF37] transition-all tracking-wide"
+                            className="w-full flex items-center gap-3 px-5 py-3 font-outfit text-xs text-white hover:bg-[#D4AF37]/10 hover:text-[#D4AF37] transition-all tracking-wide"
                           >
                             <UserCircle2 className="w-4 h-4 text-[#D4AF37]" />
-                            <span className="uppercase tracking-[0.2em] font-medium">My Account</span>
+                            <span className="uppercase tracking-[0.2em] font-medium">
+                              My Account
+                            </span>
                           </button>
 
                           <button
                             onClick={handleLogout}
-                            className="w-full flex items-center gap-3 px-5 py-3 font-outfit text-xs text-red-300 hover:bg-red-900/20 hover:text-red-200 transition-all tracking-wide border-t border-[#D4AF37]/10 mt-1"
+                            className="w-full flex items-center gap-3 px-5 py-3 font-outfit text-xs text-white hover:bg-red-900/20 hover:text-red-200 transition-all tracking-wide border-t border-[#D4AF37]/10 mt-1"
                           >
                             <LogOut className="w-4 h-4" />
-                            <span className="uppercase tracking-[0.2em] font-medium">Sign Out</span>
+                            <span className="uppercase tracking-[0.2em] font-medium">
+                              Sign Out
+                            </span>
                           </button>
                         </div>
                       </div>
@@ -333,11 +420,11 @@ export const Header: React.FC = () => {
 
               <button
                 onClick={() => setIsCartOpen(true)}
-                className="relative p-2 transition-colors cursor-pointer lg:text-[#E8DCC4] lg:hover:text-[#D4AF37] text-[#0B4F71] hover:text-[#176B87]"
+                className="relative p-2 transition-colors cursor-pointer lg:text-white lg:hover:text-[#D4AF37] text-[#0B4F71] hover:text-[#176B87]"
                 aria-label="Shopping Bag"
                 title={`Cart · ${cartCount} item${cartCount === 1 ? "" : "s"}`}
               >
-                <ShoppingBag className="w-4 h-4 sm:w-5 sm:h-5 lg:text-[#E8DCC4] text-[#0B4F71]" />
+                <ShoppingBag className="w-4 h-4 sm:w-5 sm:h-5 lg:text-white text-[#0B4F71]" />
                 {cartCount > 0 && (
                   <motion.span
                     key={cartBadgeKey}
@@ -409,9 +496,7 @@ export const Header: React.FC = () => {
                     <span>LAUNCHING SOON</span>
                   </div>
 
-                  <span className="text-[10px]  text-[#8EAAB0]">
-                    GHRÉ
-                  </span>
+                  <span className="text-[10px]  text-[#8EAAB0]">GHRÉ</span>
                 </div>
 
                 {/* Nav Links */}

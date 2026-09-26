@@ -155,7 +155,7 @@ export default function SignupPage() {
         <div className="w-full flex justify-start mb-6">
           <button
             onClick={() => router.push('/')}
-            className="group inline-flex items-center gap-2 text-xs font-cinzel text-[#D4AF37] hover:text-[#F3E5AB] transition-all tracking-widest uppercase bg-[#097B8A]/40 px-4 py-2 rounded-full border border-[#D4AF37]/20 backdrop-blur-md"
+            className="group inline-flex items-center gap-2 text-xs font-cinzel text-[#D4AF37] hover:text-[#F3E5AB] transition-all tracking-widest uppercase bg-[#097B8A]/40 px-4 py-2 rounded-full border border-white backdrop-blur-md"
           >
             <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" /> Return to Atelier
           </button>
@@ -181,11 +181,11 @@ export default function SignupPage() {
 
         {/* Steps Indicator */}
         <div className="flex items-center justify-center gap-3 mb-6">
-          <div className={`flex items-center gap-2 px-3 py-1 rounded-full text-[10px] font-cinzel tracking-widest uppercase ${step === 'form' ? 'bg-[#D4AF37] text-[#06242B]' : 'bg-[#097B8A]/50 text-[#8EAAB0] border border-[#D4AF37]/20'}`}>
+          <div className={`flex items-center gap-2 px-3 py-1 rounded-full text-[10px] font-cinzel tracking-widest uppercase ${step === 'form' ? 'bg-white text-[#006073]' : 'bg-[#097B8A]/50 text-[#8EAAB0] border border-[#D4AF37]/20'}`}>
             <User className="w-3 h-3" /> Step 1
           </div>
-          <div className="w-8 h-[1px] bg-[#D4AF37]/30" />
-          <div className={`flex items-center gap-2 px-3 py-1 rounded-full text-[10px] font-cinzel tracking-widest uppercase ${step === 'otp' ? 'bg-[#D4AF37] text-[#06242B]' : 'bg-[#097B8A]/50 text-[#8EAAB0] border border-[#D4AF37]/20'}`}>
+          <div className="w-8 h-[1px] bg-white" />
+          <div className={`flex items-center gap-2 px-3 py-1 rounded-full text-[10px] font-cinzel tracking-widest uppercase ${step === 'otp' ? 'bg-white text-[#006073]' : 'bg-[#097B8A]/50 text-[#8EAAB0] border border-[#D4AF37]/20'}`}>
             <ShieldCheck className="w-3 h-3" /> Step 2
           </div>
         </div>
@@ -332,7 +332,7 @@ export default function SignupPage() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-4 bg-gradient-to-r from-[#D4AF37] via-[#E6C65C] to-[#D4AF37] text-[#06242B] font-cinzel text-xs font-bold tracking-[0.25em] uppercase hover:brightness-110 transition-all shadow-2xl rounded-xl cursor-pointer flex items-center justify-center gap-2 group disabled:opacity-60 disabled:cursor-not-allowed"
+                className="w-full py-4 bg-white text-[#006073] font-cinzel text-xs font-bold tracking-[0.25em] uppercase hover:brightness-110 transition-all shadow-2xl rounded-xl cursor-pointer flex items-center justify-center gap-2 group disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <>

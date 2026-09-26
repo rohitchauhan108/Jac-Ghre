@@ -180,7 +180,7 @@ export const Footer: React.FC = () => {
                 aria-label="GHRÉ Home"
               >
                 <img
-                  src="/logo.png"
+                  src="/new-logo.png"
                   alt="GHRÉ Logo"
                   className="
                     h-16
