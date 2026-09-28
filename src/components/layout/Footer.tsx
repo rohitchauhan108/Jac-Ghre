@@ -196,7 +196,7 @@ export const Footer: React.FC = () => {
 
     
 
-            <p className="text-xs sm:text-sm font-normal leading-relaxed max-w-sm text-[#A5BFC4]">
+            <p className="text-lg sm:text-[16px] font-normal leading-relaxed max-w-sm text-[#A5BFC4]">
               Haute hair care and solar fragrance rituals formulated with pure
               cold-pressed Moroccan prickly pear oil and botanical extracts by
               master artist Jac Ghré.
@@ -324,11 +324,11 @@ export const Footer: React.FC = () => {
           ===================================================== */}
 
           <div className="space-y-3">
-            <span className="text-[11px]  tracking-[0.25em] text-[#D4AF37] uppercase block font-semibold">
+            <span className="text-[20px]  tracking-[0.25em] text-[#D4AF37] uppercase block font-semibold">
               The Maison
             </span>
 
-            <ul className="space-y-2.5 text-xs sm:text-sm">
+            <ul className="space-y-2.5 text-[16px] sm:text-sm">
               <li>
                 <button
                   onClick={() => navigateToPage('home')}
@@ -389,12 +389,12 @@ export const Footer: React.FC = () => {
               SIGNATURE RITUALS
           ===================================================== */}
 
-          <div className="space-y-3">
-            <span className="text-[11px]  tracking-[0.25em] text-[#D4AF37] uppercase block font-semibold">
+          <div className="space-y-3 ">
+            <span className="text-[18px]  tracking-[0.25em] text-[#D4AF37] uppercase block font-semibold">
               Signature Products
             </span>
 
-            <ul className="space-y-2.5 text-xs sm:text-sm">
+            <ul className="space-y-2.5 text-[16px] sm:text-sm">
 
               <li>
                 <button
@@ -475,8 +475,8 @@ export const Footer: React.FC = () => {
 
             </div>
           </div> */}
-          <div className="space-y-1.5 text-[11px] sm:text-sm text-[#C5D5D8] leading-relaxed">
-              <p className=" text-[#D4AF37] uppercase tracking-[0.18em] text-[10px]">
+          <div className="space-y-1.5 text-[16px] sm:text-sm text-[#C5D5D8] leading-relaxed">
+              <p className=" text-[#D4AF37] uppercase tracking-[0.18em] text-[18px]">
                 {BRAND_INFO.contact.title}
               </p>
               <p className="font-semibold text-[#F7F4EB] uppercase">{BRAND_INFO.contact.name}</p>

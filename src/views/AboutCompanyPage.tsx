@@ -175,7 +175,7 @@ export const AboutCompanyPage: React.FC = () => {
                   <span className=" text-3xl font-bold text-white block">
                     100%
                   </span>
-                  <span className="text-sm font-outfit text-[#8EAAB0]">
+                  <span className="text-lg font-outfit text-white/80">
                     Clean & Cruelty-Free Formulation
                   </span>
                 </div>
@@ -183,7 +183,7 @@ export const AboutCompanyPage: React.FC = () => {
                   <span className=" text-3xl font-bold text-white block">
                     3x
                   </span>
-                  <span className="text-sm font-outfit text-[#8EAAB0]">
+                  <span className="text-lg font-outfit text-white/80">
                     Antioxidant Power vs. Argan Oil
                   </span>
                 </div>
@@ -285,7 +285,7 @@ export const AboutCompanyPage: React.FC = () => {
                 <h3 className=" text-[30px] font-bold text-[#FBF9F3] uppercase">
                   {a.city}
                 </h3>
-                <p className="font-outfit text-sm text-[#8EAAB0] font-medium leading-relaxed">
+                <p className="font-outfit text-[18px] text-[#8EAAB0] font-medium leading-relaxed">
                   {a.desc}
                 </p>
               </div>

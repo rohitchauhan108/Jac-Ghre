@@ -57,11 +57,11 @@ export const ThierryMuglerLegacy: React.FC = () => {
                 <CheckCircle2 className="w-5 h-5 text-[#D4AF37] shrink-0 mt-0.5" />
 
                 <div>
-                  <h4 className=" text-xs font-bold text-[#F3E5AB] uppercase tracking-wider">
+                  <h4 className="text-xl font-bold text-white uppercase tracking-wider">
                     Prestigious Artistic Directorship
                   </h4>
 
-                  <p className="font-outfit text-xs text-[#8EAAB0] mt-0.5 font-light">
+                  <p className="font-outfit text-[16px] text-white/80 mt-0.5 font-light">
                     Directed flagship salons in Manhattan, introducing French
                     balayage and trichological botanical scalp rituals to
                     American high society.
@@ -73,11 +73,11 @@ export const ThierryMuglerLegacy: React.FC = () => {
                 <CheckCircle2 className="w-5 h-5 text-[#D4AF37] shrink-0 mt-0.5" />
 
                 <div>
-                  <h4 className=" text-xs font-bold text-[#F3E5AB] uppercase tracking-wider">
+                  <h4 className="text-xl font-bold text-white uppercase tracking-wider">
                     Elite Model World Global Partnerships
                   </h4>
 
-                  <p className="font-outfit text-xs text-[#8EAAB0] mt-0.5 font-light">
+                  <p className="font-outfit text-[16px] text-white/80 mt-0.5 font-light">
                     Key stylist and hair architect for Elite Model Look
                     competitions and discovery tours across Europe, the
                     United States, and Asia.

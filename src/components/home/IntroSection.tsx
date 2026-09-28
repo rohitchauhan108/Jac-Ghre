@@ -17,6 +17,7 @@ export const IntroSection: React.FC = () => {
   const hallmarks = [
     {
       icon: Award,
+      bg: "/intro-page/1.webp",
       badge: "HAUTE COIFFURE",
       title: "ATELIER CRAFT",
       subtitle: "Formulated by Jac Ghré",
@@ -27,6 +28,7 @@ export const IntroSection: React.FC = () => {
     },
     {
       icon: Droplets,
+      bg: "/intro-page/2.webp",
       badge: "SIGNATURE ELIXIR",
       title: "PRICKLY PEAR BOTANICALS",
       subtitle: "Cold-Pressed Excellence",
@@ -37,6 +39,7 @@ export const IntroSection: React.FC = () => {
     },
     {
       icon: SunMedium,
+      bg: "/intro-page/3.webp",
       badge: "SOLAR LUXURY",
       title: "COASTAL SOLAR SHIELD",
       subtitle: "Sunlit Rituals",
@@ -45,16 +48,16 @@ export const IntroSection: React.FC = () => {
       linkAction: () => navigateToPage("shop", "all"),
       actionLabel: "View Sun & Body",
     },
-    {
-      icon: ShieldCheck,
-      badge: "CLEAN BOTANICS",
-      title: "HAUTE FORMULATION",
-      subtitle: "Zero Compromise",
-      description:
-        "Strictly sulfate-free, paraben-free, cruelty-free, and safe for all Keratin and color-treated hair.",
-      linkAction: () => navigateToPage("shop", "all"),
-      actionLabel: "Shop All 12 Creations",
-    },
+    // {
+    //   icon: ShieldCheck,
+    //   badge: "CLEAN BOTANICS",
+    //   title: "HAUTE FORMULATION",
+    //   subtitle: "Zero Compromise",
+    //   description:
+    //     "Strictly sulfate-free, paraben-free, cruelty-free, and safe for all Keratin and color-treated hair.",
+    //   linkAction: () => navigateToPage("shop", "all"),
+    //   actionLabel: "Shop All 12 Creations",
+    // },
   ];
 
   return (
@@ -159,9 +162,8 @@ export const IntroSection: React.FC = () => {
               isDark ? "text-[#FBF9F3]" : "text-[#062B35]"
             }`}
           >
-            An Expression of{" "}
-            {/* <span className="italic text-[#D4AF37]"> */}
-              Timeless Beauty
+            An Expression of {/* <span className="italic text-[#D4AF37]"> */}
+            Timeless Beauty
             {/* </span> */}
           </h2>
 
@@ -193,17 +195,15 @@ export const IntroSection: React.FC = () => {
           >
             Born from sunlit beauty rituals and runway glamour,{" "}
             <strong className="font-semibold text-[#D4AF37]">GHRÉ</strong>{" "}
-            marries cosmetic excellence with cold-pressed botanical
-            botanicals.
+            marries cosmetic excellence with cold-pressed botanical botanicals.
           </p>
-
         </motion.div>
 
         {/* =========================================================
             4 ATELIER PILLARS
         ========================================================= */}
 
-        <div className="mt-16 sm:mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+        <div className="mt-16 sm:mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {hallmarks.map((item, idx) => (
             <motion.div
               key={item.title}
@@ -215,7 +215,13 @@ export const IntroSection: React.FC = () => {
                 delay: idx * 0.12,
               }}
               onClick={item.linkAction}
-              className={`group relative p-6 sm:p-7 border transition-all duration-300 cursor-pointer flex flex-col justify-between ${
+              style={{
+                backgroundImage: `url(${item.bg})`,
+                backgroundSize: "cover",
+                backgroundPosition: "90% center",
+                backgroundRepeat: "no-repeat",
+              }}
+              className={`group relative p-6 sm:p-7 transition-all duration-300 cursor-pointer flex flex-col justify-between ${
                 isDark
                   ? `
                     bg-[#007288]
@@ -232,20 +238,11 @@ export const IntroSection: React.FC = () => {
                   `
               }`}
             >
+              <div className="absolute inset-0 z-0 bg-gradient-to-r from-white via-white/95 to-transparent"></div>{" "}
               {/* Subtle card highlight */}
               {isDark && (
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(0,114,136,0.55)_0%,transparent_55%)] pointer-events-none opacity-80" />
               )}
-
-              {/* Corner Gold Accents */}
-              <div className="absolute top-0 left-0 w-2.5 h-2.5 border-t-2 border-l-2 border-[#D4AF37] opacity-60 group-hover:opacity-100 transition-opacity" />
-
-              <div className="absolute top-0 right-0 w-2.5 h-2.5 border-t-2 border-r-2 border-[#D4AF37] opacity-60 group-hover:opacity-100 transition-opacity" />
-
-              <div className="absolute bottom-0 left-0 w-2.5 h-2.5 border-b-2 border-l-2 border-[#D4AF37] opacity-60 group-hover:opacity-100 transition-opacity" />
-
-              <div className="absolute bottom-0 right-0 w-2.5 h-2.5 border-b-2 border-r-2 border-[#D4AF37] opacity-60 group-hover:opacity-100 transition-opacity" />
-
               {/* Card Content */}
               <div className="relative z-10">
                 {/* Icon + Badge */}
@@ -253,16 +250,16 @@ export const IntroSection: React.FC = () => {
                   <div
                     className={`w-11 h-11 flex items-center justify-center border transition-all duration-300 ${
                       isDark
-                        ? "bg-[#007288] border-[#D4AF37]/40 text-[#D4AF37] group-hover:bg-white group-hover:text-[#062B35]"
-                        : "bg-[#FAF7F2] border-[#D4AF37]/50 text-[#B8860B] group-hover:bg-white group-hover:text-[#062B35]"
+                        ? "bg-white border-[#D4AF37] text-[#D4AF37]"
+                        : "bg-white border-[#D4AF37] text-[#D4AF37]"
                     }`}
                   >
-                    <item.icon className="w-5 h-5" />
+                    <item.icon className="w-8 h-8" />
                   </div>
 
                   <span
-                    className={`px-2.5 py-1 border border-[#D4AF37]/30 text-[9px]  font-bold tracking-[0.2em] text-[#D4AF37] uppercase ${
-                      isDark ? "bg-[#007288]" : "bg-[#FAF7F2]"
+                    className={`px-2.5 py-1 text-[11px]  font-bold tracking-[0.2em] text-white border-2 border-[#D4AF37] uppercase ${
+                      isDark ? "bg-[#006d83]" : "bg-[#FAF7F2]"
                     }`}
                   >
                     {item.badge}
@@ -271,7 +268,7 @@ export const IntroSection: React.FC = () => {
 
                 {/* Subtitle */}
                 <span
-                  className={`text-[10px]  font-bold tracking-[0.25em] block uppercase mb-1.5 ${
+                  className={`text-[10px] font-extrabold tracking-[0.25em] block uppercase mb-1.5 ${
                     isDark ? "text-[#D4AF37]" : "text-[#B8860B]"
                   }`}
                 >
@@ -280,10 +277,8 @@ export const IntroSection: React.FC = () => {
 
                 {/* Title */}
                 <h3
-                  className={` text-xl sm:text-base font-bold tracking-wider mb-2.5 ${
-                    isDark
-                      ? "text-white group-hover:text-[#FBF9F3]"
-                      : "text-white group-hover:text-[#062B35]"
+                  className={`text-[16px] font-poppins sm:text-lg font-black mb-2.5 ${
+                    isDark ? "text-[#007288]" : "text-[#007288]"
                   }`}
                 >
                   {item.title}
@@ -291,21 +286,20 @@ export const IntroSection: React.FC = () => {
 
                 {/* Description */}
                 <p
-                  className={`text-xs sm:text-[13px] font-outfit font-light leading-relaxed mb-4 ${
-                    isDark
-                      ? "text-white group-hover:text-[#FBF9F3]"
-                      : "text-white group-hover:text-[#4D6972]"
+                  className={`text-lg sm:text-[15px] font-outfit font-light leading-relaxed mb-4 pr-15 ${
+                    isDark ? "text-black" : "text-black"
                   }`}
                 >
                   {item.description}
                 </p>
               </div>
-
               {/* Action */}
-              <div className="relative z-10 pt-3 border-t border-[#D4AF37]/20 flex items-center justify-between text-[11px]  font-bold tracking-wider text-[#D4AF37] group-hover:text-[#FFF3C4]">
+              <div className="relative z-10 pt-3 border-t border-[#D4AF37] flex items-center justify-between text-[14px] font-bold tracking-wider text-[#D4AF37]">
                 <span>{item.actionLabel}</span>
 
-                <ArrowUpRight className="w-3.5 h-3.5 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                <span className="bg-white p-1 rounded-lg">
+                  <ArrowUpRight className="w-5 h-5 text-[#D4AF37] transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </span>
               </div>
             </motion.div>
           ))}
