@@ -361,7 +361,7 @@ export const Footer: React.FC = () => {
                   onClick={() => navigateToPage('about-founder')}
                   className="hover:text-[#D4AF37] transition-colors text-left text-[#D4AF37] font-semibold cursor-pointer"
                 >
-                  About The Founder
+                  Meet The Founder
                 </button>
               </li>
 
