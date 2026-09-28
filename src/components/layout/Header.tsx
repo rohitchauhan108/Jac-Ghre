@@ -110,8 +110,8 @@ export const Header: React.FC = () => {
   const navLinks: { name: string; page: PageType }[] = [
     { name: "HOME", page: "home" },
     { name: "SHOP", page: "shop" },
-    { name: "ABOUT", page: "about-company" },
-    { name: "ABOUT THE FOUNDER", page: "about-founder" },
+    { name: "ABOUT THE COMPANY", page: "about-company" },
+    { name: "MEET THE FOUNDER", page: "about-founder" },
     { name: "THE ARTIST", page: "artist" },
     { name: "GALLERY", page: "gallery" },
     { name: "CONTACT US", page: "contact" },
@@ -145,7 +145,7 @@ export const Header: React.FC = () => {
               <img
                 src="/new-logo.png"
                 alt="GHRÉ Logo Mobile"
-                className="h-14 sm:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                className="h-20 sm:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </button>
 
@@ -295,7 +295,7 @@ export const Header: React.FC = () => {
 
           {/* Desktop header */}
           <div className="hidden lg:flex w-full items-center justify-between">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-5">
               <button
                 onClick={() => navigateToPage("home")}
                 className="group flex items-center text-left focus:outline-none cursor-pointer"
@@ -319,7 +319,7 @@ export const Header: React.FC = () => {
                   <button
                     key={link.name}
                     onClick={() => navigateToPage(link.page)}
-                    className={` text-xs xl:text-[13px] tracking-[0.2em] py-2 transition-all duration-200 cursor-pointer ${
+                    className={` text-xs xl:text-[11px] tracking-[0.2em] py-2 transition-all duration-200 cursor-pointer ${
                       isActive
                         ? "lg:text-white text-[#0B4F71] font-bold border-b-2 lg:border-[#D4AF37] border-[#0B4F71]"
                         : "lg:text-white lg:hover:text-[#D4AF37] text-[#0B4F71] hover:text-[#176B87]"

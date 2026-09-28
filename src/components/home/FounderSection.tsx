@@ -74,7 +74,7 @@ export const FounderSection: React.FC = () => {
             <div>
               <div className="flex items-center gap-2 mb-2">
                 <GoldEmblem size={20} />
-                <span className="text-xs  tracking-[0.35em] text-[#D4AF37] uppercase font-semibold">
+                <span className="text-[13px]  tracking-[0.35em] text-[#D4AF37] uppercase font-semibold">
                   THE MAN • THE NAME
                 </span>
               </div>
@@ -83,7 +83,7 @@ export const FounderSection: React.FC = () => {
                 Jac Ghré
               </h2>
 
-              <p className="text-xs sm:text-xl  tracking-[0.25em] text-[#D4AF37] mt-1 uppercase font-semibold">
+              <p className="text-[13px] sm:text-xl  tracking-[0.25em] text-[#D4AF37] mt-1 uppercase font-semibold">
                 International Hair, Beauty & Fashion Expert
               </p>
 
@@ -92,29 +92,29 @@ export const FounderSection: React.FC = () => {
 
             {/* Poster Story text */}
             <div className="p-6 sm:p-7 bg-[#006073]/80 border border-[#D4AF37]/35 space-y-3 shadow-xl backdrop-blur-md">
-              <span className="text-[11px]  tracking-[0.3em] text-[#D4AF37] uppercase block border-b border-[#D4AF37]/20 pb-2 font-bold">
+              <span className="text-[18px]  tracking-[0.3em] text-[#D4AF37] uppercase block border-b border-[#D4AF37]/20 pb-2 font-bold">
                 THE STORY & RUNWAY LEGACY
               </span>
 
-              <p className="text-xs sm:text-xl text-[#E8DCC4] font-outfit font-light leading-relaxed">
+              <p className="text-[16px] sm:text-2xl text-[#E8DCC4] font-outfit font-light leading-relaxed">
                 Jac Ghré is widely recognized for his visionary work in the global runway and fashion industry. He notably collaborated with legendary designer <strong className="text-[#F3E5AB]">Thierry Mugler</strong>, serving as <strong>Hair Director</strong> across major international fashion shows.
               </p>
 
               {/* Supermodels worked with mini-bar */}
               <div className="pt-2">
-                <span className="text-[10px]  text-[#8EAAB0] uppercase tracking-wider block mb-1.5 font-bold">
+                <span className="text-[13px]  text-[#8EAAB0] uppercase tracking-wider block mb-1.5 font-bold">
                   HAUTE COUTURE RUNWAYS & EDITORIALS:
                 </span>
                 <div className="flex flex-wrap gap-1.5">
                   {supermodels.map((m) => (
                     <span
                       key={m}
-                      className="px-2 py-0.5 bg-[#006073] border border-[#D4AF37]/30 text-[15px] font-outfit text-[#D4AF37]"
+                      className="px-2 py-0.5 bg-[#006073] border border-[#D4AF37]/30 text-[18px] font-outfit text-[#D4AF37]"
                     >
                       {m}
                     </span>
                   ))}
-                  <span className="px-2 py-0.5 bg-[#006073] border border-[#D4AF37]/30 text-[15px] font-outfit text-[#8EAAB0]">
+                  <span className="px-2 py-0.5 bg-[#006073] border border-[#D4AF37]/30 text-[18px] font-outfit text-[#8EAAB0]">
                     + Celebrities & Elite Models
                   </span>
                 </div>
@@ -123,7 +123,7 @@ export const FounderSection: React.FC = () => {
 
             {/* The Vision Quote matching Poster */}
             <div className="p-5 bg-gradient-to-r from-[#007288] to-[#006073] border-l-4 border-white space-y-1.5 shadow-xl">
-              <span className="text-[10px]  tracking-[0.3em] text-[#D4AF37] uppercase block font-semibold">
+              <span className="text-[13px]  tracking-[0.3em] text-[#D4AF37] uppercase block font-semibold">
                 THE VISION
               </span>
               <p className="font-playfair text-2xl sm:text-3xl italic text-[#F3E5AB]">

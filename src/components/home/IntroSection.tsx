@@ -149,7 +149,7 @@ export const IntroSection: React.FC = () => {
           </div>
 
           {/* Eyebrow */}
-          <div className="flex flex-col gap-3 text-[11px] sm:text-xs  font-bold tracking-[0.4em] uppercase text-[#D4AF37] mb-3">
+          <div className="flex flex-col gap-3 text-[13px] sm:text-xs  font-bold tracking-[0.4em] uppercase text-white mb-3">
             <span>L'ART DE VIVRE</span>
           </div>
 
@@ -160,9 +160,9 @@ export const IntroSection: React.FC = () => {
             }`}
           >
             An Expression of{" "}
-            <span className="italic text-[#D4AF37]">
+            {/* <span className="italic text-[#D4AF37]"> */}
               Timeless Beauty
-            </span>
+            {/* </span> */}
           </h2>
 
           {/* Quote */}
