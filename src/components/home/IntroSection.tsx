@@ -174,12 +174,13 @@ export const IntroSection: React.FC = () => {
             </span>
 
             <p
-              className={`text-lg sm:text-2xl font-editorial italic leading-relaxed text-balance ${
+              className={`text-lg sm:text-4xl font-editorial italic leading-relaxed text-balance ${
                 isDark ? "text-[#F3E5AB]" : "text-[#8A6715]"
               }`}
             >
-              Inspired by the sun, the sea, and the French art of living
-              beautifully.
+              COSMETICS HAIR CARE WITH EXPERIENCE
+              {/* Inspired by the sun, the sea, and the French art of living
+              beautifully. */}
             </p>
 
             <span className="absolute -bottom-10 right-0 sm:right-4 text-5xl sm:text-6xl text-[#D4AF37]/25 select-none">

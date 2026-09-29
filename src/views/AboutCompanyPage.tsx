@@ -24,6 +24,7 @@ export const AboutCompanyPage: React.FC = () => {
     {
       icon: <Award className="w-6 h-6 text-[#D4AF37]" />,
       title: "HAUTE COIFFURE",
+      bg: "/intro-page/1.webp",
       tagline: "Runway-Tested Excellence",
       description:
         "Born from legendary fashion week runways under master hair directorship, our formulas were initially created to protect, style, and restore supermodel hair under extreme backstage lighting.",
@@ -31,6 +32,7 @@ export const AboutCompanyPage: React.FC = () => {
     {
       icon: <Droplets className="w-6 h-6 text-[#D4AF37]" />,
       title: "PRICKLY PEAR BOTANICAL ALCHEMY",
+      bg: "/intro-page/2.webp",
       tagline: "The Crown of Rare Oils",
       description:
         "We harness 100% cold-pressed Moroccan Prickly Pear Seed Oil (Opuntia Ficus-Indica)—nature’s richest source of Vitamin E, sterols, and omega fatty acids, offering 3x the restorative power of traditional argan oil.",
@@ -38,6 +40,7 @@ export const AboutCompanyPage: React.FC = () => {
     {
       icon: <Sun className="w-6 h-6 text-[#D4AF37]" />,
       title: "COASTAL SOLAR & HUMIDITY SHIELD",
+      bg: "/intro-page/1.webp",
       tagline: "Coastal Climate Defense",
       description:
         "Engineered specifically to combat UV solar degradation, salt water crystallization, and coastal humidity.",
@@ -45,6 +48,7 @@ export const AboutCompanyPage: React.FC = () => {
     {
       icon: <ShieldCheck className="w-6 h-6 text-[#D4AF37]" />,
       title: "CLEAN HAUTE FORMULATION",
+      bg: "/intro-page/2.webp",
       tagline: "Purity Without Compromise",
       description:
         "Every GHRÉ creation is 100% free of sulfates, parabens, harsh phthalates, and synthetic heavy fillers. Dermatologist-tested, color-safe, keratin-safe, and cruelty-free.",
@@ -54,16 +58,19 @@ export const AboutCompanyPage: React.FC = () => {
   const ateliers = [
     {
       city: "Miami",
+      bg: "/about-company/1.webp",
       status: "Flagship",
       desc: "Private VIP styling & coastal beauty rituals in the heart of Florida's elite enclaves.",
     },
     {
       city: "Paris",
+      bg: "/about-company/2.webp",
       status: "Coming Soon",
       desc: "The birthplace of haute couture and the original inspiration for the GHRÉ aesthetic.",
     },
     {
       city: "New York",
+      bg: "/about-company/3.webp",
       status: "Coming Soon",
       desc: "Serving our high-fashion clientele and editorial runway partnerships.",
     },
@@ -210,7 +217,7 @@ export const AboutCompanyPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
             {pillars.map((p, idx) => (
               <motion.div
                 key={p.title}
@@ -218,19 +225,25 @@ export const AboutCompanyPage: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
+                style={{
+                  backgroundImage: `url(${p.bg})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "90% center",
+                  backgroundRepeat: "no-repeat",
+                }}
                 className="bg-[#097B8A] border border-[#D4AF37]/30 p-6 flex flex-col justify-between hover:border-white/80 transition-all hover:shadow-[0_10px_30px_rgba(212,175,55,0.15)] group"
               >
                 <div>
-                  <div className="w-12 h-12 bg-[#097B8A] border border-[#D4AF37]/40 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 bg-white border-2 border-[#D4AF37] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                     {p.icon}
                   </div>
-                  <span className="text-[10px]  tracking-[0.25em] text-[#D4AF37] uppercase font-bold block mb-1">
+                  <span className="text-[12px] bg-white w-fit px-2 rounded-lg border-2 border-[#D4AF37] tracking-[0.25em] text-[#D4AF37] uppercase font-bold block mb-1">
                     {p.tagline}
                   </span>
-                  <h3 className=" text-base font-bold text-[#FBF9F3] mb-3">
+                  <h3 className=" text-[18px] font-poppins font-bold text-[#007288] mb-3 pr-15">
                     {p.title}
                   </h3>
-                  <p className="font-outfit text-sm text-[#B3CBD1] font-light leading-relaxed">
+                  <p className="font-outfit text-[15px] text-black font-light leading-relaxed pr-25">
                     {p.description}
                   </p>
                 </div>
@@ -273,21 +286,30 @@ export const AboutCompanyPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {ateliers.map((a) => (
+            {ateliers.map((a, index) => (
               <div
-                key={a.city}
-                className="bg-[#097B8A] border border-[#D4AF37]/40 p-8 text-center space-y-4 hover:border-white/80 transition-all shadow-xl"
+                key={index}
+                style={{
+                  backgroundImage: `url(${a.bg})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center 30px",
+                  backgroundRepeat: "no-repeat",
+                }}
+                className="group relative h-[480px] rounded-xl overflow-hidden pl-8 pr-8 pt-2 transition-all duration-300 cursor-pointer flex flex-col justify-between"
               >
-                <MapPin className="w-8 h-8 text-[#D4AF37] mx-auto" />
-                {/* <span className="text-[10px]  tracking-[0.25em] text-[#D4AF37] uppercase font-bold px-3 py-1 bg-[#097B8A] border border-[#D4AF37]/30 inline-block">
-                  {a.status}
-                </span> */}
-                <h3 className=" text-[30px] font-bold text-[#FBF9F3] uppercase">
-                  {a.city}
-                </h3>
-                <p className="font-outfit text-[18px] text-[#8EAAB0] font-medium leading-relaxed">
-                  {a.desc}
-                </p>
+                {/* Gradient overlay similar to the reference image */}
+                <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#097b8a] via-[#097b8a]/50 to-transparent"></div>
+
+                {/* Content wrapper */}
+                <div className="relative z-10 flex flex-col items-center text-center">
+                  {/* <MapPin className="w-8 h-8 text-[#D4AF37] mx-auto" /> */}
+                  <h3 className="text-[32px] font-bold text-white uppercase tracking-wider mb-2">
+                    {a.city}
+                  </h3>
+                  <p className="font-outfit text-[17px] text-gray-200 font-normal leading-relaxed">
+                    {a.desc}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

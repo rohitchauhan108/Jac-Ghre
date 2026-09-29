@@ -145,7 +145,7 @@ export const ContactPage: React.FC = () => {
                     Luxury Hair Care
                   </p>
                   <p className="font-poppins text-xs sm:text-xl text-[#C5D5D8]">
-                    American Beauty Company. LLC
+                    American Beauty Company
                   </p>
                 </div>
               </div>
