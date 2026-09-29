@@ -17,7 +17,7 @@ export const IntroSection: React.FC = () => {
   const hallmarks = [
     {
       icon: Award,
-      bg: "/intro-page/1.webp",
+      bg: "/intro-page/3.webp",
       badge: "HAUTE COIFFURE",
       title: "ATELIER CRAFT",
       subtitle: "Formulated by Jac Ghré",
@@ -48,16 +48,17 @@ export const IntroSection: React.FC = () => {
       linkAction: () => navigateToPage("shop", "all"),
       actionLabel: "View Sun & Body",
     },
-    // {
-    //   icon: ShieldCheck,
-    //   badge: "CLEAN BOTANICS",
-    //   title: "HAUTE FORMULATION",
-    //   subtitle: "Zero Compromise",
-    //   description:
-    //     "Strictly sulfate-free, paraben-free, cruelty-free, and safe for all Keratin and color-treated hair.",
-    //   linkAction: () => navigateToPage("shop", "all"),
-    //   actionLabel: "Shop All 12 Creations",
-    // },
+    {
+      icon: ShieldCheck,
+      bg: "/intro-page/2.webp",
+      badge: "CLEAN BOTANICS",
+      title: "HAUTE FORMULATION",
+      subtitle: "Zero Compromise",
+      description:
+        "Strictly sulfate-free, paraben-free, cruelty-free, and safe for all Keratin and color-treated hair.",
+      linkAction: () => navigateToPage("shop", "all"),
+      actionLabel: "Shop All 12 Creations",
+    },
   ];
 
   return (
@@ -204,7 +205,7 @@ export const IntroSection: React.FC = () => {
             4 ATELIER PILLARS
         ========================================================= */}
 
-        <div className="mt-16 sm:mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+        <div className="mt-16 sm:mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 sm:gap-6">
           {hallmarks.map((item, idx) => (
             <motion.div
               key={item.title}
