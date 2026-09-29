@@ -110,7 +110,7 @@ export const ContactPage: React.FC = () => {
             Contact & Client Care
           </h1>
 
-          <p className="mt-4 max-w-2xl mx-auto font-editorial text-2xl sm:text-3xl italic text-[#D4AF37]">
+          <p className="mt-4 max-w-2xl mx-auto font-editorial text-2xl sm:text-3xl italic text-white">
             “Our dedicated team of trichology advisors and fragrance concierges is at your disposal.”
           </p>
         </div>

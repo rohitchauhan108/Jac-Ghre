@@ -324,7 +324,7 @@ export const Footer: React.FC = () => {
           ===================================================== */}
 
           <div className="space-y-3">
-            <span className="text-[20px]  tracking-[0.25em] text-[#D4AF37] uppercase block font-semibold">
+            <span className="text-[18px]  tracking-[0.25em] text-[#D4AF37] uppercase block font-semibold">
               The Maison
             </span>
 
