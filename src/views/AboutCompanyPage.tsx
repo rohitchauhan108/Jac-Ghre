@@ -292,21 +292,72 @@ export const AboutCompanyPage: React.FC = () => {
                 style={{
                   backgroundImage: `url(${a.bg})`,
                   backgroundSize: "cover",
-                  backgroundPosition: "center 30px",
+                  backgroundPosition: "center 80px",
                   backgroundRepeat: "no-repeat",
                 }}
-                className="group relative h-[480px] rounded-xl overflow-hidden pl-8 pr-8 pt-2 transition-all duration-300 cursor-pointer flex flex-col justify-between"
+                className="
+                  group relative
+                  h-[600px]
+                  overflow-hidden
+                  border-[2px] border-[#D4AF37]
+                  cursor-pointer
+                  flex flex-col
+                  items-center
+                  text-center
+                "
               >
-                {/* Gradient overlay similar to the reference image */}
-                <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#097b8a] via-[#097b8a]/50 to-transparent"></div>
+                {/* Dark/teal overlay */}
+                {/* <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#064f5c] via-[#064f5c] to-transparent"></div> */}
+                <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#064f5c] from-25% via-transparent to-transparent"></div>
+                {/* Corner decorations */}
+                <div className="absolute top-2 left-2 z-20 w-8 h-8 border-t-[3px] border-l-[3px] border-[#D4AF37]" />
+                <div className="absolute top-2 right-2 z-20 w-8 h-8 border-t-[3px] border-r-[3px] border-[#D4AF37]" />
+                <div className="absolute bottom-2 left-2 z-20 w-8 h-8 border-b-[3px] border-l-[3px] border-[#D4AF37]" />
+                <div className="absolute bottom-2 right-2 z-20 w-8 h-8 border-b-[3px] border-r-[3px] border-[#D4AF37]" />
 
-                {/* Content wrapper */}
-                <div className="relative z-10 flex flex-col items-center text-center">
-                  {/* <MapPin className="w-8 h-8 text-[#D4AF37] mx-auto" /> */}
-                  <h3 className="text-[32px] font-bold text-white uppercase tracking-wider mb-2">
+                {/* Content */}
+                <div className="relative z-10 flex flex-col items-center w-full px-8 pt-5">
+                  {/* Location icon */}
+                  <div className="mb-7 text-[#D4AF37]">
+                    <svg
+                      width="30"
+                      height="30"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                    >
+                      <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" />
+                      <circle cx="12" cy="10" r="2.5" />
+                    </svg>
+                  </div>
+
+                  {/* City */}
+                  <h3
+                    className="
+                    text-[36px]
+                    font-light
+                    text-white
+                    uppercase
+                    tracking-[0.08em]
+                    leading-none
+                    mb-7
+                  "
+                  >
                     {a.city}
                   </h3>
-                  <p className="font-outfit text-[17px] text-gray-200 font-normal leading-relaxed">
+
+                  {/* Description */}
+                  <p
+                    className="
+                    font-outfit
+                    text-[16px]
+                    text-gray-200
+                    font-normal
+                    leading-[1.7]
+                    max-w-[620px]
+                  "
+                  >
                     {a.desc}
                   </p>
                 </div>

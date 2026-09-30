@@ -79,11 +79,11 @@ export const FounderSection: React.FC = () => {
                 </span>
               </div>
 
-              <h2 className=" text-4xl sm:text-5xl font-bold tracking-[0.12em] text-[#F7F4EB] uppercase">
+              <h2 className=" text-4xl sm:text-5xl font-bold tracking-[0.12em] text-white uppercase">
                 Jac Ghré
               </h2>
 
-              <p className="text-[13px] sm:text-xl  tracking-[0.25em] text-[#D4AF37] mt-1 uppercase font-semibold">
+              <p className="text-[13px] sm:text-xl  tracking-[0.25em] text-white mt-1 uppercase font-semibold">
                 International Hair, Beauty & Fashion Expert
               </p>
 

@@ -163,23 +163,21 @@ export const IntroSection: React.FC = () => {
               isDark ? "text-[#FBF9F3]" : "text-[#062B35]"
             }`}
           >
-            An Expression of {/* <span className="italic text-[#D4AF37]"> */}
-            Timeless Beauty
-            {/* </span> */}
+            COSMETICS HAIR CARE WITH EXPERIENCE
           </h2>
 
           {/* Quote */}
           <div className="relative mt-7 px-4 sm:px-12">
-            <span className="absolute -top-6 left-0 sm:left-4 text-5xl sm:text-6xl text-[#D4AF37]/25 select-none">
+            <span className="absolute -top-6 left-0 sm:left-4 text-5xl sm:text-6xl text-white select-none">
               “
             </span>
 
             <p
               className={`text-lg sm:text-4xl font-editorial italic leading-relaxed text-balance ${
-                isDark ? "text-[#F3E5AB]" : "text-[#8A6715]"
+                isDark ? "text-white" : "text-white"
               }`}
             >
-              COSMETICS HAIR CARE WITH EXPERIENCE
+              An Expression of Timeless Beauty
               {/* Inspired by the sun, the sea, and the French art of living
               beautifully. */}
             </p>
