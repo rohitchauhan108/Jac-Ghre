@@ -75,7 +75,11 @@ export const AboutCompanyPage: React.FC = () => {
   //     desc: "Serving our high-fashion clientele and editorial runway partnerships.",
   //   },
   // ];
-
+  const city = [
+    "/about-company/1.webp",
+    "/about-company/2.webp",
+    "/about-company/3.webp",
+  ];
   return (
     <div className="bg-[#0C8A9B] min-h-screen text-[#FBF9F3]">
       {/* 1. Hero Banner */}
@@ -313,29 +317,42 @@ export const AboutCompanyPage: React.FC = () => {
               </div>
             ))}
           </div> */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             <div>
               <img
                 src="/about-company/1.webp"
                 alt="Miami Atelier"
-                className="w-full h-[480px] object-cover lg:border-none border-2 border-yellow-400"
+                className="w-full h-[480px] object-contain"
               />
             </div>
             <div>
               <img
                 src="/about-company/2.webp"
                 alt="Paris Atelier"
-                className="w-full h-[480px] lg:object-contain lg:border-none border-2 border-yellow-400"
+                className="w-full h-[480px] object-contain"
               />
             </div>
             <div>
               <img
                 src="/about-company/3.webp"
                 alt="New York Atelier"
-                className="w-full h-[480px] object-[25%_75%] lg:border-none border-2 border-yellow-400"
+                className="w-full h-[480px] object-contain"
               />
             </div>
+          </div> */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {city.map((img, index) => (
+              <div key={index} className="relative h-fit w-fit">
+                <img
+                  src={img}
+                  alt={`Atelier ${index + 1}`}
+                  className="relative inset-0 w-full h-full object-contain"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#006d83]/20 via-[#006d83]/10 via-40% to-transparent"></div>{" "}
+              </div>
+            ))}
           </div>
+
           {/* Links and CTA Bar */}
           <div className="mt-16 p-8 bg-[#097B8A] border border-white/50 rounded-lg text-center max-w-4xl mx-auto space-y-4 shadow-2xl">
             <h3 className="text-2xl font-bold text-[#FBF9F3] uppercase">
