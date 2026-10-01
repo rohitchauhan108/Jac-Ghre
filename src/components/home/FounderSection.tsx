@@ -57,7 +57,7 @@ export const FounderSection: React.FC = () => {
                   <MapPin className="w-3.5 h-3.5 text-[#D4AF37]" /> Private Client Atelier
                 </span>
                 <span className="flex items-center gap-1.5 text-[11px] tracking-wider text-[#D4AF37]">
-                  <Globe className="w-3.5 h-3.5" /> GHRÉ.COM
+                  <Globe className="w-3.5 h-3.5" /> ghrebeauty.com
                 </span>
               </div>
             </div>

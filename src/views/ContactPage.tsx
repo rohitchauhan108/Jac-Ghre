@@ -142,7 +142,7 @@ export const ContactPage: React.FC = () => {
                     International Hair Designer
                   </p>
                   <p className="font-poppins text-xs sm:text-xl text-[#C5D5D8]">
-                    Luxury Hair Care
+                    Cosmetics Luxury Hair Care
                   </p>
                   <p className="font-poppins text-xs sm:text-xl text-[#C5D5D8]">
                     American Beauty Company

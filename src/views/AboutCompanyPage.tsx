@@ -55,26 +55,26 @@ export const AboutCompanyPage: React.FC = () => {
     },
   ];
 
-  const ateliers = [
-    {
-      city: "Miami",
-      bg: "/about-company/1.webp",
-      status: "Flagship",
-      desc: "Private VIP styling & coastal beauty rituals in the heart of Florida's elite enclaves.",
-    },
-    {
-      city: "Paris",
-      bg: "/about-company/2.webp",
-      status: "Coming Soon",
-      desc: "The birthplace of haute couture and the original inspiration for the GHRÉ aesthetic.",
-    },
-    {
-      city: "New York",
-      bg: "/about-company/3.webp",
-      status: "Coming Soon",
-      desc: "Serving our high-fashion clientele and editorial runway partnerships.",
-    },
-  ];
+  // const ateliers = [
+  //   {
+  //     city: "Miami",
+  //     bg: "/about-company/1.webp",
+  //     status: "Flagship",
+  //     desc: "Private VIP styling & coastal beauty rituals in the heart of Florida's elite enclaves.",
+  //   },
+  //   {
+  //     city: "Paris",
+  //     bg: "/about-company/2.webp",
+  //     status: "Coming Soon",
+  //     desc: "The birthplace of haute couture and the original inspiration for the GHRÉ aesthetic.",
+  //   },
+  //   {
+  //     city: "New York",
+  //     bg: "/about-company/3.webp",
+  //     status: "Coming Soon",
+  //     desc: "Serving our high-fashion clientele and editorial runway partnerships.",
+  //   },
+  // ];
 
   return (
     <div className="bg-[#0C8A9B] min-h-screen text-[#FBF9F3]">
@@ -285,86 +285,57 @@ export const AboutCompanyPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-20">
             {ateliers.map((a, index) => (
               <div
                 key={index}
-                style={{
-                  backgroundImage: `url(${a.bg})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center 80px",
-                  backgroundRepeat: "no-repeat",
-                }}
                 className="
-                  group relative
-                  h-[600px]
-                  overflow-hidden
-                  border-[2px] border-[#D4AF37]
-                  cursor-pointer
-                  flex flex-col
-                  items-center
-                  text-center
-                "
+                group
+                h-[600px]
+                w-[50px]
+                overflow-hidden
+                cursor-pointer
+                flex flex-col
+                items-center
+                text-center
+              "
               >
-                {/* Dark/teal overlay */}
-                {/* <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#064f5c] via-[#064f5c] to-transparent"></div> */}
-                <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#064f5c] from-25% via-transparent to-transparent"></div>
-                {/* Corner decorations */}
-                <div className="absolute top-2 left-2 z-20 w-8 h-8 border-t-[3px] border-l-[3px] border-[#D4AF37]" />
-                <div className="absolute top-2 right-2 z-20 w-8 h-8 border-t-[3px] border-r-[3px] border-[#D4AF37]" />
-                <div className="absolute bottom-2 left-2 z-20 w-8 h-8 border-b-[3px] border-l-[3px] border-[#D4AF37]" />
-                <div className="absolute bottom-2 right-2 z-20 w-8 h-8 border-b-[3px] border-r-[3px] border-[#D4AF37]" />
-
-                {/* Content */}
-                <div className="relative z-10 flex flex-col items-center w-full px-8 pt-5">
-                  {/* Location icon */}
-                  <div className="mb-7 text-[#D4AF37]">
-                    <svg
-                      width="30"
-                      height="30"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                    >
-                      <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" />
-                      <circle cx="12" cy="10" r="2.5" />
-                    </svg>
-                  </div>
-
-                  {/* City */}
-                  <h3
-                    className="
-                    text-[36px]
-                    font-light
-                    text-white
-                    uppercase
-                    tracking-[0.08em]
-                    leading-none
-                    mb-7
-                  "
-                  >
-                    {a.city}
-                  </h3>
-
-                  {/* Description */}
-                  <p
-                    className="
-                    font-outfit
-                    text-[16px]
-                    text-gray-200
-                    font-normal
-                    leading-[1.7]
-                    max-w-[620px]
-                  "
-                  >
-                    {a.desc}
-                  </p>
-                </div>
+                <img
+                  src={a.bg}
+                  alt=""
+                  className="
+          absolute inset-0
+          w-full h-full
+          object-cover
+          object-center
+        "
+                />
               </div>
             ))}
-          </div>
-
+          </div> */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+  <div>
+    <img
+      src="/about-company/10.webp"
+      alt="Miami Atelier"
+      className="w-full h-[480px] object-[25%_75%] p- border-2 border-yellow-400"
+    />
+  </div>
+  <div>
+    <img
+      src="/about-company/2.webp"
+      alt="Paris Atelier"
+      className="w-full h-[480px] lg:object-[25%_75%] border-2 border-yellow-400"
+    />
+  </div>
+  <div>
+    <img
+      src="/about-company/3.webp"
+      alt="New York Atelier"
+      className="w-full h-[480px] object-[25%_75%] border-2 border-yellow-400"
+    />
+  </div>
+</div>
           {/* Links and CTA Bar */}
           <div className="mt-16 p-8 bg-[#097B8A] border border-white/50 rounded-lg text-center max-w-4xl mx-auto space-y-4 shadow-2xl">
             <h3 className="text-2xl font-bold text-[#FBF9F3] uppercase">

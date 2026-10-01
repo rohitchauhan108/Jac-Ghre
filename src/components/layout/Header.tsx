@@ -143,7 +143,7 @@ export const Header: React.FC = () => {
               aria-label="GHRÉ Home"
             >
               <img
-                src="/new-logo.png"
+                src="/new-logo2.png"
                 alt="GHRÉ Logo Mobile"
                 className="h-20 sm:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
@@ -302,7 +302,7 @@ export const Header: React.FC = () => {
                 aria-label="GHRÉ Home"
               >
                 <img
-                  src="/new-logo.png"
+                  src="/new-logo2.png"
                   alt="GHRÉ Logo Desktop"
                   className="h-20 sm:h-20 w-auto object-cover transition-transform duration-300 group-hover:scale-105"
                 />
@@ -475,7 +475,7 @@ export const Header: React.FC = () => {
                 <div className="flex items-center justify-between border-b border-[#D4AF37]/20 pb-4 mb-5">
                   <div className="flex items-center gap-2">
                     <img
-                      src="/logo.png"
+                      src="/new-logo2.png"
                       alt="GHRÉ Logo"
                       className="h-20 w-auto object-contain"
                     />

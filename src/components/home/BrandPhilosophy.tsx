@@ -161,7 +161,7 @@ export const BrandPhilosophy: React.FC = () => {
                   />
                 </div> */}
                 <div>
-                  <img src="/new-logo.png" alt=""
+                  <img src="/new-logo2.png" alt=""
                   width={300} />
                 </div>
 
