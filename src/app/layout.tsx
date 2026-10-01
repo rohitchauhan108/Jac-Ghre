@@ -63,6 +63,9 @@ export const metadata: Metadata = {
     'GHRE',
   ],
   authors: [{ name: 'Jac Ghré' }],
+  icons: {
+    icon: '/fav-icon.jpg',
+  },
   openGraph: {
     title: 'GHRÉ — The Art of Sun-Kissed Beauty',
     description:

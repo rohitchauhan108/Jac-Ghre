@@ -172,6 +172,9 @@ export const ContactPage: React.FC = () => {
                     <p className="font-poppins text-xs sm:text-xl text-[#8EAAB0] mt-0.5">
                       GLOBAL PRIVATE CLIENT SERVICE
                     </p>
+                    <p className="font-poppins text-xs sm:text-xl text-[#8EAAB0] mt-0.5">
+                      FISHER ISLAND PARIS ST TROPEZ
+                    </p>
                   </div>
                 </div>
 
