@@ -129,7 +129,7 @@ export const ContactPage: React.FC = () => {
 
               <div className="space-y-4 mb-6 border-b border-[#D4AF37]/20 pb-6">
                 <div className="text-[#F7F4EB] space-y-2">
-                  <div className=" text-xs uppercase tracking-[0.25em] text-[#D4AF37]">
+                  <div className=" text-[16px] uppercase tracking-[0.25em] text-[#D4AF37]">
                     JAC GHRÉ
                   </div>
                   <div className=" text-base font-bold text-[#F3E5AB] uppercase">
@@ -138,13 +138,13 @@ export const ContactPage: React.FC = () => {
                   <div className=" text-base font-bold text-[#F3E5AB] uppercase">
                     BEAUTY EXPERT & CONSULTANT
                   </div>
-                  <p className="font-poppins text-xs sm:text-xl text-[#C5D5D8]">
+                  <p className="font-poppins text-[16px] sm:text-xl text-[#C5D5D8]">
                     International Hair Designer
                   </p>
-                  <p className="font-poppins text-xs sm:text-xl text-[#C5D5D8]">
+                  <p className="font-poppins text-[16px] sm:text-xl text-[#C5D5D8]">
                     Cosmetics Luxury Hair Care
                   </p>
-                  <p className="font-poppins text-xs sm:text-xl text-[#C5D5D8]">
+                  <p className="font-poppins text-[16px] sm:text-xl text-[#C5D5D8]">
                     American Beauty Company
                   </p>
                 </div>
@@ -169,10 +169,10 @@ export const ContactPage: React.FC = () => {
                     <h4 className=" text-xl font-bold text-[#F3E5AB] uppercase">
                       PRIVATE SPA & BEAUTY SALON
                     </h4>
-                    <p className="font-poppins text-xs sm:text-xl text-[#8EAAB0] mt-0.5">
+                    <p className="font-poppins text-[16px] sm:text-xl text-[#8EAAB0] mt-0.5">
                       GLOBAL PRIVATE CLIENT SERVICE
                     </p>
-                    <p className="font-poppins text-xs sm:text-xl text-[#8EAAB0] mt-0.5">
+                    <p className="font-poppins text-[16px] sm:text-xl text-[#8EAAB0] mt-0.5">
                       FISHER ISLAND PARIS ST TROPEZ
                     </p>
                   </div>
@@ -192,15 +192,15 @@ export const ContactPage: React.FC = () => {
               </div>
 
               <div className="mt-8 pt-6 border-t border-[#D4AF37]/20 space-y-3">
-                <div className="flex items-center gap-3 text-xs sm:text-xl text-[#B5CAD0] font-poppins">
+                <div className="flex items-center gap-3 text-[16px] sm:text-xl text-[#B5CAD0] font-poppins">
                   <Mail className="w-4 h-4 text-[#D4AF37]" />
                   <span>Ghrebeauty@gmail.com</span>
                 </div>
-                <div className="flex items-center gap-3 text-xs sm:text-xl text-[#B5CAD0] font-poppins">
+                <div className="flex items-center gap-3 text-[16px] sm:text-xl text-[#B5CAD0] font-poppins">
                   <Phone className="w-4 h-4 text-[#D4AF37]" />
                   <span>Cell USA: (1) 786 238 3631</span>
                 </div>
-                <div className="flex items-center gap-3 text-xs sm:text-xl text-[#B5CAD0] font-poppins">
+                <div className="flex items-center gap-3 text-[16px] sm:text-xl text-[#B5CAD0] font-poppins">
                   <Clock className="w-4 h-4 text-[#D4AF37]" />
                   <span>Concierge desk available 24/7 for VIP clients</span>
                 </div>
