@@ -314,28 +314,28 @@ export const AboutCompanyPage: React.FC = () => {
             ))}
           </div> */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-  <div>
-    <img
-      src="/about-company/10.webp"
-      alt="Miami Atelier"
-      className="w-full h-[480px] object-[25%_75%] p- border-2 border-yellow-400"
-    />
-  </div>
-  <div>
-    <img
-      src="/about-company/2.webp"
-      alt="Paris Atelier"
-      className="w-full h-[480px] lg:object-[25%_75%] border-2 border-yellow-400"
-    />
-  </div>
-  <div>
-    <img
-      src="/about-company/3.webp"
-      alt="New York Atelier"
-      className="w-full h-[480px] object-[25%_75%] border-2 border-yellow-400"
-    />
-  </div>
-</div>
+            <div>
+              <img
+                src="/about-company/1.webp"
+                alt="Miami Atelier"
+                className="w-full h-[480px] object-cover lg:border-none border-2 border-yellow-400"
+              />
+            </div>
+            <div>
+              <img
+                src="/about-company/2.webp"
+                alt="Paris Atelier"
+                className="w-full h-[480px] lg:object-contain lg:border-none border-2 border-yellow-400"
+              />
+            </div>
+            <div>
+              <img
+                src="/about-company/3.webp"
+                alt="New York Atelier"
+                className="w-full h-[480px] object-[25%_75%] lg:border-none border-2 border-yellow-400"
+              />
+            </div>
+          </div>
           {/* Links and CTA Bar */}
           <div className="mt-16 p-8 bg-[#097B8A] border border-white/50 rounded-lg text-center max-w-4xl mx-auto space-y-4 shadow-2xl">
             <h3 className="text-2xl font-bold text-[#FBF9F3] uppercase">
