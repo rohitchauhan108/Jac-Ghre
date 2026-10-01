@@ -14,7 +14,7 @@ import {
 import { useShop } from '../../context/ShopContext';
 import { BRAND_INFO } from '../../data/products';
 
-const logoLight = '/images/logo-light.png';
+// const logoLight = '/images/logo-light.png';
 
 const TikTokIcon: React.FC<{ className?: string }> = ({ className }) => (
   <svg
