@@ -17,7 +17,7 @@ export const BRAND_INFO = {
     name: "JAC GHRÉ",
     title: "BEAUTY EXPERT & CONSULTANT",
     specialty: "International Hair Designer",
-    offering: "Luxury Hair Care",
+    offering: "Cosmetics Luxury Hair Care",
     company: "American Beauty Company",
     cellUsa: "(1) 786 238 3631",
     email: "Ghrebeauty@gmail.com",
