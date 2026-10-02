@@ -148,9 +148,9 @@ export const ContactPage: React.FC = () => {
                     American Beauty Company
                   </p>
                   <div className="grid grid-cols-2 text-center lg:grid-cols-3 gap-5 pt-5">
-                      <p className="lg:p-3 p-1 rounded-lg bg-white lg:text-[16px] font-semibold text-[#097b8a]">Fisher Island</p>
-                      <p className="lg:p-3 p-1 rounded-lg bg-white lg:text-[16px] font-semibold text-[#097b8a]">Paris</p>
-                      <p className="lg:p-3 p-1 rounded-lg bg-white lg:text-[16px] font-semibold text-[#097b8a]">St. Tropez</p>
+                      <p className="lg:p-1 p-1 rounded-lg bg-white lg:text-[16px] font-semibold text-[#097b8a]">Fisher Island</p>
+                      <p className="lg:p-1 p-1 rounded-lg bg-white lg:text-[16px] font-semibold text-[#097b8a]">Paris</p>
+                      <p className="lg:p-1 p-1 rounded-lg bg-white lg:text-[16px] font-semibold text-[#097b8a]">St. Tropez</p>
                     </div>
                 </div>
               </div>
