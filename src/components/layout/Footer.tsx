@@ -155,7 +155,7 @@ export const Footer: React.FC = () => {
             MAIN FOOTER GRID
         ========================================================= */}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-[#D4AF37]/15">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-2 pb-12 border-b border-[#D4AF37]/15">
 
           {/* =====================================================
               BRAND IDENTITY
@@ -324,11 +324,11 @@ export const Footer: React.FC = () => {
           ===================================================== */}
 
           <div className="space-y-3">
-            <span className="text-[18px]  tracking-[0.25em] text-[#D4AF37] uppercase block font-semibold">
+            <span className="text-[19px]  tracking-[0.25em] text-[#D4AF37] uppercase block font-bold">
               The Maison
             </span>
 
-            <ul className="space-y-2.5 text-[16px] sm:text-sm">
+            <ul className="space-y-2.5 text-[16px] sm:text-[18px]">
               <li>
                 <button
                   onClick={() => navigateToPage('home')}
@@ -390,11 +390,11 @@ export const Footer: React.FC = () => {
           ===================================================== */}
 
           <div className="space-y-3 ">
-            <span className="text-[18px]  tracking-[0.25em] text-[#D4AF37] uppercase block font-semibold">
+            <span className="text-[19px]  tracking-[0.25em] text-[#D4AF37] uppercase block font-bold">
               Signature Products
             </span>
 
-            <ul className="space-y-2.5 text-[16px] sm:text-sm">
+            <ul className="space-y-2.5 text-[16px] sm:text-[18px]">
 
               <li>
                 <button
@@ -475,8 +475,8 @@ export const Footer: React.FC = () => {
 
             </div>
           </div> */}
-          <div className="space-y-1.5 text-[16px] sm:text-sm text-[#C5D5D8] leading-relaxed">
-              <p className=" text-[#D4AF37] uppercase tracking-[0.18em] text-[18px]">
+          <div className="space-y-1.5 text-[16px] sm:text-[18px] text-[#C5D5D8] leading-relaxed">
+              <p className=" text-[#D4AF37] uppercase tracking-[0.18em] text-[19px] font-bold">
                 {BRAND_INFO.contact.title}
               </p>
               <p className="font-semibold text-[#F7F4EB] uppercase">{BRAND_INFO.contact.name}</p>
