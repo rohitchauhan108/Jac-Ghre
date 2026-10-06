@@ -29,7 +29,7 @@ export const FloatingConcierge: React.FC = () => {
   ];
 
   return (
-    <div className="fixed bottom-6 right-5 sm:right-6 z-40 flex flex-col items-end gap-3.5 font-poppins">
+    <div className="fixed bottom-4 right-5 sm:right-6 z-40 flex flex-col items-end gap-3.5 font-poppins">
       {/* Expanded Concierge Card */}
       <AnimatePresence>
         {isOpen && (

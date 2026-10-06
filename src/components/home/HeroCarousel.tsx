@@ -97,7 +97,7 @@ export const HeroCarousel: React.FC = () => {
         {/* =========================================================
             MOBILE ARROWS
         ========================================================= */}
-        <div className="absolute inset-y-0 left-2 top-30 right-2 z-30 flex items-center justify-between pointer-events-none md:hidden">
+        <div className="absolute inset-y-0 left-2 top-50 right-2 z-30 flex items-center justify-between pointer-events-none md:hidden">
           {/* Previous */}
           <button type="button" onClick={(e) => { e.stopPropagation(); prevSlide(); }} className="pointer-events-auto w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full bg-[#006073]/75 hover:bg-[#007288] text-[#D4AF37] hover:text-[#FFF3C4] border border-[#D4AF37]/50 backdrop-blur-md shadow-lg transition-all duration-300 active:scale-90" aria-label="Previous campaign banner">
             <ChevronLeft className="w-4 h-4" />
