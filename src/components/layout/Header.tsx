@@ -1,3 +1,4 @@
+"use client"
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import {
@@ -304,7 +305,7 @@ export const Header: React.FC = () => {
                 <img
                   src="/new-logo2.png"
                   alt="GHRÉ Logo Desktop"
-                  className="h-14 w-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="h-16 w-auto object-cover transition-transform duration-300 group-hover:scale-105"
                 />
               </button>
             </div>
