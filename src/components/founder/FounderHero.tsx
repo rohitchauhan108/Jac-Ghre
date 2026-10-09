@@ -57,18 +57,18 @@ export const FounderHero: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="lg:col-span-5 flex justify-center"
           >
-            <div className="relative aspect-[3/4] w-full max-w-md bg-gradient-to-b from-[#007288] to-[#006073] border-2 border-white/50 p-4 sm:p-5 shadow-[0_25px_60px_rgba(0,96,115,0.85)]">
+            <div className="relative -[3/4] w-full max-w-md bg-gradient-to-b from-[#007288] to-[#006073] border-2 border-white/50 p-4 sm:p-5 shadow-[0_25px_60px_rgba(0,96,115,0.85)]">
               {/* Corner Gold Brackets */}
               <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-white" />
               <div className="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-white" />
               <div className="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-white" />
               <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-white" />
 
-              <div className="relative w-full h-full overflow-hidden bg-[#006073]">
+              <div className="relative w-full h-fit overflow-hidden bg-[#006073]">
                 <img
-                  src='/gallery/founder/about-the-founder.webp'
+                  src='/gallery/founder/founder-img.webp'
                   alt="Jac GHRÉ — Beauty Expert"
-                  className="w-full h-full object-cover object-top filter brightness-102 contrast-105"
+                  className="w-full h-full object-contain object-top filter brightness-102 contrast-105"
                 />
 
                 {/* Gradient and Badge on Image Bottom */}

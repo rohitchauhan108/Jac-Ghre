@@ -295,7 +295,7 @@ export const Header: React.FC = () => {
 
           {/* Desktop header */}
           <div className="hidden lg:flex w-full items-center justify-between">
-            <div className="flex items-center gap-5">
+            <div className="flex shrink-0 items-center gap-2">
               <button
                 onClick={() => navigateToPage("home")}
                 className="group flex items-center text-left focus:outline-none cursor-pointer"
@@ -304,12 +304,12 @@ export const Header: React.FC = () => {
                 <img
                   src="/new-logo2.png"
                   alt="GHRÉ Logo Desktop"
-                  className="h-20 sm:h-20 w-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="h-14 w-auto object-cover transition-transform duration-300 group-hover:scale-105"
                 />
               </button>
             </div>
 
-            <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+            <nav className="hidden shrink-0 items-center gap-x-4 xl:gap-x-5 2xl:gap-x-7 lg:flex">
               {navLinks.map((link) => {
                 const isActive =
                   currentPage === link.page ||
@@ -319,7 +319,7 @@ export const Header: React.FC = () => {
                   <button
                     key={link.name}
                     onClick={() => navigateToPage(link.page)}
-                    className={` text-xs xl:text-[11px] tracking-[0.2em] py-2 transition-all duration-200 cursor-pointer ${
+                    className={`whitespace-nowrap text-[10px] 2xl:text-[11px] tracking-[0.12em] py-2 transition-all duration-200 cursor-pointer ${
                       isActive
                         ? "lg:text-white text-[#0B4F71] font-bold border-b-2 lg:border-[#D4AF37] border-[#0B4F71]"
                         : "lg:text-white lg:hover:text-[#D4AF37] text-[#0B4F71] hover:text-[#176B87]"
@@ -331,7 +331,7 @@ export const Header: React.FC = () => {
               })}
             </nav>
 
-            <div className="flex items-center space-x-2.5 sm:space-x-4">
+            <div className="flex shrink-0 items-center space-x-2.5 sm:space-x-4">
               <button
                 onClick={() => setIsSearchOpen(true)}
                 className="p-2 text-white hover:text-[#D4AF37] transition-colors"
