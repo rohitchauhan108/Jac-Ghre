@@ -26,6 +26,8 @@ const WORKS: GalleryItem[] = [
   { id: 3, path: "/artist/2.webp", alt: "GHRÉ CELEBRITIES", title: "GHRÉ CELEBRITIES" },
   { id: 4, path: "/artist/4.webp", alt: "GHRÉ PHOTO SHOOTS", title: "GHRÉ PHOTO SHOOTS" },
   { id: 5, path: "/artist/5.webp", alt: "GHRÉ FASHION SHOWS", title: "GHRÉ FASHION SHOWS" },
+  { id: 6, path: "/artist/6.webp", alt: "MEET WITH THE PARIS HILTON", title: "MEET WITH THE PARIS HILTON" },
+  { id: 7, path: "/artist/7.webp", alt: "GHRÉ FEATURED WORK", title: "GHRÉ FEATURED WORK" },
 ];
 
 export default function ArchiveGallery() {
