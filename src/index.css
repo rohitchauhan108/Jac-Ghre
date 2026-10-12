@@ -430,3 +430,6 @@ html.light-theme ::-webkit-scrollbar-thumb {
 h2{
   word-spacing: 5px;
 }
+p{
+  word-spacing: 3px;
+}
