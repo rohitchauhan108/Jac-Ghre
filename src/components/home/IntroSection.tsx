@@ -159,7 +159,7 @@ export const IntroSection: React.FC = () => {
 
           {/* Heading */}
           <h2
-            className={`text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-balance leading-tight ${
+            className={`text-3xl sm:text-5xl lg:text-6xl font-normal tracking-wider text-balance leading-tight ${
               isDark ? "text-[#FBF9F3]" : "text-[#062B35]"
             }`}
           >

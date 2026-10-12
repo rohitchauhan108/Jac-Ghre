@@ -427,3 +427,6 @@ html.light-theme ::-webkit-scrollbar-track {
 html.light-theme ::-webkit-scrollbar-thumb {
   background: #d4af37;
 }
+h2{
+  word-spacing: 5px;
+}
