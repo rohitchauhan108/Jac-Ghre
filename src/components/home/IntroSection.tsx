@@ -153,7 +153,7 @@ export const IntroSection: React.FC = () => {
           </div>
 
           {/* Eyebrow */}
-          <div className="flex flex-col gap-3 text-[16px] sm:text-[18px] font-bold tracking-[0.4em] uppercase text-white mb-3">
+          <div className="flex flex-col gap-3 text-[16px] sm:text-lg font-bold tracking-[0.4em] uppercase text-white mb-3">
             <p>L'ART DE VIVRE</p>
           </div>
 
